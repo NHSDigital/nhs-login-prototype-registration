@@ -1,7 +1,7 @@
 <!-- This main layout -->
 
 <!-- Extends the layout from /docs/views/template.html -->
-{% extends "layouts/template.html" %}
+{% extends "layouts/template-email.html" %}
 
 <!-- This is how we import the Nunjucks macros to the page -->
 {% from 'action-link/macro.njk' import actionLink %}
@@ -63,7 +63,7 @@
             <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
           </svg>
           <span class="nhsuk-header__service-name">
-          Prototype kit docs
+          NHS login
           </span>
         </a>
       </div>

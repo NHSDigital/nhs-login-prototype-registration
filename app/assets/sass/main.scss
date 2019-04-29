@@ -8,3 +8,27 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+// give some styling to emails
+
+.body-email {
+  padding: 1em 0;
+  background-color: #d8dde0;
+  .nhsuk-header__logo {
+    padding-left: 1em;
+  }
+  .page-section {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+    border: 1px solid #425563;
+    box-shadow: 2px 2px 8px #f0f4f9;
+    background: #fff;
+    .email-content {
+    padding: 1em;
+    }
+  }
+  footer {
+    display: none;
+  }
+}
