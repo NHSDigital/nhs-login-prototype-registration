@@ -1,0 +1,92 @@
+{% extends 'layouts/layout-transactional.html' %}
+
+{% block pageTitle %}
+  Blank template - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  <section class="nhsuk-hero">
+
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">Your NHS login</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">When accessing the NHS app, or partner services, you can use your NHS login repeatedly without having to prove who you are each time.</p>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-half">
+          <figure class="nhsuk-image login-email">
+            <img class="nhsuk-image__img" src="/images/login-email-2x.png"  alt-text="Picture of NHS login on desktop and mobile">
+          </figure>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+{% endblock %}
+
+      <!-- Add your content here -->
+
+{% block content %}
+  <div class="nhsuk-grid-row" style="padding-top: 20px;">
+    <div class="nhsuk-grid-column-one-third">
+
+      <h1 class="nhsuk-heading-m">
+        What does NHS login do for me
+      </h1>
+
+      <p>Once you have proven who you are, you can use your NHS login repeatedly without having to prove who you are each time.</p>
+
+      <p><a href="/nhs-uk/NHS-login-info">NHS.uk login info page</a><p>
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+
+      <h2 class="nhsuk-heading-m">
+        What can I use my NHS login for
+      </h2>
+
+      <p>You'll initially be able to use the NHS login to access the NHS App. The NHS App is a simple way to connect to digital NHS health services on your mobile phone or tablet.</p>
+
+      <p><a href="/nhs-uk/NHS-login-info">Partner pages</a><p>
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+
+      <h2 class="nhsuk-heading-m">
+        How do I manage my account
+      </h2>
+
+      <p>You'll initially be able to use the NHS login to access the NHS App. The NHS App is a simple way to connect to digital NHS health services on your mobile phone or tablet.</p>
+
+      <p><a href="/nhs-uk/NHS-login-info">More information</a><p>
+
+    </div>
+
+  </div>
+
+  <div class="nhsuk-grid-row" style="padding-top:40px;">
+
+    <div class="nhsuk-grid-column-one-half">
+      <h2 class="nhsuk-heading-m">The NHS login button</h2>
+      <p>This is some placeholder information about the NHS login button. You can use your NHS login when you see this button. You might find it on services like X Y and Z.</p>
+    </div>
+
+    <div class="nhsuk-grid-column-one-half" style="display: block; justify-items: center;">
+      <figure class="nhsuk-image" style="background-color: transparent; color: transparent; padding: 0 20px 0 20px; width: 100%; border-bottom:none;">
+        <img class="nhsuk-image__img" style="background-color: transparent; color: transparent; justify-self: center; width: 100%;" src="/images/SignInWith_Light.svg"  alt-text="Picture of NHS login on desktop and mobile"></img>
+      </figure>
+
+      <figure class="nhsuk-image" style="background-color: transparent; color: transparent; padding: 0 20px 0 20px; width: 100%; border-bottom: none;">
+        <img class="nhsuk-image__img" style="background-color: transparent; color: transparent; justify-self: center; width: 100%;" src="/images/SignInWith_Original.svg"  alt-text="Picture of NHS login on desktop and mobile"></img>
+      </figure>
+    </div>
+
+
+  </div>
+{% endblock %}

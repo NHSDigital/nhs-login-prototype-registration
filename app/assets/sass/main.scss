@@ -6,7 +6,7 @@
 @import 'components/related-nav';
 
 ///////////////////////////////////////////
-// Add your custom CSS/Sass styles below... 
+// Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
 // give some styling to emails
@@ -32,3 +32,22 @@
     display: none;
   }
 }
+
+// styling for email-login-info
+
+.nhsuk-image.login-email {
+  background-color: transparent;
+  color: transparent;
+  border-bottom: none;
+  width: 100%;
+}
+
+.nhsuk-hero__wrapper {
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 40.0625em) {
+    .nhsuk-hero__wrapper {
+      padding-top: 16px !important; } }
+  @media (max-width: 40.0625em) {
+    .nhsuk-hero__wrapper {
+      padding-bottom: 16px !important; } }
