@@ -42,42 +42,45 @@
   width: 100%;
 }
 
-.nhsuk-hero__wrapper {
-  padding-top: 48px;
-  padding-bottom: 48px; }
-  @media (max-width: 40.0625em) {
-    .nhsuk-hero__wrapper {
-      padding-top: 2em !important; } }
-  @media (max-width: 40.0625em) {
-    .nhsuk-hero__wrapper {
-      padding-bottom: 2em !important; } }
-
-
 .nhsuk-image.button-1 {
   background-color: transparent;
   color: transparent;
   padding: 0 20px 0 20px;
   width: 100%;
   border-bottom: none;
+  @include mq($from: tablet) {
+    margin-top: nhsuk-spacing(9) !important;
+  }
 }
 
-@media (min-width: 40.0625em) {
-  .button-1 {
-    margin-top: 0px !important; } }
+@media (max-width: 768px) and (min-width: 550px) {
+  .nhsuk-image.button-1 {
+      width: 80%
+      padding: 0 40px 0 40px !important;
+  }
+}
 
-@media (max-width: 40.0625em) {
-  .button-1 {
-    width: 100% !important; } }
+.nhsuk-hero__wrapper {
+  @include mq($from: mobile) {
+    padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3) nhsuk-spacing(0) !important;
+  }
+  @include mq($from: tablet) {
+    padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3) nhsuk-spacing(0) !important;
+  }
+  @include mq($from: desktop) {
+    padding: nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) !important;
+  }
+}
 
-@media (max-width: 40.0625em) {
-  .nhsuk-grid-column-one-half.image {
+.nhsuk-grid-column-one-half.image {
+  @include mq($from: mobile) {
     display: none;
   }
-  .nhsuk-grid-column-one-half.login-button {
-    align-items: center;
-    justify-content: center;
+  @include mq($from: tablet) {
+    display: block;
+    padding-bottom: nhsuk-spacing(2);
   }
-  .nhsuk-grid-row {
-    padding-top: 0px !important;
-  }
+}
+.nhsuk-grid-row.bodyContent {
+  padding: nhsuk-spacing(2) nhsuk-spacing(0) nhsuk-spacing(2) nhsuk-spacing(0) !important;
 }
