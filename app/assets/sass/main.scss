@@ -47,21 +47,13 @@
   padding-bottom: 48px; }
   @media (max-width: 40.0625em) {
     .nhsuk-hero__wrapper {
-      padding-top: 16px !important; } }
+      padding-top: 2em !important; } }
   @media (max-width: 40.0625em) {
     .nhsuk-hero__wrapper {
-      padding-bottom: 16px !important; } }
+      padding-bottom: 2em !important; } }
 
 
 .nhsuk-image.button-1 {
-  background-color: transparent;
-  color: transparent;
-  padding: 0 20px 0 20px;
-  width: 100%;
-  border-bottom: none;
-}
-
-.nhsuk-image.button-2 {
   background-color: transparent;
   color: transparent;
   padding: 0 20px 0 20px;
@@ -75,8 +67,17 @@
 
 @media (max-width: 40.0625em) {
   .button-1 {
-    width: 80% !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 40.0625em) {
-  .button-2 {
-    width: 80% !important; } }
+  .nhsuk-grid-column-one-half.image {
+    display: none;
+  }
+  .nhsuk-grid-column-one-half.login-button {
+    align-items: center;
+    justify-content: center;
+  }
+  .nhsuk-grid-row {
+    padding-top: 0px !important;
+  }
+}
