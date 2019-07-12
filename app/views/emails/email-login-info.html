@@ -11,7 +11,7 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-hero__wrapper">
-            <h1 class="nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">Your NHS login</h1>
+            <h1 class="nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">You now have an NHS login</h1>
             <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Use your NHS login to access digital health and care services whenever you want, without having to prove who you are each time.</p>
           </div>
         </div>
@@ -45,7 +45,7 @@
     <div class="nhsuk-grid-column-one-third">
 
       <h2 class="nhsuk-heading-m">
-        The benefits of NHS login
+        The benefits of using NHS login
       </h2>
 
       <p>NHS login is secure and can be used repeatedly without you having to prove who you are each time.</p>
@@ -55,10 +55,10 @@
     <div class="nhsuk-grid-column-one-third">
 
       <h2 class="nhsuk-heading-m">
-        How to manage your information
+        How to manage your NHS login
       </h2>
 
-      <p>You can change your password, email address or phone number in your account management section once you've logged in.</p>
+      <p>You can change your password, email address or phone number in the account management area of your NHS login.</p>
 
     </div>
 
@@ -67,7 +67,7 @@
   <div class="nhsuk-grid-row bodyContent" style="padding-top:40px;">
 
     <div class="nhsuk-grid-column-one-half">
-      <h2 class="nhsuk-heading-m">The NHS login button</h2>
+      <h2 class="nhsuk-heading-m">Where can I use my NHS login?</h2>
       <p>You can use your NHS login wherever you see the NHS login button. If a website or app shows this button, simply click it and enter your NHS login information for access.</p>
     </div>
 
@@ -89,4 +89,30 @@
 
   </div>
 
+
+{% endblock %}
+
+{% block footer %}
+  <section class="nhsuk-hero survey">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row surveyBorder">
+        <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group surveyText">
+              <h3 class="nhsuk-heading-m subtext">Do you have any questions?</h3>
+              <span class="nhsuk-hint" id="example-hint" style="display: inline-block; padding-top: -40px;">
+                Help us improve our service to meet your needs.
+              </span>
+            </div>
+        </div>
+
+        <div class ="nhsuk-grid-column-one-half surveyResponse">
+          <div class="nhsuk-grid-column-one-half">
+            <p class="nhsuk-body-l feedbackLink" style="display: inline;"><a class=""><strong>Yes</strong></a></p>
+            <p class="nhsuk-body-l feedbackLink" style="display: inline;"><a class=""><strong>No</strong></a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 {% endblock %}
