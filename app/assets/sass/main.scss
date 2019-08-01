@@ -9,6 +9,23 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
+//index page styles
+
+.nhsuk-expander.version-list {
+  background-color: #F0F4F5 !important;
+}
+
+.nhsuk-details__summary {
+  background-color: #F0F4F5 !important;
+  padding: 0px !important;
+}
+
+#details-content-0 {
+  @include mq($from: mobile) {
+    padding: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+  }
+}
+
 // give some styling to emails
 
 .body-email {
@@ -49,7 +66,7 @@
   width: 100%;
   border-bottom: none;
   @include mq($from: tablet) {
-    margin-top: nhsuk-spacing(9) !important;
+    margin-top: nhsuk-spacing(4) !important;
   }
 }
 
