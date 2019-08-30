@@ -1,0 +1,58 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'radios/macro.njk' import radios %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "#",
+        "text": "Go back"
+      }) }}
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Welcome to NHS login
+      </h1>
+      <p>Use NHS login to securely access digital health and care services.</p>
+
+      <form action="/set-up/v2/what-you-need-v3" method="post">
+
+        {{ radios({
+          "idPrefix": "example",
+          "name": "example",
+          "hint": {
+            "text": ""
+          },
+          "items": [
+            {
+              "value": "sign-in",
+              "text": "Sign in"
+            },
+            {
+              "value": "register",
+              "text": "Create an NHS login"
+            }
+          ]
+        }) }}
+
+        <div class="nhsuk-inset-text registration">
+          <h3>What is an NHS login?</h3>
+          <p>NHS login is a new way to securely access health services and apps. If you do not have one, you will need to set one up. Then you can access online health services whenever you see 'NHS login'.</p>
+        </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'layouts/layout-transactional.html' %}
+
+{% block pageTitle %}
+  Create a password
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {{ backLink({
+          "href": "#",
+          "text": "Go back"
+        }) }}
+
+      <div class="nhsuk-panel">
+
+        <h1 class="nhsuk-fieldset__legend--l">You will need</h1>
+
+        <ul>
+          <li>Around 20 minutes of your time. If you are using assistive technologies, this may take longer</li>
+          <li>A phone with signal</li>
+          <li>An email address</li>
+          <li>To prove who you are. You can do this with:</li>
+            <ul>
+              <li><b>Photo ID.</b> You will need either:
+                <ul style="margin-top: 8px;">
+                  <li>a UK driving licence</li>
+                  <li>a passport</li>
+                  <li>a european residency card</li>
+                </ul>
+              </ul>
+              <p style="list-style: none">
+                <div style="border-top: 1px grey solid; display: block; margin-top: 24px;">
+                  <div style="display: block; position: relative; top: -14px; background-color: white; width: 30px; height: auto; padding-left: 5px; margin-left: 10px;">or</div>
+                </div> 
+              </p>
+            <ul>
+              <li>
+                <div style="margin-top: -8px;"><b>Details from your GP practice.</b> You will need a:</div>
+                  <ul style="margin-top: 8px;">
+                    <li>Linkage key (could be called a Passphrase)</li>
+                    <li>O.D.S. Code (could be called an Organisation Code or Practice I.D.)</li>
+                    <li>Acccount I.D.</li>
+                  </ul>
+            </ul>
+          </ul>
+        </ul>
+
+        <a href="enter-email" class="nhsuk-button">Continue</a>
+
+      </div>
+
+        
+
+    </div>
+  </div>
+
+{% endblock %}

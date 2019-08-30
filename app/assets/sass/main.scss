@@ -26,6 +26,12 @@
   }
 }
 
+#details-content-1 {
+  @include mq($from: mobile) {
+    padding: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+  }
+}
+
 // give some styling to emails
 
 .body-email {
@@ -48,6 +54,11 @@
   footer {
     display: none;
   }
+}
+
+.nhsuk-main-wrapper.email-content {
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 // styling for email-login-info
@@ -103,10 +114,10 @@
 }
 
 
- @media (min-width: 40.0625em) {
-   h3, .nhsuk-heading-m.subtext {
-     margin-bottom: 0px !important;
-   }
+@media (min-width: 40.0625em) {
+  .nhsuk-heading-m.subtext {
+    margin-bottom: 0px !important;
+  }
 }
 
 .nhsuk-hero.survey {
@@ -166,5 +177,64 @@
 @media (min-width: 40.0625em) {
   .nhsuk-form-group.surveyText {
     margin-bottom: 0px;
+  }
+}
+
+// login flow styling
+
+.nhsuk-button.full-width {
+  @include mq($from: mobile) {
+    width: 100%;
+  }
+  @include mq($from: tablet) {
+    width: auto;
+  }
+  @include mq($from: desktop) {
+    width: auto;
+  }
+}
+
+.nhsuk-inset-text.registration {
+  margin: nhsuk-spacing(4) nhsuk-spacing(0) nhsuk-spacing(4) nhsuk-spacing(0) !important;
+}
+
+.email-input {
+  @include mq($from: mobile) {
+    width: 20%;
+  }
+  @include mq($from: tablet) {
+    width: 20%;
+  }
+  @include mq($from: desktop) {
+    width: 20%;
+  }
+}
+
+.nhsuk-panel.confirmation-panel {
+  margin: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(4) nhsuk-spacing(0) !important;
+  padding: nhsuk-spacing(2) nhsuk-spacing(2) nhsuk-spacing(2) nhsuk-spacing(2) !important;
+}
+
+div.heading-confirmation {
+  display: inline-block;
+
+}
+
+
+.tick-confirmation {
+  display: inline-block;
+  svg {
+    @include mq($from: mobile) {
+      position: relative;
+      top: 10px;
+    }
+    @include mq($from: tablet) {
+      position: relative;
+      top: 10px;
+    }
+    @include mq($from: desktop) {
+      position: relative;
+      top: 10px;
+    }
   }
 }

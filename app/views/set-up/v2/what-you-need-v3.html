@@ -1,0 +1,53 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Create a password
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {{ backLink({
+          "href": "login-yes-no",
+          "text": "Go back"
+        }) }}
+
+      <div class="nhsuk-panel">
+
+        <h1 class="nhsuk-fieldset__legend--l">Create an NHS login</h1>
+
+        <p class="govuk-body-m">To create an NHS login you will need around 20 minutes of your time and a phone with signal, as we will text you a security code. This may take longer if you are using assistive technologies. </p>
+
+        <h2 class="govuk-heading-m">Prove who you are</h3>
+
+        <p>You also need to prove who you are using either your photo I.D. or registration details from your GP surgery’s online services.</p>
+
+        <h3 class="govuk-heading-s">Option 1: Photo I.D.</h3>
+        <p>Accepted types of photo ID are:</p>
+        <ul>
+          <li>Passport</li>
+          <li>UK driving licence</li>
+          <li>European driving licence</li>
+          <li>European national identity card</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Option 2: Registration details</h3>
+        <p>Registration details from your GP surgery’s online services include:</p>
+        <ul>
+            <li>Linkage key (could be called a Passphrase)</li>
+            <li>O.D.S. Code (could be called an Organisation Code or Practice I.D.)</li>
+            <li>Acccount I.D.</li>
+        </ul>
+
+        <!-- ---------------- -->
+
+        <a href="enter-email" class="nhsuk-button">Continue</a>
+
+      </div>
+
+
+    </div>
+  </div>
+
+{% endblock %}

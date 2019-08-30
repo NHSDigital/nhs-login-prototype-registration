@@ -1,0 +1,45 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      {{ backLink({
+        "href": "enter-phone",
+        "text": "Enter a different phone number"
+      }) }}
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Check your phone
+      </h1>
+
+      <p class="nhsuk-body-m">Enter the security code we've sent to <b>{{ data['phone-number'] }}</b></p>
+
+      <form action="/set-up/v2/registration-success" method="post">
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Security code
+          </label>
+          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+            <p>The code is 6 numbers</p>
+          </span>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="test-name-2" type="text" aria-describedby="input-with-hint-text-hint">
+        </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
