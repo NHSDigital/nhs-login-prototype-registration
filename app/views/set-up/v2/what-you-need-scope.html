@@ -1,0 +1,32 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Create a password
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {{ backLink({
+          "href": "login-yes-no",
+          "text": "Go back"
+        }) }}
+
+      <div class="nhsuk-panel">
+
+        <h1 class="nhsuk-fieldset__legend--l">Set up an NHS login</h1>
+
+        <p class="govuk-body-m">To create an NHS login you will need around 10 minutes of your time and your mobile phone, as we will text you a security code. This may take longer if you are using assistive technologies. </p>
+
+        <!-- ---------------- -->
+
+        <a href="enter-email" class="nhsuk-button">Continue</a>
+
+      </div>
+
+
+    </div>
+  </div>
+
+{% endblock %}

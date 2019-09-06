@@ -21,7 +21,7 @@
       </h1>
       <p>Use NHS login to securely access digital health and care services.</p>
 
-      <form action="/set-up/v2/what-you-need-v3" method="post">
+      <form action="/set-up/v2/what-you-need" method="post">
 
         {{ radios({
           "idPrefix": "example",
@@ -31,19 +31,19 @@
           },
           "items": [
             {
-              "value": "sign-in",
-              "text": "Sign in"
+              "value": "log-in",
+              "text": "Log in"
             },
             {
               "value": "register",
-              "text": "Create an NHS login"
+              "text": "Set up an NHS login"
             }
           ]
         }) }}
 
         <div class="nhsuk-inset-text registration">
           <h3>What is an NHS login?</h3>
-          <p>NHS login is a new way to securely access health services and apps. If you do not have one, you will need to set one up. Then you can access online health services whenever you see 'NHS login'.</p>
+          <p>NHS login is a new way to securely access health and social care websites and apps. If you do not have one, you will need to set one up. Then you can access online health services whenever you see 'NHS login'.</p>
         </div>
 
         <button class="nhsuk-button full-width" type="submit">
