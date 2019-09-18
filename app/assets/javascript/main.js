@@ -4,10 +4,12 @@
 // reveal password script
 
 function myFunction() {
-    var x = document.getElementById("revealPassword");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
+    var x = document.getElementsByName("revealPassword");
+    x.forEach(function(item) {
+      if (item.type === "password") {
+        item.type = "text";
+      } else {
+        item.type = "password";
+      }
+    });
   }

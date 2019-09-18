@@ -1,0 +1,43 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      {{ backLink({
+        "href": "what-you-need-v3",
+        "text": "Check what you need"
+      }) }}
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Enter your email address
+      </h1>
+
+      <form action="/set-up/v2/check-your-email" method="post">
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Email address
+          </label>
+          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+            <p>We will send you an email to confirm your account</p>
+          </span>
+          <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" type="text" aria-describedby="user-email" value="{{ data['user-email'] }}">
+        </div>
+
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
