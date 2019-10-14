@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="142px" viewBox="0 0 93 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon-registration-details</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="reg-details-1" transform="translate(-54.000000, -19.000000)">
+            <g id="icon-registration-details" transform="translate(56.000000, 21.000000)">
+                <rect id="Rectangle" stroke="#FFFFFF" stroke-width="4" transform="translate(44.500000, 69.000000) rotate(90.000000) translate(-44.500000, -69.000000) " x="-24" y="25" width="137" height="88" rx="5"></rect>
+                <g id="details" transform="translate(9.500000, 26.000000)">
+                    <g id="Group-4" transform="translate(0.500000, 0.000000)">
+                        <path d="M19.96,6.5 L65.04,6.5" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+                        <text id="1" font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFFFFF">
+                            <tspan x="0.94" y="15">1</tspan>
+                        </text>
+                    </g>
+                    <g id="Group-2" transform="translate(1.000000, 33.000000)">
+                        <path d="M19.46,6.5 L64.54,6.5" id="Line-Copy" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+                        <text id="2" font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFFFFF">
+                            <tspan x="0.44" y="15">2</tspan>
+                        </text>
+                    </g>
+                    <g id="Group-3" transform="translate(0.000000, 66.000000)">
+                        <path d="M20.46,5.5 L65.54,5.5" id="Line-Copy-2" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+                        <text id="3" font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFFFFF">
+                            <tspan x="0.94" y="15">3</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

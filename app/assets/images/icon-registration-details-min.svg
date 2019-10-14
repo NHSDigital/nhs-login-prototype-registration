@@ -1,0 +1,19 @@
+<svg width="93" height="142" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(2 2)" fill="none" fill-rule="evenodd">
+    <rect stroke="#FFF" stroke-width="4" transform="rotate(90 44.5 69)" x="-24" y="25" width="137" height="88" rx="5"/>
+    <path d="M29.96 32.5h45.08" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+    <text font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFF" transform="translate(10 26)">
+      <tspan x=".94" y="15">1</tspan>
+    </text>
+    <path d="M29.96 65.5h45.08" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+    <text font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFF" transform="translate(10.5 59)">
+      <tspan x=".44" y="15">2</tspan>
+    </text>
+    <g>
+      <path d="M29.96 97.5h45.08" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+      <text font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFF" transform="translate(9.5 92)">
+        <tspan x=".94" y="15">3</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

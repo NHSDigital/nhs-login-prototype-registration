@@ -1,0 +1,98 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  What you need
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {{ backLink({
+          "href": "login-yes-no",
+          "text": "Go back"
+        }) }}
+
+        <h1 class="nhsuk-fieldset__legend--l">Set up an NHS login</h1>
+
+        <p class="govuk-body-m">To create an NHS login you will need your mobile phone, as we will text you a security code.</p>
+
+        <p class="govuk-body-m">You also need to prove who you are. You can do this using your photo I.D. and a video selfie, or registration details from your GP surgery’s online services.</p>
+
+        <h2 class="govuk-heading-m">Prove who you are</h3>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half" style="margin-bottom: 16px;">
+              <div class="help-card" style="padding: 32px 24px 24px 24px; border-radius: 16px; background-color: #005EB8; color: white;">
+                <svg width="141" height="92" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="translate(2 2)" stroke="#FFF" stroke-width="4" fill="none" fill-rule="evenodd">
+                    <rect width="137" height="88" rx="5"/>
+                    <g transform="translate(16 21)">
+                      <circle cx="20" cy="12" r="12"/>
+                      <path d="M39.8931754 45.8941213C38.3390147 31.2980404 31.7079562 24 20 24 8.29205334 24 1.66099613 31.2980286.10682835 45.8940857c-.05851196.5491955.33929612 1.0418151.88849521 1.100293A1.0000308 1.0000308 0 001.10120726 47H38.8988035c.5522808-.0000071.9999929-.4477192.9999929-1a.99998978.99998978 0 00-.005621-.1058787z"/>
+                    </g>
+                    <g stroke-linecap="round">
+                      <path d="M71.5 24.5h49M71.5 37.5h17M103.5 37.5h17M71.5 50.5h41M71.5 64H98"/>
+                    </g>
+                  </g>
+                </svg>
+                <h3 style="margin-top: 16px;" class="govuk-heading-s">Photo I.D. and video selfie</h3>
+                <p>You can use your:</p>
+                <ul>
+                  <li>Passport</li>
+                  <li>UK driving licence</li>
+                </ul>
+                <details class="nhsuk-details">
+                  <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                      Other accepted ID types
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+                    <ul>
+                      <li>European driving licence</li>
+                      <li>European national identity card</li>
+                    </ul>                  
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <div class="nhsuk-grid-column-one-half">
+              <div class="help-card" style="padding: 32px 24px 24px 24px; border-radius: 16px; background-color: #005EB8; color: white;">
+              <svg width="93" height="142" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(2 2)" fill="none" fill-rule="evenodd">
+                  <rect stroke="#FFF" stroke-width="4" transform="rotate(90 44.5 69)" x="-24" y="25" width="137" height="88" rx="5"/>
+                  <path d="M31.96 32.5h45.08" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+                  <text font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFF" transform="translate(12 26)">
+                    <tspan x=".94" y="15">1</tspan>
+                  </text>
+                  <path d="M31.96 65.5h45.08" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+                  <text font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFF" transform="translate(12.5 59)">
+                    <tspan x=".44" y="15">2</tspan>
+                  </text>
+                  <g>
+                    <path d="M31.96 97.5h45.08" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+                    <text font-family="FrutigerLTStd-Bold, Frutiger LT Std" font-size="20" font-weight="bold" fill="#FFF" transform="translate(11.5 92)">
+                      <tspan x=".94" y="15">3</tspan>
+                    </text>
+                  </g>
+                </g>
+              </svg>
+              <h3 style="margin-top: 16px;" class="govuk-heading-s">Registration details</h3>
+              <p>Registration details from your GP surgery’s online services include:</p>
+              <ul>
+                <li>Linkage key</li>
+                <li>O.D.S. Code</li>
+                <li>Acccount I.D.</li>
+              </ul>
+            </div>
+          </div>
+  
+      </div>
+      <a href="enter-email" class="nhsuk-button">Continue</a>
+
+    </div>
+  </div>
+
+{% endblock %}

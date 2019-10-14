@@ -15,9 +15,18 @@
   background-color: #F0F4F5 !important;
 }
 
-.nhsuk-details__summary {
+.details-index {
   background-color: #F0F4F5 !important;
   padding: 0px !important;
+}
+
+.nhsuk-details__summary {
+  color: #F0F4F5 !important;
+}
+
+.nhsuk-details__text {
+  color: #F0F4F5 !important;
+  padding-left: 24px;
 }
 
 #details-content-0 {
@@ -73,17 +82,27 @@
 .nhsuk-image.button-1 {
   background-color: transparent;
   color: transparent;
-  padding: 0 20px 0 20px;
-  width: 100%;
+  padding: 0 10px 0 10px;
   border-bottom: none;
+  @include mq($from: desktop) {
+    margin-top: nhsuk-spacing(4) !important;
+    border: 1px solid red;
+    width: 10%;
+  }
   @include mq($from: tablet) {
     margin-top: nhsuk-spacing(4) !important;
+    width: 80%;
+  }
+  @include mq($from: mobile) {
+    margin-top: nhsuk-spacing(4) !important;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) and (min-width: 550px) {
   .nhsuk-image.button-1 {
-      padding: 0 80px 0 80px !important;
+      padding: 0 60px 0 60px !important;
+      width: 80%;
   }
 }
 
@@ -208,8 +227,8 @@
   }
 }
 
-.nhsuk-inset-text.registration {
-  margin: nhsuk-spacing(4) nhsuk-spacing(0) nhsuk-spacing(4) nhsuk-spacing(0) !important;
+.nhsuk-inset-text.registration-callout {
+  margin: nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(4) nhsuk-spacing(0) !important;
 }
 
 .email-input {
@@ -250,4 +269,61 @@ div.heading-confirmation {
       top: 10px;
     }
   }
+}
+
+
+// v3 iteration to login flow styling
+
+.nhsuk-grid-column-one-third.image-column {
+  padding: 0px;
+}
+
+.nhsuk-grid-column-two-thirds.image-column {
+  padding: 0px;
+}
+
+.or-container {
+  border-top: 3px #d8dde0 solid;
+  margin: 32px 0 32px 0;
+  position: relative;
+}
+
+.line-cut {
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  padding: 0 8px 0 8px;
+  background-color: $color_nhsuk-white;
+}
+
+.nhsuk-grid-row.reg-details {
+  @include mq($from: mobile) {
+    margin: nhsuk-spacing(0) nhsuk-spacing(5) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+  }
+  @include mq($from: tablet) {
+    margin: nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+  }
+  @include mq($from: desktop) {
+    margin: nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+  }
+}
+
+// v3 iteration - inline password reveal
+
+.nhsuk-form-group.form-group-password-toggle {
+  position: relative;
+}
+
+.inline-password-toggle {
+  position: absolute;
+  top: 35px;
+  right: 180px;
+}
+
+// back-end error styling 
+
+.nhsuk-error-summary.error-be-validation {
+  background-color: #f5e6e4;
+  border: none;
+  border-top: 8px solid #da291c;
 }

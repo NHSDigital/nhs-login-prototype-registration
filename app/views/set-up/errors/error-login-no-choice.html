@@ -1,0 +1,76 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'radios/macro.njk' import radios %}
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'error-message/macro.njk' import errorMessage %}
+{% from 'date-input/macro.njk' import dateInput %}
+{% from 'error-summary/macro.njk' import errorSummary %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ errorSummary({
+        "titleText": "There is a problem",
+        "errorList": [
+          {
+            "text": "You need to tell us if you have an NHS login",
+            "href": "#error-no-selection"
+          }
+        ]
+      }) }}
+
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Welcome to NHS login
+      </h1>
+      <p>Use NHS login to securely access digital health and care services.</p>
+
+      <form action="/set-up/v3/what-you-need" class="nhsuk-form-group nhsuk-form-group--error" method="post">
+        
+
+      {{ radios({
+            "id": "error-no-selection",
+            "namePrefix": "error-no-selection",
+            "fieldset": {
+                "legend": {
+                }
+            },
+            "errorMessage": {
+                "text": "You need to tell us if you have an NHS login"
+            },
+            "items": [
+                {
+                "value": "log-in",
+                "classes": "nhsuk-input--error",
+                "text": "Log in"
+                },
+                {
+                "value": "create",
+                "classes": "nhsuk-input--error",
+                "text": "Set up an NHS login"
+                }
+            ]
+            }) }}
+
+          </form>
+
+        <div class="nhsuk-inset-text registration-callout">
+          <h3>What is an NHS login?</h3>
+          <p>NHS login is a new way to securely access health and social care websites and apps. If you do not have one, you will need to set one up. Then you can access online health services whenever you see 'NHS login'.</p>
+        </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

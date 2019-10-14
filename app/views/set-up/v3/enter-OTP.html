@@ -11,27 +11,29 @@
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
       {{ backLink({
-        "href": "what-you-need-scope-uplift",
-        "text": "Check what you need"
+        "href": "enter-phone",
+        "text": "Back to enter your mobile number"
       }) }}
 
       <h1 class="nhsuk-fieldset__legend--l">
-        Enter your email address
+        Check your mobile phone
       </h1>
 
-      <form action="/set-up/v2/check-your-email" method="post">
+      <p class="nhsuk-body-m">Enter the security code we've sent to <b>{{ data['phone-number'] }}</b></p>
+
+      <form action="/set-up/v2/registration-success-scope-uplift" method="post">
         
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-with-hint-text">
-            Email address
+            Security code
           </label>
           <span class="nhsuk-hint" id="input-with-hint-text-hint">
-            <p>We will send you an email to confirm your NHS login</p>
+            <p>The code is 6 numbers</p>
           </span>
-          <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" type="text" aria-describedby="user-email" value="{{ data['user-email'] }}">
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="test-name-2" type="text" aria-describedby="input-with-hint-text-hint">
         </div>
 
-        <button class="nhsuk-button" type="submit">
+        <button class="nhsuk-button full-width" type="submit">
           Continue
         </button>
 

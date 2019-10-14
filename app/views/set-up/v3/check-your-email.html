@@ -1,0 +1,27 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Check your email
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      {{ backLink({
+        "href": "enter-email",
+        "text": "Enter your email address"
+      }) }}
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Check your email
+      </h1>
+
+      <p>We've sent an <a href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}</p>
+      <p>Click confirm in the email and continue from there.</p>
+      <p>If you do not get an email, check your spam folder.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
