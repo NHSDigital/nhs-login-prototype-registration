@@ -10,6 +10,20 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
+
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list">
+            <li>
+              <a href="#error-email-no-input">Enter your email address</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       {{ backLink({
         "href": "what-you-need-scope-uplift",
         "text": "Check what you need"
@@ -19,23 +33,26 @@
         Enter your email address
       </h1>
 
-      <form action="/set-up/v2/check-your-email" method="post">
+      <form action="/set-up/v2/check-your-email" class="nhsuk-form-group--error" method="post">
         
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-with-hint-text">
             Email address
           </label>
-          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+          <span class="nhsuk-hint" id="error-email-regex">
             <p>We will send you an email to confirm your NHS login</p>
+          </span>
+          <span class="nhsuk-error-message" id="error-email-no-input">
+            <span class="nhsuk-u-visually-hidden">Error:</span>Enter your email address
           </span>
           <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" type="text" aria-describedby="user-email" value="{{ data['user-email'] }}">
         </div>
 
-        <button class="nhsuk-button" type="submit">
-          Continue
-        </button>
-
       </form>
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
 
     </div>
   </div>
