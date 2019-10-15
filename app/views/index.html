@@ -110,12 +110,17 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
               </table>
             </div>
           </details>
-          <details class="nhsuk-details nhsuk-expander version-list">
+          <details class="nhsuk-details nhsuk-expander version-list" id="error-messages">
               <summary class="nhsuk-details__summary details-index">
                 <span class="nhsuk-details__summary-text">
                   Error messages
                 </span>
               </summary>
+
+              <h4 class="nhsuk-heading-s">Do you have an NHS login</h4>
+              <ul>
+                <li><a href="/account/v2/errors/delete-account/password-incorrect">No input on login</a></li>
+              </ul>
       
               <h4 class="nhsuk-heading-s nhsuk-u-margin-top-5">Enter email</h4>
                 <ul>
@@ -128,7 +133,7 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
                 <ul>
                   <li><a href="/set-up/errors/error-link-expired">Email link expired</a></li>
                   <li><a href="/set-up/errors/error-link-malformed">Email link malformed</a></li>
-                  <li><a href="/set-up/errors/error-link-already-used-password">Email link has already been used <b>and</b>password created</a></li>
+                  <li><a href="/set-up/errors/error-link-already-used-password">Email link has already been used <b>and</b> password created</a></li>
                   <li><a href="/set-up/errors/error-link-already-used">Email link has already been used with no password created</a></li>                
                   </ul>
       
@@ -151,11 +156,6 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
                   <li><a href="/set-up/errors/error-OTP-no-input">Password incorrect</a></li>
                   <li><a href="/set-up/errors/error-OTP-regex">No password input</a></li>
                   <li><a href="/set-up/errors/error-OTP-be-generic">Generic back-end error</a></li>
-                </ul>
-
-                <h4 class="nhsuk-heading-s">Do you have an NHS login</h4>
-                <ul>
-                  <li><a href="/account/v2/errors/delete-account/password-incorrect">No input on login</a></li>
                 </ul>
       
             </details>
