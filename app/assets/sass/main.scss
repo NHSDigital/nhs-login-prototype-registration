@@ -82,26 +82,28 @@
 .nhsuk-image.button-1 {
   background-color: transparent;
   color: transparent;
-  padding: 0 10px 0 10px;
+  padding: 24px 24px 8px 24px;
   border-bottom: none;
   @include mq($from: desktop) {
-    margin-top: nhsuk-spacing(4) !important;
-    border: 1px solid red;
-    width: 10%;
+    margin-top: nhsuk-spacing(0) !important;
+    background-color: $color_nhsuk-grey-4;  
   }
   @include mq($from: tablet) {
-    margin-top: nhsuk-spacing(4) !important;
+    margin-top: nhsuk-spacing(0) !important;
     width: 80%;
+    background-color: $color_nhsuk-grey-4;  
   }
   @include mq($from: mobile) {
-    margin-top: nhsuk-spacing(4) !important;
+    margin-top: nhsuk-spacing(0) !important;
     width: 100%;
+    background-color: $color_nhsuk-grey-4;  
   }
 }
 
 @media (max-width: 768px) and (min-width: 550px) {
   .nhsuk-image.button-1 {
-      padding: 0 60px 0 60px !important;
+      padding: 20px 20px 20px 20px !important;
+      margin: auto;
       width: 80%;
   }
 }
@@ -128,6 +130,10 @@
   }
 }
 
+figure.nhsuk-image {
+    margin-bottom: nhsuk-spacing(4  ) !important;
+}
+
 .nhsuk-grid-row.bodyContent {
   padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3) nhsuk-spacing(0) !important;
 }
@@ -148,8 +154,11 @@
 }
 
 .nhsuk-grid-row.surveyBorder {
-  border-top: 4px solid $color_nhsuk-blue;
   padding-bottom: 16px;
+}
+
+section.survey {
+  border-top: 4px solid #005eb8;
 }
 
 .surveyText {
@@ -212,6 +221,7 @@
     padding: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
   }
 }
+
 
 // login flow styling
 
