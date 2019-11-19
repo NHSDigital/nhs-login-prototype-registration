@@ -23,3 +23,29 @@ router.post('/v1/set-up/have-login', function (req, res) {
 })
 
 module.exports = router;
+
+
+// Dev mode
+
+
+// Dev Mode
+
+function devModeRoute(req, res, next) {
+  if (!req.session.data['devMode']) {
+    console.log('no data found');
+    var devMode = req.query.devMode;
+    if (devMode === 'true') {
+      console.log('devmode detected');
+      req.session.data['devMode'] = 'true'
+      console.log('local storage updated');
+    } else {
+      console.log('devmode not detected');
+    }
+  } else {
+    console.log('data found and set to ' +  req.session.data['devMode'] )
+  }
+  next()
+}
+
+router.get("/*", devModeRoute);
+router.get("/", devModeRoute);

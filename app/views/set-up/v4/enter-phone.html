@@ -1,0 +1,38 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Enter your mobile number
+      </h1>
+
+      <form action="enter-OTP" method="post">
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Mobile number
+          </label>
+          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+            <p>We will send you a 6 digit code</p>
+          </span>
+          <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="phone-number" type="text" aria-describedby="input-with-hint-text-hint">
+        </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

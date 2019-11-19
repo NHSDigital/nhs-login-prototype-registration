@@ -4,6 +4,7 @@
 // Components that are not in the NHS.UK frontend library
 @import 'components/panel-confirmation';
 @import 'components/related-nav';
+@import 'components/devmode';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
@@ -20,9 +21,6 @@
   padding: 0px !important;
 }
 
-.nhsuk-details__summary {
-  color: #F0F4F5 !important;
-}
 
 .nhsuk-details__text.expandy {
   color: #F0F4F5 !important;
@@ -51,13 +49,13 @@
   }
   .page-section {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 580px;
     padding: 0;
     border: 1px solid #425563;
     box-shadow: 2px 2px 8px #f0f4f9;
     background: #fff;
     .email-content {
-    padding: 1em;
+    padding: 1.5em;
     }
   }
   footer {
@@ -336,4 +334,48 @@ div.heading-confirmation {
   background-color: #f5e6e4;
   border: none;
   border-top: 8px solid #da291c;
+}
+
+// spinner button styling
+
+.button--save.button--save {
+  position: relative;
+  transition: width ease 5s;
+  &::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: -6px;
+    height: 25px;
+    width: 25px;
+    background: transparent url("/images/mini-button-spinner.svg") no-repeat;
+    background-size: 25px 25px;
+    animation-name: spin;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    // spin the svg image
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  // override opacity of disabled button so spinner is more visible
+  &[disabled],
+  &[disabled]:hover {
+    background-color: #44834D;
+    opacity: 1;
+    box-shadow: 0 2px 0 #88988c
+  }
+}
+
+// blue interruption card
+.nhsuk-panel.panel--blue {
+  background-color: $color_nhsuk-blue;
+  color: white;
 }

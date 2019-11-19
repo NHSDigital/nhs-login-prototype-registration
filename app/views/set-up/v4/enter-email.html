@@ -1,0 +1,75 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <form action="enter-password" method="post">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Enter your email address
+            </h1>
+          </legend>
+          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+            <p>Enter your email address to create or log in to NHS login</p>
+          </span>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="user-email">
+              Email address
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" value="{{ data['user-email'] }}" type="email">
+          </div>
+        </fieldset>
+        <button class="nhsuk-button full-width">Continue</button>
+      </form>
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <ul>
+            <li><a href="enter-password">User has account</a></li>
+          </ul>      
+        </div>
+      </details>
+
+      {% endif %}
+    </div>
+  </div>
+
+<script type="text/javascript">
+  submitSpinner()
+  function submitSpinner() {
+    var selects = document.getElementById('button--save')
+    selects.addEventListener('click', function (event) {
+      event.preventDefault()
+      if (selects.getAttribute('disabled') === 'disabled') {
+        console.log('already clicked')
+      } else {
+        event.preventDefault()
+        console.log(selects.getAttribute('disabled'))
+        buttonClicked(selects)
+      }
+    })
+  }
+  function buttonClicked(target) {
+    target.setAttribute('disabled', 'disabled')
+    target.className += ' button--save'
+    setTimeout(function () {
+      window.location.href = target.getAttribute('href')
+    }, 2000)
+  }
+</script>
+
+{% endblock %}

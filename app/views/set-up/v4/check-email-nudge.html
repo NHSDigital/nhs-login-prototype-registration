@@ -1,0 +1,39 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Check your email
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        You need to confirm your email
+      </h1>
+
+      <p>We've sent an <a href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}</p>
+      <p>When you have confirmed your email you can continue to access the NHS app.</p>
+
+      <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
+          
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="" onclick="myFunction()">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="revealPassword">
+              I have confirmed my email address
+            </label>
+          </div>
+      </div>
+
+      <a class="nhsuk-button full-width" href="enter-phone">
+          Continue
+      </a> 
+
+      <p>You can <a href="enter-email">re-enter your email address</a> if you got it wrong.</p>
+      <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

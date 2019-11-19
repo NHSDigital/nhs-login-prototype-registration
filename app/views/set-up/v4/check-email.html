@@ -1,0 +1,49 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Check your email
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Check your email
+      </h1>
+
+      {% if data['user-email'] %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}.</p>
+      {% else %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
+      {% endif %}
+      <p>Click confirm in the email and continue from there.</p>
+
+      <a class="nhsuk-button full-width" href="enter-phone">
+          Continue
+      </a> 
+
+      <p>You can <a href="enter-email">re-enter your email address</a> if you got it wrong.</p>
+      <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
+
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <ul>
+            <li><a href="enter-password">User hasn't checked email</a></li>
+          </ul>      
+        </div>
+      </details>
+
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}
