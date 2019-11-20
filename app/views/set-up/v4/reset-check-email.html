@@ -8,22 +8,26 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
+      {{ backLink({
+        "href": "enter-password",
+        "text": "Back to: Enter your password"
+      }) }}
 
       <h1 class="nhsuk-heading-l">
-        Reset your password
+        Check your email
       </h1>
 
-      <p>We'll send you an email so that you can reset your password.</p>
+      {% if data['user-email'] %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-password-reset" target="_blank">email</a> to {{ data['user-email'] }} with a link to reset your password.</p>
+      {% else %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-password-reset" target="_blank">email</a> to mail@mail.com with a link to reset your password.</p>
+      {% endif %}
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="user-email">
-          Email address
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" type="text">
-      </div>
+      <p>After you have reset your password come back here and continue.</p>
+      <p>If you do not get an email, check your spam folder or try again.</p>
 
-      <a class="nhsuk-button full-width" href="enter-phone">
-          Continue
+      <a class="nhsuk-button full-width" href="login-enter-password">
+          Enter login details
       </a> 
 
     </div>

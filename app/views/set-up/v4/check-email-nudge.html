@@ -9,31 +9,69 @@
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
 
-      <h1 class="nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-heading-l">
         You need to confirm your email
       </h1>
 
-      <p>We've sent an <a href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}</p>
+      {% if data['user-email'] %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}.</p>
+      {% else %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
+      {% endif %}
+
       <p>When you have confirmed your email you can continue to access the NHS app.</p>
+
+      <p>Select confirm in the email and come back to this screen.</p>
+
 
       <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
           
           <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="" name="" type="checkbox" value="" onclick="myFunction()">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="revealPassword">
+            <input style="padding-right: 16px;" class="nhsuk-checkboxes__input" id="button--enable" name="button--enable" type="checkbox">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="button-enable">
               I have confirmed my email address
             </label>
           </div>
       </div>
 
-      <a class="nhsuk-button full-width" href="enter-phone">
+      <a class="nhsuk-button full-width nhsuk-button--disabled" id="button--continue" href="register-enter-phone">
           Continue
       </a> 
 
       <p>You can <a href="enter-email">re-enter your email address</a> if you got it wrong.</p>
       <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
 
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Email lookup</p>
+          <ul>
+            <li><a href="check-email-error">User hasn't checked email (again)</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
     </div>
   </div>
 
+
+<script type="text/javascript">
+var checkbox = document.getElementById('button--enable');
+var button = document.getElementById('button--continue');
+
+checkbox.addEventListener('change', (event) => {
+  if (event.target.checked) {
+    button.classList.remove('nhsuk-button--disabled');
+  } else {
+    button.classList.add('nhsuk-button--disabled');
+  }
+});
+</script>
 {% endblock %}

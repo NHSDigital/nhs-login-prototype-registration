@@ -13,12 +13,12 @@
       <form action="create-password" method="post">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
+            <h1 class="nhsuk-heading-l">
               Enter your email address
             </h1>
           </legend>
           <span class="nhsuk-hint" id="input-with-hint-text-hint">
-            <p>Enter your email address to create or log in to NHS login</p>
+            <p>Enter your email address to create or log in to NHS login.</p>
           </span>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="user-email">
@@ -27,7 +27,7 @@
             <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" value="{{ data['user-email'] }}" type="email">
           </div>
         </fieldset>
-        <button class="nhsuk-button full-width">Continue</button>
+        <button class="nhsuk-button full-width" id="button--save" href="create-password">Continue</button>
       </form>
 
       {% if data['devMode'] %}
@@ -39,7 +39,7 @@
         </summary>
         <div class="nhsuk-details__text">
           <ul>
-            <li><a href="enter-password">User has account</a></li>
+            <li><a href="login-enter-password">User has account</a></li>
           </ul>      
         </div>
       </details>

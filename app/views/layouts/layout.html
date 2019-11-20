@@ -71,6 +71,8 @@
   </header>
 {% endblock %}
 
+
+
 <!-- Footer goes inside this block -->
 {% block footer %}
   {{ footer({
@@ -86,10 +88,15 @@
       {
         "URL": "https://github.com/nhsuk/nhsuk-prototype-kit",
         "label": "NHS.UK prototype kit - GitHub"
+      },
+      {
+        "URL": "#",
+        "label": "dev-mode"
       }
     ]
   })}}
 {% endblock %}
+
 
 {% block bodyEnd %}
   {% block scripts %}

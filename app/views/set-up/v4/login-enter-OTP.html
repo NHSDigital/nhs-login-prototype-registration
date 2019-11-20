@@ -1,0 +1,69 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-heading-l">
+        Check your mobile phone
+      </h1>
+
+      {% if data['phone-number'] %}
+      <p>Enter the security code we've sent to {{ data['phone-number'] }}.</p>
+      {% else %}
+      <p>Enter the security code we've sent to {{ data['07422933311'] }}.</p>
+      {% endif %}
+
+      <form action="#" method="post">
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Security code
+          </label>
+          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+            <p>The code is 6 numbers</p>
+          </span>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="test-name-2" type="text" aria-describedby="input-with-hint-text-hint">
+        </div>
+
+        <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
+          
+            <div class="nhsuk-checkboxes__item">
+              <input style="padding-right: 16px;" class="nhsuk-checkboxes__input" id="rmd" name="rmd" type="checkbox">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="rmd">
+                Do not send me SMS codes on this device 
+              </label>
+            </div>
+        </div>
+
+        <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                What does this mean?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>We can remember the device you are using now, so you won’t need to enter a security code when you log in with this device in the future.</p>
+              <p>To keep your NHS login secure, you should only do this on your own personal or trusted devices.</p>
+              <p>We may ask if you still want us to remember this device in the future.</p>
+            </div>
+          </details>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
+        <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="enter-phone">enter your mobile phone number to try again.</a></p>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

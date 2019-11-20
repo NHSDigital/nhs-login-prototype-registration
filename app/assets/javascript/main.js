@@ -3,18 +3,6 @@
 
 // reveal password script
 
-function myFunction() {
-    var x = document.getElementsByName("revealPassword");
-    x.forEach(function(item) {
-      if (item.type === "password") {
-        item.type = "text";
-      } else {
-        item.type = "password";
-      }
-    });
-  }
-
-
 function setUpButton(button, input) {
   var form = document.createElement('form');
   if ('checkValidity' in form && 'querySelector' in document && 'classList' in document.documentElement) {
@@ -47,3 +35,13 @@ function setUpButton(button, input) {
 
 setUpButton('[data-toggle-password]', '[data-toggle-password-field]')
 setUpButton('[data-toggle-password-confirm]', '[data-toggle-password-field-confirm]')
+
+// function toggleDevMode(){
+//     const devModeButton = document.querySelector('#nhsuk-footer ul li a[href*="#"]');
+//     devModeButton.addEventListener('click', function (event) {
+//         event.preventDefault();
+//         //window.location.href = window.location.href + '?devMode=1'; 
+//     }, false);
+// }
+
+// toggleDevMode();

@@ -10,8 +10,10 @@
 
 
       <h1 class="nhsuk-heading-l">
-        Check your email
+        Something is wrong
       </h1>
+
+      <p>It doesn't look like you have confirmed your email address yet.</p>
 
       {% if data['user-email'] %}
       <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}.</p>
@@ -19,15 +21,12 @@
       <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
       {% endif %}
 
-      <p>Select confirm in the email and come back to this screen.</p>
-
-      <a class="nhsuk-button full-width" href="register-enter-phone">
-          I have checked my email
-      </a> 
-
       <p>You can <a href="enter-email">re-enter your email address</a> if you got it wrong.</p>
       <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
 
+      <a class="nhsuk-button full-width" href="enter-phone">
+          Continue
+      </a> 
 
       {% if data['devMode'] %}
       <details class="nhsuk-details dev-mode" role="group">

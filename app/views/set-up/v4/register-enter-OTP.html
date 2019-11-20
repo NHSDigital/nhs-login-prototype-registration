@@ -19,9 +19,9 @@
         Check your mobile phone
       </h1>
 
-      <p class="nhsuk-body-m">Enter the security code we've sent to {{ data['phone-number'] }}</p>
+      <p class="nhsuk-body-m">Enter the security code we've sent to <b>{{ data['phone-number'] }}</b></p>
 
-      <form action="registration-success-scope-uplift" method="post">
+      <form action="/set-up/v3/registration-success-scope-uplift" method="post">
         
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-with-hint-text">
@@ -37,7 +37,7 @@
           Continue
         </button>
 
-        <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="enter-phone">enter your mobile phone number to try again.</a></p>
+        <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="register-enter-phone">enter your mobile phone number to try again.</a></p>
 
       </form>
 
