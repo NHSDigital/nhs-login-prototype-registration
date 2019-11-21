@@ -24,14 +24,13 @@
         </div>
       </div>
 
-      {{ backLink({
-        "href": "what-you-need-scope-uplift",
-        "text": "Check what you need"
-      }) }}
-
-      <h1 class="nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-heading-l">
         Enter your email address
       </h1>
+
+      <span id="error-email-regex">
+          <p>Enter your email address to create or log in to NHS login.</p>
+      </span>
 
       <form action="/set-up/v2/check-your-email" class="nhsuk-form-group--error" method="post">
         
@@ -39,9 +38,6 @@
           <label class="nhsuk-label" for="input-with-hint-text">
             Email address
           </label>
-          <span class="nhsuk-hint" id="error-email-regex">
-            <p>We will send you an email to confirm your NHS login</p>
-          </span>
           <span class="nhsuk-error-message" id="error-regex">
             <span class="nhsuk-u-visually-hidden">Error:</span>Enter a valid email address
           </span>

@@ -23,7 +23,7 @@
           <span class="nhsuk-hint" id="input-with-hint-text-hint">
             <p>We will send you a 6 digit code</p>
           </span>
-          <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="phone-number" type="text" aria-describedby="input-with-hint-text-hint">
+          <input class="nhsuk-input nhsuk-input--width-20" id="phone-number" name="phone-number" type="text" aria-describedby="input-with-hint-text-hint">
         </div>
 
         <button class="nhsuk-button full-width" type="submit">
@@ -31,6 +31,24 @@
         </button>
 
       </form>
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Errors</p>
+          <ul>
+            <li><a href="../errors/error-phone-no-input">No input</a></li>
+            <li><a href="../errors/error-phone-no-input">Invalid format</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
 
     </div>
   </div>

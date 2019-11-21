@@ -13,11 +13,30 @@
       </h1>
 
       <p>Confirm this email address to continue setting up your NHS login.</p>
-      <p><a href="/set-up/v4/have-login" class="nhsuk-button">Confirm email address</a></p>
+      <p><a href="/set-up/v4/register-email-confirmed" class="nhsuk-button">Confirm email address</a></p>
       <p>If nothing happens when you click the button, try this link instead. You might need to copy and paste it into an internet browser:</p>
-      <p><a href="/set-up/v4/have-login">http://login.nhs.uk/create-account/v16/confirm-email</a></p>
+      <p><a href="/set-up/v4/register-email-confirmed">http://login.nhs.uk/create-account/v16/confirm-email</a></p>
       <p>If you did not try to set up an NHS login using this email address, then ignore this email. We will delete your information after 48 hours.</p>
 
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Errors</p>
+          <ul>
+            <li><a href="../set-up/errors/error-link-already-used">Link expired</a></li>
+            <li><a href="../set-up/errors/error-link-malformed">Link malformed</a></li>
+            <li><a href="../set-up/errors/error-link-already-used">Link already used</a></li>
+          </ul>   
+        </div>
+      </details>
+
+      {% endif %}
     </div>
   </div>
 
