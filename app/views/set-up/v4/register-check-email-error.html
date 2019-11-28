@@ -13,20 +13,15 @@
         Something is wrong
       </h1>
 
-      <p>It doesn't look like you have confirmed your email address yet.</p>
+      <p>You haven't confirmed your email yet.</p>
 
-      {% if data['user-email'] %}
-      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}.</p>
-      {% else %}
-      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
-      {% endif %}
-
-      <p>You can <a href="enter-email">re-enter your email address</a> if you got it wrong.</p>
-      <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
-
-      <a class="nhsuk-button full-width" href="enter-phone">
-          Continue
+      <p>We think you should try create an NHS login again.</p>
+      
+      <a class="nhsuk-button full-width" href="enter-email">
+          Start again
       </a> 
+      
+      <p>If you have confirmed your email, you can try <a href="register-enter-phone">try again</a> to continue setting up your NHS login.</p>
 
       {% if data['devMode'] %}
       <details class="nhsuk-details dev-mode" role="group">

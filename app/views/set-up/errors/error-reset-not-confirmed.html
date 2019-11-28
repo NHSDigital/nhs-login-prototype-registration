@@ -9,9 +9,20 @@
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
       {{ backLink({
-        "href": "enter-email",
+        "href": "/set-up/v4/enter-email",
         "text": "Back to: Enter your email"
       }) }}
+
+      <div class="nhsuk-error-summary error-be-validation" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          You cannot reset your password
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <p>
+            You have not confirmed your email address. Select confirm email address in the email we sent you to complete creating your NHS login.
+          </p>
+        </div>
+      </div>
 
       <h1 class="nhsuk-heading-l">
         Enter your password
@@ -20,10 +31,10 @@
       <form action="login-enter-OTP" method="post" autocomplete="on">
         <label class="nhsuk-label" for="input-with-hint-text">
             Enter your password to log in.
-          </label>  
-          <label class="nhsuk-label nhsuk-u-margin-top-3" for="input-with-hint-text">
-              Password
-            </label>
+        </label>  
+        <label class="nhsuk-label nhsuk-u-margin-top-3" for="input-with-hint-text">
+            Password
+        </label>
           <input autocomplete="on" class="nhsuk-input nhsuk-input--width-20" data-toggle-password-field-confirm id="revealPassword" name="revealPassword" type="password" aria-describedby="password reveal">
           <div style="display: inline; position: relative;">
             <div style="display: inline; position: relative;">
@@ -32,6 +43,7 @@
               </button>
             </div>          
           </div>
+        </form>
 
           <div class="nhsuk-u-margin-top-5">
               <p><a href="reset-check-email">Forgotten your password?</a></p>
@@ -43,33 +55,10 @@
             </button>
           </div>
 
-        </form>
-
-        {% if data['devMode'] %}
-        <details class="nhsuk-details dev-mode" role="group">
-          <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-            <span class="nhsuk-details__summary-text">
-              Continue with testing scenario
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>Input errors</p>
-            <ul>
-              <li><a href="../errors/error-login-enter-password-incorrect">Incorrect password</a></li>
-              <li><a href="../errors/error-login-enter-password-regex">Field validation</a></li>
-              <li><a href="../errors/error-login-enter-password-no-input">No input</a></li>
-              <li><a href="../errors/error-login-phone-otp-exceeded">User requests OTP >5 times</a></li>
-            </ul>   
-            <p>Forgotten password errors</p>
-            <ul>
-              <li><a href="../errors/error-reset-not-confirmed">User hasn't confirmed email yet</a></li>
-            </ul>   
           </div>
-        </details>
-  
-        {% endif %}
+        </div>
 
-      </div>
-    </div>  
-        
+    </div>
+
+
 {% endblock %}
