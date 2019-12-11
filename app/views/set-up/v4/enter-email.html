@@ -10,7 +10,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-      <form action="create-password" method="post">
+      <form action="register-create-password">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-heading-l">
@@ -20,19 +20,21 @@
           <span>
             <p>Enter your email address to create or log in to NHS login.</p>
           </span>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="user-email">
-              Email address
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" value="{{ data['user-email'] }}" type="email">
-          </div>
+         
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="user-email">
+                Email address
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="userEmail" name="userEmail" value="{{ data['user-email'] }}" type="email">
+            </div>
+         
           <div class="nhsuk-inset-text nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5">
             <span class="nhsuk-u-visually-hidden">Information: </span>
             <h3>What is NHS login?</h3>
             <p>NHS login is a new way to log in to health websites and apps. If you do not have an NHS login, you'll need to set one up. Then you can access online health services wherever you see 'NHS login'.</p>
           </div>
         </fieldset>
-        <button class="nhsuk-button full-width" id="button--save" href="register-create-password">Continue</button>
+        <button class="nhsuk-button full-width" id="button--save">Continue</button>
       </form>
 
       {% if data['devMode'] %}
@@ -60,7 +62,7 @@
   </div>
 
 <script type="text/javascript">
-  submitSpinner()
+ /* submitSpinner()
   function submitSpinner() {
     var selects = document.getElementById('button--save')
     selects.addEventListener('click', function (event) {
@@ -80,7 +82,7 @@
     setTimeout(function () {
       window.location.href = target.getAttribute('href')
     }, 2000)
-  }
+  }*/
 </script>
 
 {% endblock %}
