@@ -10,7 +10,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-      <form action="register-create-password">
+      <form action="register-create-password" autocomplete="on">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-heading-l">
@@ -22,7 +22,7 @@
           </span>
          
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="user-email">
+              <label class="nhsuk-label" for="userEmail">
                 Email address
               </label>
               <input class="nhsuk-input nhsuk-input--width-20" id="userEmail" name="userEmail" value="{{ data['user-email'] }}" type="email">
