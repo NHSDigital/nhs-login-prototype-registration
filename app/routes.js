@@ -22,6 +22,20 @@ router.post('/set-up/v4/register-create-password', function (req, res) {
   res.redirect('/set-up/v4/register-check-email');
 });
 
+router.post('/set-up/v4/register-enter-phone', function (req, res) {
+  console.log('method called');
+  if(req.body.phoneNumber === '07429854013'){
+    notifyClient.sendSms('2b7236fc-d18b-493c-807a-c185a2330ee2',req.body.phoneNumber)
+    .then(function (response) {
+      console.log('success')
+      res.redirect('/set-up/v4/register-enter-OTP');
+    }).catch(function (error) {
+        console.log('notify-error' + error)
+        res.redirect('/set-up/v4/register-enter-OTP');
+      });;
+  }
+  res.redirect('/set-up/v4/register-enter-OTP');
+});
 
 // Add your routes here - above the module.exports line
 
