@@ -107,8 +107,27 @@ button.secondary.home:first-child {
     background-color: green;
 }
 
-i {
-    margin-right: 8px; 
-    width: 18px;
-    height: auto;
+i, .fas, .far {
+    margin-right: 16px; 
+    width: 16px;
+}
+
+.fa-briefcase-medical {
+    color: #3D8AC6;
+}
+
+.fa-heart {
+    color: #3D8AC6;
+}
+
+.fa-map-marker-alt {
+    color: #3D8AC6;
+}
+
+.fa-clock {
+    color: #3D8AC6;
+}
+
+.fa-comment-alt {
+    color: #3D8AC6;
 }
