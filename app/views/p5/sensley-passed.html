@@ -1,26 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ask NHS App</title>
+    <meta name="description" content="Ask NHS App">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/ask-nhs.css">
+    <script src="https://kit.fontawesome.com/96c849e0f5.js" crossorigin="anonymous"></script>
+  </head>
+  <body >
 
-{% extends 'layouts/layout.html' %}
-{% from 'button/macro.njk' import button %}
-{% from 'back-link/macro.njk' import backLink %}
+    <img src="/images/sensley-home.png" width=100%; height=auto>
 
-{% block pageTitle %}
-  Ask NHS App
-{% endblock %}
+    <button class="secondary home"><i class="fas fa-briefcase-medical"></i>Symptom checker</button>
+    <button class="secondary home"><i class="far fa-heart"></i>Self care</button>
+    <button class="secondary home"><i class="fas fa-map-marker-alt"></i>Service finder</button>
+    <button class="secondary home"><i class="far fa-clock"></i>Appointment booking</button>
+    <button class="secondary home"><i class="far fa-comment-alt"></i>About ask NHS</button>
 
-{% block content %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
-    <div class="nhsuk-panel panel--blue nhsuk-u-margin-top-4">
-      <h1 class="nhsuk-heading-l">
-        Thank you - we will check your information within two hours 
-      </h1>
-      <p>You need to go back to the NHS App to continue creating your NHS login.</p>
+    <p>Powered by <span><img class="sensley" width=100px; height=auto; src="/images/sensley.png"></span></p>
+    
+  
+    <script src="" async defer></script>
+  </body>
+</html>
 
-    </div>
-  </div>
-</div>
 
-{% endblock %}
 
 
 
