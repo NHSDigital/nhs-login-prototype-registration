@@ -37,31 +37,41 @@ router.post('/set-up/v4/register-enter-phone', function (req, res) {
    //res.redirect('/set-up/v4/register-enter-OTP');
 });
 
-// Add your routes here - above the module.exports line
+// Routing for mid-level journey
+// router.post('/set-up/v4/auth', function (req, res) {
+//   // Makes variable and gives it the value from 'auth'
+//   var p5 = req.session.data['p5']
 
-// Have login
-router.post('/v1/set-up/have-login', function (req, res) {
+//   // Check whether the variable matches a condition
+//   if (p5 === "true"){
+//     // Send user to next page
+//     res.redirect('/p5/know-nhs-number')
+//     }
+//   else {
+//     // Send user to ineligible page
+//     res.redirect('/set-up/v4/auth')
+//   }
+
+// })
+
+router.post('/p5/know-nhs-number', function (req, res) {
 
   // Make a variable and give it the value from 'know-nhs-number'
-  var haveLogin = req.session.data['have-login']
+  var nhsNumber = req.session.data['know-nhs-number']
 
   // Check whether the variable matches a condition
-  if (haveLogin == "Yes") {
+  if (nhsNumber == "Yes"){
     // Send user to next page
-    res.redirect('login')
+    res.redirect('/p5/enter-nhs-number')
   }
   else {
     // Send user to ineligible page
-    res.redirect('create')
+    res.redirect('/p5/enter-dob')
   }
 
 })
 
 module.exports = router;
-
-
-// Dev mode
-
 
 // Dev Mode
 

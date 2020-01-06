@@ -1,0 +1,76 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 60px !important;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+}
+
+img.button {
+    width: 90% !important;
+}
+
+img.sensley {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+    margin-top: 4px;
+}
+
+h1 {
+    color: #444444;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+p {
+    color: #4E4E4E;
+    text-align: center;
+    font-weight: 200;
+    font-size: 16px;
+    padding: 32px;
+    margin-bottom: 60px;
+}
+
+img.button {
+    margin-bottom: 24px;
+}
+
+button {
+    background-color: #0D60B5;
+    color: white;
+    margin-bottom: 24px;
+    font-size: 17px;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: 200;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #3899FD;
+}
+
+button.secondary {
+    background-color: white !important;
+    color: #0D60B5;
+    border: 1px solid #0D60B5;
+}
+

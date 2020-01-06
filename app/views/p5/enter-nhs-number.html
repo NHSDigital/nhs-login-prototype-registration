@@ -1,0 +1,42 @@
+
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your NHS number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+        <form action="submit-information">
+            <div class="nhsuk-form-group">
+                <h1 class="nhsuk-label-wrapper">
+                <label class="nhsuk-label nhsuk-label--l" for="nhs-number">
+                    What is your NHS number?
+                </label>
+                </h1>
+                <span class="nhsuk-hint" id="nhs-number-hint">
+                Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span class="nhsuk-u-nowrap">485 777 3456</span>.
+                </span>
+                <input class="nhsuk-input nhsuk-input--width-20" id="nhs-number" name="nhs-number" type="text" aria-describedby="nhs-number-hint">
+            </div>
+        <button class="nhsuk-button full-width" type="submit">
+            Continue
+        </button>
+    </form>
+</div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -11,22 +11,24 @@
       <div class="nhsuk-width-container">
          <h1 class="nhsuk-heading-l">Checking your details</h1>
      
-      <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
-    
-        <div class="bar_container">
-          <div id="main_container">
-            <div id="pbar" class="progress-spinner" data-percent="0">
-              <img src="/images/loader-spinner.svg" width="200px" height="200px" id="spinner" class=""/>
-              <div class="ppc-loading">
-                <div class="pcc-percents-wrapper">
-                  <span id="spinner-status" class="nhsuk-body">Loading</span><span aria-hidden="true">...</span>
+      <form action="auth" method="post">
+        <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
+      
+          <div class="bar_container">
+            <div id="main_container">
+              <div id="pbar" class="progress-spinner" data-percent="0">
+                <img src="/images/loader-spinner.svg" width="200px" height="200px" id="spinner" class=""/>
+                <div class="ppc-loading">
+                  <div class="pcc-percents-wrapper">
+                    <span id="spinner-status" class="nhsuk-body">Loading</span><span aria-hidden="true">...</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-    
-      </section>
+      
+        </section>
+      </form>
 
       {% if data['devMode'] %}
       <details class="nhsuk-details dev-mode" role="group">
@@ -55,12 +57,15 @@
   </div>
 </div>
 
+{% if data['p5'] %}
 <script>
-    setTimeout(function(){ 
-      window.location.href = 'http://nhs-cid.herokuapp.com/service-access/v19/service-access-start?service=app5&serviceName=the%20NHS%20app&devMode=undefined&returnUrl=https://nhs-audit.herokuapp.com/release-dec/explainer/health-services-such-as-your-GP-surgery-or-dentist-have-their-own-health-record-about-you&lsId=undefined&lsAccess=undefined&lsStudy=undefined&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&hideBack=true#'
-    }, 2500);
-
+    setTimeout(function(){
+      window.location.href='/p5/know-nhs-number';
+  }, 2500);
 </script>
+{% endif %}
+
+
 
 
 {% endblock %}

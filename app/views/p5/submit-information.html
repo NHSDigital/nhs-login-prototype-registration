@@ -1,0 +1,42 @@
+
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  What is your name?
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+    <form method="submit">
+      <div class="nhsuk-form-group">
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Please submit your information
+            </h1>
+          </legend>
+      
+        <p>By clicking submit, you agree to send us your personal information, photo and video.</p>
+
+        <p>Your data will be stored securely. Read our <a href="http://nhs-cid.herokuapp.com/terms-of-use/v2/privacy-notice">privacy notice</a> to find out what we'll do with your data.</p>
+      </div>
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  What is your name?
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+    <form method="submit" action="enter-postcode">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h1 class="nhsuk-fieldset__heading">
+              What is your name?
+            </h1>
+          </legend>
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              First name
+            </label>
+            <input class="nhsuk-input" id="first-name" name="first-name" type="text">
+            <label class="nhsuk-label nhsuk-u-margin-top-4" for="middle-name">
+              Middle name
+            </label>
+            <input class="nhsuk-input" id="middle-name" name="middle-name" type="text">
+            <label class="nhsuk-label nhsuk-u-margin-top-4"" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input" id="last-name-name" name="last-name" type="text">
+          </div>
+
+        </fieldset>
+      </div>
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
