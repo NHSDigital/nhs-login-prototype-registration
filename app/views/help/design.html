@@ -1,0 +1,61 @@
+<!--
+ADDING CUSTOM CSS
+Add your custom CSS/Sass to /app/assets/sass/main.scss
+-->
+
+
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout-header.html' %}
+
+<!-- Set the page title inside this block -->
+{% block pageTitle %}
+  Design guidelines and support
+{% endblock %}
+
+<!-- Breadcrumb goes inside this block -->
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-xl">
+        Design guidelines and support
+      </h1>
+    </div>
+  </div>
+
+
+      <!-- Add your content here -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+
+    <h3><a href="https://beta.nhs.uk/service-manual/">NHS service manual</a></h3>
+    <p>Design principles, accessibility, front-end library and other useful information.</p>
+
+    <h3><a href="https://beta.nhs.uk/service-manual/prototyping-tools">NHS prototyping kit</a></h3>
+    <p>Get set up and learn how to use the NHS prototype kit.</p>
+
+    <h3><a href="https://beta.nhs.uk/service-manual/content">NHS content style guide</a></h3>
+    <p>How to write for digital NHS services. Voice, tone, language and health literacy.</p>
+
+    <h3><a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines">NHS Digital style guidelines</a></h3>
+    <p>Role, identity, mission, values and extra resources.</p>
+
+    <h3><a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/">NHS identity guidelines</a></h3>
+    <p>Colours, fonts, naming principles, imagery, logos and more.</p>
+
+    <h3><a href="https://digital.nhs.uk/about-nhs-digital/our-work/nhs-digital-data-and-technology-standards/framework/beta---service-design-standards">NHS service design standards</a></h3>
+    <p>An overview of the service design strategy and standards set out by NHS.</p>
+
+    <h3><a href="https://design-system.service.gov.uk/">GOV.UK design system</a></h3>
+    <p>Learn from the research and experience of other service teams and avoid repeating work that’s already been done.</p>
+      
+
+      <!-- End of content -->
+
+    </div>
+
+{% endblock %}

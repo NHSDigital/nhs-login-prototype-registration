@@ -1,0 +1,241 @@
+<!--
+ADDING CUSTOM CSS
+Add your custom CSS/Sass to /app/assets/sass/main.scss
+-->
+
+
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout-header.html' %}
+
+<!-- Set the page title inside this block -->
+{% block pageTitle %}
+  NHS login prototypes
+{% endblock %}
+
+<!-- Breadcrumb goes inside this block -->
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-xl">
+        NHS login prototypes
+      </h1>
+    </div>
+  </div>
+
+
+      <!-- Add your content here -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-action-link">
+    <a class="nhsuk-action-link__link"" href="#">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text action-link-l"><h1 class="nhsuk-heading-l">End-to-end journey</h1></span>
+    </a>
+  </div>  
+  <p class="nhsuk-body-m">The 'big' prototype, covering the end-to-end user journey in the old NHS.UK styles. The prototype journey can be started from the <a href="http://nhs-cid.herokuapp.com/start/v12/nhs-app-start">NHS App</a>.</p>
+  <details class="nhsuk-details nhsuk-expander version-list">
+    <summary class="nhsuk-details__summary details-index">
+      <span class="nhsuk-details__summary-text">
+        Details
+      </span>
+    </summary>
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Information</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"></th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Author</td>
+            <td class="nhsuk-table__cell ">Will Hepworth (Squad 1)<br>Matt Fielding (Squad 2)</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Up to date?</td>
+            <td class="nhsuk-table__cell ">Yes - v19 ✅</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Repository</td>
+            <td class="nhsuk-table__cell "><a href=https://github.com/MattFielding/nhs-cid">View on Github</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Username & password</td>
+            <td class="nhsuk-table__cell ">(nhs) (cid)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <hr>
+
+  <div class="nhsuk-action-link">
+    <a class="nhsuk-action-link__link"" href="#">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text action-link-l"><h1 class="nhsuk-heading-l">Registration</h1></span>
+    </a>
+  </div>  <p class="nhsuk-body-m">The front door of login. Covers the registration flow improvements (known as v2) in the new NHS.UK styles.</p>
+  <details class="nhsuk-details nhsuk-expander version-list">
+    <summary class="nhsuk-details__summary details-index">
+      <span class="nhsuk-details__summary-text">
+        Details
+      </span>
+    </summary>
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Information</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"></th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Author</td>
+            <td class="nhsuk-table__cell ">Will Hepworth (Squad 1)</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Up to date?</td>
+            <td class="nhsuk-table__cell ">Yes - v4 ✅</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Repository</td>
+            <td class="nhsuk-table__cell "><a href="https://github.com/wshepworth/nhs-login">View on Github</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Username & password</td>
+            <td class="nhsuk-table__cell ">(nhs) (login)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <hr>
+
+  <div class="nhsuk-action-link">
+    <a class="nhsuk-action-link__link"" href="#">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text action-link-l"><h1 class="nhsuk-heading-l">Delegated access and settings</h1></span>
+    </a>
+  </div>
+  <p class="nhsuk-body-m">How a user manages their NHS login settings and delegates access.</p>
+  <details class="nhsuk-details nhsuk-expander version-list">
+    <summary class="nhsuk-details__summary details-index">
+      <span class="nhsuk-details__summary-text">
+        Details
+      </span>
+    </summary>
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Information</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"></th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Author</td>
+            <td class="nhsuk-table__cell ">Will Hepworth (Settings - squad 1)<br>Lydia Teebay (DA - squad 3)</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Up to date?</td>
+            <td class="nhsuk-table__cell ">Yes - settings v6 ✅<br>Yes - DA MVP ✅</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Repository</td>
+            <td class="nhsuk-table__cell "><a href="https://github.com/wshepworth/manage-login">View on Github</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Username & password</td>
+            <td class="nhsuk-table__cell ">(manage) (login)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <hr>
+  
+  <div class="nhsuk-action-link">
+    <a class="nhsuk-action-link__link"" href="#">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text action-link-l"><h1 class="nhsuk-heading-l">Mid-level proofing journey</h1></span>
+    </a>
+  </div>
+  <p class="nhsuk-body-m">Early work on a P5 journey. The prototype journey can be started from the <a href="">NHS App</a> or the <a href="">Ask NHS App</a>.</p>
+  <details class="nhsuk-details nhsuk-expander version-list">
+    <summary class="nhsuk-details__summary details-index">
+      <span class="nhsuk-details__summary-text">
+        Details
+      </span>
+    </summary>
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Information</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"></th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Author</td>
+            <td class="nhsuk-table__cell ">Will Hepworth (Squad 1)</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Up to date?</td>
+            <td class="nhsuk-table__cell ">Yes - v1 ✅</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Repository</td>
+            <td class="nhsuk-table__cell "><a href="https://github.com/wshepworth/nhs-login">View on Github</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Username & password</td>
+            <td class="nhsuk-table__cell ">(nhs) (login)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <hr>
+
+      <!-- End of content -->
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+      <h3 class="nhsuk-heading-m">Useful links</h2>
+      <ul>
+        <li><a href="">Test</a></li>
+        <li><a href="">Test</a></li>
+        <li><a href="">Test</a></li>
+      </ul>
+  </div>
+{% endblock %}

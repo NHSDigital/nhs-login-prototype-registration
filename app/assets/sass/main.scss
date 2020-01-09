@@ -390,3 +390,15 @@ div.heading-confirmation {
 	position: relative;
 	top: -5px;
 }
+
+// action link font size increase 
+
+.nhsuk-action-link__text.action-link-l {
+  font-size: 32px !important;
+  position: relative;
+  bottom: 6px;
+  text-decoration: underline !important; 
+  h1 {
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,61 @@
+<!--
+ADDING CUSTOM CSS
+Add your custom CSS/Sass to /app/assets/sass/main.scss
+-->
+
+
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout-header.html' %}
+
+<!-- Set the page title inside this block -->
+{% block pageTitle %}
+  Programme documentation
+{% endblock %}
+
+<!-- Breadcrumb goes inside this block -->
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-xl">
+        Programme documentation
+      </h1>
+    </div>
+  </div>
+
+
+      <!-- Add your content here -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+
+    <h3>Dev environments</h3>
+      <ul>
+        <li><a href="https://auth.demo.signin.nhs.uk/authorize?scope=openid%20profile%20nhs_app_credentials%20gp_integration_credentials&client_id=nhs-online&redirect_uri=http://localhost:3000/auth-return&response_type=code&state=appstate&nonce=randomnonce">Demo</a></li>
+        <li><a href="https://auth.lab.signin.nhs.uk/authorize?scope=openid%20profile%20nhs_app_credentials%20gp_integration_credentials&client_id=nhs-online&redirect_uri=http://localhost:3000/auth-return&response_type=code&state=appstate&nonce=randomnonce">Lab</a></li>
+        <li><a href="https://auth.uat.signin.nhs.uk/authorize?scope=openid%20profile%20nhs_app_credentials%20gp_integration_credentials%20phone%20email%20profile_extended&client_id=nhs-online&redirect_uri=http://localhost:3000/auth-return&response_type=code&state=appstate&nonce=randomnonce">UAT</a></li>
+      </ul>
+
+    <h3>Jira boards</h3>
+    	<ul>
+    		<li><a href="https://jira.digital.nhs.uk/secure/RapidBoard.jspa?rapidView=588">Tyrell (squad 1)</a></li>
+    		<li><a href="https://jira.digital.nhs.uk/secure/RapidBoard.jspa?rapidView=585">i2D2 (squad 2)</a></li>
+    		<li><a href="https://jira.digital.nhs.uk/secure/RapidBoard.jspa?rapidView=1174">Delegated access</a></li>
+    		<li><a href="https://jira.digital.nhs.uk/secure/RapidBoard.jspa?rapidView=795">Onboarding</a></li>
+      </ul>
+      
+    <h2>Live NHS login pages</h2>
+    	<ul>
+    		<li><a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">NHS.UK - NHS login</a></li>
+    		<li><a href="https://digital.nhs.uk/services/nhs-login">NHS Digital Corporate site</a></li>
+    		<li><a href="https://github.com/nhsconnect/nhslogin">NHS login developer help</a></li>
+    	</ul>
+
+      <!-- End of content -->
+
+    </div>
+
+{% endblock %}
