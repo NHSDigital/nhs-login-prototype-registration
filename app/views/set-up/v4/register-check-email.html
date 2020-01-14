@@ -13,8 +13,10 @@
         Check your email
       </h1>
 
-      {% if data['user-email'] %}
-      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}.</p>
+      <input type="hidden" name="userEmail" id="userEmail" value="{{data['userEmail']}}" />
+
+      {% if data['userEmail'] %}
+      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['userEmail'] }}.</p>
       {% else %}
       <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
       {% endif %}

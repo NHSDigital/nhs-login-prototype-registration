@@ -97,7 +97,7 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
           </tr>
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell">Up to date?</td>
-            <td class="nhsuk-table__cell ">Yes - v4 ✅</td>
+            <td class="nhsuk-table__cell ">Yes - v4 ✅ - {{ commitDate }}</td>
           </tr>
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell">Repository</td>
@@ -196,7 +196,48 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
 
   <hr>
 
+  <h1 class="nhsuk-heading-l"><a href="https://nhs-login-idchecker.herokuapp.com/">ID checker app</a></h1>
+  <p class="nhsuk-body-m">The interface that ID checkers user to verify a users identity.</p>
+  <details class="nhsuk-details nhsuk-expander version-list">
+    <summary class="nhsuk-details__summary details-index">
+      <span class="nhsuk-details__summary-text">
+        Details
+      </span>
+    </summary>
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Information</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"></th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Author</td>
+            <td class="nhsuk-table__cell ">Matt Fielding (squad 2)</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Up to date?</td>
+            <td class="nhsuk-table__cell ">Yes</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Repository</td>
+            <td class="nhsuk-table__cell "><a href="https://github.com/MattFielding/idchecker">View on Github</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Username & password</td>
+            <td class="nhsuk-table__cell ">(nhs) (id)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <hr>
+
       <!-- End of content -->
 
-    </div>
+</div>
 {% endblock %}
