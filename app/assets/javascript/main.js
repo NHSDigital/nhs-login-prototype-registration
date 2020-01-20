@@ -45,3 +45,38 @@ setUpButton('[data-toggle-password-confirm]', '[data-toggle-password-field-confi
 // }
 
 // toggleDevMode();
+
+function getGuthuibData () {
+
+    // let commitDate = {};
+    // request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', { json: true, headers: { 'User-Agent': 'wshepworth' } }, (err, res, body) => {
+    //   if (err) { 
+    //     console.error(err);
+    //    }
+    //   commitDate = body.commit.author.date; 
+      
+    //   var commitDateCell =  document.querySelectorAll('.commit-date');
+  
+    //    setTimeout(function () {
+    //      if(commitDateCell) {
+    //        console.log('yey');
+           
+    //      } else {
+     
+    //        console.log('ney');
+    //      }
+    //    }, 2000)
+          
+    // });
+
+    fetch('https://api.github.com/repos/wshepworth/nhs-login/commits/master')
+        .then((response) => {
+            return response.json();
+        })
+        .then((myJson) => {
+            console.log(myJson);
+        });
+
+}
+
+getGuthuibData();
