@@ -41,7 +41,7 @@ function toggleDevMode(){
             window.location.href = window.location.href + '?devMode=1'; 
         }
         else{
-            window.location.href = '/examples/passing-data/clear-data';
+            window.location.href = 'clear-data';
         }
     }, false);
 }
