@@ -79,10 +79,10 @@ router.get('/help/prototypes', function (req, res) {
       console.error(err);
      }
     commitDate = body.commit.author.date; 
-    
     console.log(commitDate);
     
   });
+  console.log(commitDate);
   return res.render('help/prototypes', {'commitDate': commitDate});
 })
 

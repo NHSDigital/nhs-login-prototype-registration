@@ -1,6 +1,3 @@
-// ES6 or Vanilla JavaScript
-
-
 // reveal password script
 
 function setUpButton(button, input) {
@@ -36,47 +33,17 @@ function setUpButton(button, input) {
 setUpButton('[data-toggle-password]', '[data-toggle-password-field]')
 setUpButton('[data-toggle-password-confirm]', '[data-toggle-password-field-confirm]')
 
-// function toggleDevMode(){
-//     const devModeButton = document.querySelector('#nhsuk-footer ul li a[href*="#"]');
-//     devModeButton.addEventListener('click', function (event) {
-//         event.preventDefault();
-//         //window.location.href = window.location.href + '?devMode=1'; 
-//     }, false);
-// }
-
-// toggleDevMode();
-
-function getGuthuibData () {
-
-    // let commitDate = {};
-    // request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', { json: true, headers: { 'User-Agent': 'wshepworth' } }, (err, res, body) => {
-    //   if (err) { 
-    //     console.error(err);
-    //    }
-    //   commitDate = body.commit.author.date; 
-      
-    //   var commitDateCell =  document.querySelectorAll('.commit-date');
-  
-    //    setTimeout(function () {
-    //      if(commitDateCell) {
-    //        console.log('yey');
-           
-    //      } else {
-     
-    //        console.log('ney');
-    //      }
-    //    }, 2000)
-          
-    // });
-
-    fetch('https://api.github.com/repos/wshepworth/nhs-login/commits/master')
-        .then((response) => {
-            return response.json();
-        })
-        .then((myJson) => {
-            console.log(myJson);
-        });
-
+function toggleDevMode(){
+    const devModeButton = document.querySelector('#nhsuk-footer ul li a[href*="#"]');
+    devModeButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if(window.location.href.indexOf('devMode=') === -1){
+            window.location.href = window.location.href + '?devMode=1'; 
+        }
+        else{
+            window.location.href = '/examples/passing-data/clear-data';
+        }
+    }, false);
 }
 
-getGuthuibData();
+toggleDevMode();
