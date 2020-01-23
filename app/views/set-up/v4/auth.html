@@ -63,6 +63,12 @@
       window.location.href='/p5/know-nhs-number';
   }, 2500);
 </script>
+{% else %}
+<script>
+  setTimeout(function(){
+    window.location.href='http://nhs-cid.herokuapp.com/service-access/v19/service-access-start?service=app5&serviceName=the%20NHS%20app&devMode=undefined&returnUrl=https://nhs-audit.herokuapp.com/release-dec/explainer/health-services-such-as-your-GP-surgery-or-dentist-have-their-own-health-record-about-you&lsId=undefined&lsAccess=undefined&lsStudy=undefined&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&hideBack=true';
+}, 2500);
+</script>
 {% endif %}
 
 
