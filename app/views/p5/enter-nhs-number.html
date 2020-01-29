@@ -10,7 +10,7 @@
 {% block content %}
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
-        <form action="auth">
+        <form action="enter-dob">
             <div class="nhsuk-form-group">
                 <h1 class="nhsuk-label-wrapper">
                 <label class="nhsuk-label nhsuk-label--l" for="nhs-number">
@@ -23,8 +23,9 @@
                 <input class="nhsuk-input nhsuk-input--width-20" id="nhs-number" name="nhs-number" type="text" aria-describedby="nhs-number-hint">
             </div>
         <button class="nhsuk-button full-width" type="submit">
-            Submit information
+            Continue
         </button>
+        <input style="display: none;" class="nhsuk-input nhsuk-input--width-20" id="know-nhs-number" name="know-nhs-number" value="{{ data['know-nhs-number'] }}">
     </form>
 </div>
 </div>

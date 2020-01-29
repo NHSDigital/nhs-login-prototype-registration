@@ -55,6 +55,8 @@ router.post('/set-up/v4/register-enter-phone', function (req, res) {
 
 // })
 
+// routing for know NHS number
+
 router.post('/p5/know-nhs-number', function (req, res) {
 
   // Make a variable and give it the value from 'know-nhs-number'
