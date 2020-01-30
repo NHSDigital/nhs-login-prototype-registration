@@ -417,8 +417,14 @@ div.heading-confirmation {
   margin-top: 16px;
 }
 
-// Styling for cookies tables
+// Styling for cookies page
 
 .nhsuk-table-responsive {
   margin-bottom: 0px !important;
+}
+
+.app-side-nav__item--current {
+  border-left: 4px solid #005eb8;
+  padding-left: 8px;
+  font-weight: bold;
 }
