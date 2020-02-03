@@ -428,3 +428,11 @@ div.heading-confirmation {
   padding-left: 8px;
   font-weight: bold;
 }
+
+// RMD checkbox 
+
+@media (max-width: 500px) {
+  .nhsuk-label.nhsuk-checkboxes__label {
+    padding-top: 0px;
+  }
+}
