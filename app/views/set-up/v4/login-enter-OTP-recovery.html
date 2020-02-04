@@ -59,32 +59,27 @@
           Continue
         </button>
 
+        <p>If you don't have access to your phone, you can <a href="http://nhs-cid.herokuapp.com/account-recovery/enter-number?service=app5&serviceName=the%20NHS%20app&emailAddress=undefined&mobileNum=undefined&devMode=undefined&returnUrl=https://nhs-audit.herokuapp.com/release-dec/explainer/health-services-such-as-your-GP-surgery-or-dentist-have-their-own-health-record-about-you&verified=undefined&poluser=undefined&resend=undefined&result=200&reason=undefined">change your phone number securely</a>.</p> 
+
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+          <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+            <span class="nhsuk-details__summary-text">
+              Continue with testing scenario
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>No account recovery</p>
+            <ul>
+              <li><a href="login-enter-OTP">Enter OTP (no account recovery link)</a></li>
+            </ul>
+
+          </div>
+        </details>
+  
+        {% endif %}
       </form>
-
-      {% if data['devMode'] %}
-      <details class="nhsuk-details dev-mode" role="group">
-        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-          <span class="nhsuk-details__summary-text">
-            Continue with testing scenario
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <p>Account recovery</p>
-          <ul>
-            <li><a href="login-enter-OTP-recovery">Account recovery link</a></li>
-          </ul>
-
-          <p>Errors</p>
-          <ul>
-            <li><a href="../errors/error-login-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
-            <li><a href="../errors/error-login-OTP-no-input">No input</a></li>
-            <li><a href="../errors/error-login-OTP-regex">Field validation</a></li>
-            <li><a href="../errors/error-login-OTP-incorrect">Incorrect OTP</a></li>
-          </ul>
-        </div>
-      </details>
-
-      {% endif %}
 
     </div>
   </div>
