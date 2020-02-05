@@ -19,7 +19,11 @@
         Check your mobile phone
       </h1>
 
+      {% if data['phoneNumber'] %}
       <p class="nhsuk-body-m">Enter the security code we've sent to {{ data['phoneNumber'] }}</p>
+      {% else %}
+      <p class="nhsuk-body-m">Enter the security code we've sent to 07123456789</p>
+      {% endif %}
 
       <form>
         
