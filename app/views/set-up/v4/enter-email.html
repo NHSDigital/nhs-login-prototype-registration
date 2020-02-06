@@ -34,7 +34,9 @@
             <p>NHS login is a new way to log in to health websites and apps. If you do not have an NHS login, you'll need to set one up. Then you can access online health services wherever you see 'NHS login'.</p>
           </div>
         </fieldset>
-        <button class="nhsuk-button full-width" id="button--save">Continue</button>
+        <a>
+          <button data-redirect="register-create-password" class="nhsuk-button full-width" id="button--save">Continue</button>
+        </a>
       </form>
 
       {% if data['devMode'] %}
@@ -65,7 +67,14 @@
   </div>
 
 <script type="text/javascript">
- /* submitSpinner()
+ submitSpinner()
+  function buttonClicked(target) {
+      target.setAttribute('disabled', 'disabled')
+      target.className += ' button--save'
+      setTimeout(function () {
+        window.location.href = target.dataset.redirect;
+      }, 2000)
+    }
   function submitSpinner() {
     var selects = document.getElementById('button--save')
     selects.addEventListener('click', function (event) {
@@ -79,13 +88,7 @@
       }
     })
   }
-  function buttonClicked(target) {
-    target.setAttribute('disabled', 'disabled')
-    target.className += ' button--save'
-    setTimeout(function () {
-      window.location.href = target.getAttribute('href')
-    }, 2000)
-  }*/
+
 </script>
 
 {% endblock %}
