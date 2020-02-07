@@ -1,0 +1,57 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Enter your mobile number
+      </h1>
+
+      <form method="post">
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Mobile number
+          </label>
+          <span class="nhsuk-hint" id="input-with-hint-text-hint">
+            <p>We will send you a 6 digit security code</p>
+          </span>
+          <input class="nhsuk-input nhsuk-input--width-20" id="phoneNumber" value="{{ data['phoneNumber'] }}" name="phoneNumber" type="number" aria-describedby="enter-your-mobile-number">
+        </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Errors</p>
+          <ul>
+            <li><a href="../errors/error-register-phone-no-input">No input</a></li>
+            <li><a href="../errors/error-register-phone-regex">Invalid format</a></li>
+            <li><a href="../errors/error-register-phone-otp-exceeded">User requests OTP >5 times</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}
