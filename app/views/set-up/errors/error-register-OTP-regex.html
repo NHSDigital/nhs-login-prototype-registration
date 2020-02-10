@@ -33,7 +33,7 @@
         Check your mobile phone
       </h1>
 
-      <p class="nhsuk-body-m">Enter the security code we've sent to <b>{{ data['phone-number'] }}</b></p>
+      <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>{{ data['phoneNumber'] }}</b></p>
 
       <form action="/set-up/v2/registration-success-scope-uplift" class="nhsuk-form-group nhsuk-form-group--error"  method="post">
         
@@ -41,9 +41,6 @@
           <label class="nhsuk-label" for="input-with-hint-text">
             Security code
           </label>
-          <span class="nhsuk-hint" id="input-with-hint-text-hint">
-            <p>The code is 6 numbers</p>
-          </span>
           <span class="nhsuk-error-message" id="error-OTP-no-input">
               <span class="nhsuk-u-visually-hidden">Error:</span>Enter a valid security code
           </span>

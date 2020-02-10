@@ -8,6 +8,8 @@ const request = require('request');
 // // Notify integration
 const notifyClient = new notify(process.env.NOTIFYAPIKEY);
 
+// If you need to use Notify in the future the route will need updating to point to the most recent version (e.g. v4 or v5)
+
 // The URL here needs to match the URL of the page that the user is on
 // when they type in their email address
 // router.post('/set-up/v4/register-create-password', function (req, res) {

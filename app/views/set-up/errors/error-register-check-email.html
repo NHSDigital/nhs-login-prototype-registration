@@ -27,13 +27,13 @@
         You need to confirm your email
       </h1>
 
-      {% if data['user-email'] %}
-      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}.</p>
+      {% if data['userEmail'] %}
+      <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['userEmail'] }}.</p>
       {% else %}
-      <p>We've sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
+      <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
       {% endif %}
 
-      <p>When you have confirmed your email you can continue to access the NHS App.</p>
+      <p>When you have confirmed your email address, you can continue to access the NHS App.</p>
 
       <p>Select confirm in the email and come back to this screen.</p>
 
@@ -56,7 +56,7 @@
           Continue
       </a> 
 
-      <p>You can <a href="enter-email">re-enter your email address</a> if you got it wrong.</p>
+      <p>You can <a href="enter-email">enter your email address again</a> if you got it wrong.</p>
       <p>Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.</p>
 
 
