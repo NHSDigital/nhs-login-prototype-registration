@@ -12,7 +12,15 @@
     <link rel="stylesheet" href="/css/ask-nhs.css">
     <script src="https://kit.fontawesome.com/96c849e0f5.js" crossorigin="anonymous"></script>
   </head>
-  <body >
+  <body class="width-600">
+
+    <div id="popup">
+      <div class="content-popup">
+        <h2>Looks like you're viewing this on a desktop</h2>
+        <p>For a better experience you will need to switch to mobile view.</p>
+        <a onclick="desktopPopup()" href="#">Dismiss</a>
+      </div>
+    </div>
 
     <img src="/images/sensley-home.png" width=100%; height=auto>
 
@@ -25,7 +33,12 @@
     <p>Powered by <span><img class="sensley" width=100px; height=auto; src="/images/sensley.png"></span></p>
     
   
-    <script src="" async defer></script>
+    <script>
+      function desktopPopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+
   </body>
 </html>
 

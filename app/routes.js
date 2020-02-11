@@ -71,7 +71,7 @@ router.post('/p5/know-nhs-number', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('/p5/enter-dob')
+    res.redirect('/p5/enter-name')
   }
 
 })
