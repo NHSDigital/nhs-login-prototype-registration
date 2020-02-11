@@ -1,0 +1,153 @@
+// styling for email-login-info
+
+.nhsuk-image.login-email {
+	background-color: transparent;
+	color: transparent;
+	border-bottom: none;
+	width: 100%;
+  }
+  
+  .nhsuk-image.button-1 {
+	background-color: transparent;
+	color: transparent;
+	padding: 24px 24px 8px 24px;
+	border-bottom: none;
+	@include mq($from: desktop) {
+	  margin-top: nhsuk-spacing(0) !important;
+	  background-color: $color_nhsuk-grey-4;  
+	}
+	@include mq($from: tablet) {
+	  margin-top: nhsuk-spacing(0) !important;
+	  width: 80%;
+	  background-color: $color_nhsuk-grey-4;  
+	}
+	@include mq($from: mobile) {
+	  margin-top: nhsuk-spacing(0) !important;
+	  width: 100%;
+	  background-color: $color_nhsuk-grey-4;  
+	}
+  }
+  
+  @media (max-width: 768px) and (min-width: 550px) {
+	.nhsuk-image.button-1 {
+		padding: 20px 20px 20px 20px !important;
+		margin: auto;
+		width: 80%;
+	}
+  }
+  
+  .nhsuk-hero__wrapper {
+	@include mq($from: mobile) {
+	  padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3) nhsuk-spacing(0) !important;
+	}
+	@include mq($from: tablet) {
+	  padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3) nhsuk-spacing(0) !important;
+	}
+	@include mq($from: desktop) {
+	  padding: nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) !important;
+	}
+  }
+  
+  .nhsuk-grid-column-one-half.image {
+	@include mq($from: mobile) {
+	  display: none;
+	}
+	@include mq($from: tablet) {
+	  display: block;
+	  padding-bottom: nhsuk-spacing(2);
+	}
+  }
+  
+  figure.nhsuk-image {
+	  margin-bottom: nhsuk-spacing(4  ) !important;
+  }
+  
+  .nhsuk-grid-row.bodyContent {
+	padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3) nhsuk-spacing(0) !important;
+  }
+  
+  
+  @media (min-width: 40.0625em) {
+	.nhsuk-heading-m.subtext {
+	  margin-bottom: 0px !important;
+	}
+  }
+  
+  .nhsuk-hero.survey {
+	position: bottom;
+	background-color: $color_nhsuk-white;
+	color: $color_nhsuk-black;
+	width: 100%;
+	overflow: visible !important;
+  }
+  
+  .nhsuk-grid-row.surveyBorder {
+	padding-bottom: 16px;
+  }
+  
+  section.survey {
+	border-top: 4px solid #005eb8;
+  }
+  
+  .surveyText {
+	@include mq($from: desktop) {
+	  padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	}
+	@include mq($from: tablet) {
+	  padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	}
+	@include mq($from: mobile) {
+	  padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	}
+  }
+  
+  .survey-response {
+	@include mq($from: desktop) {
+	  padding: nhsuk-spacing(4) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(4) !important;
+	}
+  }
+  
+  #maincontent {
+	padding-bottom: 0px;
+  }
+  
+  .nhsuk-grid-one-third.repsonse {
+	display: inline;
+  }
+  
+  .nhsuk-body-l.feedbackLink {
+	text-decoration: underline;
+	white-space: nowrap; 
+	@include mq($from: mobile) {
+	  padding: nhsuk-spacing(0) nhsuk-spacing(5) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	  display: inline;
+	}
+	@include mq($from: tablet) {
+	  padding: nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	  display: inline;
+	}
+	@include mq($from: desktop) {
+	  padding: nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	  display: inline; 
+	}
+  }
+  
+  @media (min-width: 40.0625em) {
+	.nhsuk-form-group.surveyText {
+	  margin-bottom: 0px;
+	}
+  }
+  
+  .nhsuk-grid-column-full.survey-column {
+	@include mq($from: mobile) {
+	  padding: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	}
+	@include mq($from: tablet) {
+	  padding: nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	}
+	@include mq($from: tablet) {
+	  padding: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(0) !important;
+	}
+  }
+
+  
