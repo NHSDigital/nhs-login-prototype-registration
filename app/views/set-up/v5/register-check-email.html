@@ -13,8 +13,6 @@
         Check your email
       </h1>
 
-      <input type="hidden" name="userEmail" id="userEmail" value="{{data['userEmail']}}"/>
-
       {% if data['userEmail'] %}
       <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['userEmail'] }}</p>
       {% else %}
