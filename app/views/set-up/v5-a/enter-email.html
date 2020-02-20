@@ -1,0 +1,94 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <form action="register-create-password" autocomplete="on">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-heading-l">
+              Enter your email address
+            </h1>
+          </legend>
+          <span>
+            <p>Enter your email address to log in to NHS login. If you do not have an NHS login, enter your email address to set one up.</p>
+          </span>
+         
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="userEmail">
+                Email address
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="userEmail" name="userEmail" type="email">
+            </div>
+         
+          <div class="nhsuk-inset-text nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <h3>What is NHS login?</h3>
+            <p>NHS login is a new way to log in to health websites and apps. If you do not have an NHS login, you will need to set one up. Then you can access online health services wherever you see 'NHS login'.</p>
+          </div>
+        </fieldset>
+        <a>
+          <button type="submit" class="nhsuk-button full-width">Continue</button>
+        </a>
+      </form>
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Routes</p>
+          <ul>
+            <li><a href="login-enter-password">User has account</a></li>
+          </ul>    
+          <p>Errors</p>
+          <ul>
+            <li><a href="../errors/error-email-no-input">No input</a></li>
+            <li><a href="../errors/error-email-regex">Field validation</a></li>
+            <li><a href="../errors/error-lock-OTP-attempts-exceeded">Account lock: OTP attempts exceeded</a></li>
+            <li><a href="../errors/error-lock-OTP-requests-exceeded">Account lock: OTP requests exceeded</a></li>
+            <li><a href="../errors/error-lock-password-attempts-exceeded">Account lock: Password attempts exceeded</a></li>    
+          </ul>   
+        </div>
+      </details>
+
+      {% endif %}
+    </div>
+  </div>
+
+<script type="text/javascript">
+ submitSpinner()
+  function buttonClicked(target) {
+      target.setAttribute('disabled', 'disabled')
+      target.className += ' button--save'
+      setTimeout(function () {
+        window.location.href = target.dataset.redirect;
+      }, 2000)
+    }
+  function submitSpinner() {
+    var selects = document.getElementById('button--save')
+    selects.addEventListener('click', function (event) {
+      event.preventDefault()
+      if (selects.getAttribute('disabled') === 'disabled') {
+        console.log('already clicked')
+      } else {
+        event.preventDefault()
+        console.log(selects.getAttribute('disabled'))
+        buttonClicked(selects)
+      }
+    })
+  }
+
+</script>
+
+{% endblock %}

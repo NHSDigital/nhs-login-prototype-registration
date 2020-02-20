@@ -1,0 +1,73 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Create a password
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      {{ backLink({
+        "href": "enter-email",
+        "text": "Back to: Enter your email"
+      }) }}
+
+      <h1 class="nhsuk-heading-l">
+        What you need
+      </h1>
+
+      <div class="start-info first">
+        <div class="start-icon">
+          <svg class="nhsuk-icon nhsuk-icon__user nhsuk-icon--size-50 nhsuk-u-margin-right-2" xmlns="http://www.w3.org/2000/svg" viewBox="6 0 20 24" width="32" aria-hidden="true">
+            <path class="user-icon" d="M16,2a10,10,0,0,0-1.09,19.93H15A6,6,0,0,0,16,22a6,6,0,0,0,1-.06h.05A10,10,0,0,0,16,2Zm5.4,15.88a6.45,6.45,0,0,0,.14-.88,5.3,5.3,0,0,0-2.4-4.14,4.89,4.89,0,0,1-6.28,0A5.3,5.3,0,0,0,10.46,17a6.45,6.45,0,0,0,.14.88,8,8,0,1,1,10.8,0Z"/>
+            <circle class="user-icon" cx="16" cy="9" r="3"/>
+          </svg>
+       </div>
+        <div class="start-info-content">
+          <h2 class="nhsuk-heading-m start-heading">5 to 10 minutes of time</h2>
+          <p>This will take longer if you are using assistive technologies.</p>
+        </div>
+      </div>
+
+      <div class="start-info">
+        <div class="start-icon">
+          <svg class="nhsuk-icon nhsuk-icon__user nhsuk-icon--size-50 nhsuk-u-margin-right-2" xmlns="http://www.w3.org/2000/svg" viewBox="6 0 20 24" width="32" aria-hidden="true">
+            <path class="user-icon" d="M16,2a10,10,0,0,0-1.09,19.93H15A6,6,0,0,0,16,22a6,6,0,0,0,1-.06h.05A10,10,0,0,0,16,2Zm5.4,15.88a6.45,6.45,0,0,0,.14-.88,5.3,5.3,0,0,0-2.4-4.14,4.89,4.89,0,0,1-6.28,0A5.3,5.3,0,0,0,10.46,17a6.45,6.45,0,0,0,.14.88,8,8,0,1,1,10.8,0Z"/>
+            <circle class="user-icon" cx="16" cy="9" r="3"/>
+          </svg>
+        </div>
+        <div class="start-info-content">
+          <h2 class="nhsuk-heading-m start-heading">Personal information</h2>
+          <p>So that we can match you to your NHS record, you will need to tell us your:</p>
+            <ul>
+              <li>name</li>
+              <li>date of birth</li>
+              <li>postcode</li>
+            </ul>
+          <p>If you do not know these details, you can tell us your NHS number and date of birth.</p>
+        </div>
+      </div>
+
+        <div class="start-info">
+          <div class="start-icon">
+            <svg class="nhsuk-icon nhsuk-icon__user nhsuk-icon--size-50 nhsuk-u-margin-right-2" xmlns="http://www.w3.org/2000/svg" viewBox="6 0 20 24" width="32" aria-hidden="true">
+              <path class="user-icon" d="M16,2a10,10,0,0,0-1.09,19.93H15A6,6,0,0,0,16,22a6,6,0,0,0,1-.06h.05A10,10,0,0,0,16,2Zm5.4,15.88a6.45,6.45,0,0,0,.14-.88,5.3,5.3,0,0,0-2.4-4.14,4.89,4.89,0,0,1-6.28,0A5.3,5.3,0,0,0,10.46,17a6.45,6.45,0,0,0,.14.88,8,8,0,1,1,10.8,0Z"/>
+              <circle class="user-icon" cx="16" cy="9" r="3"/>
+            </svg>
+          </div>
+          <div class="start-info-content">
+            <h2 class="nhsuk-heading-m start-heading">A mobile phone</h2>
+            <p>You will need a working mobile phone with signal, as we will text you a security code.</p>
+          </div>
+        </div>
+
+        <!-- ---------------- -->
+
+        <a href="register-create-password" class="nhsuk-button">Continue</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}
