@@ -41,7 +41,7 @@ const notifyClient = new notify(process.env.NOTIFYAPIKEY);
 // });
 
 // Routing for mid-level journey
-// router.post('/set-up/v4/auth', function (req, res) {
+// router.post('/set-up/v5-a/auth', function (req, res) {
 //   // Makes variable and gives it the value from 'auth'
 //   var p5 = req.session.data['p5']
 
@@ -50,12 +50,86 @@ const notifyClient = new notify(process.env.NOTIFYAPIKEY);
 //     // Send user to next page
 //     res.redirect('/p5/know-nhs-number')
 //     }
+//   else if (signIn === "true") {
+//     // Send user to app page
+//     res.redirect('/p5/sensely-finished')
+//   }
 //   else {
 //     // Send user to ineligible page
-//     res.redirect('/set-up/v4/auth')
+//     res.redirect('/set-up/v5/auth')
 //   }
 
 // })
+
+// router.post('/set-up/v5-b/auth', function (req, res) {
+//   // Makes variable and gives it the value from 'auth'
+//   var p5 = req.session.data['p5']
+
+//   // Check whether the variable matches a condition
+//   if (p5 === "true"){
+//     // Send user to next page
+//     res.redirect('/p5/know-nhs-number')
+//     }
+//   else if (signIn === "true") {
+//     // Send user to app page
+//     res.redirect('/p5/sensely-finished')
+//   }
+//   else {
+//     // Send user to ineligible page
+//     res.redirect('/set-up/v5/auth')
+//   }
+
+// })
+
+// routing for sign in
+
+router.post('/set-up/v5-b/what-you-need', function (req, res) {
+
+  // Make a variable and give it the value from 'signIn'
+  var signIn = req.session.data['signIn']
+
+  // Check whether the variable matches a condition
+  if (signIn == "true") {
+    // Send user to next page
+    res.redirect('login-enter-password')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('register-create-password')
+  }
+})
+
+router.post('/set-up/v5-a/enter-email', function (req, res) {
+
+  // Make a variable and give it the value from 'signIn'
+  var signIn = req.session.data['signIn']
+
+  // Check whether the variable matches a condition
+  if (signIn == "true") {
+    // Send user to next page
+    res.redirect('login-enter-password')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('register-create-password')
+  }
+})
+
+router.post('/p5/sensely-sign-in', function (req, res) {
+
+  // Make a variable and give it the value from 'signIn'
+  var optionB = req.session.data['optionB']
+
+  // Check whether the variable matches a condition
+  if (optionB == "true") {
+    // Send user to next page
+    res.redirect('/set-up/v5-b/enter-email')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/set-up/v5-a/enter-email')
+  }
+})
 
 // routing for know NHS number
 
@@ -73,7 +147,6 @@ router.post('/p5/know-nhs-number', function (req, res) {
     // Send user to ineligible page
     res.redirect('/p5/enter-name')
   }
-
 })
 
 router.get('/help/prototypes', function (req, res) {
