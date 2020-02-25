@@ -149,6 +149,22 @@ router.post('/p5/know-nhs-number', function (req, res) {
   }
 })
 
+router.post('/p5/demo/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "Yes") {
+    // Send user to next page
+    res.redirect('/p5/demo/enter-nhs-number')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/p5/demo/enter-name')
+  }
+})
+
 router.get('/help/prototypes', function (req, res) {
   let commitDate = {};
   request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', { json: true, headers: { 'User-Agent': 'wshepworth' } }, (err, res, body) => {
