@@ -9,7 +9,7 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
 
 <!-- Set the page title inside this block -->
 {% block pageTitle %}
-  NHS login prototypes
+NHS login prototypes
 {% endblock %}
 
 <!-- Breadcrumb goes inside this block -->
@@ -17,75 +17,88 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
 {% endblock %}
 
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
 
-      <!-- Change the page title here -->
-      <h1 class="nhsuk-heading-xl">
-        NHS login prototypes
-      </h1>
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      NHS login prototypes
+    </h1>
 
-    </div>
   </div>
+</div>
 
-      <!-- Add your content here -->
+<!-- Add your content here -->
 
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
 
-  <h1 class="nhsuk-heading-l"> NHS login registration</h1>
-  <p class="nhsuk-body-m">Redesigning a slicker, improved registration process for new users</p>
-  <ul>
-    <li><p><a href="https://jira.digital.nhs.uk/browse/CID-5421">JIRA ticket</a></p></li>
-    <li><p><a href="/set-up/v5/enter-email">Current version</a></p></li>
-  </ul>
+    <h1 class="nhsuk-heading-l"> NHS login registration</h1>
+    <p class="nhsuk-body-m">Redesigning a slicker, improved registration process for new users</p>
+    <ul>
+      <li>
+        <p><a href="https://jira.digital.nhs.uk/browse/CID-5421">JIRA ticket</a></p>
+      </li>
+      <li>
+        <p><a href="/set-up/v6/enter-email">Current version</a></p>
+      </li>
+    </ul>
 
-<details class="nhsuk-details nhsuk-expander version-list">
-    <summary class="nhsuk-details__summary details-index">
-      <span class="nhsuk-details__summary-text">
-        Versions
-      </span>
-    </summary>
-    <div class="nhsuk-details__text version-text">
-      <table>
-        <tbody>
-          <tr>
-            <th><strong>Version</strong></th>
-            <th><strong>Research</strong></th>
-            <th><strong>Description</strong></th>
-          </tr>
-          <tr>
-            <th><a href="/set-up/v1/enter-email">v1</a></th>
-            <td>No research - incomplete prototype</td>
-            <td>Initial effort by CB</td>
-          </tr>
-          <tr>
-            <th><a href="/set-up/v2/login-yes-no">v2</a></th>
-            <td>Pop-up research at Leeds Beckett and Holbeck One Stop (19 & 20 Sept). 24 participants</td>
-            <td>Testing usability, one vs two password entries</td>
-          </tr>
-          <tr>
-            <th><a href="/set-up/v3/login-yes-no">v3</a></th>
-            <td>Pop-up research with 2 ESL users and 1 ESL user with cognitive impairment</td>
-            <td>Iterations on research (password field and HMW content)</td>
-          </tr>
-          <tr>
-            <th><a href="/set-up/v4/enter-email">v4</a></th>
-            <td>Pop-up research December 17th at Leeds library</td>
-            <td>Researched 'remove log in' and email first</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </details>
-  <details class="nhsuk-details nhsuk-expander version-list" id="registration-error-messages">
+    <details class="nhsuk-details nhsuk-expander version-list">
+      <summary class="nhsuk-details__summary details-index">
+        <span class="nhsuk-details__summary-text">
+          Versions
+        </span>
+      </summary>
+      <div class="nhsuk-details__text version-text">
+        <table>
+          <tbody>
+            <tr>
+              <th><strong>Version</strong></th>
+              <th><strong>Research</strong></th>
+              <th><strong>Description</strong></th>
+            </tr>
+            <tr>
+              <th><a href="/set-up/v1/enter-email">v1</a></th>
+              <td>No research - incomplete prototype</td>
+              <td>Initial effort by CB</td>
+            </tr>
+            <tr>
+              <th><a href="/set-up/v2/login-yes-no">v2</a></th>
+              <td>Pop-up research at Leeds Beckett and Holbeck One Stop (19 & 20 Sept). 24 participants</td>
+              <td>Testing usability, one vs two password entries</td>
+            </tr>
+            <tr>
+              <th><a href="/set-up/v3/login-yes-no">v3</a></th>
+              <td>Pop-up research with 2 ESL users and 1 ESL user with cognitive impairment</td>
+              <td>Iterations on research (password field and HMW content)</td>
+            </tr>
+            <tr>
+              <th><a href="/set-up/v4/enter-email">v4</a></th>
+              <td>Pop-up research December 17th at Leeds library</td>
+              <td>Researched 'remove log in' and email first</td>
+            </tr>
+            <tr>
+              <th><a href="/set-up/v5-a/enter-email">v5-a</a></th>
+              <td>[Include summarised research notes from v5-a here]</td>
+              <td>[Include summarised research notes from v5-a here]</td>
+            </tr>
+            <tr>
+              <th><a href="/set-up/v5-b/enter-email">v5-b</a></th>
+              <td>[Include summarised research notes from v5-b here]</td>
+              <td>[Include summarised research notes from v5-b here]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander version-list" id="registration-error-messages">
       <summary class="nhsuk-details__summary details-index">
         <span class="nhsuk-details__summary-text">
           Error messages
         </span>
       </summary>
-
 
       <h4 class="nhsuk-heading-s nhsuk-u-margin-top-5">Enter email</h4>
       <ul>
@@ -97,12 +110,19 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
       <ul>
         <li><a href="../set-up/errors/error-register-password-no-input">No input [first field]</a></li>
         <li><a href="../set-up/errors/error-register-password-no-input-confirm">No input [second field]</a></li>
-        <li><a href="../set-up/errors/error-register-password-no-input-both">No input [first and second field]</a></li>
-        <li><a href="../set-up/errors/error-register-password-regex-no-input">Field validation error [first field] and no input [second field]</a></li>
-        <li><a href="../set-up/errors/error-register-password-no-input-regex">No input [first field] and field validation error [second field]</a></li>
+        <li><a href="../set-up/errors/error-register-password-no-input-both">No input [first and second field]</a>
+        </li>
+        <li><a href="../set-up/errors/error-register-password-regex-no-input">Field validation error [first field]
+            and
+            no input [second field]</a></li>
+        <li><a href="../set-up/errors/error-register-password-no-input-regex">No input [first field] and field
+            validation error [second field]</a></li>
         <li><a href="../set-up/errors/error-register-password-regex">Field validation error [first field]</a></li>
-        <li><a href="../set-up/errors/error-register-password-regex-confirm">Field validation error [second field]</a></li>
-        <li><a href="../set-up/errors/error-register-password-regex-both">Field validation error [first and second field]</a></li>
+        <li><a href="../set-up/errors/error-register-password-regex-confirm">Field validation error [second
+            field]</a>
+        </li>
+        <li><a href="../set-up/errors/error-register-password-regex-both">Field validation error [first and second
+            field]</a></li>
         <li><a href="../set-up/errors/error-register-password-dont-match">Passwords don't match</a></li>
       </ul>
 
@@ -111,7 +131,9 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
         <li><a href="../set-up/errors/error-login-enter-password-incorrect">Incorrect password</a></li>
         <li><a href="../set-up/errors/error-login-enter-password-no-input">No input</a></li>
         <li><a href="../set-up/errors/error-login-OTP-exceeded">User requests OTP >5 times</a></li>
-        <li><a href="../set-up/errors/error-reset-not-confirmed">User cannot reset password as hasn't confirmed email yet</a></li>
+        <li><a href="../set-up/errors/error-reset-not-confirmed">User cannot reset password as hasn't confirmed
+            email
+            yet</a></li>
         <li><a href="../set-up/errors/error-login-enter-password-exceeded">Password attempts exceeded</a></li>
       </ul>
 
@@ -119,12 +141,13 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
       <ul>
         <li><a href="../set-up/errors/error-register-link-expired">Link expired</a></li>
         <li><a href="../set-up/errors/error-register-link-malformed">Link malformed</a></li>
-        <li><a href="../set-up/errors/error-register-link-used">Link already used</a></li>          
+        <li><a href="../set-up/errors/error-register-link-used">Link already used</a></li>
       </ul>
 
       <h4 class="nhsuk-heading-s">Confirm your email [nudge]</h4>
       <ul>
-        <li><a href="../set-up/errors/error-register-check-email">User didn't check email and pressed continue</a></li>
+        <li><a href="../set-up/errors/error-register-check-email">User didn't check email and pressed continue</a>
+        </li>
       </ul>
 
       <h4 class="nhsuk-heading-s">Register: enter mobile number</h4>
@@ -157,14 +180,14 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
       <ul>
         <li><a href="../set-up/errors/error-reset-link-expired">Link expired</a></li>
         <li><a href="../set-up/errors/error-reset-link-malformed">Link malformed</a></li>
-        <li><a href="../set-up/errors/error-reset-link-used">Link already used</a></li>       
+        <li><a href="../set-up/errors/error-reset-link-used">Link already used</a></li>
       </ul>
 
       <h4 class="nhsuk-heading-s">Account locking</h4>
       <ul>
         <li><a href="../set-up/errors/error-lock-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
         <li><a href="../set-up/errors/error-lock-OTP-requests-exceeded">OTP requests exceeded</a></li>
-        <li><a href="../set-up/errors/error-lock-password-attempts-exceeded">Password attempts exceeded</a></li>       
+        <li><a href="../set-up/errors/error-lock-password-attempts-exceeded">Password attempts exceeded</a></li>
       </ul>
 
       <h4 class="nhsuk-heading-s">Reset: enter your new password</h4>
@@ -172,11 +195,17 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
         <li><a href="../set-up/errors/error-reset-password-no-input">No input [first field]</a></li>
         <li><a href="../set-up/errors/error-reset-password-no-input-confirm">No input [second field]</a></li>
         <li><a href="../set-up/errors/error-reset-password-no-input-both">No input [first and second field]</a></li>
-        <li><a href="../set-up/errors/error-reset-password-regex-no-input">Field validation error [first field] and no input [second field]</a></li>
-        <li><a href="../set-up/errors/error-reset-password-no-input-regex">No input [first field] and field validation error [second field]</a></li>
+        <li><a href="../set-up/errors/error-reset-password-regex-no-input">Field validation error [first field] and
+            no
+            input [second field]</a></li>
+        <li><a href="../set-up/errors/error-reset-password-no-input-regex">No input [first field] and field
+            validation
+            error [second field]</a></li>
         <li><a href="../set-up/errors/error-reset-password-regex">Field validation error [first field]</a></li>
-        <li><a href="../set-up/errors/error-reset-password-regex-confirm">Field validation error [second field]</a></li>
-        <li><a href="../set-up/errors/error-reset-password-regex-both">Field validation error [first and second field]</a></li>
+        <li><a href="../set-up/errors/error-reset-password-regex-confirm">Field validation error [second field]</a>
+        </li>
+        <li><a href="../set-up/errors/error-reset-password-regex-both">Field validation error [first and second
+            field]</a></li>
         <li><a href="../set-up/errors/error-reset-password-dont-match">Passwords don't match</a></li>
       </ul>
 
@@ -188,122 +217,138 @@ Add your custom CSS/Sass to /app/assets/sass/main.scss
 
 
       <!-- commented out due to decision to point users back to service to display the error, not NHS login
-        <h4 class="nhsuk-heading-s">Authcode</h4>
-      <ul>
-        <li><a href="../set-up/errors/error-auth-pds-1">PDS error 1 - deceased user</a></li>
-        <li><a href="../set-up/errors/error-auth-pds-2">PDS error 2 - NHS login superseded</a></li>
-      </ul>
-      -->
+            <h4 class="nhsuk-heading-s">Authcode</h4>
+          <ul>
+            <li><a href="../set-up/errors/error-auth-pds-1">PDS error 1 - deceased user</a></li>
+            <li><a href="../set-up/errors/error-auth-pds-2">PDS error 2 - NHS login superseded</a></li>
+          </ul>
+          -->
 
     </details>
 
-  <hr>
+    <hr>
 
-      <h1 class="nhsuk-heading-l"> Mid-level proofing journey</h1>
-      <p class="nhsuk-body-m"></p>
-      <ul>
-        <li><p><a href="https://jira.digital.nhs.uk/browse/CID-2346">JIRA ticket</a></p></li>
-        <li><p><a href="/set-up/demo/enter-email?p5=true">Generic flow (for demo purposes)</a></p></li>
-        <li><p><a href="/p5/sensely-start?p5=true&serviceName=sensely">Start from the Ask NHS App</a></p></li>
-        <li><p><a href="/p5/sensely-start-b?p5=true&serviceName=sensely">Start from the Ask NHS App (with what you need)</a></p></li>
-        <li><p><a href="http://nhs-cid.herokuapp.com/start/v12/nhs-app-start">Start from NHS App</a></p></li>
-      </ul>
+    <h1 class="nhsuk-heading-l"> Mid-level proofing journey</h1>
+    <p class="nhsuk-body-m"></p>
+    <ul>
+      <li>
+        <p><a href="https://jira.digital.nhs.uk/browse/CID-2346">JIRA ticket</a></p>
+      </li>
+      <li>
+        <p><a href="/set-up/demo/enter-email?p5=true">Generic flow (for demo purposes)</a></p>
+      </li>
+      <li>
+        <p><a href="/p5/sensely-start?p5=true&serviceName=sensely">Start from the Ask NHS App</a></p>
+      </li>
+      <li>
+        <p><a href="/p5/sensely-start-b?p5=true&serviceName=sensely">Start from the Ask NHS App (with what you need)</a>
+        </p>
+      </li>
+      <li>
+        <p><a href="http://nhs-cid.herokuapp.com/start/v12/nhs-app-start">Start from NHS App</a></p>
+      </li>
+    </ul>
 
-      <details class="nhsuk-details nhsuk-expander version-list">
-          <summary class="nhsuk-details__summary details-index">
-            <span class="nhsuk-details__summary-text">
-              Versions
-            </span>
-          </summary>
-          <div class="nhsuk-details__text version-text">
-            <table>
-              <tbody>
-                <tr>
-                  <th><strong>Version</strong></th>
-                  <th><strong>Research</strong></th>
-                  <th><strong>What was new</strong></th>
-                </tr>
-                <tr>
-                  <th><a href="/p5/sensely-start?p5=true">v1</a></th>
-                  <td>Research conducted early January <br>(remote sessions)</td>
-                  <td>Initial proof of concept</td>
-                </tr>
-                <tr>
-                  <th><a href="/p5/sensely-start?p5=true">v2</a></th>
-                  <td>Pop-up research conducted 21/1/20 at One Health Lewisham with <b>Ask NHS App</b></td>
-                  <td>Reworded NHS number radios, changed flow of sign-in / register</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
+    <details class="nhsuk-details nhsuk-expander version-list">
+      <summary class="nhsuk-details__summary details-index">
+        <span class="nhsuk-details__summary-text">
+          Versions
+        </span>
+      </summary>
+      <div class="nhsuk-details__text version-text">
+        <table>
+          <tbody>
+            <tr>
+              <th><strong>Version</strong></th>
+              <th><strong>Research</strong></th>
+              <th><strong>What was new</strong></th>
+            </tr>
+            <tr>
+              <th><a href="/p5/sensely-start?p5=true">v1</a></th>
+              <td>Research conducted early January <br>(remote sessions)</td>
+              <td>Initial proof of concept</td>
+            </tr>
+            <tr>
+              <th><a href="/p5/sensely-start?p5=true">v2</a></th>
+              <td>Pop-up research conducted 21/1/20 at One Health Lewisham with <b>Ask NHS App</b></td>
+              <td>Reworded NHS number radios, changed flow of sign-in / register</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
 
     <hr>
 
-      <h1 class="nhsuk-heading-l"> NHS login email</h1>
-        <p class="nhsuk-body-m">Part of the work done regarding the NHS login value proposition piece</p>
-        <ul>
-          <li><p><a href="https://jira.digital.nhs.uk/browse/CID-2346">JIRA ticket</a></p></li>
-          <li><p><a href="/emails/email-login-info">Current version</a></p></li>
-        </ul>
+    <h1 class="nhsuk-heading-l"> NHS login email</h1>
+    <p class="nhsuk-body-m">Part of the work done regarding the NHS login value proposition piece</p>
+    <ul>
+      <li>
+        <p><a href="https://jira.digital.nhs.uk/browse/CID-2346">JIRA ticket</a></p>
+      </li>
+      <li>
+        <p><a href="/emails/email-login-info">Current version</a></p>
+      </li>
+    </ul>
 
-        <details class="nhsuk-details nhsuk-expander version-list">
-            <summary class="nhsuk-details__summary details-index">
-              <span class="nhsuk-details__summary-text">
-                Versions
-              </span>
-            </summary>
-            <div class="nhsuk-details__text version-text">
-              <table>
-                <tbody>
-                  <tr>
-                    <th><strong>Version</strong></th>
-                    <th><strong>Research</strong></th>
-                    <th><strong>What was new</strong></th>
-                  </tr>
-                  <tr>
-                    <th><a href="/email/v1/email-login-info">v1</a></th>
-                    <td>Researched 17 July 2019 <br>(pop-up at Leeds Library)</td>
-                    <td>Content iterations</td>
-                  </tr>
-                  <tr>
-                    <th><a href="/email/v2/email-login-info">v2</a></th>
-                    <td>Researched 18 July 2019 <br>(pop-up at Leeds Library)</td>
-                    <td>Content iterations</td>
-                  </tr>
-                  <tr>
-                    <th><a href="/emails/email-login-info">Current version</a></th>
-                    <td>No research planned<br></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
+    <details class="nhsuk-details nhsuk-expander version-list">
+      <summary class="nhsuk-details__summary details-index">
+        <span class="nhsuk-details__summary-text">
+          Versions
+        </span>
+      </summary>
+      <div class="nhsuk-details__text version-text">
+        <table>
+          <tbody>
+            <tr>
+              <th><strong>Version</strong></th>
+              <th><strong>Research</strong></th>
+              <th><strong>What was new</strong></th>
+            </tr>
+            <tr>
+              <th><a href="/email/v1/email-login-info">v1</a></th>
+              <td>Researched 17 July 2019 <br>(pop-up at Leeds Library)</td>
+              <td>Content iterations</td>
+            </tr>
+            <tr>
+              <th><a href="/email/v2/email-login-info">v2</a></th>
+              <td>Researched 18 July 2019 <br>(pop-up at Leeds Library)</td>
+              <td>Content iterations</td>
+            </tr>
+            <tr>
+              <th><a href="/emails/email-login-info">Current version</a></th>
+              <td>No research planned<br></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
 
-      <hr>
+    <hr>
 
-      <h1 class="nhsuk-heading-l"> Miscellaneous</h1>
+    <h1 class="nhsuk-heading-l"> Miscellaneous</h1>
 
-      <p class="nhsuk-body-m"><a href="/v1/set-up/have-login">Live flow in new styles</a></p>
+    <p class="nhsuk-body-m"><a href="/v1/set-up/have-login">Live flow in new styles</a></p>
 
-      <p class="nhsuk-body-m"><a href="/nhs-uk/NHS-login-info">NHS.UK login info page</a><p>
+    <p class="nhsuk-body-m"><a href="/nhs-uk/NHS-login-info">NHS.UK login info page</a>
+      <p>
 
-      <hr> 
+        <hr>
 
-      <!-- End of content -->
-
-    </div>
-
-    <div class="nhsuk-grid-column-one-quarter">
-      <h2>Useful links</h2>
-      <ul>
-        <li><a href="../help/design">Design guidelines and support</a></li>
-        <li><a href="../help/prototypes">NHS login prototypes</a></li>
-        <li><a href="../help/documentation">Documentation</a></li>
-      </ul>
-    </div>
+        <!-- End of content -->
 
   </div>
+
+  <div class="nhsuk-grid-column-one-quarter">
+    <h2>Useful links</h2>
+    <ul>
+      <li><a href="../help/design">Design guidelines and support</a></li>
+      <li><a href="../help/prototypes">NHS login prototypes</a></li>
+      <li><a href="../help/documentation">Documentation</a></li>
+    </ul>
+  </div>
+
+</div>
 
 {% endblock %}

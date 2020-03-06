@@ -1,10 +1,9 @@
-
 {% extends 'layouts/layout.html' %}
 {% from 'button/macro.njk' import button %}
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-  What is your name?
+What is your name?
 {% endblock %}
 
 {% block content %}
@@ -13,10 +12,13 @@
 
     <div class="nhsuk-back-link">
       <a onclick="goBack()" class="nhsuk-back-link__link" href="#">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+          </path>
         </svg>
-        Back to: What is your date of birth</a>
+        Back to: Do you know your NHS number</a>
     </div>
 
     <form method="submit" action="enter-dob">
@@ -27,7 +29,7 @@
               What is your name?
             </h1>
           </legend>
-      
+
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
               First name
@@ -37,7 +39,7 @@
               Middle name
             </label>
             <input class="nhsuk-input" id="middle-name" name="middle-name" type="text">
-            <label class="nhsuk-label nhsuk-u-margin-top-4"" for="last-name">
+            <label class="nhsuk-label nhsuk-u-margin-top-4"" for=" last-name">
               Last name
             </label>
             <input class="nhsuk-input" id="last-name-name" name="last-name" type="text">
@@ -53,13 +55,3 @@
 </div>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,3 @@
-
 // External dependencies
 const express = require('express');
 const router = express.Router();
@@ -92,8 +91,7 @@ router.post('/set-up/v5-b/what-you-need', function (req, res) {
   if (signIn == "true") {
     // Send user to next page
     res.redirect('login-enter-password')
-  }
-  else {
+  } else {
     // Send user to ineligible page
     res.redirect('register-create-password')
   }
@@ -108,8 +106,7 @@ router.post('/set-up/v5-a/enter-email', function (req, res) {
   if (signIn == "true") {
     // Send user to next page
     res.redirect('login-enter-password')
-  }
-  else {
+  } else {
     // Send user to ineligible page
     res.redirect('register-create-password')
   }
@@ -124,8 +121,7 @@ router.post('/p5/sensely-sign-in', function (req, res) {
   if (optionB == "true") {
     // Send user to next page
     res.redirect('/set-up/v5-b/enter-email')
-  }
-  else {
+  } else {
     // Send user to ineligible page
     res.redirect('/set-up/v5-a/enter-email')
   }
@@ -142,8 +138,7 @@ router.post('/p5/know-nhs-number', function (req, res) {
   if (nhsNumber == "Yes") {
     // Send user to next page
     res.redirect('/p5/enter-nhs-number')
-  }
-  else {
+  } else {
     // Send user to ineligible page
     res.redirect('/p5/enter-name')
   }
@@ -158,25 +153,46 @@ router.post('/p5/demo/know-nhs-number', function (req, res) {
   if (nhsNumber == "Yes") {
     // Send user to next page
     res.redirect('/p5/demo/enter-nhs-number')
-  }
-  else {
+  } else {
     // Send user to ineligible page
+    res.redirect('/p5/demo/enter-name')
+  }
+})
+
+router.post('/p5/errors/error-radio-no-input', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches the following condition
+  if (nhsNumber == "Yes") {
+    // Redirect user to this page
+    res.redirect('/p5/demo/enter-nhs-number')
+  } else {
+    // Redirect user to this page
     res.redirect('/p5/demo/enter-name')
   }
 })
 
 router.get('/help/prototypes', function (req, res) {
   let commitDate = {};
-  request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', { json: true, headers: { 'User-Agent': 'wshepworth' } }, (err, res, body) => {
-    if (err) { 
+  request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', {
+    json: true,
+    headers: {
+      'User-Agent': 'wshepworth'
+    }
+  }, (err, res, body) => {
+    if (err) {
       console.error(err);
-     }
-    commitDate = body.commit.author.date; 
+    }
+    commitDate = body.commit.author.date;
     console.log(commitDate);
-    
+
   });
   console.log(commitDate);
-  return res.render('help/prototypes', {'commitDate': commitDate});
+  return res.render('help/prototypes', {
+    'commitDate': commitDate
+  });
 })
 
 module.exports = router;
@@ -206,6 +222,6 @@ router.get("/", devModeRoute);
 
 // Clear all session data
 router.get('/clear-data', (req, res) => {
-	req.session.data = {}
-	res.redirect('/index')
+  req.session.data = {}
+  res.redirect('/index')
 })
