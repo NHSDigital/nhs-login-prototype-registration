@@ -30,9 +30,6 @@ Error: What is your name?
                     <li>
                         <a href="#first-name-no-input">You need to enter your first name</a>
                     </li>
-                    <li>
-                        <a href="#first-name-no-inputfirst-name-no-input">You need to enter your last name</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -47,11 +44,11 @@ Error: What is your name?
                 <label class="nhsuk-label" for="name">
                     First name
                 </label>
-                <span class="nhsuk-error-message" id="first-name-no-input">
+                <span class="nhsuk-error-message" id="name-error">
                     <span class="nhsuk-u-visually-hidden">Error:</span> Enter your first name
                 </span>
-                <input class="nhsuk-input nhsuk-input--error" id="first-name-no-input" name="first-name" type="text"
-                    aria-describedby="first-name-no-input" value="{{ data['first-name'] }}">
+                <input class="nhsuk-input nhsuk-input--error" id="name" name="first-name" type="text"
+                    aria-describedby="name-error" value="{{ data['first-name'] }}">
 
             </div>
 
@@ -64,16 +61,11 @@ Error: What is your name?
 
             <!-- Last Name Error -->
 
-            <div class="nhsuk-form-group nhsuk-form-group--error">
-
-                <label class="nhsuk-label" for="last-name">
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-u-margin-top-4" for="last-name">
                     Last name
                 </label>
-                <span class="nhsuk-error-message" id="last-name-no-input">
-                    <span class="nhsuk-u-visually-hidden">Error:</span> Enter your last name
-                </span>
-                <input class="nhsuk-input nhsuk-input--error" id="name" name="last-name" type="text"
-                    aria-describedby="last-name-no-input" value="{{ data['last-name'] }}">
+                <input class="nhsuk-input" id="middle-name" name="last-name" type="text">
             </div>
 
             <button class="nhsuk-button full-width" type="submit">
