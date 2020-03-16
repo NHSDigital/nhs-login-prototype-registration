@@ -3,7 +3,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your mobile phone number
+Enter your email address
 {% endblock %}
 
 {% block content %}
@@ -18,32 +18,26 @@ Enter your mobile phone number
                         d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
                     </path>
                 </svg>
-                Go back to: Check your mobile phone</a>
+                Go back to: Enter your mobile phone number</a>
         </div>
 
-        <form action="../v6/acc-recovery-enter-new-mobile-number" method="POST" role="form">
+        <h1 class="nhsuk-heading-l">
+            Enter your new mobile phone number
+        </h1>
 
-            <h1 class="nhsuk-heading-l">
-                Enter your mobile phone number
-            </h1>
+        <p class="nhsuk-body">We will send a 6 digit security code to your new phone number.</p>
 
-            <p class="nhsuk-body">We need you to confirm the number linked to your NHS login.</p>
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="mobile-number">
+                New number
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="new-number" type="number"
+                value="{{ data['new-number'] }}">
+        </div>
 
-            <p class="nhsuk-body">We will not text a security code to this number.</p>
-
-            <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile-number">
-                    Mobile number
-                </label>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="mobile-number"
-                    type="number">
-            </div>
-
-            <button class="nhsuk-button full-width" type="submit">
-                Continue
-            </button>
-
-        </form>
+        <button class="nhsuk-button full-width" type="submit">
+            Continue
+        </button>
 
 
         {% if data['devMode'] %}
@@ -57,7 +51,7 @@ Enter your mobile phone number
             <div class="nhsuk-details__text">
                 <p>Errors</p>
                 <ul>
-                    <li><a href="../errors/error-acc-recovery-mobile-no-input">No user input</a></li>
+                    <li><a href="../errors/error-acc-recovery-security-code-no-input">No user input</a></li>
                 </ul>
             </div>
         </details>
