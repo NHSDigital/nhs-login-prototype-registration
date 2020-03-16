@@ -51,9 +51,11 @@
   @include mq($from: mobile) {
     width: 100%;
   }
+
   @include mq($from: tablet) {
     width: auto;
   }
+
   @include mq($from: desktop) {
     width: auto;
   }
@@ -67,9 +69,11 @@
   @include mq($from: mobile) {
     width: 20%;
   }
+
   @include mq($from: tablet) {
     width: 20%;
   }
+
   @include mq($from: desktop) {
     width: 20%;
   }
@@ -87,15 +91,18 @@ div.heading-confirmation {
 
 .tick-confirmation {
   display: inline-block;
+
   svg {
     @include mq($from: mobile) {
       position: relative;
       top: 10px;
     }
+
     @include mq($from: tablet) {
       position: relative;
       top: 10px;
     }
+
     @include mq($from: desktop) {
       position: relative;
       top: 10px;
@@ -132,9 +139,11 @@ div.heading-confirmation {
   @include mq($from: mobile) {
     margin: nhsuk-spacing(0) nhsuk-spacing(5) nhsuk-spacing(0) nhsuk-spacing(0) !important;
   }
+
   @include mq($from: tablet) {
     margin: nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(0) !important;
   }
+
   @include mq($from: desktop) {
     margin: nhsuk-spacing(0) nhsuk-spacing(6) nhsuk-spacing(0) nhsuk-spacing(0) !important;
   }
@@ -172,9 +181,9 @@ div.heading-confirmation {
 // user icon styling
 
 .icon-text {
-	display: inline-block;
-	position: relative;
-	top: -5px;
+  display: inline-block;
+  position: relative;
+  top: -5px;
 }
 
 // action link font size increase 
@@ -183,7 +192,8 @@ div.heading-confirmation {
   font-size: 32px !important;
   position: relative;
   bottom: 6px;
-  text-decoration: underline !important; 
+  text-decoration: underline !important;
+
   h1 {
     margin-bottom: 0px;
   }
@@ -236,4 +246,8 @@ div.heading-confirmation {
 
 .nhsuk-heading-m.start-heading {
   margin-bottom: 12px;
+}
+
+.latest {
+  background-color: rgba(0, 123, 20, 0.3);
 }
