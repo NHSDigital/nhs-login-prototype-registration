@@ -21,7 +21,23 @@ Check your recovery email
 
         <p class="nhsuk-body">You have 48 hours to follow the link before it expires.</p>
 
-
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Email</p>
+                <ul>
+                    <li><a href="../v6/acc-recovery-email-confirmation">Confirmation email sent to the users recovery
+                            email address</a></li>
+                </ul>
+            </div>
+        </details>
+        {% endif %}
     </div>
 </div>
 
