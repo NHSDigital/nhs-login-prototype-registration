@@ -1,0 +1,38 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+This link does not work
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <h1 class="nhsuk-heading-l">
+            This link does not work
+        </h1>
+
+        <p class="nhsuk-body">It's been more than 24 hours since the link was sent.</p>
+
+        <p class="nhsuk-body">You will need to try change your phone number again.</p>
+
+        <p class="nhsuk-body">If you did not mean to change your phone number, contact the National Service Desk. You
+            will need to make note of the reference below.</p>
+
+        <p class="nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin: 0px 10px 10px 0px;">Email:</p>
+        <p class="nhsuk-body">
+            <a href=" #" class="nhsuk-body">nationalservicedesk@nhs.net</a>
+        </p>
+
+        <p class=" nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin-right: 10px;">Phone:</p>
+        <p class="nhsuk-body" style="margin-left: 10px;">0300 303 5035</p>
+
+        <p class=" nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin-right: 10px;">Reference:</p>
+        <p class="nhsuk-body" style="margin-left: 10px;">CID3006</p>
+
+    </div>
+</div>
+
+{% endblock %}
