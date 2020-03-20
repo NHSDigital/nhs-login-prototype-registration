@@ -21,23 +21,43 @@ Enter your mobile phone number
                 Back to: Check your mobile phone</a>
         </div>
 
-        <form action="../v6/acc-recovery-enter-new-mobile-number" method="POST" role="form">
+        <form action="../v6/acc-recovery-route-enter-nhs-number" method="POST" role="form">
 
             <h1 class="nhsuk-heading-l">
-                Enter your mobile phone number
+                Enter your NHS number
             </h1>
 
-            <p class="nhsuk-body">We need you to confirm the number linked to your NHS login.</p>
-
-            <p class="nhsuk-body">We will not text a security code to this number.</p>
+            <p class="nhsuk-body">We need you to confirm your NHS number so you can change your phone number.</p>
 
             <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="mobile-number">
-                    Mobile number
+                    NHS number
                 </label>
+                <span class="nhsuk-hint">
+                    Example: 458 777 3456
+                </span>
                 <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="mobile-number"
                     type="number">
             </div>
+
+            <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                        Where can I find my NHS number?
+                    </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                    <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                    <ul>
+                        <li>prescriptions</li>
+                        <li>test results</li>
+                        <li>hospital referral letters</li>
+                        <li>appointment letters</li>
+                        <li>your NHS medical record</li>
+                    </ul>
+                    <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+                </div>
+            </details>
 
             <button class="nhsuk-button full-width" type="submit">
                 Continue
@@ -57,16 +77,6 @@ Enter your mobile phone number
                 <p>Errors</p>
                 <ul>
                     <li><a href="../errors/error-acc-recovery-mobile-no-input">No user input</a></li>
-                </ul>
-            </div>
-            <div class="nhsuk-details__text">
-                <p>Routes</p>
-                <ul>
-                    <li><a href="acc-recovery-route-no-recovery-email">User is P>0 and does not have a recovery
-                            email</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">User with p=0</a></li>
                 </ul>
             </div>
         </details>
