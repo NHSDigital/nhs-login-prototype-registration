@@ -1,0 +1,84 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Error: Enter your NHS number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-back-link">
+            <a onclick="goBack()" class="nhsuk-back-link__link" href="#">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path
+                        d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                </svg>
+                Back to: Enter your NHS number</a>
+        </div>
+
+        <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+            <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+                There is a problem
+            </h2>
+            <div class="nhsuk-error-summary__body">
+                <ul class="nhsuk-list nhsuk-error-summary__list">
+                    <li>
+                        <a href="#nhs-number-no-input">You need to enter your NHS number</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nhsuk-form-group nhsuk-form-group--error">
+            <h1 class="nhsuk-label-wrapper">
+                <label class="nhsuk-label nhsuk-label--l" for="nhs-number">
+                    Enter your NHS number
+                </label>
+            </h1>
+            <p class="nhsuk-body">We need you to confirm your NHS number so you can change your phone number.</p>
+            <label class="nhsuk-label" for="mobile-number">
+                NHS number
+            </label>
+            <span class="nhsuk-hint">
+                Example: 458 777 3456
+            </span>
+            <span class="nhsuk-error-message" id="nhs-number-no-input">
+                <span class="nhsuk-u-visually-hidden">Error:</span>You need to enter your NHS number
+            </span>
+            <input class="nhsuk-input nhsuk-u-width-one-third" id="nhs-number-no-input" name="nhs-number-no-input"
+                type="number">
+        </div>
+        <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                    Where can I find my NHS number?
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                <ul>
+                    <li>prescriptions</li>
+                    <li>test results</li>
+                    <li>hospital referral letters</li>
+                    <li>appointment letters</li>
+                    <li>your NHS medical record</li>
+                </ul>
+                <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+            </div>
+        </details>
+
+        <button class="nhsuk-button full-width" type="submit">
+            Continue
+        </button>
+
+        <p><a href="#">I do not know my NHS number</a></p>
+
+    </div>
+</div>
+
+{% endblock %}

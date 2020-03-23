@@ -1,68 +1,63 @@
-
 {% extends 'layouts/layout.html' %}
 {% from 'button/macro.njk' import button %}
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-  Error: Enter your NHS number
+Error: Enter your NHS number
 {% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-        <div class="nhsuk-back-link">
-        <a onclick="goBack()" class="nhsuk-back-link__link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-            </svg>
-            Back to: Do you know your NHS number</a>
-        </div> 
+    <div class="nhsuk-back-link">
+      <a onclick="goBack()" class="nhsuk-back-link__link" href="#">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+          </path>
+        </svg>
+        Back to: Do you know your NHS number</a>
+    </div>
 
-        <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
-            <h2 class="nhsuk-error-summary__title" id="error-summary-title">
-              There is a problem
-            </h2>
-            <div class="nhsuk-error-summary__body">
-              <ul class="nhsuk-list nhsuk-error-summary__list">
-                <li>
-                  <a href="#nhs-number-digits-exceeded">Your NHS number must have 10 digits</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+      <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="nhsuk-error-summary__body">
+        <ul class="nhsuk-list nhsuk-error-summary__list">
+          <li>
+            <a href="#nhs-number-digits-exceeded">Your NHS number must have 10 digits</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-        <form action="enter-dob">
-            <div class="nhsuk-form-group nhsuk-form-group--error">
-                <h1 class="nhsuk-label-wrapper">
-                <label class="nhsuk-label nhsuk-label--l" for="nhs-number">
-                    What is your NHS number?
-                </label>
-                </h1>
-                <span class="nhsuk-hint" id="nhs-number-hint">
-                Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span class="nhsuk-u-nowrap">485 777 3456</span>.
-                </span>
-                <span class="nhsuk-error-message" id="nhs-number-digits-exceeded">
-                    <span class="nhsuk-u-visually-hidden">Error:</span>Your NHS number must have 10 digits
-                </span>
-                <input class="nhsuk-input nhsuk-input--width-20" id="nhs-number" name="nhs-number" type="text" aria-describedby="nhs-number-hint">
-            </div>
-        <button class="nhsuk-button full-width" type="submit">
-            Continue
-        </button>
-        <input style="display: none;" class="nhsuk-input nhsuk-input--width-20" id="know-nhs-number" name="know-nhs-number" value="{{ data['know-nhs-number'] }}">
+    <form action="enter-dob">
+      <div class="nhsuk-form-group nhsuk-form-group--error">
+        <h1 class="nhsuk-label-wrapper">
+          <label class="nhsuk-label nhsuk-label--l" for="nhs-number">
+            What is your NHS number?
+          </label>
+        </h1>
+        <span class="nhsuk-hint" id="nhs-number-hint">
+          Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span
+            class="nhsuk-u-nowrap">485 777 3456</span>.
+        </span>
+        <span class="nhsuk-error-message" id="nhs-number-digits-exceeded">
+          <span class="nhsuk-u-visually-hidden">Error:</span>Your NHS number must have 10 digits
+        </span>
+        <input class="nhsuk-input nhsuk-input--width-20" id="nhs-number" name="nhs-number" type="text"
+          aria-describedby="nhs-number-hint">
+      </div>
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
+      <input style="display: none;" class="nhsuk-input nhsuk-input--width-20" id="know-nhs-number"
+        name="know-nhs-number" value="{{ data['know-nhs-number'] }}">
     </form>
-</div>
+  </div>
 </div>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
