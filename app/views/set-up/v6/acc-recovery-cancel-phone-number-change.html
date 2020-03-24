@@ -1,0 +1,32 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Phone number changed
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <form action="acc-recovery-cancel-phone-number-change-confirmed" method="POST" role="form">
+            <h1 class="nhsuk-heading-l">
+                Cancel changing your phone number
+            </h1>
+
+            <p class="nhsuk-body">If you did not ask to change your phone number, you can stop it from happening.</p>
+
+            <p class="nhsuk-body">Your phone number will stay the same as it is now.</p>
+
+            <p class="nhsuk-body">Make sure your email and password are secure.</p>
+
+            <button class="nhsuk-button" type="submit">
+                Cancel the change number process
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
