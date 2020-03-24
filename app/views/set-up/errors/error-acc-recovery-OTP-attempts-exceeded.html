@@ -1,0 +1,39 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Something went wrong
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <h1 class="nhsuk-heading-l">
+            You cannot continue
+        </h1>
+
+        <p>You have entered a wrong security code too many times.</p>
+        <p>You must wait <b>15 minutes</b> before you can try again.</p>
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Errors</p>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-OTP-lock-request">API exceeded error - user requests new
+                            OTP while locked out.</a></li>
+                </ul>
+            </div>
+        </details>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

@@ -3,7 +3,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Check your phone
+Enter your mobile phone number
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@ Check your phone
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
         <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="../v6/acc-recovery-enter-new-mobile-number">
+            <a class="nhsuk-back-link__link" href="acc-recovery-enter-new-mobile-number">
                 <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                     aria-hidden="true">
                     <path
@@ -21,7 +21,7 @@ Check your phone
                 Back to: Enter your new mobile phone number</a>
         </div>
 
-        <form action="../v6/acc-recovery-check-email" method="POST" role="form">
+        <form action="../v6/acc-recovery-route-phone-number-changed" method="POST" role="form">
 
             <h1 class="nhsuk-heading-l">
                 Check your phone
@@ -30,14 +30,14 @@ Check your phone
             <p class="nhsuk-body">Enter the security code we've sent to {{ data['new-number'] }}</p>
 
             <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="security-code">
+                <label class="nhsuk-label" for="otp-number">
                     Security code
                 </label>
-                <span class="nhsuk-hint" id="security-code-with-hint-text">
+                <span class="nhsuk-hint">
                     The code is 6 digits
                 </span>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="security-code" name="security-code"
-                    type="number">
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="otp-number" name="otp-number" type="number"
+                    value="{{ data['otp-number'] }}">
             </div>
 
             <button class="nhsuk-button full-width" type="submit">
@@ -46,9 +46,8 @@ Check your phone
 
         </form>
 
-        <p class="nhsuk-body">If you did not get a code, <a href="../v6/acc-recovery-enter-new-mobile-number">enter your
-                number to try again</a></p>
-
+        <p>If you do not get a code, <a href="acc-recovery-enter-new-mobile-number">enter your number to try again</a>
+        </p>
 
         {% if data['devMode'] %}
         <details class="nhsuk-details dev-mode" role="group">
@@ -61,7 +60,11 @@ Check your phone
             <div class="nhsuk-details__text">
                 <p>Errors</p>
                 <ul>
-                    <li><a href="../errors/error-acc-recovery-security-code-no-input">No user input</a></li>
+                    <li><a href="../errors/error-account-recovery-OTP-no-input">No user input</a></li>
+                    <li><a href="../errors/error-acc-recovery-OTP-expired">OTP expired</a></li>
+                    <li><a href="../errors/error-acc-recovery-OTP-incorrect-format">Incorrect format</a></li>
+                    <li><a href="../errors/error-acc-recovery-incorrect-OTP">Incorrect OTP</a></li>
+                    <li><a href="../errors/error-acc-recovery-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
                 </ul>
             </div>
         </details>
