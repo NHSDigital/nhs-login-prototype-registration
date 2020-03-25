@@ -1,0 +1,37 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+Change your phone number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h1 class="nhsuk-fieldset__legend--l">
+            Recovery email added
+        </h1>
+
+        <p>You have added mail@mail.com to your NHS login as a recovery email address.</p>
+
+        <p class="nhsuk-body">We will only contact you on this email address when you need to recover your NHS login.
+        </p>
+
+        <p>Contact the National Service Desk if this is a mistake, or if you want to remove this recovery email address.
+        </p>
+
+        <p class="nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin: 0px 10px 10px 0px;">Email:</p>
+        <p class="nhsuk-body">
+            <a href=" #" class="nhsuk-body">nationalservicedesk@nhs.net</a>
+        </p>
+
+        <p class=" nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin-right: 10px;">Phone:</p>
+        <p class="nhsuk-body" style="margin-left: 10px;">0300 303 5035</p>
+
+        <p class=" nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin-right: 10px;">Reference:</p>
+        <p class="nhsuk-body" style="margin-left: 10px;">CID3005</p>
+
+    </div>
+</div>
+
+{% endblock %}
