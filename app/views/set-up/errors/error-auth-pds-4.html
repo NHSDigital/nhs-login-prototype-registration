@@ -7,32 +7,13 @@ Something went wrong
 {% block content %}
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
-
         <h1 class="nhsuk-heading-l">
-            You cannot continue
+            Multiple matches
         </h1>
-
-        <p class="nhsuk-body">You have tried to register too many times.</p>
-        <p class="nhsuk-body">You must wait <b>15 minutes</b> before you can try again.</p>
+        <p>There is a problem.</p>
+        <p>We could not find a user with this NHS number.</p>
         <!-- <p>Send an email to <a href="mailto:help.nhslogin@nhs.net@nhs.net?subject=NHS%20login%20-%20CID2011">help.nhslogin@nhs.net</a> with the code <b>CID2011</b></p>
       <p>We will then try to fix the problem for you.</p> -->
-        {% if data['devMode'] %}
-        <details class="nhsuk-details dev-mode" role="group">
-            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
-                aria-expanded="true">
-                <span class="nhsuk-details__summary-text">
-                    Continue with testing scenario
-                </span>
-            </summary>
-            <div class="nhsuk-details__text">
-                <p>Errors</p>
-                <ul>
-                    <li><a href="error-auth-pds-4-alt">API exceeded error - user tries to register again
-                            while locked out.</a></li>
-                </ul>
-            </div>
-        </details>
-        {% endif %}
     </div>
 </div>
 
