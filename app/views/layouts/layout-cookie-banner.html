@@ -59,24 +59,35 @@ NHS.UK prototype kit
         <div class="nhsuk-cookie-banner" id="cookiebanner" aria-label="Cookie banner" role="banner">
             <div class="page-section" style="padding: 0 !important;">
                 <div class="nhsuk-width-container">
-                    <p>We've put small files called cookies on your device to make the website better.</p>
-                    <ul>
-                        <li id="nhsuk-cookie-banner__link_accept"><a href="#" tabindex="1"><strong>I'm OK with
-                                    cookies</strong></a>
-                        </li>
-                        <li id="nhsuk-cookie-banner__link"><a href="../v6/legal/manage-cookies" tabindex="2">Turn
-                                cookies on
-                                or off</a></li>
-                    </ul>
+                    <h4 class="nhsuk-heading-s cookie-heading">Cookies on NHS login</h4>
+                    <p class="nhsuk-body cookie-body">Cookies collect information about how you use NHS login to help us
+                        make our site
+                        work as well as possible.
+                    </p>
+                    <p class="nhsuk-body cookie-body">We'd also like to use analytics cookies to improve our service.
+                    </p>
+
+                    <a href="#" tabindex="1">
+                        <button class="nhsuk-button full-width" id="nhsuk-cookie-banner__link_accept">
+                            Accept all cookies
+                        </button>
+                    </a>
+
+                    <a href="../v6/legal/manage-cookies" tabindex="2">
+                        <button class="nhsuk-button full-width" id="nhsuk-cookie-banner__link">
+                            Choose your cookies
+                        </button>
+                    </a>
+
                 </div>
             </div>
         </div>
 
         <div class="nhsuk-success-banner" id="nhsuk-cookie-confirmation-banner" style="display:none;" role="banner">
-            <div class="page-section" style="padding: 0 !important;">
+            <div class="page-section" style="padding: 0px !important;">
                 <div class="nhsuk-width-container">
-                    <p>Your cookie settings have been saved. <a href="/terms-of-use/cookies{{ params }}"
-                            style="color: #ffffff;">Turn cookies on or off</a></p>
+                    <p class="nhsuk-body accepted-cookies">You can change your cookie settings at any time using our <a
+                            href="../v6/legal/manage-cookies" class="nhsuk-link">cookies page</a>.</p>
                 </div>
             </div>
         </div>
