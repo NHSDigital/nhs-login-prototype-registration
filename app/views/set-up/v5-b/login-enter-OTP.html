@@ -1,90 +1,95 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
 {% extends 'layouts/layout.html' %}
+
 {% from 'button/macro.njk' import button %}
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-  Enter your email address
+Enter your email address
 {% endblock %}
 
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-      <h1 class="nhsuk-heading-l">
-        Check your mobile phone
-      </h1>
+    <h1 class="nhsuk-heading-l">
+      Check your mobile phone
+    </h1>
 
-      {% if data['phoneNumber'] %}
-      <p>Enter the 6 digit security code we've sent to {{ data['phoneNumber'] }}.</p>
-      {% else %}
-      <p>Enter the 6 digit security code we've sent to 07422933311.</p>
-      {% endif %}
+    {% if data['phoneNumber'] %}
+    <p>Enter the 6 digit security code we've sent to {{ data['phoneNumber'] }}.</p>
+    {% else %}
+    <p>Enter the 6 digit security code we've sent to 07422933311.</p>
+    {% endif %}
 
-      <form action="auth" method="post">
-        
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-with-hint-text">
-            Security code
+    <form action="auth" method="post">
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-with-hint-text">
+          Security code
+        </label>
+        <input
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+          type="number" aria-describedby="security-code-input">
+      </div>
+
+      <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-checkboxes__item">
+          <input style="padding-right: 16px;" class="nhsuk-checkboxes__input" id="rmd" name="rmd" type="checkbox">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="rmd">
+            Remember this device and stop sending security codes
           </label>
-          <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp" type="number" aria-describedby="security-code-input">
         </div>
+      </div>
 
-        <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
-          
-            <div class="nhsuk-checkboxes__item">
-              <input style="padding-right: 16px;" class="nhsuk-checkboxes__input" id="rmd" name="rmd" type="checkbox">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="rmd">
-                Remember this device and stop sending security codes
-              </label>
-            </div>
-        </div>
-
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              What does remember this device mean?
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>We can remember the device you are using now, so you won’t need to enter a security code when you log in with this device in the future.</p>
-            <p>To keep your NHS login secure, you should only do this on your own personal or trusted devices.</p>
-            <p>We may ask if you still want us to remember this device in the future.</p>
-          </div>
-        </details>
-
-        <button class="nhsuk-button full-width" type="submit">
-          Continue
-        </button>
-
-      </form>
-
-      {% if data['devMode'] %}
-      <details class="nhsuk-details dev-mode" role="group">
-        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
-            Continue with testing scenario
+            What does remember this device mean?
           </span>
         </summary>
         <div class="nhsuk-details__text">
-          <p>Account recovery</p>
-          <ul>
-            <li><a href="login-enter-OTP-recovery">Account recovery link</a></li>
-          </ul>
-
-          <p>Errors</p>
-          <ul>
-            <li><a href="../errors/error-login-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
-            <li><a href="../errors/error-login-OTP-no-input">No input</a></li>
-            <li><a href="../errors/error-login-OTP-regex">Field validation</a></li>
-            <li><a href="../errors/error-login-OTP-incorrect">Incorrect OTP</a></li>
-          </ul>
+          <p>We can remember the device you are using now, so you won’t need to enter a security code when you log in
+            with this device in the future.</p>
+          <p>To keep your NHS login secure, you should only do this on your own personal or trusted devices.</p>
+          <p>We may ask if you still want us to remember this device in the future.</p>
         </div>
       </details>
 
-      {% endif %}
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
 
-    </div>
+    </form>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Account recovery</p>
+        <ul>
+          <li><a href="login-enter-OTP-recovery">Account recovery link</a></li>
+        </ul>
+
+        <p>Errors</p>
+        <ul>
+          <li><a href="../errors/error-login-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
+          <li><a href="../errors/error-login-OTP-no-input">No input</a></li>
+          <li><a href="../errors/error-login-OTP-regex">Field validation</a></li>
+          <li><a href="../errors/error-login-OTP-incorrect">Incorrect OTP</a></li>
+        </ul>
+      </div>
+    </details>
+
+    {% endif %}
+
   </div>
+</div>
 
 {% endblock %}
