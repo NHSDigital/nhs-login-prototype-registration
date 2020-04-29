@@ -1,11 +1,11 @@
 // External dependencies
 const express = require('express');
 const router = express.Router();
-const notify = require('notifications-node-client').NotifyClient;
+// const notify = require('notifications-node-client').NotifyClient;
 const request = require('request');
 
 // Notify integration
-const notifyClient = new notify(process.env.NOTIFYAPIKEY);
+// const notifyClient = new notify(process.env.NOTIFYAPIKEY);
 
 // If you need to use Notify in the future the route will need updating to point to the most recent version (e.g. v4 or v5)
 
