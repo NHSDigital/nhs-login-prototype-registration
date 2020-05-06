@@ -20,10 +20,6 @@ Enter your email address
             Enter your email address
           </h1>
         </legend>
-        <span>
-          <p>Enter your email address to log in to NHS login. If you do not have an NHS login, enter your email address
-            to set one up.</p>
-        </span>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="userEmail">
@@ -32,18 +28,22 @@ Enter your email address
           <input class="nhsuk-input nhsuk-input--width-20" id="userEmail" name="userEmail"
             value="{{ data['userEmail'] }}" type="email">
         </div>
+        <a>
+          <button data-redirect="register-create-password" class="nhsuk-button full-width"
+            id="button--save">Continue</button>
+        </a>
 
-        <div class="nhsuk-inset-text nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5">
+        <div class="nhsuk-inset-text nhsuk-u-margin-top-1 nhsuk-u-margin-bottom-5">
           <span class="nhsuk-u-visually-hidden">Information: </span>
           <h3>What is NHS login?</h3>
-          <p>NHS login is a new way to log in to health websites and apps. If you do not have an NHS login, you will
-            need to set one up. Then you can access online health services wherever you see 'NHS login'.</p>
+          <p>NHS login is a way to access online health services wherever you see ’NHS login’. If you do not have an NHS
+            login, enter your email address to register.</p>
         </div>
       </fieldset>
-      <a>
-        <button data-redirect="register-create-password" class="nhsuk-button full-width"
-          id="button--save">Continue</button>
-      </a>
+      <div class="nhsuk-warning-callout  nhsuk-u-margin-top-3">
+        <h3 class="nhsuk-warning-callout__label">Coronavirus (COVID-19)</h3>
+        <p>For health information and advice, read <a href="#" class="nhsuk-link">NHS guidance about Coronavirus</a></p>
+      </div>
     </form>
 
     {% if data['devMode'] %}

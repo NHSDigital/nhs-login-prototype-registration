@@ -1,0 +1,108 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Enter your mobile phone number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-back-link">
+            <a class="nhsuk-back-link__link" href="login-enter-OTP-recovery">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path
+                        d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                </svg>
+                Back to: Check your mobile phone</a>
+        </div>
+
+        <form action="../v6/acc-recovery-route-enter-new-number" method="POST" role="form">
+
+            <h1 class="nhsuk-heading-l">
+                Enter your NHS number
+            </h1>
+
+            <p class="nhsuk-body">We need you to confirm your NHS number so you can change your phone number.</p>
+
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="mobile-number">
+                    NHS number
+                </label>
+                <span class="nhsuk-hint">
+                    Example: 458 777 3456
+                </span>
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="mobile-number"
+                    type="number">
+            </div>
+
+            <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                        Where can I find my NHS number?
+                    </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                    <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                    <ul>
+                        <li>prescriptions</li>
+                        <li>test results</li>
+                        <li>hospital referral letters</li>
+                        <li>appointment letters</li>
+                        <li>your NHS medical record</li>
+                    </ul>
+                    <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+                </div>
+            </details>
+
+            <button class="nhsuk-button full-width" type="submit">
+                Continue
+            </button>
+
+            <p><a href="acc-recovery-not-know-nhs-number">I do not know my NHS number</a></p>
+
+        </form>
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Errors</p>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-enter-nhs-number-no-input">No user input</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-national-insurance-number-input">User inputs NI number</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-nhs-number-digits-exceeded">>10 digits entered</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-no-nhs-number">No NHS number on record</a></li>
+                </ul>
+                <p>Routes</p>
+                <ul>
+                    <li><a href="#">User does not know NHS number</a></li>
+                </ul>
+
+            </div>
+        </details>
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

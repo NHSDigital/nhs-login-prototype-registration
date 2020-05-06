@@ -1,0 +1,46 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Phone number changed
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <form action="acc-recovery-recovery-email-added" method="POST" role="form">
+
+            <h1 class="nhsuk-heading-l">
+                Add recovery email
+            </h1>
+
+            <p class="nhsuk-body">Adding a recovery email address will help to secure your account. It will be used if
+                you
+                need to recover your account in future.</p>
+
+            <p class="nhsuk-body">A recovery email address can be a second email you have. It is not recommended to use
+                an
+                email address where you may lose access over time, for example a work email.</p>
+
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="recovery-email">
+                    Recovery email
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="recovery-email" name="recovery-email"
+                    type="text">
+            </div>
+
+            <button class="nhsuk-button" type="submit">
+                Add recovery email
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
