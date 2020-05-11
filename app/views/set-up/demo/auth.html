@@ -63,6 +63,15 @@ Checking your details
   </div>
 </div>
 
+{% if data['consent'] %}
+<script>
+  setTimeout(function () {
+    window.location.href = 'https://nhs-contact.herokuapp.com/app/p5/terms';
+  }, 2000);
+</script>
+{% endif %}
+
+
 {% if data['p5'] %}
 <script>
   setTimeout(function () {
@@ -73,7 +82,7 @@ Checking your details
 <script>
   setTimeout(function () {
     window.location.href =
-      'http://nhs-cid.herokuapp.com/service-access/v19/service-access-start?service=app5&serviceName=the%20NHS%20app&devMode=undefined&returnUrl=https://nhs-audit.herokuapp.com/release-dec/explainer/health-services-such-as-your-GP-surgery-or-dentist-have-their-own-health-record-about-you&lsId=undefined&lsAccess=undefined&lsStudy=undefined&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&hideBack=true  ';
+      'http://nhs-cid.herokuapp.com/service-access/v19/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=undefined&lsId=undefined&lsAccess=undefined&lsStudy=true&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&hideBack=true  ';
   }, 2500);
 </script>
 {% endif %}
