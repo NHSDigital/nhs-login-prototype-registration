@@ -63,6 +63,12 @@ Checking your details
   </div>
 </div>
 
+<script>
+  setTimeout(function () {
+    window.location.href = '/p5/demo/know-nhs-number';
+  }, 2500);
+</script>
+
 {% if data['consent'] %}
 <script>
   setTimeout(function () {
@@ -71,7 +77,7 @@ Checking your details
 </script>
 {% endif %}
 
-
+<!-- 
 {% if data['p5'] %}
 <script>
   setTimeout(function () {
@@ -87,4 +93,5 @@ Checking your details
 </script>
 {% endif %}
 
+-->
 {% endblock %}
