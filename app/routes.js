@@ -144,9 +144,9 @@ router.post('/p5/know-nhs-number', function (req, res) {
   }
 })
 
-// routing for know NHS number for the auth content route
+// vsps-reg-p5-plugin routung for Know your NHS number
 
-router.post('/p5/to-auth-consent/know-nhs-number', function (req, res) {
+router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
 
   // Make a variable and give it the value from 'know-nhs-number'
   var nhsNumber = req.session.data['know-nhs-number']
@@ -154,10 +154,10 @@ router.post('/p5/to-auth-consent/know-nhs-number', function (req, res) {
   // Check whether the variable matches a condition
   if (nhsNumber == "Yes") {
     // Send user to next page
-    res.redirect('/p5/to-auth-consent/enter-nhs-number')
+    res.redirect('/p5/vsps-reg-p5-plugin/enter-nhs-number')
   } else {
     // Send user to ineligible page
-    res.redirect('/p5/to-auth-consent/enter-name')
+    res.redirect('/p5/vsps-reg-p5-plugin/enter-name')
   }
 })
 
