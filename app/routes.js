@@ -144,6 +144,25 @@ router.post('/p5/know-nhs-number', function (req, res) {
   }
 })
 
+// routing for know NHS number for the auth content route
+
+router.post('/p5/to-auth-consent/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "Yes") {
+    // Send user to next page
+    res.redirect('/p5/to-auth-consent/enter-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/p5/to-auth-consent/enter-name')
+  }
+})
+
+//../../p5/to-auth-consent/enter-nhs-number
+
 router.post('/p5/demo/know-nhs-number', function (req, res) {
 
   // Make a variable and give it the value from 'know-nhs-number'

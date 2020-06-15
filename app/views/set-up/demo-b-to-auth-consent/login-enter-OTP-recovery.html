@@ -1,0 +1,95 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Enter your email address
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <h1 class="nhsuk-heading-l">
+      Check your mobile phone
+    </h1>
+
+    {% if data['phone-number'] %}
+    <p>Enter the security code we have sent to {{ data['phone-number'] }}.</p>
+    {% else %}
+    <p>Enter the security code we have sent to {{ data['07422933311'] }}.</p>
+    {% endif %}
+
+    <form action="auth" method="post">
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-with-hint-text">
+          Security code
+        </label>
+        <span class="nhsuk-hint" id="input-with-hint-text-hint">
+          <p>The code is 6 numbers</p>
+        </span>
+        <input
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+          type="number" aria-describedby="security-code-input">
+      </div>
+
+      <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-checkboxes__item">
+          <input style="padding-right: 16px;" class="nhsuk-checkboxes__input" id="rmd" name="rmd" type="checkbox">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="rmd">
+            Remember this device and stop sending security codes
+          </label>
+        </div>
+      </div>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            What does remember this device this mean?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>We can remember the device you are using now, so you won’t need to enter a security code when you log in
+            with this device in the future.</p>
+          <p>To keep your NHS login secure, you should only do this on your own personal or trusted devices.</p>
+          <p>We may ask if you still want us to remember this device in the future.</p>
+        </div>
+      </details>
+
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
+
+      <p>If you don't have access to your phone, you can <a
+          href="http://nhs-cid.herokuapp.com/account-recovery/enter-number?service=app5&serviceName=the%20NHS%20app&emailAddress=undefined&mobileNum=undefined&devMode=undefined&returnUrl=https://nhs-audit.herokuapp.com/release-dec/explainer/health-services-such-as-your-GP-surgery-or-dentist-have-their-own-health-record-about-you&verified=undefined&poluser=undefined&resend=undefined&result=200&reason=undefined">change
+          your phone number securely</a>.</p>
+
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>No account recovery</p>
+          <ul>
+            <li><a href="login-enter-OTP">Enter OTP (no account recovery link)</a></li>
+          </ul>
+
+        </div>
+      </details>
+
+      {% endif %}
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
