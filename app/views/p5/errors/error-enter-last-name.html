@@ -36,7 +36,14 @@ Error: What is your name?
 
         <form action="../enter-dob" method="POST" role="form">
 
-            <h1 class="nhsuk-heading-l">What is your name</h1>
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Enter your full name
+                </h1>
+                <span class="nhsuk-hint nhsuk-u-margin-top-4" id="enter-name-hint">
+                  Enter your full name as it is written on official documents.
+                </span>
+              </legend>
 
             <!-- First name error -->
 
@@ -49,7 +56,7 @@ Error: What is your name?
 
             <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-margin-top-4" for="middle-name">
-                    Middle name
+                    Middle names (if you have any)
                 </label>
                 <input class="nhsuk-input" id="middle-name" name="middle-name" type="text">
             </div>
