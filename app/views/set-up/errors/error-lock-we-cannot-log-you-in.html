@@ -1,0 +1,30 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Something went wrong
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-heading-l">
+        We cannot log you in
+      </h1>
+
+      <p>This is because you are not registered, or your email address is incorrect.</p>
+
+      <p>If you have already registered, check you have entered your email address correctly and try log in again.</p>
+
+      <p>If you have not registered, go back to the website or app you were trying to access and register with them first before using NHS login to login.</p>
+
+      <a href="../v7/enter-email">
+        <button class="nhsuk-button full-width" type="submit">
+          Try again
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}
