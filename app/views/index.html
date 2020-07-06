@@ -3,7 +3,6 @@ ADDING CUSTOM CSS
 Add your custom CSS/Sass to /app/assets/sass/main.scss
 -->
 
-
 <!-- Extends the layout from /app/views/layouts/layout.html -->
 {% extends 'layouts/layout.html' %}
 
@@ -40,6 +39,7 @@ NHS login prototypes
       <li>
         <p><a href="https://jira.digital.nhs.uk/browse/CID-5421">JIRA ticket</a></p>
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="/set-up/v7/enter-email">Current version</a></p>
       </li>
@@ -230,7 +230,6 @@ NHS login prototypes
         <li><a href="../set-up/errors/error-be-generic-2">Generic back-end error message</a></li>
       </ul>
 
-
       <!-- commented out due to decision to point users back to service to display the error, not NHS login
             <h4 class="nhsuk-heading-s">Authcode</h4>
           <ul>
@@ -241,7 +240,13 @@ NHS login prototypes
 
     </details>
 
-    <hr>
+    <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
+
+    <ul>
+      <li>
+        <p><a href="/set-up/no-mobile-phone-journey/enter-email">No mobile phone, poor signal, no UK number, poor signal journey</a></p>
+      </li>
+    </ul>
 
     <h1 class="nhsuk-heading-l"> Mid-level proofing journey</h1>
     <p class="nhsuk-body-m"></p>
@@ -249,22 +254,27 @@ NHS login prototypes
       <li>
         <p><a href="https://jira.digital.nhs.uk/browse/CID-7400" target="_blank">JIRA ticket</a></p>
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="/set-up/demo/enter-email?p5=true">Generic flow (for demo purposes)</a></p>
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="/set-up/vsps-reg-p5-plugin/enter-email?p5=true">The Vulnerable Shielding Person Service (Reg flow + p5 plugin)</a></p>
         <!--
           Another hippo team are wanting to plug into the NHS login registration flow as well as the p5 flow as part of their user joureny. The end to end journey starts from the enter email screen and finishes on the auth consent screen. The demo prototype hangs on the second spinner page and is not ideal for the other team to use in UR. This link has been created to facilitate their needs, I've created a new folder in the setup parent folder called 'demo-b-to-auth-consent' which doesnt interfier with any other prototype links, as well as creating 'to-auth-consent' in the p5 folder. All this work was requested and done on the 15th June 2020. Hippo team contact: John Maher, project: Shielded Vulnerable Person Service
         -->
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="/p5/sensely-start?p5=true&serviceName=sensely">Start from the Ask NHS App (Sense.ly)</a></p>
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="/p5/sensely-start-b?p5=true&serviceName=sensely">Start from the Ask NHS App (What you need)</a>
         </p>
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="http://nhs-cid.herokuapp.com/start/v12/nhs-app-start">Start from NHS App</a></p>
       </li>
@@ -307,6 +317,7 @@ NHS login prototypes
       <li>
         <p><a href="https://jira.digital.nhs.uk/browse/CID-2346">JIRA ticket</a></p>
       </li>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
       <li>
         <p><a href="/emails/email-login-info">Current version</a></p>
       </li>
@@ -351,7 +362,7 @@ NHS login prototypes
     <h1 class="nhsuk-heading-l"> Miscellaneous</h1>
 
     <p class="nhsuk-body-m"><a href="/v1/set-up/have-login">Live flow in new styles</a></p>
-
+    <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
     <p class="nhsuk-body-m"><a href="/nhs-uk/NHS-login-info">NHS.UK login info page</a>
       <p>
 

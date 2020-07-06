@@ -161,7 +161,23 @@ router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
   }
 })
 
-//../../p5/to-auth-consent/enter-nhs-number
+// OTP route for the no-mobile-phone-journey
+router.post('/set-up/no-mobile-phone-journey/register-OTP-route', function (req, res) {
+
+  // Make a variable and give it the value from 'register-OTP-route'
+  var otpRoute = req.session.data['otp-route']
+
+  // Check whether the variable matches a condition
+  if (otpRoute == "email") {
+    // Send user to the email OTP page
+    res.redirect('/set-up/no-mobile-phone-journey/register-check-email-OTP')
+  } else {
+    // Send user to the SMS OTP page
+    res.redirect('/set-up/no-mobile-phone-journey/register-enter-phone')
+  }
+})
+
+// Know NHS number route
 
 router.post('/p5/demo/know-nhs-number', function (req, res) {
 
