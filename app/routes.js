@@ -170,7 +170,7 @@ router.post('/set-up/no-mobile-phone-journey/register-OTP-route', function (req,
   // Check whether the variable matches a condition
   if (otpRoute == "email") {
     // Send user to the email OTP page
-    res.redirect('/set-up/no-mobile-phone-journey/register-check-email-OTP')
+    res.redirect('/set-up/no-mobile-phone-journey/email-route-alert')
   } else {
     // Send user to the SMS OTP page
     res.redirect('/set-up/no-mobile-phone-journey/register-enter-phone')
