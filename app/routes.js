@@ -161,8 +161,8 @@ router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
   }
 })
 
-// OTP route for the no-mobile-phone-journey
-router.post('/set-up/no-mobile-phone-journey/register-OTP-route', function (req, res) {
+// OTP route for new users
+router.post('/set-up/alt-OTP-solution-new-user/register-OTP-route', function (req, res) {
 
   // Make a variable and give it the value from 'register-OTP-route'
   var otpRoute = req.session.data['otp-route']
@@ -170,10 +170,26 @@ router.post('/set-up/no-mobile-phone-journey/register-OTP-route', function (req,
   // Check whether the variable matches a condition
   if (otpRoute == "email") {
     // Send user to the email OTP page
-    res.redirect('/set-up/no-mobile-phone-journey/email-route-alert')
+    res.redirect('/set-up/alt-OTP-solution-new-user/email-route-alert')
   } else {
     // Send user to the SMS OTP page
-    res.redirect('/set-up/no-mobile-phone-journey/register-enter-phone')
+    res.redirect('/set-up/alt-OTP-solution-new-user/register-enter-phone')
+  }
+})
+
+// OTP route for existing users
+router.post('/set-up/alt-OTP-solution-existing-user/login-OTP-route', function (req, res) {
+
+  // Make a variable and give it the value from 'register-OTP-route'
+  var otpRoute = req.session.data['otp-route']
+
+  // Check whether the variable matches a condition
+  if (otpRoute == "email") {
+    // Send user to the email OTP page
+    res.redirect('/set-up/alt-OTP-solution-existing-user/email-route-alert')
+  } else {
+    // Send user to the SMS OTP page
+    res.redirect('/set-up/alt-OTP-solution-existing-user/login-enter-OTP')
   }
 })
 

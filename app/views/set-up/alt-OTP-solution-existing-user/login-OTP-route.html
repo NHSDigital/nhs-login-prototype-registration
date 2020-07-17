@@ -1,0 +1,58 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <form action="#" method="POST">
+
+        <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Choose how to receive your security code
+                </h1>
+              </legend>
+    
+              <p class="nhsuk-body">We will send your security code by email or SMS.</p>
+          
+              <div class="nhsuk-radios">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="otp-route" name="otp-route" type="radio" value="email">
+                  <label class="nhsuk-label nhsuk-radios__label" for="otp-route">
+                    Receive security code through email
+                  </label>
+                  <span class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                    Use this option if you do not have a mobile phone, a UK mobile phone number, or live in a poor signal area.
+                  </span>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="otp-route" name="otp-route" type="radio" value="sms">
+                  <label class="nhsuk-label nhsuk-radios__label" for="otp-route">
+                    Receive security code through SMS
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
+          
+          </div>
+
+          <button class="nhsuk-button full-width" type="submit">
+            Continue
+          </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
