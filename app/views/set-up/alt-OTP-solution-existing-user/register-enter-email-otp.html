@@ -21,7 +21,7 @@ Enter your email address
       Enter your security code
     </h1>
 
-    <p class="nhsuk-body-m">Enter the 6 digit <a href="../../emails/email-security-code" style="color: #212b32; text-decoration: none;">security code</a> we have sent you to <b>mail@mail.com</b></p>
+    <p class="nhsuk-body-m">Enter the 6 digit <a href="../../emails/email-security-code" style="color: #212b32; text-decoration: none;">security code</a> we have sent to <b>mail@mail.com</b></p>
 
     <form>
 
@@ -29,6 +29,9 @@ Enter your email address
         <label class="nhsuk-label" for="input-with-hint-text">
           Security code
         </label>
+        <span class="nhsuk-hint" id="example-with-hint-text-hint">
+          The code is 6 digits
+        </span>
         <input
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
           type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
