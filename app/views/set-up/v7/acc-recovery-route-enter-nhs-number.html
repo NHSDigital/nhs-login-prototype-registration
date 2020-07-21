@@ -5,7 +5,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your mobile phone number
+Enter your NHS number
 {% endblock %}
 
 {% block content %}
@@ -29,18 +29,13 @@ Enter your mobile phone number
                 Enter your NHS number
             </h1>
 
-            <p class="nhsuk-body">We need you to confirm your NHS number so you can change your phone number.</p>
+            <span class="nhsuk-hint">Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, 485 777 3456.</span>
 
             <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile-number">
-                    NHS number
-                </label>
-                <span class="nhsuk-hint">
-                    Example: 458 777 3456
-                </span>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="mobile-number"
-                    type="number">
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="nhs-number" name="nhs-number" type="number">
             </div>
+
+            <!--
 
             <details class="nhsuk-details">
                 <summary class="nhsuk-details__summary">
@@ -60,6 +55,8 @@ Enter your mobile phone number
                     <p>Ask your GP surgery for help if you can't find your NHS number.</p>
                 </div>
             </details>
+
+            -->
 
             <button class="nhsuk-button full-width" type="submit">
                 Continue
@@ -81,22 +78,15 @@ Enter your mobile phone number
                 <p>Errors</p>
                 <ul>
                     <li><a href="../errors/error-acc-recovery-enter-nhs-number-no-input">No user input</a></li>
-                </ul>
-                <ul>
-                    <li><a href="../errors/error-acc-recovery-national-insurance-number-input">User inputs NI number</a>
-                    </li>
-                </ul>
-                <ul>
+                    <li><a href="../errors/error-acc-recovery-national-insurance-number-input">User inputs NI number</a></li>
                     <li><a href="../errors/error-acc-recovery-nhs-number-digits-exceeded">>10 digits entered</a></li>
-                </ul>
-                <ul>
                     <li><a href="../errors/error-acc-recovery-no-nhs-number">No NHS number on record</a></li>
+                    <li><a href="../errors/error-acc-recovery-nhs-number-letters">More or less than 10 numbers and includes letters</a></li>
                 </ul>
                 <p>Routes</p>
                 <ul>
-                    <li><a href="#">User does not know NHS number</a></li>
+                    <li><a href="acc-recovery-not-know-nhs-number">User does not know NHS number</a></li>
                 </ul>
-
             </div>
         </details>
 

@@ -28,8 +28,7 @@ Error: Enter your NHS number
             <div class="nhsuk-error-summary__body">
                 <ul class="nhsuk-list nhsuk-error-summary__list">
                     <li>
-                        <a href="#nhs-number-national-insurance">We think you have entered a National Insurance number,
-                            you need to enter your NHS number</a>
+                        <a href="#nhs-number-national-insurance">Enter your NHS number in the correct format</a>
                     </li>
                 </ul>
             </div>
@@ -41,20 +40,17 @@ Error: Enter your NHS number
                     Enter your NHS number
                 </label>
             </h1>
-            <p class="nhsuk-body">We need you to confirm your NHS number so you can change your phone number.</p>
-            <label class="nhsuk-label" for="mobile-number">
-                NHS number
-            </label>
-            <span class="nhsuk-hint">
-                Example: 458 777 3456
-            </span>
+
+            <span class="nhsuk-hint">Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, 485 777 3456.</span>
+
             <span class="nhsuk-error-message" id="nhs-number-national-insurance">
-                <span class="nhsuk-u-visually-hidden">Error:</span>We think you have entered a National Insurance
-                number, you need to enter your NHS number
+                <span class="nhsuk-u-visually-hidden">Error:</span>You entered a National Insurance number. Enter your NHS number in the correct format.
             </span>
             <input class="nhsuk-input nhsuk-u-width-one-third" id="nhs-number-no-input" name="nhs-number-no-input"
                 type="number">
         </div>
+
+        <!--
         <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
                 <span class="nhsuk-details__summary-text">
@@ -74,11 +70,13 @@ Error: Enter your NHS number
             </div>
         </details>
 
+        -->
+
         <button class="nhsuk-button full-width" type="submit">
             Continue
         </button>
 
-        <p><a href="#">I do not know my NHS number</a></p>
+        <p><a href="../v7/acc-recovery-not-know-nhs-number">I do not know my NHS number</a></p>
 
     </div>
 </div>
