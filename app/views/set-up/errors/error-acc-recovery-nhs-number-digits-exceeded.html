@@ -40,7 +40,26 @@ Error: Enter your NHS number
                     Enter your NHS number
                 </label>
             </h1>
-            <p class="nhsuk-hint">Your NHS number is a 10 digit number that you can find on any letter the NHS has sent you. For example, 485 777 3456.</p>
+
+            <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    How to find your NHS number
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+                  <p>You can find your NHS number by logging in to a GP online service or on any document the NHS has sent you, such as your:</p>
+                  <ul>
+                    <li>prescriptions</li>
+                    <li>test results</li>
+                    <li>hospital referral letters</li>
+                    <li>appointment letters</li>
+                  </ul>
+                  <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+              
+                </div>
+              </details>
             
             <span class="nhsuk-error-message" id="nhs-number-digits-exceeded">
                 <span class="nhsuk-u-visually-hidden">Error:</span>Your NHS number must have 10 numbers
@@ -48,27 +67,6 @@ Error: Enter your NHS number
             <input class="nhsuk-input nhsuk-u-width-one-third" id="nhs-number-digits-exceeded"
                 name="nhs-number-digits-exceeded" type="number">
         </div>
-
-        <!--
-        <details class="nhsuk-details">
-            <summary class="nhsuk-details__summary">
-                <span class="nhsuk-details__summary-text">
-                    Where can I find my NHS number?
-                </span>
-            </summary>
-            <div class="nhsuk-details__text">
-                <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
-                <ul>
-                    <li>prescriptions</li>
-                    <li>test results</li>
-                    <li>hospital referral letters</li>
-                    <li>appointment letters</li>
-                    <li>your NHS medical record</li>
-                </ul>
-                <p>Ask your GP surgery for help if you can't find your NHS number.</p>
-            </div>
-        </details>
-        -->
 
         <button class="nhsuk-button full-width" type="submit">
             Continue
