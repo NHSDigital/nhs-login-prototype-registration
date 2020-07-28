@@ -34,7 +34,7 @@ Enter your email address
           Security code
         </label>
         <span class="nhsuk-hint" id="example-with-hint-text-hint">
-          The code is 6 digits
+          The code is 6 numbers
         </span>
         <input
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -44,8 +44,17 @@ Enter your email address
 
       <a class="nhsuk-button full-width" href="auth">Continue</a>
 
-      <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="register-enter-phone">enter your mobile
-          number to try again.</a></p>
+      <h3 class="nhsuk-heading-m">Did not receive the security code?</h3>
+
+      <p class=" nhsuk-body">
+        <a href="register-enter-phone">Enter your mobile number to try again</a>
+      </p>
+
+      <p class="nhsuk-body">Or</p>
+
+      <p class=" nhsuk-body">
+        <a href="email-route-alert">You can use your email address to receive the security code</a>
+      </p>
 
     </form>
 

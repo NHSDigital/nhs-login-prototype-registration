@@ -177,22 +177,6 @@ router.post('/set-up/alt-OTP-solution-new-user/register-OTP-route', function (re
   }
 })
 
-// OTP route for existing users
-router.post('/set-up/alt-OTP-solution-existing-user/login-OTP-route', function (req, res) {
-
-  // Make a variable and give it the value from 'register-OTP-route'
-  var otpRoute = req.session.data['otp-route']
-
-  // Check whether the variable matches a condition
-  if (otpRoute == "email") {
-    // Send user to the email OTP page
-    res.redirect('/set-up/alt-OTP-solution-existing-user/email-route-alert')
-  } else {
-    // Send user to the SMS OTP page
-    res.redirect('/set-up/alt-OTP-solution-existing-user/login-enter-OTP')
-  }
-})
-
 // Know NHS number route
 
 router.post('/p5/demo/know-nhs-number', function (req, res) {
