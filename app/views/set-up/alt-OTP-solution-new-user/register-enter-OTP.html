@@ -24,8 +24,12 @@ Enter your email address
     {% if data['phoneNumber'] %}
     <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to {{ data['phoneNumber'] }}</p>
     {% else %}
-    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to 07123456789</p>
+    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>07123456789</b>.</p>
     {% endif %}
+
+    <p class="govuk-body">
+      <a href="email-route-alert">Send to your email address instead</a>
+    </p>
 
     <form>
 
@@ -48,12 +52,6 @@ Enter your email address
 
       <p class=" nhsuk-body">
         <a href="register-enter-phone">Enter your mobile number to try again</a>
-      </p>
-
-      <p class="nhsuk-body">Or</p>
-
-      <p class=" nhsuk-body">
-        <a href="email-route-alert">You can use your email address to receive the security code</a>
       </p>
 
     </form>
