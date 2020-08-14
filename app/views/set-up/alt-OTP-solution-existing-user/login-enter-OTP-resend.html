@@ -16,6 +16,11 @@ Enter your email address
       Check your mobile phone
     </h1>
 
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You have been sent a new security code.</p>
+      </div>
+
     {% if data['phoneNumber'] %}
     <p>Enter the 6 digit security code we have sent to {{ data['phoneNumber'] }}.</p>
     {% else %}
