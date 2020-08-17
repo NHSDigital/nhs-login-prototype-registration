@@ -16,11 +16,25 @@ Enter your email address
       Check your mobile phone
     </h1>
 
-    {% if data['phone-number'] %}
-    <p>Enter the security code we have sent to {{ data['phone-number'] }}.</p>
+    {% if data['phoneNumber'] %}
+    <p>Enter the 6 digit security code we have sent to {{ data['phoneNumber'] }}.</p>
     {% else %}
-    <p>Enter the security code we have sent to {{ data['07422933311'] }}.</p>
+    <p>Enter the 6 digit security code we have sent to <b>07422933311</b>.</p>
     {% endif %}
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Not received your security code?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p class="govuk-body">
+          <a href="login-enter-OTP-resend">Request a new security code</a> or <a href="../alt-OTP-solution-existing-user/email-route-alert">send to your email address instead.</a>
+        </p>
+    
+      </div>
+    </details>
 
     <form action="auth" method="post">
 
@@ -29,7 +43,7 @@ Enter your email address
           Security code
         </label>
         <span class="nhsuk-hint" id="otp-hint-text">
-          <p>The code is 6 numbers</p>
+          The code is 6 numbers
         </span>
         <input
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -50,14 +64,26 @@ Enter your email address
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
-            What does remember this device this mean?
+            What does remember this device mean?
           </span>
         </summary>
         <div class="nhsuk-details__text">
-          <p>We can remember the device you are using now, so you won’t need to enter a security code when you log in
+          <p>We can remember the device you are using now, so you will not need to enter a security code when you log in
             with this device in the future.</p>
           <p>To keep your NHS login secure, you should only do this on your own personal or trusted devices.</p>
           <p>We may ask if you still want us to remember this device in the future.</p>
+        </div>
+      </details>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Do not have access to your mobile phone?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If you don't have access to your phone, you can <a href="../v7/acc-recovery-enter-mobile-number">change your
+            phone number securely</a>.</p>
         </div>
       </details>
 
@@ -65,9 +91,7 @@ Enter your email address
         Continue
       </button>
 
-      <p>If you don't have access to your phone, you can <a href="../v7/acc-recovery-enter-mobile-number">change your
-          phone number securely</a>.</p>
-
+    </form>
 
       {% if data['devMode'] %}
       <details class="nhsuk-details dev-mode" role="group">
@@ -86,7 +110,6 @@ Enter your email address
       </details>
 
       {% endif %}
-    </form>
 
   </div>
 </div>
