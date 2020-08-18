@@ -12,23 +12,30 @@ Enter your email address
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-    <h1 class="nhsuk-fieldset__legend--l">
+    <h1 class="nhsuk-heading-l">
       Enter your security code
     </h1>
 
-    <p class="nhsuk-body-m">Enter the 6 digit <a href="../../emails/email-security-code" style="color: #212b32; text-decoration: none;">security code</a> we have sent you to your NHS login email address.</p>
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You have been sent a new security code.</p>
+      </div>
 
-    <p class="govuk-body">
+    <p>Enter the 6 digit security code we have sent you to your NHS login email address.</p>
+
+    <p>
       <a href="register-enter-phone">Send by text message instead.</a>
     </p>
 
-    <form>
+    <form action="auth" method="post">
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-with-hint-text">
           Security code
         </label>
-        <span class="nhsuk-hint">The code is 6 numbers</span>
+        <span class="nhsuk-hint" id="example-with-hint-text-hint">
+          The code is 6 numbers
+        </span>
         <input
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
           type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
@@ -39,7 +46,9 @@ Enter your email address
         If you did not receive a security code, <a href="register-enter-OTP-resend">request a new security code to your NHS login email address.</a>
       </p>
 
-      <a class="nhsuk-button full-width" href="auth">Continue</a>
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
 
     </form>
 
@@ -51,17 +60,17 @@ Enter your email address
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p>Emails</p>
+        <p>Account recovery</p>
         <ul>
-          <li><a href="../../emails/email-security-code">Security code email</a></li>
+          <li><a href="login-enter-OTP-recovery">Account recovery link</a></li>
         </ul>
+
         <p>Errors</p>
         <ul>
-          <li><a href="../errors/error-register-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
-          <li><a href="../errors/error-register-OTP-no-input">No input</a></li>
-          <li><a href="../errors/error-register-OTP-regex">Incorrect format</a></li>
-          <li><a href="../errors/error-register-OTP-incorrect">Incorrect OTP</a></li>
-          <li><a href="../errors/error-login-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
+          <li><a href="../errors/error-login-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
+          <li><a href="../errors/error-login-OTP-no-input">No input</a></li>
+          <li><a href="../errors/error-login-OTP-regex">Field validation</a></li>
+          <li><a href="../errors/error-login-OTP-incorrect">Incorrect OTP</a></li>
         </ul>
       </div>
     </details>
