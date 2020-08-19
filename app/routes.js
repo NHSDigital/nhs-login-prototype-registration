@@ -194,6 +194,23 @@ router.post('/p5/demo/know-nhs-number', function (req, res) {
   }
 })
 
+// p5 to p9 uplift - know NHS number route
+
+router.post('/p5/p5-p9-uplift/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "Yes") {
+    // Send user to next page
+    res.redirect('/p5/p5-p9-uplift/enter-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/p5/p5-p9-uplift/enter-name')
+  }
+})
+
 router.post('/p5/errors/error-radio-no-input', function (req, res) {
 
   // Make a variable and give it the value from 'know-nhs-number'
