@@ -127,7 +127,7 @@ router.post('/p5/sensely-sign-in', function (req, res) {
   }
 })
 
-// routing for know NHS number
+// routing for know NHS number in the p5 journey
 
 router.post('/p5/know-nhs-number', function (req, res) {
 
@@ -177,7 +177,7 @@ router.post('/set-up/alt-OTP-solution-new-user/register-OTP-route', function (re
   }
 })
 
-// Know NHS number route
+// Know NHS number route for demo prototype branch
 
 router.post('/p5/demo/know-nhs-number', function (req, res) {
 
@@ -210,6 +210,25 @@ router.post('/p5/p5-p9-uplift/know-nhs-number', function (req, res) {
     res.redirect('/p5/p5-p9-uplift/enter-name')
   }
 })
+
+// p5 to p9 uplift confirm your details page radio buttons
+
+router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v21/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&returnUrl=https://nhs-audit.herokuapp.com/release-dec/explainer/health-services-such-as-your-GP-surgery-or-dentist-have-their-own-health-record-about-you&lsId=undefined&lsAccess=undefined&lsStudy=undefined&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true')
+  } else if (confDetails == "no") {
+    res.redirect('/p5/errors/error-p5-p9-uplift-hc-wrong-details')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/p5/errors/error-p5-p9-uplift-hc-incorrect-details')
+  }
+})
+
 
 router.post('/p5/errors/error-radio-no-input', function (req, res) {
 

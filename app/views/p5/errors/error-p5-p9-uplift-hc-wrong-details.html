@@ -1,0 +1,44 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Something went wrong
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-heading-l">
+        This NHS record does not match your details
+      </h1>
+
+      <div class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+        <table class="nhsuk-table">
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><b>Name</b></td>
+              <td class="nhsuk-table__cell ">Alex smith</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><b>Date of birth</b></td>
+              <td class="nhsuk-table__cell ">18 August 1989</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Postcode</b></td>
+              <td class="nhsuk-table__cell ">AB3 4CD</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>NHS number</b></td>
+              <td class="nhsuk-table__cell ">*** *** 3456</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>If you are sure these are not your details, <a href="#" class="nhsuk-link">contact us and let us know.</a></p>
+      <p>If you chose this option by mistake, <a href="../p5-p9-uplift/user-profile" class="nhsuk-link">go back and try again.</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

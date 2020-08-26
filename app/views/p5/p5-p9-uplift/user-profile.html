@@ -11,54 +11,69 @@ Enter your NHS number
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-    <form action="#">
+    <form action="#" method="POST">
         <h1 class="nhsuk-label-wrapper">
           <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
             Confirm your details
           </label>
         </h1>
 
+        <p class="nhsuk-body">
+          We found this NHS record using the information you gave us.
+        </p>
+
         <div class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
-            <table class="nhsuk-table">
-              <tbody class="nhsuk-table__body">
-                <tr class="nhsuk-table__row">
-                  <td class="nhsuk-table__cell"><b>Name</b></td>
-                  <td class="nhsuk-table__cell ">Alex smith</td>
-                </tr>
-                <tr class="nhsuk-table__row">
-                  <td class="nhsuk-table__cell"><b>Date of birth</b></td>
-                  <td class="nhsuk-table__cell ">18 August 1989</td>
-                </tr>
-                <tr class="nhsuk-table__row">
-                    <td class="nhsuk-table__cell"><b>Postcode</b></td>
-                  <td class="nhsuk-table__cell ">AB3 4CD</td>
-                </tr>
-                <tr class="nhsuk-table__row">
-                    <td class="nhsuk-table__cell"><b>NHS number</b></td>
-                  <td class="nhsuk-table__cell ">*** *** 3456</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <table class="nhsuk-table">
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Name</b></td>
+                <td class="nhsuk-table__cell ">Alex smith</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Date of birth</b></td>
+                <td class="nhsuk-table__cell ">18 August 1989</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell"><b>Postcode</b></td>
+                <td class="nhsuk-table__cell ">AB3 4CD</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell"><b>NHS number</b></td>
+                <td class="nhsuk-table__cell ">*** *** 3456</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
           <div class="nhsuk-form-group">
+
+            <h3 class="nhsuk-heading-m">Are these your details?</h3>
 
             <fieldset class="nhsuk-fieldset">
           
               <div class="nhsuk-radios">
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="yes" name="details-radio" type="radio" value="yes">
+                  <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="yes">
                   <label class="nhsuk-label nhsuk-radios__label" for="yes">
                     Yes, these details are correct
                   </label>
                 </div>
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="no" name="details-radio" type="radio" value="no">
+                  <input class="nhsuk-radios__input" id="no" name="confirm-details-radio" type="radio" value="no">
                   <label class="nhsuk-label nhsuk-radios__label" for="no">
                     No, these details are wrong
                   </label>
+                </div>
+
+                <p>Or</p>
+
+                <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="incorrect">
+                    <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                        Yes, these are my details but they are not correct
+                    </label>
                 </div>
           
               </div>
