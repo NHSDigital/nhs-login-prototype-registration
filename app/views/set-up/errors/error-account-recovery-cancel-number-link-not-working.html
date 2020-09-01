@@ -1,0 +1,36 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+This link does not work
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <h1 class="nhsuk-heading-l">
+            This link does not work
+        </h1>
+
+        <p class="nhsuk-body">This may be because you have already used the link to cancel changing your phone number.</p>
+
+        <p class="nhsuk-body">You can check or change your phone number by visiting your <a href="#">NHS login settings</a>.</p>
+
+        <p class="nhsuk-body">Visit the <a href="https://help.login.nhs.uk">NHS login help centre</a> if you do not have access to the phone number on your NHS login.</p>
+
+        <p> Reference: <b>CID3003</b></p>
+
+        <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p><a href="#" title="External help centre link">What does reference CID3003 mean?</a></p>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
