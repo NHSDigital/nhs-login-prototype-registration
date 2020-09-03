@@ -1,0 +1,251 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login prototypes
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      Registration front-end errors
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+
+  <!-- Enter email address -->
+
+    <div class="nhsuk-grid-column-full">
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    Enter email address
+                </span>
+            </summary>
+        <div class="nhsuk-details__text version-text">
+          <table>
+            <tbody>
+                <tr>
+                    <th><strong><a href="../v7/enter-email">Enter email address screen</a></strong></th>
+                </tr>
+                <tr>
+                    <td><a href="../errors/error-email-no-input">No user input</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../errors/error-email-regex">Incorrect format</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../errors/error-client-not-found">Client not found</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../errors/error-404">Error 404</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-lock-OTP-attempts-exceeded">Account lock: OTP incorrect attempts exceeded (less than 5 times)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-lock-OTP-incorrect-attempts-exceeded">Account lock: OTP incorrect attempts exceeded (more than 5 times)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-lock-OTP-requests-exceeded">Account lock: OTP requests exceeded</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-lock-password-attempts-exceeded">Account lock: Password attempts exceeded</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-lock-p5-p9-nhs-no-mismatch">Account lock: P5 to P9 NHS number mismatch</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-lock-we-cannot-log-you-in">Account lock: We cannot log you in</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-login-disabled">Disabled NHS login</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Session timeouts</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../errors/error-session-timeout">Session timeout</a>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+
+    <!-- Create your password -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+              <span class="nhsuk-details__summary-text">
+                Create your password
+              </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+              <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/register-create-password">Create your password screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-register-password-no-input">No user input (first field)</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-register-password-no-input-confirm">No user input (second field)</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-register-password-no-input-both">No user input (first and second field)</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-register-password-regex-no-input">Field validation error (first field) and no input (second field)</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../errors/error-register-password-no-input-regex">No input (first field) and field validation error (second field)</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../errors/error-register-password-regex">Field validation error (first field)</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../errors/error-register-password-regex-confirm">Field validation error (second field)</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../errors/error-register-password-regex-both">Field validation error (first and second field)</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../errors/error-register-password-dont-match">Passwords don't match</a>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </details>
+
+
+    <!-- Check your email -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+              <span class="nhsuk-details__summary-text">
+                Check your email
+              </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/register-check-email">Create your password screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../v7/register-check-email-nudge">User hasn't checked email</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-check-email">User hasn't checked email step 2</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    <!-- Enter your mobile phone number -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Enter your mobile phone number
+            </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/register-enter-phone">Enter your mobile phone number screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-phone-no-input">No user input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-phone-regex">Invalid format</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-phone-otp-exceeded">User requests OTP > 5 times</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    <!-- Check your phone -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Check your mobile phone
+            </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/register-enter-OTP">Check your mobile phone</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-OTP-be-generic">OTP expired</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-OTP-no-input">No user input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-OTP-regex">Invalid format</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-register-OTP-incorrect">Incorrect OTP</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-login-OTP-attempts-exceeded">OTP attempts exceeded</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-login-OTP-attempts-exceeded-reattempt">OTP attempts exceeded reattempt</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- /. grid-column-full -->
+</div> <!-- /.grid-row -->
+
+{% endblock %}
