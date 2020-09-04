@@ -1,0 +1,182 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login prototypes
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      P5 front-end errors
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+    <!-- Do you know your NHS number> -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    Do you know your NHS number?
+                </span>
+            </summary>
+                <div class="nhsuk-details__text version-text">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><strong><a href="../../p5/know-nhs-number">Do you know your NHS number screen</a></strong></th>
+                            </tr>
+                            <tr>
+                                <td><a href="../../p5/errors/error-radio-no-input">No user input</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </details>
+
+    <!-- Enter your NHS number -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    Enter your NHS number
+                </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../../p5/enter-nhs-number">Enter your NHS number screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-nhs-number-digits-exceeded">>10 digits entered</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-nhs-number-field-validation ">No NHS number on record</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-nhs-number-no-input ">No user input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-nhs-number-national-insurance ">National Insurance number input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-nhs-number-numbers-and-letters">More or less than 10 numbers and includes letters</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    <!-- ... -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    What is your date of birth
+                </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../../p5/enter-dob">What is your date of birth screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-no-user-input">No user input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-day">No day input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-month">No month input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-year">No year input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-no-input-two-fields">No user input in more than 1 field</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-invalid-format">Invalid format</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-invalid-year">User enters a date in the future</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-dob-year-less-than-4-digits">User enters a year with 1, 2 or 3 digits</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    <!-- Enter your full name -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Enter your full name
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../../p5/enter-name">Enter your full name screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../../p5/errors/error-enter-first-last-name">No user input</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../p5/errors/error-enter-first-name ">No user input first name field</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../p5/errors/error-enter-last-name">No user input last name field</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../p5/errors/error-enter-name-one-character ">Invalid format</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- What is your postcode? -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    What is your postcode?
+                </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../../p5/enter-postcode">What is your postcode screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-postcode-no-input">No user input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/errors/error-postcode-field-validation">Invalid format</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- /. grid-column-full -->
+</div> <!-- /.grid-row -->
+
+{% endblock %}
