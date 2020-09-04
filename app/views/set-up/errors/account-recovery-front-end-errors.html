@@ -129,42 +129,195 @@ NHS login prototypes
         Journey 2: P0 User but has no recovery email address
     </h3>
 
-    <!-- ... -->
+    <!-- Enter your mobile phone number -->
 
         <details class="nhsuk-details nhsuk-expander version-list">
             <summary class="nhsuk-details__summary details-index">
                 <span class="nhsuk-details__summary-text">
-                    ...
+                    Enter your mobile phone number
                 </span>
             </summary>
             <div class="nhsuk-details__text version-text">
                 <table>
                     <tbody>
                         <tr>
-                            <th><strong><a href="../v7/">...</a></strong></th>
+                            <th><strong><a href="../v7/acc-recovery-route-no-recovery-email">Enter your mobile phone number screen</a></strong></th>
                         </tr>
                         <tr>
-                            <td><a href="../errors/">...</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="../errors/">...</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="../errors/">...</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="../errors/">...</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="../errors/">...</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="../errors/">...</a></td>
+                            <td><a href="../errors/error-acc-recovery-mobile-no-input">No user input</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </details>
+
+    <!-- Enter your NHS number -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Enter your NHS number
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/acc-recovery-route-enter-nhs-number">Enter your NHS number screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-enter-nhs-number-no-input">No user input</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-national-insurance-number-input">National Insurance number input</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-nhs-number-digits-exceeded">> 10 digits entered</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-no-nhs-number">No NHS number on record</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-nhs-number-letters">More or less than 10 numbers and includes letters</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../v7/acc-recovery-not-know-nhs-number">User doesn't know their NHS number</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- Enter your new mobile phone number -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Enter your new mobile phone number
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/acc-recovery-route-enter-new-number">Enter your new mobile phone number screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-enter-new-number-no-input">No user input</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- Check your phone -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Check your phone
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/acc-recovery-enter-OTP">Check your phone screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-account-recovery-OTP-no-input">No user input</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-OTP-expired-existing-user">OTP expired</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-OTP-attempts-exceeded">OTP attempts exceeded</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-incorrect-OTP">Incorrect OTP</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-OTP-incorrect-format">Invalid format</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- Phone number changed -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Phone number changed
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/acc-recovery-route-phone-number-changed">Phone number changed screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../v7/acc-recovery-email-number-change-notification">Notification email sent to the users primary email address immediately</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../v7/acc-recovery-email-number-change-success">Success email sent to the users primary email address after 24 hours</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-phone-number-change-requested">User already requested phone number change wait prompt </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- Phone number changed notification email -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Phone number changed notification email
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/acc-recovery-email-number-change-notification">Phone number changed notification email screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-email-generic-error">Generic back-end error</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-acc-recovery-email-link-expired">Link expired</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- Cancel changing your phone number -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Cancel changing your phone number
+            </span>
+        </summary>
+        <div class="nhsuk-details__text version-text">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><strong><a href="../v7/acc-recovery-cancel-phone-number-change">Cancel changing your phone number screen</a></strong></th>
+                    </tr>
+                    <tr>
+                        <td><a href="../errors/error-account-recovery-cancel-number-link-not-working">Link expired</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
 
     </div> <!-- /. grid-column-full -->
 </div> <!-- /.grid-row -->
