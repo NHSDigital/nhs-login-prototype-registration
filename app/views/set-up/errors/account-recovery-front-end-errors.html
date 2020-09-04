@@ -1,0 +1,172 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login prototypes
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      Account recovery front-end errors
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h3 class="nhsuk-heading-m">
+            Journey 1: P0 User
+        </h3>
+
+    <!-- Enter your mobile phone number -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    Enter your mobile phone number
+                </span>
+            </summary>
+                <div class="nhsuk-details__text version-text">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><strong><a href="../v7/acc-recovery-user-p0">Enter your mobile phone number screen</a></strong></th>
+                            </tr>
+                            <tr>
+                                <td><a href="../errors/error-acc-recovery-mobile-no-input">No user input</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </details>
+
+    <!-- Enter your new mobile phone number -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Enter your new mobile phone number
+            </span>
+        </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/acc-recovery-enter-new-mobile-number-p0">Enter your new mobile phone number screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-acc-recovery-new-mobile-no-input">No user input</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </details>
+
+    <!-- Check your phone -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Check your phone
+            </span>
+        </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/acc-recovery-check-your-phone-p0">Check your phone screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-account-recovery-OTP-no-input">No user input</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-acc-recovery-OTP-expired-existing-user">OTP expired</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-acc-recovery-incorrect-OTP">Incorrect OTP</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-acc-recovery-OTP-attempts-exceeded">OTP attempts exceeded</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/error-acc-recovery-OTP-incorrect-format">Invalid format</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </details>
+
+    <!-- Phone number changed -->
+
+    <details class="nhsuk-details nhsuk-expander version-list">
+        <summary class="nhsuk-details__summary details-index">
+            <span class="nhsuk-details__summary-text">
+                Phone number changed
+            </span>
+        </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/acc-recovery-phone-number-change-p0">Phone number changed screen</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../v7/acc-recovery-email-number-change-success">Phone number changed success email</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </details>
+
+    <h3 class="nhsuk-heading-m">
+        Journey 2: P0 User but has no recovery email address
+    </h3>
+
+    <!-- ... -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    ...
+                </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><strong><a href="../v7/">...</a></strong></th>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/">...</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/">...</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/">...</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/">...</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/">...</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../errors/">...</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- /. grid-column-full -->
+</div> <!-- /.grid-row -->
+
+{% endblock %}
