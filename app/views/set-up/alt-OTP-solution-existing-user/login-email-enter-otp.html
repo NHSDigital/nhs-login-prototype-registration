@@ -11,39 +11,24 @@ Enter your email address
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
-
-    <h1 class="nhsuk-heading-l">
-      Check your mobile phone
+    
+    <h1 class="nhsuk-fieldset__legend--l">
+      Enter your security code
     </h1>
 
-    {% if data['phoneNumber'] %}
-    <p>Enter the 6 digit security code we have sent to {{ data['phoneNumber'] }}.</p>
-    {% else %}
-    <p>Enter the 6 digit security code we have sent to <b>07422933311</b>.</p>
-    {% endif %}
+    <p class="nhsuk-body-m">Enter the 6 digit <a href="../../emails/email-security-code" style="color: #212b32; text-decoration: none;">security code</a> we have sent to your NHS login email address.</p>
+    
+    <p class="govuk-body">
+      <a href="login-enter-OTP">Send by text message instead</a>
+    </p>
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Not received your security code?
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p class="govuk-body">
-          <a href="login-enter-OTP-resend">Request a new security code</a> or <a href="../alt-OTP-solution-existing-user/email-route-alert">send to your email address instead.</a>
-        </p>
-      </div>
-    </details>
-
-    <form action="auth" method="post">
+    <form>
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-with-hint-text">
           Security code
         </label>
-        <span class="nhsuk-hint" id="otp-hint-text">
-          The code is 6 numbers
-        </span>
+        <span class="nhsuk-hint">The code is 6 numbers</span>
         <input
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
           type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
@@ -67,7 +52,7 @@ Enter your email address
           </span>
         </summary>
         <div class="nhsuk-details__text">
-          <p>We can remember the device you are using now, so you will not need to enter a security code when you log in
+          <p>We can remember the device you are using now, so you won’t need to enter a security code when you log in
             with this device in the future.</p>
           <p>To keep your NHS login secure, you should only do this on your own personal or trusted devices.</p>
           <p>We may ask if you still want us to remember this device in the future.</p>
@@ -77,18 +62,17 @@ Enter your email address
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
-            Do not have access to your mobile phone?
+            Not received your security code?
           </span>
         </summary>
         <div class="nhsuk-details__text">
-          <p>If you don't have access to your phone, you can <a href="../v7/acc-recovery-enter-mobile-number">change your
-            phone number securely</a>.</p>
+          <p class=" nhsuk-body">
+            If you did not receive a security code, <a href="register-check-email-OTP-reattempt">you can send a new security code to your email address.</a>
+          </p>
         </div>
       </details>
 
-      <button class="nhsuk-button full-width" type="submit">
-        Continue
-      </button>
+      <a class="nhsuk-button full-width" href="auth">Continue</a>
 
     </form>
 
@@ -100,24 +84,17 @@ Enter your email address
         </span>
       </summary>
       <div class="nhsuk-details__text">
-
-        <p>User has selected email OTP and returns to the service</p>
+        <p>Emails</p>
         <ul>
-          <li><a href="login-email-enter-otp">Login email OTP enter screen</a></li>
+          <li><a href="../../emails/email-security-code">Security code email</a></li>
         </ul>
-
-        <p>Account recovery</p>
-        <ul>
-          <li><a href="login-enter-OTP-recovery">Account recovery link</a></li>
-        </ul>
-
         <p>Errors</p>
         <ul>
-          <li><a href="../errors/error-login-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
-          <li><a href="../errors/error-login-OTP-no-input">No input</a></li>
-          <li><a href="../errors/error-login-OTP-regex">Field validation</a></li>
-          <li><a href="../errors/error-login-OTP-incorrect">Incorrect OTP</a></li>
-          <li><a href="../errors/error-login-OTP-attempts-exceeded-reattempt">OTP attempts exceeded reattempt</a></li>
+          <li><a href="../errors/error-register-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
+          <li><a href="../errors/error-register-OTP-no-input">No input</a></li>
+          <li><a href="../errors/error-register-OTP-regex">Incorrect format</a></li>
+          <li><a href="../errors/error-register-OTP-incorrect">Incorrect OTP</a></li>
+          <li><a href="../errors/error-login-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
         </ul>
       </div>
     </details>
