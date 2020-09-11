@@ -229,6 +229,25 @@ router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {
   }
 })
 
+// P9 uplift option after 3 failed P5 attempts (demo branch of the P5 prototype)
+
+router.post('/p5/errors/p9-uplift-option', function (req, res) {
+
+  // Make a variable and give it the value from p9-uplift-option-radio
+  var p9UpliftOption = req.session.data['p9-uplift-option-radio']
+
+  if (p9UpliftOption == "pyi-id") {
+    // Send user to start of PYI journey
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true&uplift=true')
+  } else if (p9UpliftOption == "pyi-no-id") {
+    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v22/patient-online-details?serviceName=the%20NHS%20app&service=app6&lsId=undefined&lsAccess=undefined&lsStudy=undefined&system=undefined&mobileNum=&hidehead=undefined&devMode=false&returnUrl=undefined&surgery=undefined&practiceID=undefined&supported=undefined&manual=undefined&uplift=undefined&drop=need') 
+  } else if (p9UpliftOption == "enter-details-again") {
+    res.redirect('/p5/demo/know-nhs-number')
+  }
+})
+
+
+// P5 Know NHS number page route
 
 router.post('/p5/errors/error-radio-no-input', function (req, res) {
 
