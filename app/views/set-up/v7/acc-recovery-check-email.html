@@ -1,0 +1,47 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Check your recovery email
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <h1 class="nhsuk-heading-l">
+            Check your email
+        </h1>
+
+        <p class="nhsuk-body">We have sent an email to ws••••••@gmail.com with a link to confirm the change in your
+            phone
+            number.</p>
+
+        <p class="nhsuk-body">If you have not received the email, check your spam folder.</p>
+
+        <p class="nhsuk-body">You have 48 hours to follow the link before it expires.</p>
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Email</p>
+                <ul>
+                    <li><a href="../v7/acc-recovery-email-confirmation">Confirmation email sent to the users recovery
+                            email address</a></li>
+                </ul>
+            </div>
+        </details>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

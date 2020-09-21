@@ -1,0 +1,22 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+Change your phone number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h1 class="nhsuk-fieldset__legend--l">
+            Phone number successfully changed
+        </h1>
+
+        <p>Your phone number has been changed to {{ data['new-number'] }}</p>
+
+        <p class="nhsuk-body">Go back to the website or app you were trying to access and log back in.</p>
+
+    </div>
+</div>
+
+{% endblock %}
