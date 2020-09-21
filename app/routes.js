@@ -4,82 +4,6 @@ const router = express.Router();
 // const notify = require('notifications-node-client').NotifyClient;
 const request = require('request');
 
-// Notify integration
-// const notifyClient = new notify(process.env.NOTIFYAPIKEY);
-
-// If you need to use Notify in the future the route will need updating to point to the most recent version (e.g. v4 or v5)
-
-// The URL here needs to match the URL of the page that the user is on
-// when they type in their email address
-// router.post('/set-up/v5-b/register-create-password', function (req, res) {
-//   //if(req.body.userEmail === 'will.hepworth1@nhs.net'){
-//   notifyClient.sendEmail('443d169e-9fbb-4fd0-b77e-e57389ed1804', req.body.userEmail)
-//     .then(function (response) {
-//       res.redirect('/set-up/v5-b/register-check-email');
-//     }).catch(function (error) {
-//       console.log('notify-error' + error)
-//       res.redirect('/set-up/v5-b/enter-email');
-//     });;
-//   }
-//   res.redirect('/set-up/v5-b/register-check-email');
-// });
-
-// router.post('/set-up/v4/register-enter-phone', function (req, res) {
-//   console.log('method called');
-//   // if(req.body.phoneNumber === '07429854013'){
-//   notifyClient.sendSms('2b7236fc-d18b-493c-807a-c185a2330ee2', req.body.phoneNumber)
-//     .then(function (response) {
-//       console.log('success')
-//       res.redirect('/set-  up/v4/register-enter-OTP');
-//     }).catch(function (error) {
-//       console.log('notify-error' + error)
-//       res.redirect('/set-up/v4/register-enter-OTP');
-//     });
-//   // }
-//   //res.redirect('/set-up/v4/register-enter-OTP');
-// });
-
-// Routing for mid-level journey
-// router.post('/set-up/v5-a/auth', function (req, res) {
-//   // Makes variable and gives it the value from 'auth'
-//   var p5 = req.session.data['p5']
-
-//   // Check whether the variable matches a condition
-//   if (p5 === "true"){
-//     // Send user to next page
-//     res.redirect('/p5/know-nhs-number')
-//     }
-//   else if (signIn === "true") {
-//     // Send user to app page
-//     res.redirect('/p5/sensely-finished')
-//   }
-//   else {
-//     // Send user to ineligible page
-//     res.redirect('/set-up/v5/auth')
-//   }
-
-// })
-
-// router.post('/set-up/v5-b/auth', function (req, res) {
-//   // Makes variable and gives it the value from 'auth'
-//   var p5 = req.session.data['p5']
-
-//   // Check whether the variable matches a condition
-//   if (p5 === "true"){
-//     // Send user to next page
-//     res.redirect('/p5/know-nhs-number')
-//     }
-//   else if (signIn === "true") {
-//     // Send user to app page
-//     res.redirect('/p5/sensely-finished')
-//   }
-//   else {
-//     // Send user to ineligible page
-//     res.redirect('/set-up/v5/auth')
-//   }
-
-// })
-
 // routing for sign in
 
 router.post('/set-up/v5-b/what-you-need', function (req, res) {
@@ -211,6 +135,57 @@ router.post('/p5/p5-p9-uplift/know-nhs-number', function (req, res) {
   }
 })
 
+// research session thur24-fri25-sep20 - know NHS number route
+
+router.post('/research-prototypes/thur24-fri25-sep20/p5-first-attempt/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "Yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-first-attempt/enter-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-first-attempt/enter-name')
+  }
+})
+
+// research session thur24-fri25-sep20 - know NHS number route
+
+router.post('/research-prototypes/thur24-fri25-sep20/p5-second-attempt/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "Yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-second-attempt/enter-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-second-attempt/enter-name')
+  }
+})
+
+// research session thur24-fri25-sep20 - know NHS number route
+
+router.post('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "Yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/enter-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/enter-name')
+  }
+})
+
 // p5 to p9 uplift confirm your details page radio buttons
 
 router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {
@@ -221,7 +196,7 @@ router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {
   //Check whether the variable matches a condition below
   if (confDetails == "yes") {
     // Send user to start of PYI journey
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true&uplift=true')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&uplift=true')
   } else if (confDetails == "no") {
     res.redirect('/p5/errors/error-p5-p9-uplift-hc-wrong-details')
   } else if (confDetails == "incorrect") {
@@ -238,11 +213,28 @@ router.post('/p5/errors/p9-uplift-option', function (req, res) {
 
   if (p9UpliftOption == "pyi-id") {
     // Send user to start of PYI journey
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true&uplift=true')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
   } else if (p9UpliftOption == "pyi-no-id") {
-    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v22/patient-online-details?serviceName=the%20NHS%20app&service=app6&lsId=undefined&lsAccess=undefined&lsStudy=undefined&system=undefined&mobileNum=&hidehead=undefined&devMode=false&returnUrl=undefined&surgery=undefined&practiceID=undefined&supported=undefined&manual=undefined&uplift=undefined&drop=need') 
+    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v22/patient-online-details?serviceName=the%20NHS%20app&service=app6&devMode=false&uplift=true') 
   } else if (p9UpliftOption == "enter-details-again") {
     res.redirect('/p5/demo/know-nhs-number')
+  }
+})
+
+// P9 uplift option after 3 failed P5 attempts (demo branch of the P5 prototype) for thur24-fri25-sep20 research prototype
+
+router.post('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/p9-uplift-option', function (req, res) {
+
+  // Make a variable and give it the value from p9-uplift-option-radio
+  var p9UpliftOption = req.session.data['p9-uplift-option-radio']
+
+  if (p9UpliftOption == "pyi-id") {
+    // Send user to start of PYI journey
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
+  } else if (p9UpliftOption == "pyi-no-id") {
+    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v22/patient-online-details?serviceName=the%20NHS%20app&service=app6&devMode=false&uplift=true') 
+  } else if (p9UpliftOption == "enter-details-again") {
+    res.redirect('/research-prototypes/thur24-fri25-sep20/p5-first-attempt/know-nhs-number')
   }
 })
 

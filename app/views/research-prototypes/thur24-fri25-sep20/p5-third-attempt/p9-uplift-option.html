@@ -1,0 +1,79 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Enter your NHS number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <form action="#" method="POST">
+        <h1 class="nhsuk-label-wrapper">
+          <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
+            We still cannot find a match
+          </label>
+        </h1>
+
+        <p class="nhsuk-body">We cannot match you to an NHS record using the details you have given.</p>
+        <p class="nhsuk-body">We may be able to match you to an NHS record if you can prove who you are.</p>
+
+          <div class="nhsuk-form-group">
+            <h3 class="nhsuk-heading-m">What do you want to do next?</h3>
+            <fieldset class="nhsuk-fieldset">
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="pyi-id" name="p9-uplift-option-radio" type="radio" value="pyi-id">
+                  <label class="nhsuk-label nhsuk-radios__label" for="pyi-id">
+                    Prove who you are with photo I.D.
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="pyi-no-id" name="p9-uplift-option-radio" type="radio" value="pyi-no-id">
+                  <label class="nhsuk-label nhsuk-radios__label" for="pyi-no-id">
+                    Prove who you are without using photo I.D.
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="enter-details-again" name="p9-uplift-option-radio" type="radio" value="enter-details-again">
+                  <label class="nhsuk-label nhsuk-radios__label" for="enter-details-again">
+                    Go back and enter your details again
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+        
+    </form>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <li>
+            <a href="../errors/error-p9-uplift-option">No user input</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

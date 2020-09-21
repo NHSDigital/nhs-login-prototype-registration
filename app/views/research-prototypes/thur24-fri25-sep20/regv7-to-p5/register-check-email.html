@@ -9,17 +9,14 @@ Check your email
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-
     <h1 class="nhsuk-heading-l">
       Check your email
     </h1>
 
-    {% if data['userEmail'] %}
-    <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to {{ data['userEmail'] }}</p>
+    {% if data['user-email'] %}
+      <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to {{ data['user-email'] }}</p>
     {% else %}
-    <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to mail@mail.com</p>
+      <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm" target="_blank">email</a> to mail@mail.com</p>
     {% endif %}
 
     <p>Select confirm in the email and come back to this screen.</p>
