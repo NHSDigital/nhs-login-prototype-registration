@@ -1,0 +1,33 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  This link does not work
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-heading-l">
+        This link has expired
+      </h1>
+
+      <p>It has been more than 24 hours since we sent you this link to confirm your email address.</p>
+      <p>You will need to set up your NHS login again.</p>
+      <p>To do this, go back to <b>'NHS App'</b> and register again using NHS login.</p>
+
+      <p>Reference: <b>CID1002</b></p>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>
+          <a href="https://support-nhslogin.herokuapp.com/manage/email/article#confirmemail" title="Help centre link">
+            What does reference CID1002 mean?
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
