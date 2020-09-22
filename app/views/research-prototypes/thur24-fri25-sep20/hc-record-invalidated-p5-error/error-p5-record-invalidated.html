@@ -1,0 +1,27 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+There is a problem
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+
+        <h1 class="nhsuk-heading-l">
+            Something went wrong
+        </h1>
+
+        <p>There may be a problem with your NHS number.</p>
+
+        <p>Reference: <b>CID2011</b></p>
+
+        <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p><a href="https://support-nhslogin.herokuapp.com/mixed/article#error2011" title="Help centre external link">What does reference CID2011 mean?</a></p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
