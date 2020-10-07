@@ -10,6 +10,7 @@
 
 .nhsuk-panel__title {
   @include nhsuk-responsive-margin(4, "bottom");
+
   text-align: center;
 }
 
