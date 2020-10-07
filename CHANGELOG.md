@@ -1,5 +1,87 @@
 # NHS.UK prototype kit Changelog
 
+## 3.1.0 - 24th April 2020
+
+:new: **New features**
+
+- Install NHS.UK frontend v3.1.0 which includes conditional Checkboxes and Radios
+- Update package dependencies to latest versions
+
+## 3.0.10 - 25th March 2020
+
+:wrench: **Fixes**
+
+- Install latest version of NHS.UK frontend (3.0.4)
+- Update package dependencies to latest versions
+
+## 3.0.9 - 18th March 2020
+
+- Update package dependencies to latest versions
+
+## 3.0.8 - 17th February 2020
+
+:wrench: **Fixes**
+
+- Use the latest version of the NHS.UK frontend library (3.0.3)
+- Update package dependencies to latest versions
+
+## 3.0.7 - 10th February 2020
+
+:new: **New features**
+
+- Add phase banner and tag components
+
+## 3.0.6 - 7th November 2019
+
+:wrench: **Fixes**
+
+- Update to NHS.UK frontend v3.0.0
+
+## 3.0.5 - 29th October 2019
+
+- Add support for Node 12.x
+
+  Node 12.x recently became the long term supported version of Nodejs. The `gulp-sass` dependency had a peer dependency pinned to specific version `node-sass` that doesn't work on Node 12.x. Node 12.x support got added to `node-sass` in `4.12.0` and above.
+
+- Update package dependencies to latest versions
+
+## 3.0.4 - 2nd October 2019
+
+- Use the latest version of the NHS.UK frontend library (v2.3.2)
+- Update package dependencies to latest versions
+
+## 3.0.3 - 11th September 2019
+
+:wrench: **Fixes**
+
+- Use the latest version of the NHS.UK frontend library (v2.3.1)
+- Update package dependencies to latest versions
+
+## 3.0.2 - 29th August 2019
+
+:wrench: **Fixes**
+
+- Update to NHS.UK frontend v2.3.0
+- Update package dependencies to latest versions
+- Use the lede text class on paragraphs below the page headings
+
+## 3.0.1 - 24th June 2019
+
+:wrench: **Fixes**
+
+- Update to NHS.UK frontend v2.2.0 and use the new favicons
+- Update package dependencies to latest versions
+
+## 3.0.0 - May 14, 2019
+
+:boom: **Breaking changes**
+
+- Layouts - restructure and tidy page layouts so they are easier to understand and edit
+
+:wrench: **Fixes**
+
+- Update package dependencies
+
 ## 2.0.1 - April 15, 2019
 
 :wrench: **Fixes**
