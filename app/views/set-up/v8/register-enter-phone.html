@@ -30,48 +30,18 @@ Enter your email address
         
       </div>
 
-        <button class="nhsuk-button full-width" type="submit">
-          Continue
-        </button>
-      </form>
+      <!-- Conditional reveal radio button -->
 
       <div class="nhsuk-form-group">
 
         <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              How would you prefer to be contacted?
-            </h1>
-          </legend>
-      
-          <span class="nhsuk-hint" id="contact-hint">
-            Select one option
-          </span>
-      
+
           <div class="nhsuk-radios nhsuk-radios--conditional">
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                Email
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-      
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="email">
-                  Email address
-                </label>
-                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-              </div>
-      
-            </div>
       
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
               <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                Phone
+                I have an international mobile number
               </label>
             </div>
       
@@ -79,27 +49,12 @@ Enter your email address
       
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="phone">
-                  Phone number
+                  International number
                 </label>
+                <span class="nhsuk-hint nhsuk-radios__conditional__hint" id="example-hints-1-item-hint">
+                  Include the country code of your international mobile phone number.
+                </span>
                 <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
-              </div>
-      
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
-                Text message
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-3">
-      
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile">
-                  Mobile phone number
-                </label>
-                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
               </div>
       
             </div>
@@ -108,6 +63,11 @@ Enter your email address
         </fieldset>
       
       </div>
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+      </form>
 
     </div>
 
