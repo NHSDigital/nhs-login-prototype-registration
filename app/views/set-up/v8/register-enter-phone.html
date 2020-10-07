@@ -16,26 +16,25 @@ Enter your email address
       Enter your mobile number
     </h1>
 
-    <p></p>
+    <p class="nhsuk-body">Enter your UK mobile phone number or an international phone number so we can send you a 6 digit security code.</p>
 
     <form method="post" action="register-enter-OTP">
 
       <div class="nhsuk-form-group">
+
         <label class="nhsuk-label" for="input-with-hint-text">
           Mobile number
         </label>
-        <span class="nhsuk-hint" id="input-with-hint-text-hint">
-          <p>You must enter a UK mobile phone number so we can send you a 6 digit security code.</p>
-        </span>
-        <input class="nhsuk-input nhsuk-input--width-20" id="phoneNumber" value="{{ data['phoneNumber'] }}"
-          name="phoneNumber" type="number" aria-describedby="enter-your-mobile-number">
+
+        <input class="nhsuk-input nhsuk-input--width-20" id="phoneNumber" value="{{ data['phoneNumber'] }}" name="phoneNumber" type="number" aria-describedby="enter-your-mobile-number">
+        
       </div>
 
-      <button class="nhsuk-button full-width" type="submit">
-        Continue
-      </button>
-
-    </form>
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+      </form>
+    </div>
 
     {% if data['devMode'] %}
     <details class="nhsuk-details dev-mode" role="group">
