@@ -1,0 +1,60 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+Change your phone number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h1 class="nhsuk-fieldset__legend--l">
+            Change your phone number
+        </h1>
+
+        <p>Confirm your phone number is {{ data['new-number'] }}</p>
+        <a href="../v7/acc-recovery-phone-number-changed">
+            <button class="nhsuk-button" type="submit">
+                Confirm change
+            </button>
+        </a>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-bottom-4">
+
+        <p class="nhsuk-body">If you did not ask to change your phone number, contact the National Service Desk. You
+            will need to make note of the reference below.</p>
+
+        <p class="nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin: 0px 10px 10px 0px;">Email:</p>
+        <p class="nhsuk-body">
+            <a href=" #" class="nhsuk-body">nationalservicedesk@nhs.net</a>
+        </p>
+
+        <p class=" nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin-right: 10px;">Phone:</p>
+        <p class="nhsuk-body" style="margin-left: 10px;">0300 303 5035</p>
+
+        <p class=" nhsuk-body nhsuk-u-font-weight-bold" style="float: left; margin-right: 10px;">Reference:</p>
+        <p class="nhsuk-body" style="margin-left: 10px;">CID3005</p>
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Errors</p>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-email-generic-error">Generic back-end error</a></li>
+                    <li><a href="../errors/error-acc-recovery-email-link-expired">Link expired</a></li>
+                    <li><a href="../errors/error-acc-recovery-email-linked-used">Link already used</a></li>
+                </ul>
+            </div>
+        </details>
+
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
