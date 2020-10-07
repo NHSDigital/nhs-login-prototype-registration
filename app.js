@@ -15,7 +15,7 @@ dotenv.config()
 
 // Local dependencies
 const packageInfo = require('./package.json');
-// const authentication = require('./middleware/authentication');
+const authentication = require('./middleware/authentication');
 const automaticRouting = require('./middleware/auto-routing');
 const config = require('./app/config');
 const locals = require('./app/locals');
@@ -74,7 +74,7 @@ let sessionOptions = {
 }
 
 // Support session data in cookie or memory
-if (useCookieSessionStore === 'true') {
+if (useCookieSessionStore === 'true' && !onlyDocumentation) {
   app.use(sessionInCookie(Object.assign(sessionOptions, {
     cookieName: sessionName,
     proxy: true,
