@@ -39,13 +39,13 @@ Enter your email address
           <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
 
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+              <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-checkbox" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">
                 I have an international mobile number
               </label>
             </div>
       
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-checkbox">
       
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="mobile">
@@ -91,5 +91,13 @@ Enter your email address
     </div>
 
   </div>
+
+  <script>
+
+    document.getElementById('int-checkbox').onchange = function() {
+    document.getElementById('phoneNumber').disabled = this.checked;
+  };
+
+  </script>
 
 {% endblock %}
