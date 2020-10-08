@@ -14,37 +14,49 @@ Enter your mobile phone number
 
         <div class="nhsuk-back-link">
             <a class="nhsuk-back-link__link" href="../v8/login-enter-OTP-recovery">
-                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    aria-hidden="true">
-                    <path
-                        d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
-                    </path>
+                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
                 </svg>
-                Back to: Check your mobile phone</a>
+                Back to: Check your mobile phone
+            </a>
         </div>
 
         <form action="../v8/acc-recovery-route-enter-nhs-number" method="POST" role="form">
 
-            <h1 class="nhsuk-heading-l">
-                Enter your mobile phone number
-            </h1>
-
+            <h1 class="nhsuk-heading-l">Enter your mobile phone number</h1>
             <p class="nhsuk-body">We need you to confirm the number linked to your NHS login.</p>
-
             <p class="nhsuk-body">We will not text a security code to this number.</p>
 
             <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile-number">
-                    Mobile number
-                </label>
+                <label class="nhsuk-label" for="mobile-number">Mobile number</label>
                 <span class="nhsuk-hint">Enter your number below.</span>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="mobile-number"
-                    type="number">
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="mobile-number" type="number">
             </div>
 
-            <button class="nhsuk-button full-width" type="submit">
-                Continue
-            </button>
+            <!-- Conditional reveal radio button -->
+
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+                        <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-checkbox" aria-expanded="false">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-checkbox">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label" for="mobile">International number</label>
+                                <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
+                                Include the country code of your international mobile phone number.
+                                </span>
+                                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+                            </div> <!-- end nhsuk-form group -->
+                        </div> <!-- end nhsuk-checkboxes__conditional--hidden -->
+                    </div> <!-- end nhsuk-checkboxes--conditional -->
+                </fieldset> <!-- end fieldset -->
+            </div> <!-- end nhsuk-form-group -->
+
+            <button class="nhsuk-button full-width" type="submit">Continue</button>
 
         </form>
 
@@ -66,7 +78,22 @@ Enter your mobile phone number
 
         {% endif %}
 
-    </div>
-</div>
+    </div> <!-- end grid-column-two-thirds -->
+</div> <!-- end nhsuk-grid-row -->
+
+<script>
+
+    // This script is for the register-enter-phone screen in the registration journey as well as 
+    // the account recovery journeys where we ask users to enter their mobile phone number
+
+    // The proposed design / interaction for this, is because there is a conditional reveal checkbox
+    // which displays another input field, users could get confused with which input field to interact
+    // with this script disables the default mobile number input field if the checkbox is selected.
+
+    document.getElementById('int-checkbox').onchange = function() {
+        document.getElementById('mobile-number').disabled = this.checked;
+    };
+
+  </script>
 
 {% endblock %}
