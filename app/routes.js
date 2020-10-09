@@ -109,9 +109,9 @@ router.post('/p5/demo/know-nhs-number', function (req, res) {
   var nhsNumber = req.session.data['know-nhs-number']
 
   // Check whether the variable matches a condition
-  if (nhsNumber == "Yes") {
+  if (nhsNumber == "yes") {
     // Send user to next page
-    res.redirect('/p5/demo/enter-nhs-number')
+    res.redirect('/p5/demo/enter-dob')
   } else {
     // Send user to ineligible page
     res.redirect('/p5/demo/enter-name')
