@@ -211,11 +211,9 @@ router.post('/p5/errors/p9-uplift-option', function (req, res) {
   // Make a variable and give it the value from p9-uplift-option-radio
   var p9UpliftOption = req.session.data['p9-uplift-option-radio']
 
-  if (p9UpliftOption == "pyi-id") {
+  if (p9UpliftOption == "pyi") {
     // Send user to start of PYI journey
     res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
-  } else if (p9UpliftOption == "pyi-no-id") {
-    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v22/patient-online-details?serviceName=the%20NHS%20app&service=app6&devMode=false&uplift=true') 
   } else if (p9UpliftOption == "enter-details-again") {
     res.redirect('/p5/demo/know-nhs-number')
   }

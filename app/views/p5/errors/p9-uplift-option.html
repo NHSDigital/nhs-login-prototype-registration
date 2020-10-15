@@ -18,27 +18,20 @@ Enter your NHS number
           </label>
         </h1>
 
-        <p class="nhsuk-body">We cannot match you to an NHS record using the details you have given.</p>
-        <p class="nhsuk-body">We may be able to match you to an NHS record if you can prove who you are.</p>
+        <p class="nhsuk-body">We still cannot match you to an NHS record using the details you have given.</p>
+        <p class="nhsuk-body">We may be able to match you to an NHS record if you can prove your identity.</p>
+        <p class="nhsuk-body">You can enter your details again, or try another way and prove who you are.</p>
 
           <div class="nhsuk-form-group">
             <h3 class="nhsuk-heading-m">What do you want to do next?</h3>
             <fieldset class="nhsuk-fieldset">
               <div class="nhsuk-radios">
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="pyi-id" name="p9-uplift-option-radio" type="radio" value="pyi-id">
-                  <label class="nhsuk-label nhsuk-radios__label" for="pyi-id">
-                    Prove who you are with photo I.D.
+                  <input class="nhsuk-radios__input" id="pyi" name="p9-uplift-option-radio" type="radio" value="pyi">
+                  <label class="nhsuk-label nhsuk-radios__label" for="pyi">
+                    Try another way and prove who you are
                   </label>
                 </div>
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="pyi-no-id" name="p9-uplift-option-radio" type="radio" value="pyi-no-id">
-                  <label class="nhsuk-label nhsuk-radios__label" for="pyi-no-id">
-                    Prove who you are without using photo I.D.
-                  </label>
-                </div>
-
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="enter-details-again" name="p9-uplift-option-radio" type="radio" value="enter-details-again">
                   <label class="nhsuk-label nhsuk-radios__label" for="enter-details-again">
@@ -52,7 +45,6 @@ Enter your NHS number
         <button class="nhsuk-button full-width" type="submit">
           Continue
         </button>
-        
     </form>
 
     {% if data['devMode'] %}
