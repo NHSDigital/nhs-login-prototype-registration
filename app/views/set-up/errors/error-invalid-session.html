@@ -1,0 +1,17 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  You have tried too many times
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+        <h1 class="nhsuk-heading-l">You have tried too many times</h1>
+        <p class="nhsuk-body">You must start again.</p>
+        <p class="nhsuk-body">Go back to the website or app you want to access and log in with NHS login.</p>
+    </div>
+  </div>
+{% endblock %}
