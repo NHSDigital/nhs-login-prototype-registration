@@ -27,10 +27,10 @@ Enter your email address
         <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
           <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-checkbox" aria-expanded="false">
+              <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-num-checkbox" aria-expanded="false">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
             </div>
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-checkbox">
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-num-checkbox">
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="mobile">International mobile number</label>
                 <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
@@ -60,6 +60,7 @@ Enter your email address
           <ul>
             <li><a href="../errors/error-register-phone-no-input">No input</a></li>
             <li><a href="../errors/error-register-phone-regex">Invalid format</a></li>
+            <li><a href="../errors/error-int-number-invalid">International number invalid format</a></li>
             <li><a href="../errors/error-register-phone-otp-exceeded">User requests OTP >5 times</a></li>
           </ul>
         </div>
@@ -80,7 +81,7 @@ Enter your email address
     // with this script disables the default mobile number input field if the checkbox is selected.
 
     document.getElementById('int-checkbox').onchange = function() {
-        document.getElementById('phoneNumber').disabled = this.checked;
+      document.getElementById('phoneNumber').disabled = this.checked;
     };
 
   </script>
