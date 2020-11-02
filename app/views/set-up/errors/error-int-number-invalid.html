@@ -73,7 +73,7 @@
     // with this script disables the default mobile number input field if the checkbox is selected.
 
     document.getElementById('int-checkbox').onchange = function() {
-      document.getElementById('uk-mobile-number').disabled = this.checked;
+      document.getElementById('uk-mobile-number').disabled = !this.checked;
     };
 
   </script>

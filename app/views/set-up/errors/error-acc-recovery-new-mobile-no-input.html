@@ -43,22 +43,55 @@ Enter your email address
             <p class="nhsuk-body">We will send a 6 digit security code to your new phone number.</p>
 
             <div class="nhsuk-form-group nhsuk-form-group--error">
-                <label class="nhsuk-label" for="new-number">
-                    New number
-                </label>
+                <label class="nhsuk-label" for="new-number">New number</label>
                 <span class="nhsuk-error-message" id="no-input-error">
                     <span class="nhsuk-u-visually-hidden">Error:</span> You need to enter a new mobile phone number
                 </span>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="new-number" name="new-number" type="number"
-                    value="{{ data['new-number'] }}">
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="new-number" name="new-number" type="number" value="{{ data['new-number'] }}">
             </div>
+
+            <!-- Conditional reveal checkbox -->
+
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+                        <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-num-checkbox" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
+                        </div>
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-num-checkbox">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="mobile">International mobile number</label>
+                            <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
+                            Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
+                            </span>
+                            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+                        </div> <!-- end nhsuk-form-group --> 
+                        </div> <!-- end nhsuk-checkboxes__conditional -->
+                    </div> <!-- end nhsuk-checkboxes -->
+                </fieldset> <!-- nhsuk-fieldset -->
+            </div> <!-- end nhsuk-form-group -->
 
             <button class="nhsuk-button full-width" type="submit">
                 Continue
             </button>
         </form>
-
     </div>
 </div>
+
+<script>
+
+    // This script is for the register-enter-phone screen in the registration journey as well as 
+    // the account recovery journeys where we ask users to enter their mobile phone number
+
+    // The proposed design / interaction for this, is because there is a conditional reveal checkbox
+    // which displays another input field, users could get confused with which input field to interact
+    // with this script disables the default mobile number input field if the checkbox is selected.
+
+    document.getElementById('int-checkbox').onchange = function() {
+        document.getElementById('uk-mobile-number').disabled = this.checked;
+    };
+
+  </script>
 
 {% endblock %}
