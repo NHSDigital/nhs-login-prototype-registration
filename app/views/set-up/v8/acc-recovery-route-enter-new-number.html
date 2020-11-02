@@ -28,6 +28,7 @@ Enter your mobile phone number
 
             <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="mobile-number">New number</label>
+                <span class="nhsuk-hint">You must enter a UK mobile phone number so we can send you a 6 digit security code.</span>
                 <input class="nhsuk-input nhsuk-u-width-one-third" id="new-number" name="new-number" type="number" value="{{ data['new-number'] }}">
             </div>
 
@@ -44,7 +45,7 @@ Enter your mobile phone number
                     <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="mobile">International mobile number</label>
                         <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
-                        Please enter + and then your country code before your phone number. For example, <b>+353</b>07777666555
+                        Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
                         </span>
                         <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
                     </div> <!-- end nhsuk-form-group --> 
@@ -72,6 +73,7 @@ Enter your mobile phone number
                 <p>Errors</p>
                 <ul>
                     <li><a href="../errors/error-acc-recovery-enter-new-number-no-input">No user input</a></li>
+                    <li><a href="../errors/error-acc-recovery-new-mobile-international-number-invalid-format">International number invalid format</a></li>
                 </ul>
             </div>
         </details>
