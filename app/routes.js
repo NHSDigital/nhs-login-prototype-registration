@@ -186,6 +186,41 @@ router.post('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/know-nhs-n
   }
 })
 
+// p5 to p9 uplift research - idv mobile number
+
+router.post('/research-prototypes/idv-p5-uplift/p5/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5/enter-dob')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5/enter-name')
+  }
+})
+
+// p5 to p9 uplift confirm your details page radio buttons - idv mobile number
+
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/user-profile', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/prove-who-you-are')
+  } else if (confDetails == "no") {
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/error-p5-p9-uplift-hc-wrong-details')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/error-p5-p9-uplift-hc-incorrect-details')
+  }
+})
+
 // p5 to p9 uplift confirm your details page radio buttons
 
 router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {

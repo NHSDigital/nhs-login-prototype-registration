@@ -1,0 +1,45 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Phone number changed
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <h1 class="nhsuk-heading-l">
+            Recovery email added
+        </h1>
+
+        <p class="nhsuk-body">You have added mail@mail.com as your recovery email address.</p>
+
+        <p class="nhsuk-body">You must wait 24 hours before this recovery email address can be used.</p>
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Email</p>
+                <ul>
+                    <li>
+                        <a href="../v8/acc-recovery-email-recovery-email-added">Recovery email added email - sent to users
+                            primary email address</a>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

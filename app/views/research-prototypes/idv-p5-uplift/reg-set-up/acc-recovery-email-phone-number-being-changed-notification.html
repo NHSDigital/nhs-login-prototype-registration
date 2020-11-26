@@ -1,0 +1,43 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+Change your phone number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h1 class="nhsuk-fieldset__legend--l">
+            Your phone number is being changed
+        </h1>
+
+        <p class="nhsuk-body">We are changing the phone number linked to your NHS login. This can take up to 24 hours.
+        </p>
+
+        <p class="nhsuk-body">If you did not ask for this, you can <a
+                href="../v8/acc-recovery-cancel-phone-number-change">cancel changing your phone number</a>.</p>
+
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Errors</p>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-email-generic-error">Generic back-end error</a></li>
+                    <li><a href="../errors/error-acc-recovery-email-link-expired">Link expired</a></li>
+                </ul>
+            </div>
+        </details>
+
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

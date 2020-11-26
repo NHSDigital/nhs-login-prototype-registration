@@ -1,0 +1,77 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Checking your details
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container">
+    <h1 class="nhsuk-heading-l">Checking your details</h1>
+
+    <form action="auth" method="post">
+      <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
+
+        <div class="bar_container">
+          <div id="main_container">
+            <div id="pbar" class="progress-spinner" data-percent="0">
+              <img src="/images/loader-spinner.svg" width="200px" height="200px" id="spinner" class="" />
+              <div class="ppc-loading">
+                <div class="pcc-percents-wrapper">
+                  <span id="spinner-status" class="nhsuk-body">Loading</span><span aria-hidden="true">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </form>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <li><a href="../errors/error-p5-no-match">PDS error 1 - No match</a></li>
+          <li><a href="../errors/error-p5-api-calls-exceeded">PDS error 2 - API calls exceeded</a></li>
+          <li><a href="../errors/error-p5-nhs-number-not-verified">PDS error 3 - NHS number not verified</a></li>
+          <li><a href="../errors/error-p5-record-invalidated">PDS error 5 - Record invalidated</a></li>
+          <li><a href="../errors/error-p5-deceased-user">PDS error 6 - Deceased user</a></li>
+          <li><a href="../errors/error-p5-generic">PDS error 7 - Technical (generic) back-end error</a></li>
+        </ul>
+        <p>Routes</p>
+        <ul>
+          <li><a href="../errors/p9-uplift-option">Option of P9 after 3 failed P5 attempts</a></li>
+          <li><a href="../../set-up/demo/auth-terms">Updated terms of use</a></li>
+          <li><a href="../../set-up/demo/auth-consent">NHS App - Agree to give consent to information use</a></li>
+          <li><a href="../../set-up/demo/auth-consent-sensely">Sensely - Agree to give consent to information use</a>
+          </li>
+          <li><a href="../../set-up/demo/auth-consent-extra-scope">Agree to give consent to <b>additional</b>
+              information use</a></li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+</div>
+
+
+<script>
+  setTimeout(function () {
+    window.location.href = '/research-prototypes/idv-p5-uplift/p5-p9-uplift/user-profile';
+  }, 2500);
+</script>
+
+
+
+{% endblock %}
