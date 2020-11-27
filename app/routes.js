@@ -221,6 +221,40 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/user-profile', func
   }
 })
 
+// p5 to p9 uplift prove who you are radio buttons - idv mobile number
+
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/prove-who-you-are', function (req, res) {
+
+  // Make a variable and give it the value from 'prove who you are'
+  var whoAreYou = req.session.data['who-you-are-radio']
+
+  // Check whether the variable matches a condition
+  if (whoAreYou == "yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/auth')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/auth')
+  }
+})  
+
+// p5 to p9 uplift your number radio buttons - idv mobile number
+
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/your-mobile-phone-number', function (req, res) {
+
+  // Make a variable and give it the value from 'your number'v
+  var yourNumber = req.session.data['your-number']
+
+  // Check whether the variable matches a condition
+  if (yourNumber == "yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/register-enter-OTP')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/confirmed-details')
+  }
+})  
+
 // p5 to p9 uplift confirm your details page radio buttons
 
 router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {

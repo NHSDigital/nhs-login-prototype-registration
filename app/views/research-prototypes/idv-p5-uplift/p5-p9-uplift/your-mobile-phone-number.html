@@ -4,7 +4,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Prove who you are
+Your mobile phone number
 {% endblock %}
 
 {% block content %}
@@ -22,50 +22,43 @@ Prove who you are
     <form action="#" method="POST">
         <h1 class="nhsuk-label-wrapper">
           <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
-            Prove who you are
+            Your mobile phone number
           </label>
         </h1>
         
         <p>
-          When you registered for your GP surgery’s online services you will have used 3 registration details.
+          You have a mobile phone number that is registered with your GP. We can use this to prove who you are, so you can access all areas of <b>‘CLIENT NAME’</b>.
         </p>
         <p>
-          We can find these registration details for you and use them to prove who you are.
+          The mobile phone number on your NHS record is <b>********777</b>.
+        </p>
+        <p>
+          If you still use this phone number, we can send you a security code. You will need to enter this security code on the next page.
         </p>
 
         <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset" aria-describedby="who-you-are-hint">
+          <fieldset class="nhsuk-fieldset" aria-describedby="your-number-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h2 class="nhsuk-fieldset__heading">
-                Can we use your registration details?
+                Do you use this mobile phone number?
               </h2>
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--conditional">
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="yes" name="who-you-are-radio" type="radio" value="yes" aria-controls="conditional-who-you-are-1" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="who-you-are-1">
+                <input class="nhsuk-radios__input" id="yes" name="your-number" type="radio" value="yes" aria-controls="conditional-your-number-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="your-number-1">
                   Yes
                 </label>
               </div>
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="no" name="who-you-are-radio" type="radio" value="no" aria-controls="conditional-who-you-are-2" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="who-you-are-2">
+                <input class="nhsuk-radios__input" id="no" name="your-number" type="radio" value="no" aria-controls="conditional-your-number-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="your-number-2">
                   No
                 </label>
-              </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-who-you-are-2">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="no">
-                    Your access to <b>‘CLIENT NAME’</b> may be limited until you prove who you are.
-                  </label>
-                </div>
-        
               </div>
         
             </div>
@@ -87,12 +80,6 @@ Prove who you are
           Continue with testing scenario
         </span>
       </summary>
-      <div class="nhsuk-details__text">
-        <p>Phone doesn't match</p>
-        <ul>
-          <a href="/p5-p9-uplift/your-mobile-phone-number">No user input</a>
-        </ul>
-      </div>
       <div class="nhsuk-details__text">
         <p>Errors</p>
         <ul>
