@@ -1,0 +1,63 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Your details have been confirmed
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <form action="auth" method="POST">
+        <h1 class="nhsuk-label-wrapper">
+          <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
+            You cannot use this mobile phone number
+          </label>
+        </h1>
+        
+        <p>
+          You entered the wrong security code too many times. This means you cannot use the mobile phone number registered with your GP to prove who you are.
+        </p>
+        <h3 class="nhsuk-heading-m">
+          Your details have been confirmed
+        </h3>
+        <p>
+          We have connected your NHS record to your NHS login. You can now select <b>Continue</b> to access <b>‘CLIENT NAME’</b>. You may have limited access until you are able to prove who you are.
+        </p>
+        
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+        
+    </form>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Phone doesn't match</p>
+        <ul>
+          <a href="/p5-p9-uplift/your-mobile-phone-number">No user input</a>
+        </ul>
+      </div>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <a href="/p5-p9-uplift/error-prove-who-you-are">No user input</a>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

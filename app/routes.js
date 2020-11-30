@@ -239,6 +239,24 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/us
   }
 })
 
+// research session fri4-mon7 - idv mobile number - confirm your details page radio buttons - user scenario 3
+
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/user-profile', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/your-mobile-phone-number')
+  } else if (confDetails == "no") {
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/error-p5-p9-uplift-hc-wrong-details')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/error-p5-p9-uplift-hc-incorrect-details')
+  }
+})
+
 // research session fri4-mon7 - idv mobile number - prove who you are radio buttons
 
 router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/prove-who-you-are', function (req, res) {
@@ -270,6 +288,23 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/yo
   } else {
     // Send user to ineligible page
     res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/confirmed-details')
+  }
+})  
+
+// research session fri4-mon7 - idv mobile number - your number radio buttons
+
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/your-mobile-phone-number', function (req, res) {
+
+  // Make a variable and give it the value from 'your number'v
+  var yourNumber = req.session.data['your-number']
+
+  // Check whether the variable matches a condition
+  if (yourNumber == "yes") {
+    // Send user to next page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/register-enter-OTP')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match-new/confirmed-details')
   }
 })  
 
