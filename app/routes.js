@@ -186,7 +186,7 @@ router.post('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/know-nhs-n
   }
 })
 
-// p5 to p9 uplift research - idv mobile number
+// research session fri4-mon7 - idv mobile number
 
 router.post('/research-prototypes/idv-p5-uplift/p5/know-nhs-number', function (req, res) {
 
@@ -203,7 +203,7 @@ router.post('/research-prototypes/idv-p5-uplift/p5/know-nhs-number', function (r
   }
 })
 
-// p5 to p9 uplift confirm your details page radio buttons - idv mobile number
+// research session fri4-mon7 - idv mobile number - confirm your details page radio buttons
 
 router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/user-profile', function (req, res) {
   
@@ -213,7 +213,7 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/user-profile', func
   //Check whether the variable matches a condition below
   if (confDetails == "yes") {
     // Send user to start of PYI journey
-    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/prove-who-you-are')
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/auth-details')
   } else if (confDetails == "no") {
     res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/error-p5-p9-uplift-hc-wrong-details')
   } else if (confDetails == "incorrect") {
@@ -221,7 +221,25 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/user-profile', func
   }
 })
 
-// p5 to p9 uplift prove who you are radio buttons - idv mobile number
+// research session fri4-mon7 - idv mobile number - confirm your details page radio buttons - user scenario 2
+
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/user-profile', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/your-mobile-phone-number')
+  } else if (confDetails == "no") {
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/error-p5-p9-uplift-hc-wrong-details')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/error-p5-p9-uplift-hc-incorrect-details')
+  }
+})
+
+// research session fri4-mon7 - idv mobile number - prove who you are radio buttons
 
 router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/prove-who-you-are', function (req, res) {
 
@@ -238,9 +256,9 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/prove-who-you-are',
   }
 })  
 
-// p5 to p9 uplift your number radio buttons - idv mobile number
+// research session fri4-mon7 - idv mobile number - your number radio buttons
 
-router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/your-mobile-phone-number', function (req, res) {
+router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/your-mobile-phone-number', function (req, res) {
 
   // Make a variable and give it the value from 'your number'v
   var yourNumber = req.session.data['your-number']
@@ -248,10 +266,10 @@ router.post('/research-prototypes/idv-p5-uplift/p5-p9-uplift/your-mobile-phone-n
   // Check whether the variable matches a condition
   if (yourNumber == "yes") {
     // Send user to next page
-    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/register-enter-OTP')
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/register-enter-OTP')
   } else {
     // Send user to ineligible page
-    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/confirmed-details')
+    res.redirect('/research-prototypes/idv-p5-uplift/p5-p9-uplift/number-not-match/confirmed-details')
   }
 })  
 
