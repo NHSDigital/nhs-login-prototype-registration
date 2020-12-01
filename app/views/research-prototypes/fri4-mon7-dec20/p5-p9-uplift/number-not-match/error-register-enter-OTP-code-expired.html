@@ -1,0 +1,51 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+The security code has expired
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+      
+
+    <h1 class="nhsuk-fieldset__legend--l">
+      The security code has expired
+    </h1>
+
+    <p class="nhsuk-body-m">This is because it has been more than 5 minutes since it has been sent.</p>
+
+    
+    <p><a href="register-enter-OTP-new-code">Send a new security code</a></p>
+
+    <!--<a class="nhsuk-button full-width" href="cannot-use-mobile-new">Continue</a>-->
+
+    <!--
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <li><a href="../errors/error-register-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
+          <li><a href="../errors/error-register-OTP-no-input">No input</a></li>
+          <li><a href="../errors/error-register-OTP-regex">Incorrect format</a></li>
+          <li><a href="../errors/error-register-OTP-incorrect">Incorrect OTP</a></li>
+          <li><a href="../errors/error-login-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+    -->
+
+  </div>
+</div>
+
+{% endblock %}

@@ -11,6 +11,19 @@ Enter your NHS number
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
+    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+      <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="nhsuk-error-summary__body">
+        <ul class="nhsuk-list nhsuk-error-summary__list">
+          <li>
+            <a href="#example-error-1">You need to confirm if these are your details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <form action="#" method="POST">
         <h1 class="nhsuk-label-wrapper">
           <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
@@ -48,8 +61,14 @@ Enter your NHS number
           <div class="nhsuk-form-group">
             <h3 class="nhsuk-heading-m">Are these your details?</h3>
             <fieldset class="nhsuk-fieldset">
-              <div class="nhsuk-radios">
+              <div class="nhsuk-radios nhsuk-form-group--error">
+          
+                <span class="nhsuk-error-message" id="example-error-error">
+                  <span class="nhsuk-u-visually-hidden">Error:</span> You need to select if we can use your number for your registration details
+                </span>
+
                 <div class="nhsuk-radios__item">
+                    
                   <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="yes">
                   <label class="nhsuk-label nhsuk-radios__label" for="yes">
                     Yes, these are my details
@@ -79,7 +98,7 @@ Enter your NHS number
         
     </form>
 
-    
+    <!--
     {% if data['devMode'] %}
     <details class="nhsuk-details dev-mode" role="group">
       <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
@@ -95,6 +114,7 @@ Enter your NHS number
       </div>
     </details>
     {% endif %}
+    -->
     
 
   </div>
