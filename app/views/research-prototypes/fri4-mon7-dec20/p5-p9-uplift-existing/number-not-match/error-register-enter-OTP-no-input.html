@@ -23,8 +23,7 @@ Enter your email address
         <div class="nhsuk-error-summary__body">
           <ul class="nhsuk-list nhsuk-error-summary__list">
             <li>
-              <a href="#example-error-1">The security code you have entered is
-                wrong</a>
+              <a href="#example-error-1">Enter the security code</a>
             </li>
           </ul>
         </div>
@@ -37,7 +36,7 @@ Enter your email address
     {% if data['phoneNumber'] %}
     <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to {{ data['phoneNumber'] }}</p>
     {% else %}
-    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to ********777</p>
+    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>********777</b></p>
     {% endif %}
 
     <details class="nhsuk-details">
@@ -64,7 +63,7 @@ Enter your email address
 
 
         <span class="nhsuk-error-message" id="example-error-error">
-          <span class="nhsuk-u-visually-hidden">Error:</span> Enter the correct security code
+          <span class="nhsuk-u-visually-hidden">Error:</span> Enter the security code
         </span>
 
         <input
@@ -73,7 +72,7 @@ Enter your email address
           type="number" aria-describedby="security-code-input">
       </div>
 
-      <a class="nhsuk-button full-width" href="cannot-use-mobile-existing">Continue</a>
+      <a class="nhsuk-button full-width" href="cannot-use-mobile-new">Continue</a>
 
     </form>
 

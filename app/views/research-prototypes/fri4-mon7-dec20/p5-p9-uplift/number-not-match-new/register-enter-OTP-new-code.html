@@ -23,7 +23,7 @@ Check your mobile phone
     {% if data['phoneNumber'] %}
     <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to {{ data['phoneNumber'] }}</p>
     {% else %}
-    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to ********777</p>
+    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>********777</b></p>
     {% endif %}
 
 
@@ -31,6 +31,18 @@ Check your mobile phone
       <span class="nhsuk-u-visually-hidden">Information: </span>
       <p>You have been sent a new security code.</p>
     </div>
+
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Not received your security code?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <a href="register-enter-OTP-new-code">Request a new security code</a>
+      </div>
+    </details>
 
     <form>
 
@@ -48,17 +60,6 @@ Check your mobile phone
       </div>
 
       <a class="nhsuk-button full-width" href="error-register-enter-OTP">Continue</a>
-
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Still not received your security code?
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <a href="register-enter-OTP-new-code">Request a new security code</a>
-        </div>
-      </details>
 
     </form>
 

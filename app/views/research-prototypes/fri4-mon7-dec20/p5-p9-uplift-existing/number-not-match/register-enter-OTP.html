@@ -4,7 +4,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Check your mobile phone
+Enter your email address
 {% endblock %}
 
 {% block content %}
@@ -23,14 +23,19 @@ Check your mobile phone
     {% if data['phoneNumber'] %}
     <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to {{ data['phoneNumber'] }}</p>
     {% else %}
-    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to ********777</p>
+    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>********777</b></p>
     {% endif %}
 
-
-    <div class="nhsuk-inset-text">
-      <span class="nhsuk-u-visually-hidden">Information: </span>
-      <p>You have been sent a new security code.</p>
-    </div>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Not received your security code?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <a href="register-enter-OTP-new-code">Request a new security code</a>
+      </div>
+    </details>
 
     <form>
 
@@ -49,19 +54,9 @@ Check your mobile phone
 
       <a class="nhsuk-button full-width" href="error-register-enter-OTP">Continue</a>
 
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Still not received your security code?
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <a href="register-enter-OTP-new-code">Request a new security code</a>
-        </div>
-      </details>
-
     </form>
 
+    
     {% if data['devMode'] %}
     <details class="nhsuk-details dev-mode" role="group">
       <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
@@ -76,14 +71,13 @@ Check your mobile phone
           <li><a href="error-register-enter-OTP-no-input">No input</a></li>
           <li><a href="error-register-enter-OTP-format">Incorrect format</a></li>
           <li><a href="error-register-enter-OTP">Incorrect OTP</a></li>
-          <li><a href="cannot-use-mobile-new">OTP attempts exceeded</a></li>
+          <li><a href="cannot-use-mobile-existing">OTP attempts exceeded</a></li>
+          <li><a href="error-register-enter-OTP-code-expired">Code expired</a></li>
         </ul>
       </div>
     </details>
 
     {% endif %}
-    
-
 
   </div>
 </div>
