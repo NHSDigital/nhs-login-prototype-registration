@@ -1,0 +1,53 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout-app.html' %}
+
+{% block pageTitle %}
+NHS App
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<header class="home-header">
+  <div class="spacer"></div>
+  <div class="nhso_logo">
+      <svg style="height:3em" viewBox="0 0 112 46" xmlns="http://www.w3.org/2000/svg"><title>NHS app</title><path d="M112 44V0H0v44h112zM45.032 4.25L37.3 39.678H25.165L17.54 15.162h-.106l-5.076 24.516H3.182l7.77-35.428H23.15l7.478 24.567h.1L35.832 4.25h9.201zm34.701 0l-7.578 35.428h-9.77l3.24-15.173H54.097l-3.267 15.173h-9.774L48.639 4.25h9.769l-2.87 13.552h11.546l2.88-13.552h9.77zm28.072.963l-2.355 7.055a18.871 18.871 0 0 0-8.045-1.62c-3.867 0-7.006.554-7.006 3.4 0 5.022 14.165 3.148 14.165 13.91 0 9.794-9.36 12.336-17.825 12.336a41.984 41.984 0 0 1-11.29-1.833l2.3-7.21c1.931 1.221 5.803 2.034 9.017 2.034 3.033 0 7.785-.56 7.785-4.214 0-5.694-14.165-3.556-14.165-13.547 0-9.141 8.263-11.906 16.26-11.906 4.498 0 8.73.461 11.185 1.553l-.026.042z" fill="#FFF"></path></svg>
+  </div>
+
+  <div class="spacer"></div>
+
+
+  <div class="symptom_banner">
+      <h2 style="font-weight: normal;">How are you feeling today?</h2>
+      <button class="button white" id="btn_symptoms" style="font-weight: normal;">
+          Check symptoms
+      </button>
+  </div>
+</header>
+
+<main class="home-main">
+  <h2 style="font-weight: normal;">To access your GP services</h2>
+
+  <a href="/enter-email" class="button" id="btn_login blue" style="background-color: #005EB8; font-weight: normal;">
+      Continue with NHS login
+  </a>
+
+
+
+  <!-- <a href="/create-account/pb/login-nhs?service=app5&amp;serviceName=NHS%20App&amp;lsId=undefined&amp;lsAccess=undefined&amp;lsStudy=undefined&amp;devMode=undefined&amp;manual=undefined" class="button green" id="btn_login" style="
+color: #ffffff;text-decoration: none;font-weight: 700;font-size: 1.125em;">
+      Log in with NHS Access
+
+  </a>
+
+  <a href="/create-account/pb/create-acc-terms?service=app5&amp;serviceName=NHS%20App&amp;lsId=undefined&amp;lsAccess=undefined&amp;lsStudy=undefined&amp;devMode=undefined&amp;manual=undefined" class="button" id="btn_register" style="
+  color: #ffffff;text-decoration: none;font-weight: 700;font-size: 1.125em;">
+      Create an account
+  </a> -->
+
+  <!--<a href="#">Terms and conditions</a>-->
+</main>
+
+{% endblock %}
