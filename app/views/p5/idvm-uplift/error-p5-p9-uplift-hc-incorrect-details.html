@@ -1,0 +1,57 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+These are my details but some are wrong
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <h1 class="nhsuk-heading-l">
+        These are my details but some are wrong
+      </h1>
+
+      <div class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+        <table class="nhsuk-table">
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><b>Name</b></td>
+              <td class="nhsuk-table__cell ">Alex smith</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><b>Date of birth</b></td>
+              <td class="nhsuk-table__cell ">18 August 1989</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Postcode</b></td>
+              <td class="nhsuk-table__cell ">AB3 4CD</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>NHS number</b></td>
+              <td class="nhsuk-table__cell ">*** *** 3456</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="nhsuk-body">If your name is wrong, you should contact your GP surgery to update your details. Doing so will then update your details on this NHS record.
+      </p>
+
+      <p>If all of these details are wrong, <a href="https://support-nhslogin.herokuapp.com/contact-form/contact" class="nhsuk-link">contact us and let us know.</a></p>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Reference: <b>CID1005</b></p>
+      </div>
+
+      <a href="auth-confirming">
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}

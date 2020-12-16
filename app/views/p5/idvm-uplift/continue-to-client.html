@@ -1,0 +1,57 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Prove who you are
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+        <h1 class="nhsuk-label-wrapper">
+          <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
+            Continue to ‘CLIENT NAME’
+          </label>
+        </h1>
+        <p>
+          You must prove who you are to access any areas of the service that contain personal or confidential information. We will tell you how to do this if you try to access these areas in future.
+        </p>
+        <p>
+          If you want to prove who you are, <a href="../idvm-uplift/prove-who-you-are">go back and change your answer</a>.
+        </p>
+        <p>
+          Select <b>Continue</b> to go to <b>‘CLIENT NAME’</b>.
+        </p>
+
+        <a href="auth">
+          <button class="nhsuk-button full-width" type="submit">
+          Continue
+          </button>
+        </a>
+        
+
+    
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <a href="error-prove-who-you-are">No user input</a>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+    
+
+  </div>
+</div>
+
+{% endblock %}

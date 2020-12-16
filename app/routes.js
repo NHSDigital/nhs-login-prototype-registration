@@ -345,6 +345,40 @@ router.post('/research-prototypes/fri4-thur10-dec20/p5-p9-uplift/number-not-matc
   }
 })  
 
+// idv mobile number - confirm your details page radio buttons
+
+router.post('/p5/idvm-uplift/user-profile', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('/p5/idvm-uplift/auth-confirming')
+  } else if (confDetails == "no") {
+    res.redirect('/p5/idvm-uplift/error-p5-p9-uplift-hc-wrong-details')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/p5/idvm-uplift/error-p5-p9-uplift-hc-incorrect-details')
+  }
+})
+
+// idv mobile number - prove who you are page radio buttons
+
+router.post('/p5/idvm-uplift/prove-who-you-are', function (req, res) {
+  
+  // Make a variable and give it the value from 'prove-who-radio'
+  var proveWho = req.session.data['prove-who-radio']
+
+  //Check whether the variable matches a condition below
+  if (proveWho == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('/p5/idvm-uplift/auth')
+  } else if (proveWho == "no") {
+    res.redirect('/p5/idvm-uplift/continue-to-client')
+  }
+})
+
 // p5 to p9 uplift confirm your details page radio buttons
 
 router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {

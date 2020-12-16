@@ -1,0 +1,73 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Your details have been confirmed
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="your-mobile-phone-number">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Back to: Your mobile phone number</a>
+    </div>
+
+    <form action="auth" method="POST">
+        <h1 class="nhsuk-label-wrapper">
+          <label class="nhsuk-label nhsuk-label--l" for="confirm-details">
+            Your details have been confirmed
+          </label>
+        </h1>
+        
+        <p>
+          We have connected your NHS record to your NHS login. You can now select Continue to access <b>‘CLIENT NAME’</b>.
+        </p>
+        <p>
+          You will not have full access to <b>'CLIENT NAME'</b> until you prove who you are.
+        </p>
+        <p>
+          Visit the NHS login help centre for more information on <a href="https://help.login.nhs.uk/provewhoyouare/">how to prove who you are</a>.
+        </p>
+        
+
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+        
+    </form>
+
+    <!--
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Phone doesn't match</p>
+        <ul>
+          <a href="/p5-p9-uplift/your-mobile-phone-number">No user input</a>
+        </ul>
+      </div>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <a href="/p5-p9-uplift/error-prove-who-you-are">No user input</a>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+    -->
+
+  </div>
+</div>
+
+{% endblock %}
