@@ -4,7 +4,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your NHS number
+Confirm your details
 {% endblock %}
 
 {% block content %}
@@ -32,11 +32,10 @@ Enter your NHS number
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Date of birth</b></td>
                 <td class="nhsuk-table__cell ">18 August 1989</td>
-              </tr>
-              <!--<tr class="nhsuk-table__row">
+              </tr><tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell"><b>Postcode</b></td>
                 <td class="nhsuk-table__cell ">AB3 4CD</td>
-              </tr>-->
+              </tr>
               <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell"><b>NHS number</b></td>
                 <td class="nhsuk-table__cell ">*** *** 3456</td>
@@ -79,6 +78,7 @@ Enter your NHS number
         
     </form>
 
+    
     {% if data['devMode'] %}
     <details class="nhsuk-details dev-mode" role="group">
       <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
@@ -87,17 +87,14 @@ Enter your NHS number
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p>Alternate version</p>
-        <ul>
-          <a href="user-profile-no-nhs-number">User journey "no nhs number"</a>
-        </ul>
         <p>Errors</p>
         <ul>
-          <a href="../errors/error-p5-p9-uplift-no-user-input">No user input</a>
+          <a href="error-user-profile">No user input</a>
         </ul>
       </div>
     </details>
     {% endif %}
+    
 
   </div>
 </div>
