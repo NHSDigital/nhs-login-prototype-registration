@@ -11,16 +11,18 @@ What is your date of birth?
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-    <a onclick="goBack()" class="nhsuk-back-link__link" href="#">
-      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-        aria-hidden="true">
-        <path
-          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
-        </path>
-      </svg>
-      Back to: What is your name</a>
+    <div class="nhsuk-back-link">
+      <a onclick="goBack()" class="nhsuk-back-link__link" href="know-nhs-number">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+          </path>
+        </svg>
+        Back to: Do you know your NHS number?</a>
+    </div>
 
-    <div class="nhsuk-u-padding-bottom-3"></div>
+
     <form method="submit">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
@@ -65,24 +67,10 @@ What is your date of birth?
         </fieldset>
       </div>
 
-
-      <a class="nhsuk-button full-width" href="enter-postcode">
-        Continue
-      </a>
-
-      <!--
-
-      {% if data['know-nhs-number'] == "Yes" %}
-      <a class="nhsuk-button full-width" href="auth">
+      
+      <a class="nhsuk-button full-width" href="sensely-passed">
         Submit information
       </a>
-      {% else %}
-      <a class="nhsuk-button full-width" href="enter-postcode">
-        Continue
-      </a>
-      {% endif %}
-
-      -->
 
     </form>
 
@@ -96,16 +84,16 @@ What is your date of birth?
       <div class="nhsuk-details__text">
         <p>Errors</p>
         <ul>
-          <li><a href="../errors/error-dob-no-user-input">Field validation - No user input</a></li>
-          <li><a href="../errors/error-dob-day">Field validation - No [Day] input</a></li>
-          <li><a href="../errors/error-dob-month">Field validation - No [Month] input</a></li>
-          <li><a href="../errors/error-dob-year">Field validation - No [Year] input</a></li>
-          <li><a href="../errors/error-dob-no-input-two-fields">Field validation - No user input in more > 1
-              field and tries to continue</a></li>
-          <li><a href="../errors/error-dob-invalid-format">Field validation - Invalid format</a></li>
-          <li><a href="../errors/error-dob-invalid-year">Field validation - User inputs a date of birth in the
+          <li><a href="../p5/errors/error-dob-no-user-input">Field validation - No user input</a></li>
+          <li><a href="../p5/errors/error-dob-day">Field validation - No [Day] input</a></li>
+          <li><a href="../p5/errors/error-dob-month">Field validation - No [Month] input</a></li>
+          <li><a href="../p5/errors/error-dob-year">Field validation - No [Year] input</a></li>
+          <li><a href="../p5/errors/error-dob-no-input-two-fields">Field validation - No user input in more > 1 field
+              and tries to continue</a></li>
+          <li><a href="../p5/errors/error-dob-invalid-format">Field validation - Invalid format</a></li>
+          <li><a href="../p5/errors/error-dob-invalid-year">Field validation - User inputs a date of birth in the
               future</a></li>
-          <li><a href="../errors/error-dob-year-less-than-4-digits">Field validation - User enters a year with 1, 2 or 3 digits</a></li>
+          <li><a href="../p5/errors/error-dob-year-less-than-4-digits">Field validation - User enters a year with 1, 2 or 3 digits</a></li>
         </ul>
       </div>
     </details>

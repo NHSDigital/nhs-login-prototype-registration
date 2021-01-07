@@ -59,9 +59,9 @@ router.post('/p5/know-nhs-number', function (req, res) {
   var nhsNumber = req.session.data['know-nhs-number']
 
   // Check whether the variable matches a condition
-  if (nhsNumber == "Yes") {
+  if (nhsNumber == "yes") {
     // Send user to next page
-    res.redirect('/p5/enter-nhs-number')
+    res.redirect('/p5/enter-dob-nhs-number')
   } else {
     // Send user to ineligible page
     res.redirect('/p5/enter-name')
@@ -111,7 +111,7 @@ router.post('/p5/demo/know-nhs-number', function (req, res) {
   // Check whether the variable matches a condition
   if (nhsNumber == "yes") {
     // Send user to next page
-    res.redirect('/p5/demo/enter-dob')
+    res.redirect('/p5/demo/enter-dob-nhs-number')
   } else {
     // Send user to ineligible page
     res.redirect('/p5/demo/enter-name')
@@ -126,9 +126,9 @@ router.post('/p5/p5-p9-uplift/know-nhs-number', function (req, res) {
   var nhsNumber = req.session.data['know-nhs-number']
 
   // Check whether the variable matches a condition
-  if (nhsNumber == "Yes") {
+  if (nhsNumber == "yes") {
     // Send user to next page
-    res.redirect('/p5/p5-p9-uplift/enter-nhs-number')
+    res.redirect('/p5/p5-p9-uplift/enter-dob-nhs-number')
   } else {
     // Send user to ineligible page
     res.redirect('/p5/p5-p9-uplift/enter-name')
@@ -440,7 +440,7 @@ router.post('/p5/errors/error-radio-no-input', function (req, res) {
   // Check whether the variable matches the following condition
   if (nhsNumber == "Yes") {
     // Redirect user to this page
-    res.redirect('/p5/demo/enter-nhs-number')
+    res.redirect('/p5/demo/enter-dob-nhs-number')
   } else {
     // Redirect user to this page
     res.redirect('/p5/demo/enter-name')
