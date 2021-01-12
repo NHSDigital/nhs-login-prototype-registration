@@ -1,0 +1,81 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list">
+            <li>
+              <a href="#error-int-number-invalid">We cannot accept mobile phone numbers from the country you have entered.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 class="nhsuk-fieldset__legend--l">Enter your mobile number</h1>
+      <p class="nhsuk-body">We will send you a 6 digit security code.</p>
+
+      <form method="post" action="register-enter-OTP">
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-with-hint-text">UK mobile number</label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="phoneNumber" value="{{ data['phoneNumber'] }}" name="phoneNumber" type="number" aria-describedby="enter-your-mobile-number">
+        </div> <!-- nhsuk-form-group -->
+
+      <!-- Conditional reveal Checkbox -->
+
+      <div class="nhsuk-form-group">
+          <div class="nhsuk-checkboxes">
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional conditional-reveal--border-colour">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-checkbox" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
+                  </div>
+                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-checkbox">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="mobile">International mobile number</label>
+                      <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
+                        Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
+                      </span>
+                      <span class="nhsuk-error-message" id="uk-mobile-number-error">
+                        <span class="nhsuk-u-visually-hidden">Error:</span> We cannot accept mobile phone numbers from the country you have entered.
+                      </span>
+                      <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-20" id="mobile" name="mobile" type="text">
+                    </div> <!-- end nhsuk-form-group --> 
+                  </div> <!-- end nhsuk-checkboxes__conditional -->
+                </div> <!-- end nhsuk-checkboxes -->
+              </fieldset> <!-- nhsuk-fieldset -->
+          </div>
+      </div>
+      <button class="nhsuk-button full-width" type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    // This script is for the register-enter-phone screen in the registration journey as well as 
+    // the account recovery journeys where we ask users to enter their mobile phone number
+
+    // The proposed design / interaction for this, is because there is a conditional reveal checkbox
+    // which displays another input field, users could get confused with which input field to interact
+    // with this script disables the default mobile number input field if the checkbox is selected.
+
+    document.getElementById('int-checkbox').onchange = function() {
+      document.getElementById('uk-mobile-number').disabled = !this.checked;
+    };
+
+  </script>
+
+{% endblock %}
