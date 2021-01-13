@@ -389,7 +389,7 @@ router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {
   //Check whether the variable matches a condition below
   if (confDetails == "yes") {
     // Send user to start of PYI journey
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&uplift=true')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=NHS%20app&devMode=false&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true&uplift=true')
   } else if (confDetails == "no") {
     res.redirect('/p5/errors/error-p5-p9-uplift-hc-wrong-details')
   } else if (confDetails == "incorrect") {
