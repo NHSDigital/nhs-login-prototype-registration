@@ -4,13 +4,13 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Finding an NHS record
+Checking your details
 {% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container">
-    <h1 class="nhsuk-heading-l">Finding an NHS record</h1>
+    <h1 class="nhsuk-heading-l">Checking your details</h1>
 
     <form action="auth" method="post">
       <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
@@ -34,10 +34,11 @@ Finding an NHS record
   </div>
 </div>
 
-<script>
+<!--<script>
   setTimeout(function () {
-    window.location.href = '/p5/idvm-uplift/user-profile';
+    window.location.href = '/p5/idvm-uplift/auth-finding';
   }, 2500);
-</script>
+</script>-->
+
 
 {% endblock %}

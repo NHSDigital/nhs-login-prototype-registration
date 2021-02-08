@@ -4,13 +4,13 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-We are returning you to ‘CLIENT NAME’
+NHS login
 {% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container">
-    <h1 class="nhsuk-heading-l">We are returning you to ‘CLIENT NAME’</h1>
+    <h1 class="nhsuk-heading-l"></h1>
 
     <form action="auth" method="post">
       <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
@@ -34,12 +34,11 @@ We are returning you to ‘CLIENT NAME’
   </div>
 </div>
 
-<!--
+
 <script>
   setTimeout(function () {
-    window.location.href = '/p5/p5-p9-uplift/user-profile';
+    window.location.href = '/p5/idvm-uplift/auth-checking-2';
   }, 2500);
 </script>
--->
 
 {% endblock %}
