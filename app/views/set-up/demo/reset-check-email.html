@@ -20,10 +20,10 @@ Check your email
 
     {% if data['user-email'] %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-password-reset"
-        target="_blank">email</a> to {{ data['user-email'] }} with a link to reset your password.</p>
+        target="_blank">email</a> to <b>{{ data['user-email'] }}</b> with a link to reset your password.</p>
     {% else %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-password-reset"
-        target="_blank">email</a> to mail@mail.com with a link to reset your password.</p>
+        target="_blank">email</a> to <b>mail@mail.com</b> with a link to reset your password.</p>
     {% endif %}
 
     <p>After you have reset your password, come back here and continue.</p>

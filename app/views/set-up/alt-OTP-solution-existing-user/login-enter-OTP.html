@@ -17,7 +17,7 @@ Enter your email address
     </h1>
 
     {% if data['phoneNumber'] %}
-    <p>Enter the 6 digit security code we have sent to {{ data['phoneNumber'] }}.</p>
+    <p>Enter the 6 digit security code we have sent to <b>{{ data['phoneNumber'] }}</b>.</p>
     {% else %}
     <p>Enter the 6 digit security code we have sent to <b>*********6789</b>.</p>
     {% endif %}

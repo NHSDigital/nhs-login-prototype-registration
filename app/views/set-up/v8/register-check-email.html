@@ -16,13 +16,13 @@ Check your email
 
     {% if data['userEmail'] %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to {{ data['userEmail'] }}</p>
+        target="_blank">email</a> to <b>{{ data['userEmail'] }}</b></p>
     {% else %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to mail@mail.com</p>
+        target="_blank">email</a> to <b>mail@mail.com</b></p>
     {% endif %}
 
-    <p>Select confirm in the email and come back to this screen.</p>
+    <p>Select <em>confirm</em> in the email and come back to this screen.</p>
 
     <a class="nhsuk-button full-width" href="register-enter-phone">
       I have confirmed my email

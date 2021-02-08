@@ -16,16 +16,16 @@ Check your email
 
     {% if data['user-email'] %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to {{ data['user-email'] }}.</p>
+        target="_blank">email</a> to <b>{{ data['user-email'] }}</b>.</p>
     {% else %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to mail@mail.com</p>
+        target="_blank">email</a> to <b>mail@mail.com</b></p>
     {% endif %}
 
     <p>When you have confirmed your email address, you can continue to set up your NHS login to access the <b>'NHS
         App'</b>.</p>
 
-    <p>Select confirm in the email and come back to this screen.</p>
+    <p>Select <em>confirm</em> in the email and come back to this screen.</p>
 
     <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-4">
 
