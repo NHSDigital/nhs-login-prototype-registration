@@ -1,0 +1,73 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login prototypes
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="../../index">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back to: Prototype homepage</a>
+    </div>
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      Uplift front-end errors
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+    <!-- IDVM uplift -->
+
+        <details class="nhsuk-details nhsuk-expander version-list">
+            <summary class="nhsuk-details__summary details-index">
+                <span class="nhsuk-details__summary-text">
+                    IDVM uplift
+                </span>
+            </summary>
+            <div class="nhsuk-details__text version-text">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><a href="../../p5/idvm-uplift/error-user-profile">Confirm your details</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/idvm-uplift/error-prove-who-you-are">Registraion complete</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../p5/idvm-uplift/error-idvm-uplift-generic">NHS login disabled</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    <div class="nhsuk-u-padding-bottom-9"></div>
+
+    </div> <!-- /. grid-column-three-quarters -->
+
+    <div class="nhsuk-grid-column-one-quarter">
+        <h3 class="nhsuk-heading-m">
+            Other errors
+        </h3>
+        <ul class="nhsuk-list">
+            <li><a href="../errors/reg-front-end-errors">Reg &amp; setup errors</a></li>
+            <li><a href="../errors/p5-front-end-errors">P5 errors</a></li>
+            <li><a href="../errors/account-recovery-front-end-errors">Account recovery errors</a></li>
+          </ul>
+    </div>
+
+</div> <!-- /.grid-row -->
+
+{% endblock %}
