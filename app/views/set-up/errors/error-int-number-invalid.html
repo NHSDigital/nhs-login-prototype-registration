@@ -48,7 +48,7 @@ Error: Enter your mobile number
                       <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
                         Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
                       </span>
-                      <span class="nhsuk-error-message" id="uk-mobile-number-error">
+                      <span class="nhsuk-error-message" id="phoneNumber-error">
                         <span class="nhsuk-u-visually-hidden">Error:</span> Enter an international mobile phone number in the correct format
                       </span>
                       <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-20" id="mobile" name="mobile" type="text">
@@ -73,7 +73,7 @@ Error: Enter your mobile number
     // with this script disables the default mobile number input field if the checkbox is selected.
 
     document.getElementById('int-checkbox').onchange = function() {
-      document.getElementById('uk-mobile-number').disabled = !this.checked;
+      document.getElementById('phoneNumber').disabled = !this.checked;
     };
 
   </script>
