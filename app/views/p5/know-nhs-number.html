@@ -42,13 +42,10 @@ Do you know your NHS number
                 </div>
                 <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
                   <div class="nhsuk-form-group">
-                    <label aria-hidden="false" aria-expanded="false" class="nhsuk-label" for="nhs-number">
-                      NHS number
-                    </label>
                     <span class="nhsuk-hint" id="nhs-number-hint">
                       Example: 485 777 3456
                     </span>
-                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="nhs-number" name="nhs-number" value="{{ checked("nhs-number", "yes") }}" type="number">
+                    <input aria-label="NHS number" class="nhsuk-input nhsuk-u-width-two-thirds" id="nhs-number" name="nhs-number" value="{{ checked("nhs-number", "yes") }}" type="number">
                   </div>
                 </div>
               </div>
