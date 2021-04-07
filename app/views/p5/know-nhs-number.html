@@ -26,6 +26,7 @@ Do you know your NHS number
             <li>on any letter the NHS has sent you</li>
             <li>on a prescription</li>
             <li>by logging in to a GP surgery online service</li>
+            <li>on a vaccination letter</li>
           </ul>
 
           <div class="nhsuk-form-group">
@@ -34,12 +35,12 @@ Do you know your NHS number
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="know-nhs-number" name="know-nhs-number" type="radio" value="yes" aria-controls="conditional-contact-1" aria-expanded="false">
                   <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                    Yes - I know my NHS number
+                    Yes, I know my NHS number
                   </label>
                 </div>
                 <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
                   <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="nhs-number">
+                    <label aria-hidden="false" aria-expanded="false" class="nhsuk-label" for="nhs-number">
                       NHS number
                     </label>
                     <span class="nhsuk-hint" id="nhs-number-hint">
@@ -53,7 +54,7 @@ Do you know your NHS number
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="know-nhs-number" name="know-nhs-number" type="radio" value="no">
                   <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number">
-                    No - continue another way
+                    No, continue another way
                   </label>
                 </div>
               </div>
