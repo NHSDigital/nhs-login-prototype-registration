@@ -45,7 +45,7 @@ Do you know your NHS number
                     <span class="nhsuk-hint" id="nhs-number-hint">
                       Example: 485 777 3456
                     </span>
-                    <input aria-label="NHS number" class="nhsuk-input nhsuk-u-width-two-thirds" id="nhs-number" name="nhs-number" value="{{ checked("nhs-number", "yes") }}" type="number">
+                    <input aria-label="NHS number" class="nhsuk-input nhsuk-u-width-two-thirds" id="nhs-number" name="nhs-number" value="{{ checked("nhs-number", "yes") }}" type="text" inputmode="numeric" pattern="[0-9]*">
                   </div>
                 </div>
               </div>
