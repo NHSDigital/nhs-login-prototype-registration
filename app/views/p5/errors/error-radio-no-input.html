@@ -37,11 +37,16 @@ Error: Do you know your NHS number?
                       <p class="nhsuk-body">Your NHS number is a 10 digit number, like 485 777 3456.</p>
             
                       <p>You can find it:</p>
-                      <ul class="nhsuk-list nhsuk-list--bullet">
-                        <li>on any letter the NHS has sent you</li>
-                        <li>on a prescription</li>
-                        <li>by logging in to a GP surgery online service</li>
-                      </ul>
+                        <ul class="nhsuk-list nhsuk-list--bullet">
+                          <li>on any letter the NHS has sent you</li>
+                          <li>on a prescription</li>
+                          <li>by logging in to a GP surgery online service</li>
+                          <li>on a vaccination letter</li>
+                        </ul>
+
+                        <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+
+          
 
                     <span class="nhsuk-error-message" id="radio-no-input">
                         <span class="nhsuk-u-visually-hidden">Error:</span> Select yes if you know your NHS number
@@ -53,14 +58,11 @@ Error: Do you know your NHS number?
                             <div class="nhsuk-radios__item">
                               <input class="nhsuk-radios__input" id="know-nhs-number" name="know-nhs-number" type="radio" value="yes" aria-controls="conditional-contact-1" aria-expanded="false">
                               <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                                Yes - I know my NHS number
+                                Yes, I know my NHS number
                               </label>
                             </div>
                             <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
                               <div class="nhsuk-form-group">
-                                <label class="nhsuk-label" for="nhs-number">
-                                  NHS number
-                                </label>
                                 <span class="nhsuk-hint" id="nhs-number-hint">
                                   Example: 485 777 3456
                                 </span>
@@ -72,7 +74,7 @@ Error: Do you know your NHS number?
                             <div class="nhsuk-radios__item">
                               <input class="nhsuk-radios__input" id="know-nhs-number" name="know-nhs-number" type="radio" value="no">
                               <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number">
-                                No - continue another way
+                                No, continue another way
                               </label>
                             </div>
                           </div>
