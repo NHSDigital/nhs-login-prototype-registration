@@ -14,9 +14,15 @@ Check your email
       "text": "Back to: Enter your email address"
     }) }}
 
+
     <h1 class="nhsuk-heading-l">
       Check your email
     </h1>
+
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You have been sent a new security code.</p>
+      </div>
 
     {% if data['userEmail'] %}
     <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
@@ -27,7 +33,7 @@ Check your email
     {% endif %}
 
     
-    <p><a href="register-check-email-resend">Request a new security code</a></p>
+    <p><a href="login-enter-OTP-resend">Request a new security code</a></p>
 
     <form action="register-enter-phone" method="post">
 
