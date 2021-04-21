@@ -1,0 +1,71 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+    <h1 class="nhsuk-heading-l">
+      Check your email
+    </h1>
+
+    {% if data['userEmail'] %}
+    <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
+        target="_blank"></a> {{ data['userEmail'] }} to confirm this is your email address.</p>
+    {% else %}
+    <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
+        target="_blank"></a> <b>mail@mail.com</b> to confirm this is your email address.</p>
+    {% endif %}
+
+    
+    <p><a href="login-enter-OTP-resend">Request a new security code</a></p>
+
+    <form action="register-enter-OTP" method="post">
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-with-hint-text">
+          Security code
+        </label>
+        <span class="nhsuk-hint" id="otp-hint-text">
+          The code is 6 numbers
+        </span>
+        <input
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+          type="number" aria-describedby="security-code-input">
+      </div>
+
+
+      <button data-redirect="register-enter-OTP" class="nhsuk-button full-width"
+        id="button--save">Continue</button>
+
+    </form>
+
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Email lookup</p>
+        <ul>
+          <li><a href="register-check-email-nudge">User hasn't checked email</a></li>
+        </ul>
+      </div>
+    </details>
+
+    {% endif %}
+
+
+  </div>
+</div>
+
+{% endblock %}
