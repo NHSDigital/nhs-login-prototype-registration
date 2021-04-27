@@ -21,6 +21,7 @@ Set up a new NHS login
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
+    
     <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1 class="nhsuk-heading-l">
@@ -28,13 +29,8 @@ Set up a new NHS login
           </h1>
         </legend>
 
-        {% if data['userEmail'] %}
-        <p>Select <b>Continue</b> to set up a new NHS login with <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank"></a> {{ data['userEmail'] }}  and register with <b>NHS App</b>.</p>
-        {% else %}
-        <p>Select <b>Continue</b> to set up a new NHS login with <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank"></a> <b>mail@mail.com</b> and register with <b>NHS App</b></p>
-        {% endif %}
+
+        <p>Select <b>Continue</b> to set up a new NHS login with <b>{{ data.emailAddress or 'mail@mail.com' }}</b> and register with <b>NHS App</b></p>
 
 
 

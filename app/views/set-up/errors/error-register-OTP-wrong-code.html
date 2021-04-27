@@ -33,11 +33,7 @@
         Check your mobile phone
       </h1>
 
-      {% if data['phoneNumber'] %}
-    <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>{{ data['phoneNumber'] }}</b> to confirm this is your mobile phone number.</p>
-    {% else %}
-    <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>07123456789</b> to confirm this is your mobile phone number.</p>
-    {% endif %}
+      <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>{{ data.phoneNumber or '07123456789' }}</b> to confirm this is your mobile phone number.</p>
 
       <form action="/set-up/v2/registration-success-scope-uplift" class="nhsuk-form-group nhsuk-form-group--error"  method="post">
         

@@ -14,9 +14,9 @@ Check your email
       Check your email
     </h1>
 
-    {% if data['userEmail'] %}
+    {% if data['emailAddress'] %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank">email</a> to {{ data['userEmail'] }}</p>
+        target="_blank">email</a> to {{ data['emailAddress'] }}</p>
     {% else %}
     <p>We have sent an <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
         target="_blank">email</a> to your NHS login email address.</p>

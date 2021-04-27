@@ -2,7 +2,12 @@
 const express = require('express');
 const router = express.Router();
 // const notify = require('notifications-node-client').NotifyClient;
+const http = require('http');
 const request = require('request');
+
+// connect to Notify
+var NotifyClient = require('notifications-node-client').NotifyClient,
+    notify = new NotifyClient(process.env.NOTIFYAPIKEY);
 
 // routing for sign in
 
@@ -466,6 +471,47 @@ router.get('/help/prototypes', function (req, res) {
   return res.render('help/prototypes', {
     'commitDate': commitDate
   });
+})
+
+// Take user details and send the invite email
+/* router.get('set-up/email-confirmation-code/enter-email', function (req, res) {
+  var emailSent = req.query.emailSent
+  console.log('render', req.query.emailSent)
+  res.render('set-up/email-confirmation-code/enter-email', { emailSent: emailSent }, function (err, html) {
+      res.send(html)
+  })
+}) */
+// The URL here needs to match the URL of the page that the user is on
+// when they type in their email address 
+router.post('set-up/email-confirmation-code/enter-email', function (req, res) {
+  notify.sendEmail(
+      // this long string is the template ID, copy it from the template
+      // page in GOV.UK Notify. It's not a secret so it's fine to put it
+      // in your code.
+      '5bb78be7-96c5-4830-9492-14848fcb6051',
+      // `emailAddress` here needs to match the name of the form field in
+      // your HTML page
+      req.body.emailAddress, {
+      //personalisation: {
+      //    'primaryuserfirstname': req.body.primaryUserFirstName,
+      //    'primaryuserlastname': req.body.primaryUserLastName
+      //},
+      reference: ''
+  })
+      .then(response => console.log('response'))
+      .catch(err => console.error('error', err))
+  console.log(req.body.emailAddress)
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('set-up/email-confirmation-code/register-check-email');
+})
+
+router.get('set-up/email-confirmation-code/register-create-password', function (req, res) {
+  var emailSent = req.query.emailSent
+  console.log('render', req.query.emailSent)
+  res.render('set-up/email-confirmation-code/register-check-email', { emailSent: emailSent }, function (err, html) {
+      res.send(html)
+  })
 })
 
 module.exports = router;

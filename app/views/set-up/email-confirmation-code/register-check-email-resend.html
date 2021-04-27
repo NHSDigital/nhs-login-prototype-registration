@@ -24,9 +24,9 @@ Check your email
         <p>You have been sent a new security code.</p>
       </div>
 
-    {% if data['userEmail'] %}
+    {% if data['emailAddress'] %}
     <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank"></a> {{ data['userEmail'] }} to confirm this is your email address.</p>
+        target="_blank"></a> {{ data['emailAddress'] }} to confirm this is your email address.</p>
     {% else %}
     <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
         target="_blank"></a> <b>mail@mail.com</b> to confirm this is your email address.</p>

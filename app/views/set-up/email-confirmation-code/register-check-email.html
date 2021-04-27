@@ -14,17 +14,20 @@ Check your email
       "text": "Back to: Enter your email address"
     }) }}
 
+
     <h1 class="nhsuk-heading-l">
       Check your email
     </h1>
 
-    {% if data['userEmail'] %}
-    <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank"></a> {{ data['userEmail'] }} to confirm this is your email address.</p>
-    {% else %}
-    <p>Enter the 6 digit security code we’ve sent to <a style="color: #212b32; text-decoration: none;" href="/emails/email-confirm"
-        target="_blank"></a> <b>mail@mail.com</b> to confirm this is your email address.</p>
-    {% endif %}
+    {% if emailSent === 'true' %}
+        {{ warningCallout({
+          "heading": "Email has been sent",
+          "HTML": "<p>Check the user's email inbox.</p>"
+        }) }}
+        <p><a href="https://delegated-access.herokuapp.com/v4/email/delegate-success">click here to open it</a></p>
+      {% endif %}
+
+    <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="text-decoration: none"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
     <p>You need to use this code within <b>5 minutes</b> or it will expire.</p>
 
     
