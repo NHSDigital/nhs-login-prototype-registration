@@ -23,7 +23,7 @@ Enter your email address
 
     <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>{{ data.phoneNumber or '07123456789' }}</b> to confirm this is your mobile phone number.</p>
     
-    <form>
+    <form action="auth" method="post">
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-with-hint-text">
@@ -38,7 +38,7 @@ Enter your email address
           type="number" aria-describedby="security-code-input">
       </div>
 
-      <a class="nhsuk-button full-width" href="auth">Continue</a>
+      <a class="nhsuk-button full-width">Continue</a>
 
       <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="register-enter-phone">enter your mobile
           number to try again.</a></p>

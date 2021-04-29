@@ -6,10 +6,9 @@ const http = require('http');
 const request = require('request');
 
 // connect to Notify
-var NotifyClient = require('notifications-node-client').NotifyClient,
+var NotifyClient = require('notifications-node-client').NotifyClient;
+//var notifyClient = new NotifyClient(apiKey);
     notify = new NotifyClient(process.env.NOTIFYAPIKEY);
-
-    //var notifyClient = new NotifyClient(apiKey);
 
 // routing for sign in
 
@@ -475,6 +474,8 @@ router.get('/help/prototypes', function (req, res) {
   });
 })
 
+//Email confirmation - email sent
+
 // Take user details and send the invite email
 /* router.get('set-up/email-confirmation-code/enter-email', function (req, res) {
   var emailSent = req.query.emailSent
@@ -484,7 +485,7 @@ router.get('/help/prototypes', function (req, res) {
   })
 }) */
 router.get('/set-up/email-confirmation-code/register-create-password', function (req, res) {
-  var emailSent = req.query.emailSent
+  var emailSent = req.query.emailSent;
   console.log('render', req.query.emailSent)
   res.render('set-up/email-confirmation-code/register-create-password', { emailSent: emailSent }, function (err, html) {
       res.send(html)
@@ -492,14 +493,14 @@ router.get('/set-up/email-confirmation-code/register-create-password', function 
 })
 // The URL here needs to match the URL of the page that the user is on
 // when they type in their email address 
-router.post('/set-up/email-confirmation-code/enter-email', function (req, res) {
+router.post('set-up/email-confirmation-code/enter-email', function (req, res) {
   notify.sendEmail(
       // this long string is the template ID, copy it from the template
       // page in GOV.UK Notify. It's not a secret so it's fine to put it
       // in your code.
-      '5bb78be7-96c5-4830-9492-14848fcb6051',
+      '5bb78be7-96c5-4830-9492-14848fcb6051', 
       // `emailAddress` here needs to match the name of the form field in
-      // your HTML page
+      // your HTML page 
       req.body.emailAddress, {
       //personalisation: {
       //    'primaryuserfirstname': req.body.primaryUserFirstName,
@@ -516,6 +517,36 @@ router.post('/set-up/email-confirmation-code/enter-email', function (req, res) {
   // has been sent
   res.redirect('/set-up/email-confirmation-code/register-check-email?emailSent=true');
 })
+
+//Email confirmation - text sent
+
+// Take user details and send the text
+router.get('/set-up/email-confirmation-code/register-enter-phone', function (req, res) {
+  var smsSent = req.query.smsSent;
+  console.log('render', req.query.smsSent)
+  res.render('set-up/email-confirmation-code/register-enter-phone', { smsSent: smsSent }, function (err, html) {
+      res.send(html)
+  })
+})
+// The URL here needs to match the URL of the page that the user is on
+// when they type in their phone number
+router.post('set-up/email-confirmation-code/register-enter-phone', function (req, res) {
+  //notify.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', '07989894487' {
+  notify.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', req.body.phoneNumber, {
+    reference: 'null',
+    smsSenderId: '8e63067f-0698-45d5-ac59-946c2089c058'
+  })
+
+    .then(response => console.log('response'))
+    .catch(err => console.error('error', err))
+
+  console.log(req.body.phoneNumber)
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
+})
+
+
 
 
 module.exports = router;

@@ -15,7 +15,7 @@ Enter your mobile number
     <h1 class="nhsuk-fieldset__legend--l">Enter your mobile number</h1>
     <p class="nhsuk-body">We will send you another 6 digit security code, this time to your phone, to confirm your mobile number.</p>
 
-    <form method="post" action="register-enter-OTP">
+    <form action="register-enter-OTP" method="get">
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-with-hint-text">UK mobile number</label>
         <input class="nhsuk-input nhsuk-input--width-20" id="phoneNumber" value="{{ data['phoneNumber'] }}" name="phoneNumber" type="number" aria-describedby="enter-your-mobile-number">
