@@ -499,7 +499,7 @@ router.post('/set-up/email-confirmation-code/register-check-email', function (re
       reference: ''
   })
   .then(function (response) {
-      console.log('success')
+      console.log('success-email')
       res.redirect('/set-up/email-confirmation-code/register-create-password');
     }).catch(function (error) {
       console.log('notify-error' + error)
@@ -528,11 +528,11 @@ router.post('/set-up/email-confirmation-code/register-enter-phone', function (re
   //if(req.body.phoneNumber === '07989894487'){
   notifyClient.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', req.body.phoneNumber)
     .then(function (response) {
-      console.log('success')
+      console.log('success-text')
       res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
     }).catch(function (error) {
       console.log('notify-error' + error)
-      res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
+      res.redirect('/set-up/email-confirmation-code/register-enter-phone');
     });
   //}
   //res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
