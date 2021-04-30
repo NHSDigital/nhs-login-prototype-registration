@@ -19,40 +19,33 @@ Check your email
       Check your email
     </h1>
 
-    {% if emailSent === 'true' %}
-        {{ warningCallout({
-          "heading": "Email has been sent",
-          "HTML": "<p>Check the user's email inbox.</p>"
-        }) }}
-        <p><a href="https://delegated-access.herokuapp.com/v4/email/delegate-success">click here to open it</a></p>
-      {% elif emailSent === 'false' %}
-      <p>NOooOOoo</p>
-      {% endif %}
+      <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
+      <p>You need to use this code within <b>5 minutes</b> or it will expire.</p>
 
-    <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
-    <p>You need to use this code within <b>5 minutes</b> or it will expire.</p>
+      
+      <p><a href="register-check-email-resend">Request a new security code</a></p>
 
-    
-    <p><a href="register-check-email-resend">Request a new security code</a></p>
-
-    <form action="register-enter-phone" method="post">
-
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-with-hint-text">
-          Security code
-        </label>
-        <span class="nhsuk-hint" id="otp-hint-text">
-          The code is 6 numbers
-        </span>
-        <input
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
-          type="number" aria-describedby="security-code-input">
-      </div>
+      
+      <form action="register-enter-phone" method="post">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Security code
+          </label>
+          <span class="nhsuk-hint" id="otp-hint-text">
+            The code is 6 numbers
+          </span>
+          <input
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+            type="number" aria-describedby="security-code-input">
+        </div>
 
 
-      <button data-redirect="register-enter-phone" class="nhsuk-button full-width"
-        id="button--save">Continue</button>
+        <fieldset class="nhsuk-fieldset">
+          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'mail@mail.com' }} type="hidden">
+        </fieldset>
+        <button data-redirect="register-enter-phone" class="nhsuk-button full-width"
+          id="button--save">Continue</button>
 
     </form>
 
