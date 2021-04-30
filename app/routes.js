@@ -515,7 +515,7 @@ router.post('set-up/email-confirmation-code/enter-email', function (req, res) {
   console.log(req.body.emailAddress)
   // This is the URL the users will be redirected to once the email
   // has been sent
-  res.redirect('/set-up/email-confirmation-code/register-check-email?emailSent=true');
+  res.redirect('/set-up/email-confirmation-code/register-check-email');
 })
 
 //Email confirmation - text sent
@@ -531,7 +531,7 @@ router.get('/set-up/email-confirmation-code/register-enter-phone', function (req
 // The URL here needs to match the URL of the page that the user is on
 // when they type in their phone number
 router.post('set-up/email-confirmation-code/register-enter-phone', function (req, res) {
-  //notify.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', '07989894487' {
+  //notify.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', 'phoneNumber' {
   notify.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', req.body.phoneNumber, {
     reference: 'null',
     smsSenderId: '8e63067f-0698-45d5-ac59-946c2089c058'
