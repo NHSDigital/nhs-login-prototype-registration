@@ -491,7 +491,7 @@ router.get('/help/prototypes', function (req, res) {
     })
 })    */
 
-router.post('/set-up/email-confirmation-code/enter-email', function (req, res) {
+router.post('/set-up/email-confirmation-code/register-check-email', function (req, res) {
 
   notifyClient.sendEmail(
       '5bb78be7-96c5-4830-9492-14848fcb6051',
@@ -503,6 +503,7 @@ router.post('/set-up/email-confirmation-code/enter-email', function (req, res) {
       res.redirect('/set-up/email-confirmation-code/register-create-password');
     }).catch(function (error) {
       console.log('notify-error' + error)
+      // '/set-up/email-confirmation-code/register-create-password'
       res.redirect('/set-up/email-confirmation-code/register-create-password');
     });
   // }
@@ -519,65 +520,23 @@ router.post('/set-up/email-confirmation-code/enter-email', function (req, res) {
 
 })
 
-// Take user details and send the invite email
-/* router.get('set-up/email-confirmation-code/enter-email', function (req, res) {
-  var emailSent = req.query.emailSent
-  console.log('render', req.query.emailSent)
-  res.render('set-up/email-confirmation-code/enter-email', { emailSent: emailSent }, function (err, html) {
-      res.send(html)
-  })
-}) 
-router.get('/set-up/email-confirmation-code/register-create-password', function (req, res) {
-  var emailSent = req.query.emailSent;
-  console.log('render', req.query.emailSent)
-  res.render('set-up/email-confirmation-code/register-create-password', { emailSent: emailSent }, function (err, html) {
-      res.send(html)
-  })
-})
-// The URL here needs to match the URL of the page that the user is on
-// when they type in their email address 
-router.post('set-up/email-confirmation-code/enter-email', function (req, res) {
-  notify.sendEmail(
-      // this long string is the template ID, copy it from the template
-      // page in GOV.UK Notify. It's not a secret so it's fine to put it
-      // in your code.
-      '5bb78be7-96c5-4830-9492-14848fcb6051', 
-      // `emailAddress` here needs to match the name of the form field in
-      // your HTML page 
-      req.body.emailAddress, {
-      //personalisation: {
-      //    'primaryuserfirstname': req.body.primaryUserFirstName,
-      //    'primaryuserlastname': req.body.primaryUserLastName
-      //},
-      reference: 'null'
-  })
-
-    .then(response => console.log('response'))
-    .catch(err => console.error('error', err))
-
-  console.log(req.body.emailAddress)
-  // This is the URL the users will be redirected to once the email
-  // has been sent
-  res.redirect('/set-up/email-confirmation-code/register-check-email');
-})*/
-
 //Email confirmation - text sent
 
 // Notify OTP code
 router.post('/set-up/email-confirmation-code/register-enter-phone', function (req, res) {
   console.log('method called');
-  // if(req.body.phoneNumber === '07791463997'){
+  //if(req.body.phoneNumber === '07989894487'){
   notifyClient.sendSms('6a821a13-9d8c-43ec-9b6c-7003e38aa325', req.body.phoneNumber)
     .then(function (response) {
       console.log('success')
-      res.redirect('/set-up/email-confirmation-code/register-enter-phone');
+      res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
     }).catch(function (error) {
       console.log('notify-error' + error)
-      res.redirect('/set-up/email-confirmation-code/register-enter-phone');
+      res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
     });
-  // }
-  //res.redirect('/set-up/v4/register-enter-OTP');
-});
+  //}
+  //res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
+})
 
 /* Take user details and send the text
 router.get('/set-up/email-confirmation-code/register-enter-phone', function (req, res) {
@@ -604,7 +563,6 @@ router.post('set-up/email-confirmation-code/register-enter-phone', function (req
   // has been sent
   res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
 })*/
-
 
 
 
