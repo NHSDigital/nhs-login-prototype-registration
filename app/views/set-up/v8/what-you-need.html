@@ -14,16 +14,14 @@ What you need
         "text": "Back to: Enter your email address"
       }) }}
 
-    <form method="post">
+    <form action="register-create-password" method="post">
       <h1 class="nhsuk-heading-l">
         What you need
       </h1>
 
       <div class="start-info">
         <div class="start-info-content">
-          <p>We need to match you to your NHS record. To do this we will ask for some personal information.</p>
-          <p>If you do not know your NHS number, you can tell us your full name instead. Telling us your NHS number will give us the best chance of matching you to your NHS record.</p>
-          <p>We will ask for your:</p>
+          <p>So that we can match you to your NHS record, we will ask you to provide your:</p>
           <ul>
             <li>NHS number or name</li>
             <li>date of birth</li>
@@ -50,14 +48,15 @@ What you need
             </summary>
             <div class="nhsuk-details__text">
               <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
-              <p>You can find your NHS number by logging in to a GP online service or on any document the NHS has sent
-                you, such as your:</p>
+              <p>You can find it:</p> 
+
               <ul>
-                <li>prescriptions</li>
-                <li>test results</li>
-                <li>hospital referral letters</li>
-                <li>appointment letters</li>
+                <li>on any letter the NHS has sent you</li>
+                <li>on a prescription</li>
+                <li>by logging in to a GP surgery online service</li>
+                <li>on a vaccination letter</li>
               </ul>
+    
               <p>Ask your GP surgery for help if you can't find your NHS number.</p>
             </div>
           </details>
@@ -71,9 +70,9 @@ What you need
         </div>
       </div>
 
-      <!-- ---------------- -->
-
-      <button class="nhsuk-button full-width" action="submit">Continue</button>
+      <a href="register-create-password">
+        <button class="nhsuk-button full-width" action="submit">Continue</button>
+      </a>
 
     </form>
 
