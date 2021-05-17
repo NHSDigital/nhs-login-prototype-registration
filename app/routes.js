@@ -6,14 +6,14 @@ const router = express.Router();
 
  var NotifyClient = require('notifications-node-client').NotifyClient,
     notify = new NotifyClient(process.env.NOTIFYAPIKEY); 
- */
+
 
  // Create new variables
  const notify = require('notifications-node-client').NotifyClient;
  const request = require('request');
  
  // Notify integration
- const notifyClient = new notify(process.env.NOTIFYAPIKEY);
+ const notifyClient = new notify(process.env.NOTIFYAPIKEY); */
 
  
 // routing for sign in
@@ -489,8 +489,9 @@ router.get('/help/prototypes', function (req, res) {
     res.render('/createaccount/v1/index', { emailSent: emailSent }, function (err, html) {
         res.send(html)
     })
-})    */
+})*/
 
+/*
 router.post('/set-up/email-confirmation-code/register-check-email', function (req, res) {
 
   notifyClient.sendEmail(
@@ -513,7 +514,7 @@ router.post('/set-up/email-confirmation-code/register-check-email', function (re
       .then(response => console.log('response'))
       .catch(err => console.error('error', err))
 
-  console.log(req.body.emailAddress) */
+  console.log(req.body.emailAddress) 
 
   // This is the URL the users will be redirected to once the email has been sent
   res.redirect('/set-up/email-confirmation-code/register-check-email');
@@ -537,6 +538,7 @@ router.post('/set-up/email-confirmation-code/register-enter-phone', function (re
   //}
   //res.redirect('/set-up/email-confirmation-code/register-enter-OTP');
 })
+*/
 
 /* Take user details and send the text
 router.get('/set-up/email-confirmation-code/register-enter-phone', function (req, res) {
