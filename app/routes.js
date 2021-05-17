@@ -514,7 +514,7 @@ router.post('/set-up/email-confirmation-code/register-check-email', function (re
       .then(response => console.log('response'))
       .catch(err => console.error('error', err))
 
-  console.log(req.body.emailAddress) */
+  console.log(req.body.emailAddress) 
 
   // This is the URL the users will be redirected to once the email has been sent
   res.redirect('/set-up/email-confirmation-code/register-check-email');
