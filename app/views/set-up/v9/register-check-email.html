@@ -1,0 +1,115 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Create a password
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {% from 'back-link/macro.njk' import backLink %}
+        {{ backLink({
+            "href": "enter-email",
+            "text": "Back to: enter email address"
+          }) }}
+
+
+        
+          
+        <h1 class="nhsuk-heading-l">Check your email</h1>
+
+        <p class="nhsuk-body nhsuk-u-margin-bottom-5">Enter the 6 digit security code we've sent to {{ data.emailAddress or 'mail@mail.com' }} to confirm this is your email address.</p>
+
+            <p>You need to use this code within <b>24 hours</b> or it will expire.</p>
+
+            <div class="nhsuk-u-font-size-19 nhsuk-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-4">
+              <a href="">Request a new security code</a>
+            </div>
+        
+        <form action="register-enter-phone" method="POST">
+            <div class="nhsuk-form-group">
+            
+              <label class="nhsuk-label" for="securityCode">
+                Security code
+              </label>
+              <p class="nhsuk-hint">The code is 6 numbers</p>
+            
+            <input class="nhsuk-input nhskuk-input--width-10" id="securityCode" name="securityCode" type="number" maxlength="6">
+          </div>
+          <button class="nhsuk-button" type="submit">Continue</button>
+          
+
+        </form>
+    
+
+        
+      
+
+
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

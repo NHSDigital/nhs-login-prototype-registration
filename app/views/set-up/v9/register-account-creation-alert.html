@@ -1,0 +1,118 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Set up a new NHS login
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {% from 'back-link/macro.njk' import backLink %}
+        {{ backLink({
+            "href": "enter-email",
+            "text": "Back to: enter email address"
+          }) }}
+
+
+        
+          
+        <h1 class="nhsuk-heading-l">Set up a new NHS login</h1>
+        <p class="nhsuk-body">
+            Select <b>Continue</b> to set up a new NHS login with {{ data.emailAddress or 'mail@mail.com' }} and register with <b>NHS App</b>.
+        </p>
+
+        <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Do you already have an NHS login?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>If you already have an NHS login, you cannot create a new one with a different email address. <a href="enter-email">Go back and enter the email address you used to set up your NHS login.</a></p>
+          
+            </div>
+        </details>
+
+        <a href="what-you-need" class="nhsuk-button">Continue</a>
+
+        <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <h2>What is NHS login?</h2>
+            <p>You can use your NHS login to access health websites and apps that have the NHS login button.</p>
+        </div>
+        
+
+        
+    
+
+        
+      
+
+
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

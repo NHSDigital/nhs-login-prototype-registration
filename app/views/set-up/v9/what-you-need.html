@@ -1,0 +1,143 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  What you need
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+        {% from 'back-link/macro.njk' import backLink %}
+        {{ backLink({
+            "href": "enter-email",
+            "text": "Back to: enter email address"
+          }) }}
+          
+        <h1 class="nhsuk-heading-l">What you need</h1>
+
+        <p class="nhsuk-body">
+          <div>
+            <p>
+              So that we can match you to your NHS record, we will ask you to provide your:
+            </p>
+            <ul>
+              <li>NHS number or name</li>
+              <li>date of birth</li>
+              <li>postcode</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>
+              Telling us your NHS number will give us the best chance of matching you to your NHS record. If you do not know your NHS number, you can tell us your full name instead.
+            </p>
+          </div>
+          
+          <div>
+            <details class="nhsuk-details">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  How to find your NHS number
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+                <p>You can find it:</p>
+                <ul>
+                  <li>on any letter the NHS has sent you</li>
+                  <li>on a prescription</li>
+                  <li>by logging in to a GP surgery online service
+                  </li>
+                  <li>on a vaccination letter</li>
+                </ul>
+                <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+            
+              </div>
+          </details>
+          </div>
+
+        </p>
+
+        <h2 class="nhsuk-heading-m">A mobile phone</h2>
+        <p class="nhsuk-body">
+          You will need a working mobile phone with signal, as we will text you a security code.
+        </p>
+
+        <a href="register-create-password" class="nhsuk-button">Continue</a>
+        
+
+        
+    
+
+        
+      
+
+
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}
