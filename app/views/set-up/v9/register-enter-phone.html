@@ -32,26 +32,56 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-        <h1 class="nhsuk-heading-l">Enter your mobile number</h1>
         
-        <p class="nhsuk-body">We will send you another 6 digit security code, this time to your phone, to confirm your mobile number.</p>
-
         <form action="" method="POST">
-          <div class="nhsuk-form-group">
-
-            <label for="ukMobileNumber" class="nhsuk-label">
-              UK mobile number
-            </label>
-            <input name="ukMobileNumber" id="ukMobileNumber" type="number" value="{{ data['ukMobileNumber'] }}" class="nhsuk-input nhsuk-input--width-20">
-          </div>
 
           <div class="nhsuk-form-group">
-            <fieldset class="nhsuk-fieldset">
-              <div class="nhsuk-checkboxes">
-                
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Enter your mobile number
+                </h1>
+              </legend>
+
+              <p class="nhsuk-body">We will send you another 6 digit security code, this time to your phone, to confirm your mobile number.</p>
+
+              <label for="ukMobileNumber" class="nhsuk-label">
+                UK mobile number
+              </label>
+              <input name="ukMobileNumber" id="ukMobileNumber" type="number" value="{{ data['ukMobileNumber'] }}" class="nhsuk-input nhsuk-input--width-20 nhsuk-u-margin-bottom-4">
+          
+          
+              <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+          
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="haveInternationalNumber" name="haveInternationalNumber" type="checkbox" value="internationalNumber" aria-controls="conditional-number-checkbox" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="haveInternationalNumber">
+                    I have an international mobile number
+                  </label>
+                </div>
+          
+                <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-number-checkbox">
+          
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="internationalMobileNumber">
+                      International mobile number
+                    </label>
+                    <div class="nhsuk-hint" id="contact-hint">
+                      Please enter + and then your country code before your phone number. For example, +3537777666555
+                    </div>
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="internationalMobileNumber" name="internationalMobileNumber" type="number">
+                  </div>
+          
+                </div>
+          
+          
               </div>
             </fieldset>
+          
           </div>
+
+          <buttton class="nhsuk-button" type="submit">Continue</buttton>
           
 
 
