@@ -1,0 +1,142 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Do you know your NHS number
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="register-enter-OTP" method="POST">
+
+            <div class="nhsuk-form-group">
+  
+              <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    Do you know your NHS number?
+                  </h1>
+                </legend>
+
+                <p class="nhsuk-body">Your NHS number is a 10 digit number, like 485 777 3456.</p>
+                <p class="nhsuk-body">You can find it:</p>
+                <ul class="nhsuk-list nhsuk-list--bullet">
+                    <li>on any letter the NHS has sent you</li>
+                    <li>on a prescription</li>
+                    <li>by logging in to a GP surgery online service</li>
+                    <li>on a vaccination letter</li>
+                </ul>
+
+                <p class="nhsuk-body">Ask your GP surgery for help if you can't find your NHS number.</p>
+
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+                    <div class="nhsuk-radios__item">
+
+                        <input class="nhsuk-radios__input" type="radio" name="" id="" value="Yes" aria-controls="yes-nhsNumber" aria-expanded="false">
+                        <label for="" class="nhsuk-label nhsuk-radios__label">Yes, I know my NHS number</label>
+
+                    </div>
+
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="yes-nhsNumber">
+
+                        <div class="nhsuk-form-group">
+                            <div class="nhsuk-hint" id="">
+                              Example: 485 777 3456
+                            </div>
+                            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="" name="" type="text">
+                          </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+
+                        <input class="nhsuk-radios__input" id="" name="" type="radio" value="No">
+                        <label class="nhsuk-label nhsuk-radios__label" for="">
+                           No, continue another way
+                          </label>
+
+                    </div>
+                </div>
+            
+                
+              </fieldset>
+            
+            </div>
+  
+            <a href=""><buttton class="nhsuk-button" type="submit">Continue</buttton></a>
+            
+  
+  
+          </form>
+
+    </div>
+  </div>
+
+  
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

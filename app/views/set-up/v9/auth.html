@@ -14,7 +14,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  Check your mobile phone
+  Checking your details
 {% endblock %}
 
 <!-- Header goes inside the header block -->
@@ -35,46 +35,36 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-        {% from 'back-link/macro.njk' import backLink %}
-        {{ backLink({
-            "href": "register-enter-phone",
-            "text": "Back to: enter your mobile number"
-          }) }}
-
-
-        
           
-        <h1 class="nhsuk-heading-l">Check your mobile phone</h1>
+        <h1 class="nhsuk-heading-l">Checking your details</h1>
 
-        <p class="nhsuk-body nhsuk-u-margin-bottom-5">Enter the 6 digit security code we've sent to <strong>{{ data.ukMobileNumber or '07517289480' }}</strong> to confirm this is your mobile number.</p>
-
-        
-        <form action="auth" method="POST">
-            <div class="nhsuk-form-group">
-            
-              <label class="nhsuk-label" for="securityCode">
-                Security code
-              </label>
-              <p class="nhsuk-hint">The code is 6 numbers</p>
-
-              <input class="nhsuk-input nhsuk-u-width-one-half" id="securityCode" name="securityCode" type="number" maxlength="6">
-            
-            
-          </div>
-          <a href="" class="nhsuk-link" href="auth"><button class="nhsuk-button" type="submit">Continue</button></a>
-
-          <p class="nhsuk-body">If you do not get a code, you can <a href="register-enter-phone">enter your mobile number to try again</a>.</p>
-
-        </form>
-    
-
-        
-      
+        <form action="auth" method="post">
+            <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
+              <div class="bar_container">
+                <div id="main_container">
+                  <div id="pbar" class="progress-spinner" data-percent="0">
+                    <img src="/images/loader-spinner.svg" width="200px" height="200px" id="spinner" class="" />
+                    <div class="ppc-loading">
+                      <div class="pcc-percents-wrapper">
+                        <span id="spinner-status" class="nhsuk-body">Loading</span><span aria-hidden="true">...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </form>
 
 
 
     </div>
   </div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = 'know-nhs-number';
+    }, 2500);
+  </script>
 {% endblock %}
 
 
