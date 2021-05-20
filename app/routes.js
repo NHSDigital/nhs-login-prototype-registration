@@ -80,7 +80,7 @@ router.post('/p5/know-nhs-number', function (req, res) {
   }
 })
 
-// vsps-reg-p5-plugin routung for Know your NHS number
+// vsps-reg-p5-plugin routing for Know your NHS number
 
 router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
 
@@ -94,6 +94,23 @@ router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
   } else {
     // Send user to ineligible page
     res.redirect('/p5/vsps-reg-p5-plugin/enter-name')
+  }
+})
+
+// email-confirmation-code testing routing for Know your NHS number
+
+router.post('/set-up/email-confirmation-code/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "yes") {
+    // Send user to next page
+    res.redirect('/p5/enter-dob-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/p5/enter-name')
   }
 })
 
