@@ -16,7 +16,7 @@
         Back to: NHS login cookie settings</a>
     </div>
 
-    <h1>Choose which analytic cookies we use</h1>
+    <h1>Your cookie choices</h1>
 
     </div>
 </div>
@@ -27,15 +27,15 @@
 
     <section>
     
-    <div class="block-markdown"><p>Let us know which cookies we can use. We'll use a cookie to save your settings.</p>
+    <div class="block-markdown"><p>Cookies store information about how you use our website. We use these additional, optional cookies, to gather usage data and feedback to improve our website.</p>
     </div>
     </section>
 
 
     <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
 
-        <h2>Adobe Analytics cookies</h2>
-        <p>These cookies store information about how you use our website, such as the links you click on. We use them to help make our website better.</p>
+        <h2>Adobe cookies</h2>
+        <p>These cookies store information about how you use our website, such as the links you click on.</p>
 
         <details class="nhsuk-details">
             <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="false">
@@ -137,27 +137,8 @@
             </div>
           </details>
 
-
-    <fieldset class="nhsuk-fieldset" id="cookie-preferences-form" aria-describedby="cookie-preferences">
-    <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
-    <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="input-preferences-1" name="input-preferences" type="radio" value="on">
-        <label class="nhsuk-label nhsuk-radios__label" for="input-preferences-1">
-            Use cookies to measure service use
-        </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="input-preferences-2" name="input-preferences" type="radio" checked value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="input-preferences-2">
-            Do not use cookies to measure service use
-        </label>
-    </div>
-    </div>
-    </fieldset>
-
         <h2>Hotjar cookies</h2>
-        <p>These cookies are used to obtain user feedback so that we can make our website better.</p>
+        <p>These cookies are used to obtain user feedback.</p>
 
     <details class="nhsuk-details">
     <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-1" aria-expanded="false">
@@ -188,13 +169,167 @@
                   <p>This is set to tell Hotjar if you are included in a sample of user journeys used to generate heatmaps and funnels (ways to display data), and recordings.</p>
                 </td>
                 <td>1 year</td>
-              </tr>
+              </tr>            
             </tbody>
         </table>
-
     </div>
     </details>
 
+        <h2>VWO cookies</h2>
+        <p>These cookies are used to run AB tests.</p>
+
+    <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-1" aria-expanded="false">
+    <span class="nhsuk-details__summary-text">
+    List of VMO cookies
+    </span>
+    </summary>
+    <div class="nhsuk-details__text" id="details-content-1" aria-hidden="true">
+        <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Purpose</th>
+                <th>Expires</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>_vis_opt_exp_{CAMPAIGNID} _goal_{GOALID}</b></td>
+                <td>
+                  <p>This cookie is created when a campaign goal is triggered. This cookie, when created, will always have a value of 1</p>
+                <td>100 days</td>
+              </tr>
+              <tr>
+                <td><b>_vis_opt_exp_{CAMPAIGNID} _combi</b></td>
+                <td>
+                  <p>This cookie is created when a visitor is chosen for a particular variation for a test. This cookie makes sure that visitors see the same variation when they revisit the page in the future. Here the Control has a value of 1, Variation #1 has a value of 2, Variation #2 has a value of 3, and so on</p>
+                </td>
+                <td>100 days</td>
+              </tr>
+              <tr>
+                <td><b>pshcrw_v_k</b></td>
+                <td>
+                    <p>This cookie stores the public VAPID Key of the customer to identify which VAPID key was used for subscribing</p>
+                </td>
+                <td>10,000 days</td>
+              </tr>
+              <tr>
+                <td><b>_pc_fb</b></td>
+                <td>
+                    <p>This cookie stores Facebook messenger-specific information.</p>
+                    <p>Page ID, Count of times the messenger opt-in was shown, and the state of FB Messenger subscription is stored.</p>
+                </td>
+                <td>10,000 days</td>
+              </tr>
+              <tr>
+                <td><b>pshcrw_update_subId</b></td>
+                <td>
+                    <p>This cookie is used for retrying the storage of subscriptions with VWO Engage’s Server. Used only in cases when the server is not reachable due to network issues.</p>
+                </td>
+                <td>10,000 days</td>
+              </tr>
+              <tr>
+                <td><b>pushcrew_opt_out</b></td>
+                <td>
+                    <p>This cookie is used for opting-out.</p>
+                </td>
+                <td>10,000 days</td>
+              </tr>
+              <tr>
+                <td><b>_vis_opt_exp_{CAMPAIGNID} _exclude</b></td>
+                <td>
+                    <p>This cookie is created when a user has been excluded from a Test Campaign due to the traffic percentage specifications. The value is always 1.</p>
+                </td>
+                <td>100 days</td>
+              </tr>
+              <tr>
+                <td><b>_vis_opt_exp_{CAMPAIGNID} _split</b></td>
+                <td>
+                    <p>This cookie is created when one of the variations is chosen for the visitor, but the visitor is not yet redirected to the variation page. It exists so that VWO can verify that the variation page corresponds to the chosen variation after landing on the page. The value is >=2 (as 1 corresponds to Control and it’s not created in case the Control is chosen)</p>
+                    <p>NOTE: This cookie is created only for Split URL campaigns.</p>
+                </td>
+                <td>100 days</td>
+              </tr>
+              <tr>
+                <td><b>_vis_opt_s</b></td>
+                <td>
+                    <p>This cookie tracks session created for a visitor, i.e., the number of times the browser was closed and reopened. The value is >=1, followed by a pipe sign. For example, the value of 2 indicates that the visitor restarted the browser once while 3 means twice.</p>
+                </td>
+                <td>100 days</td>
+              </tr>
+              <tr>
+                <td><b>_vis_opt_out</b></td>
+                <td>
+                    <p>This cookie indicates that the visitor should not be made part of any campaign. Its value is 1.</p>
+                </td>
+                <td>10 years</td>
+              </tr>
+              <tr>
+                <td><b>_vwo_uuid</b></td>
+                <td>
+                    <p>This cookie generates a unique id for every visitor and is used for the report segmentation feature in VWO, and it also allows us to view data in a more refined manner.</p>
+                </td>
+                <td>10 years</td>
+              </tr>
+              <tr>
+                <td><b>_vwo_uuid_{CAMPAIGNID}</b></td>
+                <td>
+                    <p>This cookie is created for each cross-domain campaign. It generates a unique id for every visitor and is used for the report segmentation feature in VWO, and it also allows us to view data in a more refined manner.</p>
+                </td>
+                <td>10 years</td>
+              </tr>
+              <tr>
+                <td><b>_vwo_ds</b></td>
+                <td>
+                    <p>This cookie stores persistent user-level data for VWO Insights.</p>
+                </td>
+                <td>90 days</td>
+              </tr>
+              <tr>
+                <td><b>_vwo_sn</b></td>
+                <td>
+                    <p>This cookie stores session-level information.</p>
+                </td>
+                <td>30 minutes</td>
+              </tr>
+              <tr>
+                <td><b>_vwo_uuid_v2</b></td>
+                <td>
+                    <p>This cookie calculates unique traffic on a website.</p>
+                </td>
+                <td>366 days</td>
+              </tr>
+              <tr>
+                <td><b>_vis_opt_exp_{CAMPAIGNID} _combi_choose</b></td>
+                <td>
+                    <p>This cookie stores the chosen combination. It’s a temporary cookie that gets deleted when the campaign changes are applied.</p>
+                </td>
+                <td>366 days</td>
+              </tr>
+              <tr>
+                <td><b>_vwo_referrer</b></td>
+                <td>
+                    <p>This cookie stores referral info allowing VWO to identify the original Traffic source in case of the Split URL campaign</p>
+                    <p>NOTE: This cookie is created only for Split URL campaigns but can be read by all campaign types.</p>
+                </td>
+                <td>366 days</td>
+              </tr>
+              <tr>
+                <td><b>_vwo</b></td>
+                <td>
+                    <p>This cookie is a jar of all the cookies. It is currently created only for the Safari browser. In the future, it would replace all the cookies. The actual expiry of a cookie doesn’t matter as it stores the expiry of cookies set in it and keeps on expiring them.</p>
+                </td>
+                <td>2096 years</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    </details>
+
+
+        <h2>Change your cookies</h2>
+        <p>Let us know whether we can use cookies. We will save your choice.</p>
 
     <fieldset class="nhsuk-fieldset" id="cookie-statistics-form" aria-describedby="cookie-statistics">
     <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
