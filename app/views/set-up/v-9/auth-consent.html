@@ -1,0 +1,61 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login consent
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+    <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">
+      Agree to share your NHS login information
+    </h1>
+
+    <p class="nhsuk-body-m">To continue, you need to agree to share your NHS login information with <b>'Sensely'</b>.</p>
+
+    <p class="nhsuk-body-m"><b>'Sensely'</b> will use your:</p>
+    <ul>
+      <li>NHS number</li>
+      <li>date of birth</li>
+      <li>last name</li>
+      <li>registration details for GP online services</li>
+    </ul>
+
+    <p class="nhsuk-body-m">
+      Read the <a href="#">terms of use</a> and <a href="#">privacy policy</a> for <b>'Sensely'</b> to check how your information will be used.
+    </p>
+
+    <button class="nhsuk-button full-width" type="submit">
+      I agree
+    </button>
+
+    <p><a href="#">I do not agree to share this information</a></p>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Alternative scenarios</p>
+        <ul>
+          <li><a href="auth-consent-extra-scope-one">One additional scope is requested</a></li>
+          <li><a href="auth-consent-extra-scope-all">Example of some scopes requested</a></li>
+          <li><a href="auth-consent-extra-scope-all">Full list of scopes</a></li>
+
+          <br>
+          <p><b>Note</b><br>The client ID for NHS App is currently 'NHS App'. We should preface all instances of this on
+            this page with 'the'.</p>
+        </ul>
+
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

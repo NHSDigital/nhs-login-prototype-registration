@@ -1,0 +1,74 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Enter your email address
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    {{ backLink({
+        "href": "register-enter-phone",
+        "text": "Back to: Enter your mobile number"
+      }) }}
+
+    <h1 class="nhsuk-fieldset__legend--l">
+      Check your mobile phone
+    </h1>
+
+    <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>{{ data.phoneNumber or '07123456789' }}</b> to confirm this is your mobile phone number.</p>
+    
+    <form action="auth" method="post">
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-with-hint-text">
+          Security code
+        </label>
+        <span class="nhsuk-hint" id="example-with-hint-text-hint">
+          The code is 6 numbers
+        </span>
+        <input
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+          type="number" aria-describedby="security-code-input">
+      </div>
+
+      <a class="nhsuk-button full-width" href="/set-up/v-9/auth">Continue</a>
+
+      <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="register-enter-phone">enter your mobile
+          number to try again.</a></p>
+
+    </form>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Errors</p>
+        <ul>
+          <li><a href="../errors/error-register-OTP-be-generic">Generic back-end error (OTP expired)</a></li>
+          <li><a href="../errors/error-register-OTP-no-input">No input</a></li>
+          <li><a href="../errors/error-register-OTP-regex">Incorrect format</a></li>
+          <li><a href="../errors/error-register-OTP-incorrect">Incorrect OTP</a></li>
+          <li><a href="../errors/error-login-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
+          <li><a href="../errors/error-register-OTP-wrong-code">Wrong code entered</a></li>  
+          
+        </ul>
+      </div>
+    </details>
+
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

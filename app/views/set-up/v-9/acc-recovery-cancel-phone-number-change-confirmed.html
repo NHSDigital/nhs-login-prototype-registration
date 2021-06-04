@@ -1,0 +1,23 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Phone number changed
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+        <h1 class="nhsuk-heading-l">Phone number change cancelled</h1>
+        <p class="nhsuk-body">Your phone number will stay the same as it is now.</p>
+        <p class="nhsuk-body">
+            If you think you need to secure your NHS login you can reset your password. To do this, go back to [CLIENT] and enter your email address. When asked to enter your password, select 'Forgotten your password?'.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

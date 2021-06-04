@@ -1,0 +1,91 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Enter your mobile number
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <h1 class="nhsuk-fieldset__legend--l">Enter your mobile number</h1>
+    <p class="nhsuk-body">We will send you a 6 digit security code.</p>
+
+    <form method="post" action="register-enter-OTP">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-with-hint-text">UK mobile number</label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="phoneNumber" value="{{ data['phoneNumber'] }}" name="phoneNumber" type="number" aria-describedby="enter-your-mobile-number">
+      </div> <!-- nhsuk-form-group -->
+
+      <!-- Conditional reveal radio button -->
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-num-checkbox" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
+            </div>
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-num-checkbox">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="mobile">International mobile number</label>
+                <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
+                  Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
+                </span>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+              </div> <!-- end nhsuk-form-group --> 
+            </div> <!-- end nhsuk-checkboxes__conditional -->
+          </div> <!-- end nhsuk-checkboxes -->
+        </fieldset> <!-- nhsuk-fieldset -->
+      </div> <!-- end nhsuk-form-group -->
+
+      <button class="nhsuk-button full-width" type="submit">Continue</button>
+
+      </form> <!-- end form -->
+
+      {% if data['devMode'] %}
+
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Errors</p>
+          <ul>
+            <li><a href="../errors/error-register-phone-no-input">No input</a></li>
+            <li><a href="../errors/error-register-phone-regex">Invalid format</a></li>
+            <li><a href="../errors/error-int-number-no-input">International number no iput</a></li>
+            <li><a href="../errors/error-int-number-invalid">International number invalid format</a></li>
+            <li><a href="../errors/error-int-number-not-accepted">International number not accepted</a></li>
+            <li><a href="../errors/error-register-phone-otp-exceeded">User requests OTP >5 times</a></li>
+          </ul>
+        </div>
+      </details>
+  
+      {% endif %}
+
+    </div> <!-- end grid-column-two-thirds -->
+  </div> <!-- end nhsuk-grid-row -->
+
+  <script>
+
+    // This script is for the register-enter-phone screen in the registration journey as well as 
+    // the account recovery journeys where we ask users to enter their mobile phone number
+
+    // The proposed design / interaction for this, is because there is a conditional reveal checkbox
+    // which displays another input field, users could get confused with which input field to interact
+    // with this script disables the default mobile number input field if the checkbox is selected.
+
+    document.getElementById('int-checkbox').onchange = function() {
+      document.getElementById('phoneNumber').disabled = this.checked;
+    };
+
+  </script>
+
+{% endblock %}

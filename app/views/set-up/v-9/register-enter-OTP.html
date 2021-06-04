@@ -5,7 +5,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your email address
+Check your mobile phone
 {% endblock %}
 
 {% block content %}
@@ -21,15 +21,19 @@ Enter your email address
       Check your mobile phone
     </h1>
 
-    <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>{{ data.phoneNumber or '07123456789' }}</b> to confirm this is your mobile phone number.</p>
-    
-    <form action="auth" method="post">
+    {% if data['phoneNumber'] %}
+    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>{{ data['phoneNumber'] }}</b></p>
+    {% else %}
+    <p class="nhsuk-body-m">Enter the 6 digit security code we've sent to <b>07123456789</b></p>
+    {% endif %}
+
+    <form>
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-with-hint-text">
           Security code
         </label>
-        <span class="nhsuk-hint" id="example-with-hint-text-hint">
+        <span class="nhsuk-hint" id="otp-hint-text">
           The code is 6 numbers
         </span>
         <input
@@ -59,9 +63,8 @@ Enter your email address
           <li><a href="../errors/error-register-OTP-no-input">No input</a></li>
           <li><a href="../errors/error-register-OTP-regex">Incorrect format</a></li>
           <li><a href="../errors/error-register-OTP-incorrect">Incorrect OTP</a></li>
-          <li><a href="../errors/error-login-OTP-attempts-exceeded">OTP attempts exceeded</a></li>
-          <li><a href="../errors/error-register-OTP-wrong-code">Wrong code entered</a></li>  
-          
+          <li><a href="../errors/error-login-OTP-incorrect-attempt">OTP attempts exceeded</a></li>
+          <li><a href="../errors/error-login-OTP-attempts-exceeded-reattempt">OTP attempts exceeded reattempt</a></li>
         </ul>
       </div>
     </details>

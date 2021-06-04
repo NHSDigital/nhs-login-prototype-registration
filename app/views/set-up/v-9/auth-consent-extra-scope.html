@@ -1,0 +1,69 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Agree to share more information
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+    <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">
+      Agree to share more information
+    </h1>
+
+    <p class="nhsuk-body-m">To continue, you need to agree to share more NHS login information with the <b>'NHS
+        App'</b>.</p>
+
+    <p>This is so that you can access the features of the <b>'NHS App'</b>.</p>
+
+    <p class="nhsuk-body-m">You have already shared your:</p>
+    <ul>
+      <li>NHS number</li>
+      <li>date of birth</li>
+      <li>last name</li>
+      <li>registration details for GP online services</li>
+    </ul>
+
+    <p class="nhsuk-body-m">The <b>'NHS App'</b> will also use your:</p>
+    <ul>
+      <li>first name</li>
+      <li>email address</li>
+    </ul>
+
+    <p class="nhsuk-body-m">If you agree, read their terms of use and privacy policy to check how your information will
+      be used.</p>
+
+    <p>By continuing, you agree to let us use your information.</p>
+
+    <button class="nhsuk-button full-width" href="auth">
+      Agree and continue
+    </button>
+
+    <p><a href="">I do not agree to share this information</a></p>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Alternative scenarios</p>
+        <ul>
+          <li><a href="auth-consent-extra-scope-one">One additional scope is requested</a></li>
+          <li><a href="auth-consent-extra-scope-all">Full list of scopes</a></li>
+          <br>
+          <p><b>Note</b><br>The client ID for NHS App is currently 'NHS App'. We should preface all instances of this on
+            this page with 'the'.</p>
+        </ul>
+
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}
