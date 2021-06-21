@@ -1,0 +1,54 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login prototypes
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      User testing session Monday 28th June
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <h1 class="nhsuk-heading-l">Enter email and password</h1>
+    <ul>
+      <li>
+        <p><a href="/research-prototypes/mon28-june21/login--A/welcome-nhs-login" target="blank_">Version A</a></p>
+      </li>
+      <li>
+        <p><a href="/research-prototypes/mon28-june21/login--B/enter-email" target="blank_">Version B</a></p>
+      </li>
+    </ul>
+
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <h1 class="nhsuk-heading-l">Errors</h1>
+    <ul>
+      <li>
+        <p><a href="#">Error journey</a></p>
+      </li>
+    </ul>
+
+    </div>
+</div>
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-8"></div>
+</div>
+
+{% endblock %}
