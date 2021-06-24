@@ -34,9 +34,10 @@ module.exports = function (req, res, next) {
       res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
       return res.sendStatus(401)
     }
+
+   up to here!*/
+   
   }
   next()
-
-  up to here!*/
 
 }
