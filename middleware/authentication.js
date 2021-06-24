@@ -26,7 +26,7 @@
       return res.send('<p>Username or password not set in environment variables.</p>');
     }
 
-    // Remove this if we don't want password
+    /*Remove this if we don't want password
 
     const user = basicAuth(req)
 
@@ -35,7 +35,7 @@
       return res.sendStatus(401)
     }
 
-    // up to here!
+    // up to here!*/
   }
   next()
 }
