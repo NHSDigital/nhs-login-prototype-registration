@@ -5226,64 +5226,64 @@ b {
 /* ==========================================================================
    COMPONENTS / #PANEL
    ========================================================================== */
-.nhsuk-panel {
+.nhsuk-card {
   margin-bottom: 40px;
   margin-top: 40px;
   padding: 24px;
   background-color: #ffffff;
   color: #212b32;
   width: 100%; }
-  .nhsuk-panel > *:first-child {
+  .nhsuk-card > *:first-child {
     margin-top: 0; }
-  .nhsuk-panel > *:last-child {
+  .nhsuk-card > *:last-child {
     margin-bottom: 0; }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel {
+    .nhsuk-card {
       margin-bottom: 48px; } }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel {
+    .nhsuk-card {
       margin-top: 48px; } }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel {
+    .nhsuk-card {
       padding: 32px; } }
   @media print {
-    .nhsuk-panel {
+    .nhsuk-card {
       border: 1px solid #212b32;
       page-break-inside: avoid; } }
 
 /* Panel colour variant
    ========================================================================== */
-.nhsuk-panel--grey {
+.nhsuk-card--grey {
   background-color: #f0f4f5; }
 
 /* Panel with label
    ========================================================================== */
-.nhsuk-panel-with-label {
+.nhsuk-card-with-label {
   margin-bottom: 40px;
   margin-top: 40px;
   padding: 24px;
   background-color: #ffffff;
   color: #212b32;
   padding-top: 0 !important; }
-  .nhsuk-panel-with-label > *:first-child {
+  .nhsuk-card-with-label > *:first-child {
     margin-top: 0; }
-  .nhsuk-panel-with-label > *:last-child {
+  .nhsuk-card-with-label > *:last-child {
     margin-bottom: 0; }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel-with-label {
+    .nhsuk-card-with-label {
       margin-bottom: 48px; } }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel-with-label {
+    .nhsuk-card-with-label {
       margin-top: 48px; } }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel-with-label {
+    .nhsuk-card-with-label {
       padding: 32px; } }
   @media print {
-    .nhsuk-panel-with-label {
+    .nhsuk-card-with-label {
       border: 1px solid #212b32;
       page-break-inside: avoid; } }
 
-.nhsuk-panel-with-label__label {
+.nhsuk-card-with-label__label {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -5295,30 +5295,30 @@ b {
   position: relative;
   top: -16px; }
   @media (min-width: 40.0625em) {
-    .nhsuk-panel-with-label__label {
+    .nhsuk-card-with-label__label {
       font-size: 24px;
       font-size: 1.5rem;
       line-height: 1.33333; } }
   @media print {
-    .nhsuk-panel-with-label__label {
+    .nhsuk-card-with-label__label {
       font-size: 18pt;
       line-height: 1.15; } }
   @media (max-width: 40.0525em) {
-    .nhsuk-panel-with-label__label {
+    .nhsuk-card-with-label__label {
       margin-left: -24px;
       margin-right: -24px;
       padding: 8px 24px;
       top: -8px; } }
   @media print {
-    .nhsuk-panel-with-label__label {
+    .nhsuk-card-with-label__label {
       background: none;
       color: #212b32;
       top: 0; } }
   @media print {
-    .nhsuk-panel-with-label__label {
+    .nhsuk-card-with-label__label {
       color: #212b32;
       fill: #212b32; }
-      .nhsuk-panel-with-label__label:active, .nhsuk-panel-with-label__label:focus, .nhsuk-panel-with-label__label:visited {
+      .nhsuk-card-with-label__label:active, .nhsuk-card-with-label__label:focus, .nhsuk-card-with-label__label:visited {
         color: #212b32; } }
 
 /* Panel group
@@ -5328,27 +5328,27 @@ b {
  *
  * 1. Flexbox is used to make each panel in a row the same height.
  */
-.nhsuk-panel-group {
+.nhsuk-card-group {
   display: flex;
   flex-wrap: wrap;
   /* [1] */
   margin-bottom: 32px; }
   @media (max-width: 48.0525em) {
-    .nhsuk-panel-group {
+    .nhsuk-card-group {
       margin-bottom: 24px; } }
 
-.nhsuk-panel-group__item {
+.nhsuk-card-group__item {
   display: flex;
   /* [1] */ }
   @media (max-width: 48.0525em) {
-    .nhsuk-panel-group__item {
+    .nhsuk-card-group__item {
       flex: 0 0 100%; } }
   @media (max-width: 48.0525em) {
-    .nhsuk-panel-group__item {
+    .nhsuk-card-group__item {
       margin-bottom: 24px; }
-      .nhsuk-panel-group__item:last-child {
+      .nhsuk-card-group__item:last-child {
         margin-bottom: 0; } }
-  .nhsuk-panel-group__item .nhsuk-panel {
+  .nhsuk-card-group__item .nhsuk-card {
     margin-bottom: 0;
     margin-top: 0; }
 
@@ -5902,7 +5902,7 @@ b {
     .nhsuk-table__panel-with-heading-tab {
       border: 1px solid #212b32;
       page-break-inside: avoid; } }
-  .nhsuk-table__panel-with-heading-tab .nhsuk-table-responsive,
+  .nhsuk-table__panel-with-heading-tab .nnhsuk-table-container,
   .nhsuk-table__panel-with-heading-tab .nhsuk-table {
     margin: 0;
     /* [1] */ }
@@ -5946,7 +5946,7 @@ b {
  *
  * 1. Margin is removed so there isn't double spacing.
  */
-.nhsuk-table-responsive {
+.nnhsuk-table-container {
   margin-bottom: 40px;
   margin-top: 40px;
   display: block;
@@ -5955,12 +5955,12 @@ b {
   overflow-x: auto;
   width: 100%; }
   @media (min-width: 40.0625em) {
-    .nhsuk-table-responsive {
+    .nnhsuk-table-container {
       margin-bottom: 48px; } }
   @media (min-width: 40.0625em) {
-    .nhsuk-table-responsive {
+    .nnhsuk-table-container {
       margin-top: 48px; } }
-  .nhsuk-table-responsive .nhsuk-table {
+  .nnhsuk-table-container .nhsuk-table {
     margin: 0;
     /* [1] */ }
 
@@ -9302,7 +9302,7 @@ li a.nhs-app-list-menu-delete__link {
 @media (max-width: 40.0525em) {
   .nhs-app-panel-group {
     padding: 0 12px; }
-    .nhs-app-panel-group .nhsuk-panel-group__item {
+    .nhs-app-panel-group .nhsuk-card-group__item {
       padding: 0;
       flex: 0 0 50%;
       padding: 0 4px;
@@ -9361,7 +9361,7 @@ li a.nhs-app-list-menu-delete__link {
 .nhs-app-error-panel {
   margin-top: 32px;
   border-top: 4px solid #da291c; }
-  .nhs-app-error-panel .nhsuk-panel-with-label__label {
+  .nhs-app-error-panel .nhsuk-card-with-label__label {
     background-color: #da291c;
     top: -16px; }
   .nhs-app-error-panel a {
