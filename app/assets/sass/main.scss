@@ -87,7 +87,7 @@ a {
   }
 }
 
-.nhsuk-panel.confirmation-panel {
+.nhsuk-card.confirmation-panel {
   margin: nhsuk-spacing(0) nhsuk-spacing(0) nhsuk-spacing(4) nhsuk-spacing(0) !important;
   padding: nhsuk-spacing(2) nhsuk-spacing(2) nhsuk-spacing(2) nhsuk-spacing(2) !important;
 }
@@ -181,7 +181,7 @@ div.heading-confirmation {
 
 
 // blue interruption card
-.nhsuk-panel.panel--blue {
+.nhsuk-card.panel--blue {
   background-color: $color_nhsuk-blue;
   color: white;
 }
@@ -223,7 +223,7 @@ div.heading-confirmation {
 
 // Styling for terms of use pages
 
-.nhsuk-table-responsive {
+.nnhsuk-table-container {
   margin-bottom: 0px !important;
 }
 
