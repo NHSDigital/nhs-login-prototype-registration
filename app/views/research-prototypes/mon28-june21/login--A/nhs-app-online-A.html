@@ -1,0 +1,87 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout-nhsuk.html' %}
+
+{% block pageTitle %}
+Login screen
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      Access your NHS services
+    </h1>
+
+    <p>Use NHS App online to access services on your desktop or laptop computer, through your web browser. You do not need to install anything to get started.</p>
+
+    <p>Use this service to:</p>
+
+    <ul>
+      <li>
+        <p>get your NHS COVID Pass</p>
+      </li>
+      <li>
+        <p>order repeat prescriptions</p>
+      </li>
+      <li>
+        <p>book and manage appointments</p>
+      </li>
+      <li>
+        <p>get health information and advice</p>
+      </li>
+      <li>
+        <p>view your health record securely</p>
+      </li>
+      <li>
+        <p>view your NHS number</p>
+      </li>
+    </ul>
+
+    <h2 class="nhsuk-heading-l">
+    Before you start
+    </h2>
+
+    <p>To use this service you must be:</p>
+
+    <ul>
+      <li>
+        <p>registered with a GP surgery in England</p>
+      </li>
+      <li>
+        <p>aged 13 and over</p>
+      </li>
+    </ul>
+    <details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      What to do if you're aged 13 to 15
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>You'll need to contact your GP surgery first and request access to GP online services.</p>
+  </div>
+</details>
+
+  </div>
+</div>
+
+  <form action="welcome-nhs-login" method="post">
+    <input class="nhsuk-button nhslogin-button nhs-app-u-button-full" type="submit" value="Continue with NHS login">
+  </form>
+
+  <p>Other services you can use without logging in:</p>
+  <ul>
+      <li>
+        <p><a href="#">Search conditions and treatments</a></p>
+      </li>
+  </ul>
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-8"></div>
+</div>
+
+{% endblock %}
