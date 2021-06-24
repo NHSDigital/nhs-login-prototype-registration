@@ -1,53 +1,109 @@
-{% extends 'layouts/layout.html' %}
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
 
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Error! we do not know which website or app you are trying to access
+  Error! We do not know which website or app you are trying to access
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-    
 
-
-        {% from 'back-link/macro.njk' import backLink %}
-        {{ backLink({
-        "href": "/",
-        "text": "Back to: [relevant transaction]"
-        }) }}
-        
+          
         <h1 class="nhsuk-heading-l">We do not know which website or app you are trying to access</h1>
 
         <p class="nhsuk-heading-xs" style="color:#4c6272">Reference: CID1004</p>
 
-    
-        <p>
-            This can happen if you try to log in directly from a web search engine, bookmark or your browser history.
+        <p class="nhsuk-body">
+          This can happen if you try to log in directly from a web search engine, bookmark or your browser history.
         </p>
 
-        <h3 class="nhsuk-heading-m">What you can do</h3>
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              What you can do
+            </h2>
+            <p class="nhsuk-card__description">To try again, you should go to the website or app you want to access and select Continue with NHS login.</p>
 
-        <p>
-            To try again, you should go to the website or app you want to access and select Continue with NHS login.
-        </p>
+            <p class="nhsuk-card__description">Make sure you go to the main website or app of the service you want to access. Avoid using bookmarks or links from your browser history.</p>
 
-        <p>
-            Make sure you go to the main website or app of the service you want to access. Avoid using bookmarks or links from your browser history.
-        </p>
+            <p class="nhsuk-card__description">If that doesn't work, you can see more options to try in our help centre.</p>
 
-        <p>
-            If that doesn't work, you can see more options to try in our help centre.
-        </p>
+            <h3 class="nhsuk-heading-s">More advice on the help centre</h3>
 
-        <h3 class="nhsuk-heading-m">More advice on the help centre</h3>
-        <a href="" class="nhsuk-link">Get advice on the help centre</a>
-        <p>
-            help.login.nhs.uk
-        </p>
-        
+            <p class="nhsuk-card__description nhsuk-u-margin-bottom-1">
+              <a href="" class="nhsuk-link">Get advice on the help centre</a>
+            </p>
+            
+            <p>
+              help.login.nhs.uk
+            </p>
 
+          </div>
+        </div>
 
     </div>
   </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
 {% endblock %}
