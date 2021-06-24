@@ -12,21 +12,21 @@
  * @returns {function} Express 4 middleware requiring the given credentials
  */
 
-module.exports = function (req, res, next) {
+ module.exports = function (req, res, next) {
   // External dependencies
   const basicAuth = require('basic-auth')
 
- // Set configuration variables
+  // Set configuration variables
   const env = (process.env.NODE_ENV || 'development').toLowerCase();
-  //const username = process.env.PROTOTYPE_USERNAME;
-  //const password = process.env.PROTOTYPE_PASSWORD;
+  const username = process.env.PROTOTYPE_USERNAME;
+  const password = process.env.PROTOTYPE_PASSWORD;
 
   if (env === 'production' || env === 'staging') {
     if (!username || !password) {
       return res.send('<p>Username or password not set in environment variables.</p>');
     }
 
-    /* Remove this if we don't want password
+    // Remove this if we don't want password
 
     const user = basicAuth(req)
 
@@ -35,9 +35,7 @@ module.exports = function (req, res, next) {
       return res.sendStatus(401)
     }
 
-   up to here!*/
-
+    // up to here!
   }
   next()
-
 }
