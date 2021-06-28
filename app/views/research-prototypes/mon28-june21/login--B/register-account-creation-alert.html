@@ -19,40 +19,41 @@ Set up a new NHS login
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+    <form autocomplete="on" method="get">
+      <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-heading-l">
+              We found your NHS login
+            </h1>
+          </legend>
+          <p class="nhsuk-body">
+            We found an NHS login linked to <b>{{ data.emailAddress or 'mail@mail.com' }}</b>. Continue to visit <strong>NHS App online</strong>.
+          </p>
 
-    <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-heading-l">
-            We found your NHS login
-          </h1>
-        </legend>
-        <p class="nhsuk-body">
-          We found an NHS login linked to <b>{{ data.emailAddress or 'mail@mail.com' }}</b>. Continue to visit <strong>NHS App online</strong>.
-        </p>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Don’t remember setting up an account?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>You may have set up an NHS login when using other health websites or apps, like a COVID-19 service. </a></p>
+          
+            </div>
+          </details>
 
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Don’t remember setting up an account?
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>You may have set up an NHS login when using other health websites or apps, like a COVID-19 service. </a></p>
-        
+          <a href="login-enter-password" class="nshuk-button">
+              <button class="nhsuk-button full-width">Continue</button>
+          </a>
+
+          <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <h3>What is NHS login?</h3>
+            <p>NHS login allows you to securely access health websites and apps with just one username and password.</p>
           </div>
-        </details>
 
-        <a href="login-enter-password" class="nshuk-button">
-            <button class="nhsuk-button full-width">Continue</button>
-        </a>
-
-        <div class="nhsuk-inset-text">
-          <span class="nhsuk-u-visually-hidden">Information: </span>
-          <h3>What is NHS login?</h3>
-          <p>NHS login allows you to securely access health websites and apps with just one username and password.</p>
-        </div>
-
-    </fieldset>
+      </fieldset>
+    </form>
   </div>
 </div>
 
