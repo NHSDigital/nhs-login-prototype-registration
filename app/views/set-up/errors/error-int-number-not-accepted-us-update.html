@@ -1,0 +1,17 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Unable to send security code
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+        <h1 class="nhsuk-heading-l">Unable to send security code</h1>
+        <p class="nhsuk-body">The mobile phone number on your NHS login is from the US, which we no longer accept.</p>
+        <p class="nhsuk-body">You should visit your <a href="">NHS login settings</a> and change your mobile phone number.</p>
+    </div>
+  </div>
+{% endblock %}
