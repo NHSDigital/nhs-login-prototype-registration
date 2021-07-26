@@ -317,7 +317,7 @@ router.post('/research-prototypes/fri4-thur10-dec20/p5-p9-uplift-existing/prove-
     res.redirect('/research-prototypes/fri4-thur10-dec20/p5-p9-uplift-existing/auth')
   } else {
     // Send user to ineligible page
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v24/service-access-start')
   }
 })  
 
@@ -418,7 +418,7 @@ router.post('/p5/p5-p9-uplift/user-profile', function (req, res) {
   //Check whether the variable matches a condition below
   if (confDetails == "yes") {
     // Send user to start of PYI journey
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=NHS%20app&devMode=false&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true&uplift=true')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v24/service-access-start?service=app6&serviceName=NHS%20app&devMode=false&emailAddress=undefined&mobileNum=&idType=undefined&formerror=undefined&hidehead=undefined&reason=pyi&result=undefined&manual=undefined&hideBack=true&uplift=true')
   } else if (confDetails == "no") {
     res.redirect('/p5/errors/error-p5-p9-uplift-hc-wrong-details')
   } else if (confDetails == "incorrect") {
@@ -435,7 +435,7 @@ router.post('/p5/errors/p9-uplift-option', function (req, res) {
 
   if (p9UpliftOption == "pyi") {
     // Send user to start of PYI journey
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v24/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
   } else if (p9UpliftOption == "enter-details-again") {
     res.redirect('/p5/demo/know-nhs-number')
   }
@@ -450,9 +450,9 @@ router.post('/research-prototypes/thur24-fri25-sep20/p5-third-attempt/p9-uplift-
 
   if (p9UpliftOption == "pyi-id") {
     // Send user to start of PYI journey
-    res.redirect('https://nhs-cid.herokuapp.com/service-access/v22/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v24/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=true')
   } else if (p9UpliftOption == "pyi-no-id") {
-    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v22/patient-online-details?serviceName=the%20NHS%20app&service=app6&devMode=false&uplift=true') 
+    res.redirect('https://nhs-cid.herokuapp.com/patient-online/v24/patient-online-details?serviceName=the%20NHS%20app&service=app6&devMode=false&uplift=true') 
   } else if (p9UpliftOption == "enter-details-again") {
     res.redirect('/research-prototypes/thur24-fri25-sep20/p5-first-attempt/know-nhs-number')
   }
