@@ -33,10 +33,10 @@ Checking your details
 
   </div>
 </div>
-{% if data['p5'] %}
+{% if data['nhsNumber'] %}
 <script>
   setTimeout(function () {
-    window.location.href = '/p5/p5-p9-uplift/user-profile';
+    window.location.href = '/p5/check-details-flow/errors/error-p5-no-match-nhs-number';
   }, 2500);
 </script>
 {% else %}

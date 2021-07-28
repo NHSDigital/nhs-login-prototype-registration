@@ -43,12 +43,12 @@ Check your details
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Name</b></td>
-                <td class="nhsuk-table__cell ">{{ data.first-name or 'Alex Smith' }}</td>
+                <td class="nhsuk-table__cell ">{{ data.firstName + " " + data.middleName + " " + data.lastName or 'Alex Smith' }}</td>
                 <a href="enter"><td class="nhsuk-table__cell "><a href="enter-name">Change</a></td></a>
               </tr>
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Date of birth</b></td>
-                <td class="nhsuk-table__cell ">{{ data.day or '18 August 1989' }}</td>
+                <td class="nhsuk-table__cell ">{{ (data.day + " " + data.month + " " + data.year) or '18 August 1989' }}</td>
                 <td class="nhsuk-table__cell "><a href="enter-dob-nhs-number">Change</a></td>
               </tr>
               <tr class="nhsuk-table__row">

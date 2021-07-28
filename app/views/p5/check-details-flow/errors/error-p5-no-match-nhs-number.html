@@ -1,0 +1,58 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+We cannot find a match
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+
+        <h1 class="nhsuk-heading-l">
+            We cannot find a match
+        </h1>
+
+        <p>We cannot match you to an NHS record using the details you have given.</p>
+
+        <p>We may be able to find a match if you tell us your NHS number, or if you can prove your identity instead.</p>
+        
+        <form action="#" method="POST">
+            <div class="nhsuk-form-group">
+                <h3 class="nhsuk-heading-m">What do you want to do next?</h3>
+                <fieldset class="nhsuk-fieldset">
+                <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="yes" name="check-details-radio" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                        Go back and check your details
+                    </label>
+                    </div>
+            
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="no" name="check-details-radio" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="no">
+                        Go back and tell us your full name instead
+                    </label>
+                    </div>
+
+                    <div class="nhsuk-radios__divider">or</div>
+
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="yes" name="check-details-radio" type="radio" value="incorrect">
+                    <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                        Try another way and prove who you are
+                    </label>
+                    </div>
+                </div>
+                </fieldset>
+            </div>
+
+            <button class="nhsuk-button full-width" type="submit">
+            Continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
