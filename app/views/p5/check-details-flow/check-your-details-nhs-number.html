@@ -24,7 +24,6 @@ Check your details
     </div>
     {% endif %}
 
-
     <form method="post" action="auth">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
@@ -42,9 +41,9 @@ Check your details
           <table class="nhsuk-table">
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><b>Name</b></td>
-                <td class="nhsuk-table__cell ">{{ data.first-name or 'Alex Smith' }}</td>
-                <a href="enter"><td class="nhsuk-table__cell "><a href="enter-name">Change</a></td></a>
+                <td class="nhsuk-table__cell"><b>NHS number</b></td>
+                <td class="nhsuk-table__cell ">{{ data.nhs-number or '485 777 3456' }}</td>
+                <td class="nhsuk-table__cell "><a href="know-nhs-number">Change</a></td>
               </tr>
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Date of birth</b></td>

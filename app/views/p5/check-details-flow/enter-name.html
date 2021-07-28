@@ -36,26 +36,28 @@ What is your name?
           </p>
 
 
-          <div class="nhsuk-form-group">
+          <div method="get" class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
               First name
             </label>
-            <input class="nhsuk-input" id="first-name" name="first-name" type="text">
+            <input class="nhsuk-input" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
             <label class="nhsuk-label nhsuk-u-margin-top-4" for="middle-name">
               Middle names (if you have any)
             </label>
-            <input class="nhsuk-input" id="middle-name" name="middle-name" type="text">
-            <label class="nhsuk-label nhsuk-u-margin-top-4"" for=" last-name">
+            <input class="nhsuk-input" id="middle-name" name="middle-name" type="text" value="{{ data['middle-name'] }}">
+            <label class="nhsuk-label nhsuk-u-margin-top-4" for="last-name">
               Last name
             </label>
-            <input class="nhsuk-input" id="last-name-name" name="last-name" type="text">
+            <input class="nhsuk-input" id="last-name-name" name="last-name" type="text" value="{{ data['last-name'] }}">
           </div>
+        
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
+
 
         </fieldset>
       </div>
-      <button class="nhsuk-button full-width" type="submit">
-        Continue
-      </button>
     </form>
 
     {% if data['devMode'] %}

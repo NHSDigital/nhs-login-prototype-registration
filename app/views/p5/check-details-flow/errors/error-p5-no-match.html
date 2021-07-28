@@ -1,7 +1,7 @@
 {% extends 'layouts/layout.html' %}
 
 {% block pageTitle %}
-Something went wrong
+We cannot find a match
 {% endblock %}
 
 {% block content %}
@@ -9,19 +9,48 @@ Something went wrong
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
 
         <h1 class="nhsuk-heading-l">
-            There is a problem
+            We cannot find a match
         </h1>
 
-        <p>We were unable to match you to an NHS record with the details you have given.</p>
-        <p>You must enter:</p>
-        <ul class="nhsuk-list nhsuk-list--bullet">
-            <li>your full name as written on official documents</li>
-            <li>the postcode of the address you registered with your GP</li>
-        </ul>
+        <p>We cannot match you to an NHS record using the details you have given.</p>
 
-        <a href="../../p5/know-nhs-number">
-            <button class="nhsuk-button full-width" type="submit">Enter your details again</button>
-        </a>
+        <p>We may be able to find a match if you tell us your NHS number, or if you can prove your identity instead.</p>
+        
+        <form action="#" method="POST">
+            <div class="nhsuk-form-group">
+                <h3 class="nhsuk-heading-m">What do you want to do next?</h3>
+                <fieldset class="nhsuk-fieldset">
+                <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="yes" name="check-details-radio" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                        Go back and check your details
+                    </label>
+                    </div>
+            
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="no" name="check-details-radio" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="no">
+                        Go back and tell us your NHS number instead
+                    </label>
+                    </div>
+
+                    <div class="nhsuk-radios__divider">or</div>
+
+                    <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="yes" name="check-details-radio" type="radio" value="incorrect">
+                    <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                        Try another way and prove who you are
+                    </label>
+                    </div>
+                </div>
+                </fieldset>
+            </div>
+
+            <button class="nhsuk-button full-width" type="submit">
+            Continue
+            </button>
+        </form>
 
     </div>
 </div>

@@ -33,11 +33,18 @@ Checking your details
 
   </div>
 </div>
-
+{% if data['p5'] %}
 <script>
   setTimeout(function () {
     window.location.href = '/p5/p5-p9-uplift/user-profile';
   }, 2500);
 </script>
+{% else %}
+<script>
+  setTimeout(function () {
+    window.location.href = '/p5/check-details-flow/errors/error-p5-no-match';
+  }, 2500);
+</script>
+{% endif %}
 
 {% endblock %}
