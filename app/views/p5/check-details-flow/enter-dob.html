@@ -21,7 +21,7 @@ Enter your date of birth
       Back to: What is your name</a>
 
     <div class="nhsuk-u-padding-bottom-3"></div>
-    <form method="submit">
+    <form method="get" action="enter-postcode">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
           <legend class="nhsuk-fieldset__legend nhsuk-label--l">
@@ -40,7 +40,7 @@ Enter your date of birth
                   Day
                 </label>
                 <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="day"
-                  type="number" pattern="[0-9]*">
+                  type="number" pattern="[0-9]*" value="{{ data['day'] }}">
               </div>
             </div>
             <div class="nhsuk-date-input__item">
@@ -49,7 +49,7 @@ Enter your date of birth
                   Month
                 </label>
                 <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="month"
-                  type="number" pattern="[0-9]*">
+                  type="number" pattern="[0-9]*" value="{{ data['month'] }}">
               </div>
             </div>
             <div class="nhsuk-date-input__item">
@@ -58,16 +58,18 @@ Enter your date of birth
                   Year
                 </label>
                 <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year"
-                  type="number" pattern="[0-9]*">
+                  type="number" pattern="[0-9]*" value="{{ data['year'] }}">
               </div>
             </div>
           </div>
+
         </fieldset>
       </div>
 
-      <a class="nhsuk-button full-width" href="enter-postcode">
-        Continue
-      </a>
+      
+        <button class="nhsuk-button full-width" type="submit">
+          Continue
+        </button>
 
       <!--
 

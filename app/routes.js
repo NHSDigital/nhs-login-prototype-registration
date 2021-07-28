@@ -80,6 +80,23 @@ router.post('/p5/know-nhs-number', function (req, res) {
   }
 })
 
+// routing for know NHS number in the p5 journey for check details
+
+router.post('/p5/check-details-flow/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "yes") {
+    // Send user to next page
+    res.redirect('/p5/check-details-flow/enter-dob-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/p5/check-details-flow/enter-name')
+  }
+})
+
 // vsps-reg-p5-plugin routing for Know your NHS number
 
 router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
@@ -127,6 +144,64 @@ router.post('/set-up/alt-OTP-solution-new-user/register-OTP-route', function (re
   } else {
     // Send user to the SMS OTP page
     res.redirect('/set-up/alt-OTP-solution-new-user/register-enter-phone')
+  }
+})
+
+// Check details p5 no match error - Full name
+
+
+router.post('/p5/check-details-flow/errors/error-p5-no-match', function (req, res) {
+
+  // Make a variable and give it the value from 'prove who you are'
+  var checkDetails = req.session.data['check-details-radio']
+
+  // Check whether the variable matches a condition
+  if (checkDetails == "yes") {
+    // Send user to next page
+    res.redirect('/p5/check-details-flow/check-your-details?error=true')
+  } else if (checkDetails == "no") {
+      // Send user to next page
+      res.redirect('/p5/check-details-flow/know-nhs-number?error=true')
+  } else if (checkDetails == "incorrect") {
+    // Send user to ineligible page
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v24/service-access-start')
+  }
+})
+
+// Check details p5 no match error - NHS number
+
+router.post('/p5/check-details-flow/errors/error-p5-no-match-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'prove who you are'
+  var checkDetails = req.session.data['check-details-radio']
+
+  // Check whether the variable matches a condition
+  if (checkDetails == "yes") {
+    // Send user to next page
+    res.redirect('/p5/check-details-flow/check-your-details-nhs-number?error=true')
+  } else if (checkDetails == "no") {
+      // Send user to next page
+      res.redirect('/p5/check-details-flow/enter-name?error=true')
+  } else if (checkDetails == "incorrect") {
+    // Send user to ineligible page
+    res.redirect('https://nhs-cid.herokuapp.com/service-access/v24/service-access-start')
+  }
+})
+
+// routing for know NHS number in the check details flow
+
+router.post('/p5/check-details-flow/know-nhs-number', function (req, res) {
+
+  // Make a variable and give it the value from 'know-nhs-number'
+  var nhsNumber = req.session.data['know-nhs-number']
+
+  // Check whether the variable matches a condition
+  if (nhsNumber == "yes") {
+    // Send user to next page
+    res.redirect('/p5/check-details-flow/enter-dob-nhs-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/p5/check-details-flow/enter-name')
   }
 })
 
