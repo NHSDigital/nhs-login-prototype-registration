@@ -311,3 +311,150 @@ div.heading-confirmation {
   border-color: #da291c !important;
 }
 
+// Expander variation [EXPANDER FOR USER TESTING]
+
+.nhsuk-expander {
+  background-color: #ffffff;
+  border: 0px solid #d8dde0;
+  border-bottom-width: 0px;
+}
+
+.nhsuk-expander:hover {
+  border-color: #aeb7bd;
+}
+.nhsuk-expander .nhsuk-details__summary {
+  background-color: #ffffff;
+  border-top: 4px solid transparent;
+  display: block;
+  padding: 20px 0px 24px;
+}
+// used to be padding: 20px 24px 24px;
+
+@media (max-width: 40.0525em) {
+  .nhsuk-expander .nhsuk-details__summary {
+    padding: 12px 16px 16px;
+  }
+}
+.nhsuk-expander .nhsuk-details__summary:before {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+  /* [1] */
+}
+.nhsuk-expander .nhsuk-details__summary:hover .nhsuk-details__summary-text {
+  color: #7C2855;
+}
+.nhsuk-expander .nhsuk-details__summary:focus {
+  box-shadow: none;
+}
+.nhsuk-expander .nhsuk-details__summary:focus .nhsuk-details__summary-text {
+  background-color: #ffeb3b;
+  box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+  color: #212b32;
+  outline: 4px solid transparent;
+  text-decoration: none;
+}
+.nhsuk-expander .nhsuk-details__summary:focus .nhsuk-details__summary-text:before {
+  background: #ffeb3b url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='002f5c'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
+}
+.nhsuk-expander .nhsuk-details__summary-text {
+  color: #005eb8;
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 4px 4px 38px;
+  position: relative;
+}
+.nhsuk-expander .nhsuk-details__summary-text:before {
+  background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
+  content: "";
+  display: inline-block;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 16px);
+  width: 32px;
+}
+.nhsuk-expander .nhsuk-details__text {
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  border-left: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-expander .nhsuk-details__text {
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-expander .nhsuk-details__text {
+    padding-left: 24px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-expander .nhsuk-details__text {
+    padding-right: 24px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-expander .nhsuk-details__text {
+    padding-top: 0;
+  }
+}
+
+.nhsuk-expander[open] {
+  border-bottom-width: 0px;
+}
+// used to be border-bottom-width: 1px;
+
+.nhsuk-expander[open] .nhsuk-details__summary:focus:hover .nhsuk-details__summary-text {
+  text-decoration: none;
+}
+.nhsuk-expander[open] .nhsuk-details__summary:focus .nhsuk-details__summary-text::before {
+  background: #ffeb3b url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__minus' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='002f5c'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
+  /* [3] */
+}
+.nhsuk-expander[open] .nhsuk-details__summary-text::before {
+  background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__minus' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
+  /* [3] */
+}
+
+.nhsuk-expander-group {
+  /* [4] */
+  margin-bottom: 16px;
+}
+.nhsuk-expander-group > .nhsuk-details {
+  margin-bottom: 8px;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-expander-group > .nhsuk-details {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-expander-group {
+    margin-bottom: 24px;
+  }
+}
+
+.nhsuk-details + h2,
+.nhsuk-details + .nhsuk-heading-l {
+  padding-top: 16px;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-details + h2,
+.nhsuk-details + .nhsuk-heading-l {
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 40.0525em) {
+  .nhsuk-expander .nhsuk-details__summary {
+    padding: 4px 0px 16px;
+  }
+}
+
+// Expander variation ends HERE
+
+
