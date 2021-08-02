@@ -1,0 +1,45 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      User testing session Wednesday 4th August
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <h1 class="nhsuk-heading-m">NHS login journey</h1>
+    <ul>
+      <li>
+        <p><a href="/research-prototypes/wed4-aug20/report-covid-19-test/report-covid-19-test" target="blank_">New user</a></p>
+      </li>
+      <li>
+        <p><a href="/research-prototypes/mon28-june21/login--B/nhs-app-online-B" target="blank_">Exisitng user</a></p>
+      </li>
+    </ul>
+
+    </div>
+</div>
+
+<p><a href="/emails/email-learn-more" target="blank_">NHS login email</a></p>
+
+<p><a href="https://www.nhs.uk/nhs-services/online-services/nhs-log-in/" target="blank_">NHS.UK page</a></p>
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-8"></div>
+</div>
+
+{% endblock %}
