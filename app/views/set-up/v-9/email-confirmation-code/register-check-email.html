@@ -20,10 +20,23 @@ Check your email
     </h1>
 
       <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
-      <p>You need to use this code within <b>24 hours</b> or it will expire.</p>
+      <p>You need to use this code within <b>1 hour</b> or it will expire.</p>
 
       
-      <p><a href="register-check-email-resend">Request a new security code</a></p>
+      <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Not received your security code?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>If you did not get a security code, check your spam folder.</p>
+        <p class="govuk-body">
+          <a href="login-enter-OTP-resend">Send the security code again</a> or <a href="../alt-OTP-solution-existing-user/email-route-alert">enter your email address to try again</a>.
+        </p>
+    
+      </div>
+    </details>
 
       
       <form action="register-enter-phone" method="post">
@@ -47,7 +60,6 @@ Check your email
         <button data-redirect="register-enter-phone" class="nhsuk-button full-width"
           id="button--save">Continue</button>
 
-          <p>If you did not get a security code, check your spam folder or <a href="enter-email">enter your email address to try again.</a></p>
 
     </form>
 

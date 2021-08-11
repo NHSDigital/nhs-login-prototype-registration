@@ -23,6 +23,21 @@ Enter your email address
 
     <p class="nhsuk-body-m">Enter the 6 digit security code we have sent to <b>{{ data.phoneNumber or '07123456789' }}</b> to confirm this is your mobile phone number.</p>
     
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Not received your security code?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>When we are really busy, it may take a bit longer for your code to arrive.</p>
+        <p class="govuk-body">
+          <a href="login-enter-OTP-resend">Send the security code again</a> or <a href="../alt-OTP-solution-existing-user/email-route-alert">enter your mobile number to try again</a>.
+        </p>
+    
+      </div>
+    </details>
+
     <form action="auth" method="post">
 
       <div class="nhsuk-form-group">
@@ -39,9 +54,6 @@ Enter your email address
       </div>
 
       <a class="nhsuk-button full-width" href="/set-up/v-9/auth">Continue</a>
-
-      <p class="nhsuk-u-margin-top-2">If you do not get a code, you can <a href="register-enter-phone">enter your mobile
-          number to try again.</a></p>
 
     </form>
 
