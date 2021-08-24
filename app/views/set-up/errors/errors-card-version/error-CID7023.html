@@ -1,0 +1,135 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Cannot connect to your GP surgery
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+          
+        <h1 class="nhsuk-heading-l">Cannot connect to your GP surgery</h1>
+
+        <p class="nhsuk-heading-xs" style="color:#4c6272">Reference: CID7023</p>
+
+        <p class="nhsuk-body">
+          The website or app you are trying to visit needs to connect to your GP surgery and it has not been able to do so.
+        </p>
+
+        <p class="nhsuk-body">
+          This may be because:
+        </p>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>you already have an NHS login with a different email address</li>
+          <li>you have changed GP surgery</li>
+          <li>your GP surgery has changed systems</li>
+          <li>you no longer have permission to use your GP surgery’s online services</li>
+        </ul>
+
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              What you can do
+            </h2>
+
+            <p class="nhsuk-card__description">If you already have an NHS login, you cannot create another one.</p>
+
+            <p class="nhsuk-card__description">You should go back and log in again using the email address you registered with.</p>            
+
+            <button class="nhsuk-button" type="submit">
+              Go back and log in
+            </button>
+
+            <p class="nhsuk-card__description">If you want to change the email address on your NHS login, you can do so in the <a>NHS login settings</a></p>
+
+            <div style="width: 100%; height: 12px; border-bottom: 1px solid black; text-align: center; margin: 40px 0;">
+              <span style="font-size: 18px; background-color: #fff; padding: 0 10px;">Or</span>
+            </div>
+
+                <p class="nhsuk-card__description">
+                  If this does not work, ask your GP surgery for your registration details on their GP online services. These are different to your username and password.
+                </p>
+                <p>You will need:</p>
+                <ul class="nhsuk-list nhsuk-list--bullet">
+                  <li>account ID </li>
+                  <li>O.D.S code (also called organisation code or practice ID) </li>
+                  <li>linkage key (also called passphrase) </li>
+                </ul>
+                <p class="nhsuk-card__description">
+                  When you have these, log in again and enter your registration details.
+                </p>
+
+                <button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                  Enter your registration details
+                </button>
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/",
+        "label": "Home"
+      },
+      {
+        "URL": "/page-example",
+        "label": "Example page"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}
