@@ -44,17 +44,17 @@ Check your details
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Name</b></td>
                 <td class="nhsuk-table__cell ">{{ data.firstName + " " + data.middleName + " " + data.lastName or 'Alex Smith' }}</td>
-                <a href="enter"><td class="nhsuk-table__cell "><a href="enter-name">Change</a></td></a>
+                <a href="enter"><td class="nhsuk-table__cell "><a href="enter-name">Change name</a></td></a>
               </tr>
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Date of birth</b></td>
                 <td class="nhsuk-table__cell ">{{ (data.day + " " + data.month + " " + data.year) or '18 August 1989' }}</td>
-                <td class="nhsuk-table__cell "><a href="enter-dob-nhs-number">Change</a></td>
+                <td class="nhsuk-table__cell "><a href="enter-dob-nhs-number">Change date of birth</a></td>
               </tr>
               <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell"><b>Postcode</b></td>
                 <td class="nhsuk-table__cell ">{{ data.postcode or 'AB3 4CD' }}</td>
-                <td class="nhsuk-table__cell "><a href="enter-postcode">Change</a></td>
+                <td class="nhsuk-table__cell "><a href="enter-postcode">Change postcode</a></td>
               </tr>
               <!--<tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell"><b>NHS number</b></td>
