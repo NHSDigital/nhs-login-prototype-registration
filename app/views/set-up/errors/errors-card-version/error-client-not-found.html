@@ -1,0 +1,44 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-5">
+
+      <h1 class="nhsuk-heading-l">
+        We do not know which website or app you are trying to access
+      </h1>
+
+      <p class="nhsuk-heading-xs" style="color:#4c6272">Reference: CID1004</p>
+
+        <p class="nhsuk-body">
+          This can happen if you try to log in directly from a web search engine, bookmark, or your browser history.
+        </p>
+
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-s">
+              What you can do
+            </h2>
+            <p class="nhsuk-card__description">Go to the website or app you want to access and select <strong>Continue with NHS login</strong>.</p>
+
+            <p>Avoid using bookmarks or links from your browser history.</p>
+
+            <p class="nhsuk-card__description"><a href="https://www.nhs.uk/nhs-services/online-services/nhs-log-in/websites-and-apps-you-can-access-with-nhs-login/" class="nhsuk-link">See the full list of websites and apps you can access with NHS login.</a></p>
+
+          </div>
+        </div>
+
+      
+
+      
+
+    </div>
+  </div>
+
+{% endblock %}
