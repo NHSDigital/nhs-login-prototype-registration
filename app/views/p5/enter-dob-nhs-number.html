@@ -75,28 +75,7 @@ Enter your date of birth
     </form>
 
     {% if data['devMode'] %}
-    <details class="nhsuk-details dev-mode" role="group">
-      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-        <span class="nhsuk-details__summary-text">
-          Continue with testing scenario
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>Errors</p>
-        <ul>
-          <li><a href="../p5/errors/error-dob-no-user-input">Field validation - No user input</a></li>
-          <li><a href="../p5/errors/error-dob-day">Field validation - No [Day] input</a></li>
-          <li><a href="../p5/errors/error-dob-month">Field validation - No [Month] input</a></li>
-          <li><a href="../p5/errors/error-dob-year">Field validation - No [Year] input</a></li>
-          <li><a href="../p5/errors/error-dob-no-input-two-fields">Field validation - No user input in more > 1 field
-              and tries to continue</a></li>
-          <li><a href="../p5/errors/error-dob-invalid-format">Field validation - Invalid format</a></li>
-          <li><a href="../p5/errors/error-dob-invalid-year">Field validation - User inputs a date of birth in the
-              future</a></li>
-          <li><a href="../p5/errors/error-dob-year-less-than-4-digits">Field validation - User enters a year with 1, 2 or 3 digits</a></li>
-        </ul>
-      </div>
-    </details>
+      {% include "includes/devmode-enter-dob.html" %}
     {% endif %}
 
   </div>
