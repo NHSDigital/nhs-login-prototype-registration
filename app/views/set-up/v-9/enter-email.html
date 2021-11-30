@@ -35,6 +35,9 @@ Enter your email address
           <label class="nhsuk-label" for="emailAddress">
             Email address
           </label>
+          <div class="nhsuk-hint" id="emailAddress">
+            Your email address must be at least 7 characters.
+          </div>
           <input class="nhsuk-input nhsuk-input--width-20" id="emailAddress" name="emailAddress"
             value="{{ data['emailAddress'] }}" type="email">
         </div>
@@ -56,72 +59,7 @@ Enter your email address
     </form>
 
     {% if data['devMode'] %}
-    <details class="nhsuk-details dev-mode" role="group">
-      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-        <span class="nhsuk-details__summary-text">
-          Continue with testing scenario
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>Routes</p>
-        <ul>
-          <li>
-            <a href="login-enter-password">User has account</a>
-          </li>
-          <li>
-            <a href="register-account-creation-alert">Account creation alert screen</a>
-          </li>
-          <li>
-            <a href="what-you-need">What you need</a>
-          </li>
-        </ul>
-        <p>Errors</p>
-        <ul>
-          <li>
-            <a href="../errors/error-email-no-input">No input</a>
-          </li>
-          <li>
-            <a href="../errors/error-email-regex">Incorrect format</a>
-          </li>
-          <li>
-            <a href="../errors/error-session-timeout">Session timeout</a>
-          </li>
-          <li>
-            <a href="../errors/error-invalid-session">Invalid Session</a>
-          </li>
-          <li>
-            <a href="../errors/error-client-not-found">Client not found</a>
-          </li>
-          <li>
-            <a href="../errors/error-404">404</a>
-          </li>
-          <li>
-            <a href="../errors/error-service-busy">Service too busy</a>
-          </li>
-          <li>
-            <a href="../errors/error-lock-OTP-attempts-exceeded">Account lock: OTP attempts exceeded (< 5 times)</a>
-          </li> 
-          <li>
-            <a href="../errors/error-lock-OTP-incorrect-attempts-exceeded">Account lock: OTP incorrect attempts exceeded (> 5 times)</a>
-          </li>
-          <li>
-            <a href="../errors/error-lock-OTP-requests-exceeded">Account lock: OTP requests exceeded</a>
-          </li>
-          <li>
-            <a href="../errors/error-lock-password-attempts-exceeded">Account lock: Password attempts exceeded</a>
-          </li>
-          <li>
-            <a href="../errors/error-lock-p5-p9-nhs-no-mismatch">Account lock: P5 to P9 - NHS Number mismatch</a>
-          </li>
-          <li>
-            <a href="../errors/error-lock-we-cannot-log-you-in">Account lock: We cannot log you in</a>
-          </li>
-          <li>
-            <a href="../errors/error-login-disabled">Disabled NHS login</a>
-          </li>
-        </ul>
-      </div>
-    </details>
+      {% include "includes/devmode-enter-email.html" %}
     {% endif %}
   </div>
 </div>

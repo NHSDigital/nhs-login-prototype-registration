@@ -1,0 +1,65 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list">
+            <li>
+              <a href="#error-email-length">We cannot accept email addresses with less than 7 characters</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 class="nhsuk-heading-l">
+        Enter your email address
+      </h1>
+
+      <form action="/set-up/v2/check-your-email" class="nhsuk-form-group--error" method="post">
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Email address
+          </label>
+          <div class="nhsuk-hint" id="emailAddress">
+            Your email address must be at least 7 characters.
+          </div>
+          <span class="nhsuk-error-message" id="error-regex">
+            <span class="nhsuk-u-visually-hidden">Error:</span>Enter an email address with at least 7 characters
+          </span>
+          <input class="nhsuk-input nhsuk-input--width-20" id="user-email" name="user-email" type="text" aria-describedby="user-email" value="{{ data['user-email'] }}">
+        </div>
+
+      </form>
+      
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+        <div class="nhsuk-inset-text nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <h3>What is NHS login?</h3>
+          <p>You can use your NHS login to access health websites and apps that have the NHS login button. If you do not have an NHS login, enter your email address to set one up.</p>
+        </div>
+
+        <div class="nhsuk-warning-callout  nhsuk-u-margin-top-3">
+          <h3 class="nhsuk-warning-callout__label">Coronavirus (COVID-19)</h3>
+          <p>For health information and advice, read <a href="#" class="nhsuk-link">NHS guidance about Coronavirus</a></p>
+        </div>
+
+    </div>
+  </div>
+
+{% endblock %}
