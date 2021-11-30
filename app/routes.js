@@ -476,7 +476,7 @@ router.post('/p5/idvm-uplift/prove-who-you-are', function (req, res) {
 
   //Check whether the variable matches a condition below
   if (proveWho == "yes") {
-    // Send user to start of PYI journey
+    // Send user to start of service
     res.redirect('/p5/idvm-uplift/auth-service')
   } else if (proveWho == "no") {
     res.redirect('/p5/idvm-uplift/continue-to-client')
