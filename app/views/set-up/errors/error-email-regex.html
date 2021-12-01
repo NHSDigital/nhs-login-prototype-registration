@@ -26,13 +26,16 @@
       <h1 class="nhsuk-heading-l">
         Enter your email address
       </h1>
-
+      <p>We will check if you have an NHS login. If not, you can set one up. </p>
       <form action="/set-up/v2/check-your-email" class="nhsuk-form-group--error" method="post">
         
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-with-hint-text">
             Email address
           </label>
+          <div class="nhsuk-hint" id="emailAddress">
+            Your email address must be at least 7 characters
+          </div>
           <span class="nhsuk-error-message" id="error-regex">
             <span class="nhsuk-u-visually-hidden">Error:</span>Enter an email address in the correct format, like name@example.com
           </span>
