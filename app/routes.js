@@ -467,6 +467,24 @@ router.post('/p5/idvm-uplift/user-profile', function (req, res) {
   }
 })
 
+// idv mobile number - confirm your details page radio buttons
+
+router.post('/p5/idvm-uplift/user-profile-no-nhs-number', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to start of PYI journey
+    res.redirect('/p5/idvm-uplift/auth-confirming')
+  } else if (confDetails == "no") {
+    res.redirect('/p5/idvm-uplift/error-p5-p9-uplift-hc-wrong-details')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/p5/idvm-uplift/error-p5-p9-uplift-hc-incorrect-details')
+  }
+})
+
 // idv mobile number - prove who you are page radio buttons
 
 router.post('/p5/idvm-uplift/prove-who-you-are', function (req, res) {

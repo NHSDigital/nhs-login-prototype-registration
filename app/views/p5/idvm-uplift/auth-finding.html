@@ -34,10 +34,18 @@ Finding an NHS record
   </div>
 </div>
 
+{% if data['nhsNumber'] %}
 <script>
   setTimeout(function () {
     window.location.href = '/p5/idvm-uplift/user-profile';
   }, 2500);
 </script>
+{% else %}
+<script>
+  setTimeout(function () {
+    window.location.href = '/p5/idvm-uplift/user-profile-no-nhs-number';
+  }, 2500);
+</script>
+{% endif %}
 
 {% endblock %}

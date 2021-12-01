@@ -24,7 +24,7 @@ Check your details
     </div>
     {% endif %}
 
-    <form method="post" action="auth-nhs-number">
+    <form method="post" action="../idvm-uplift/auth-checking?=nhsNumber">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -81,19 +81,10 @@ Check your details
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p>Routes</p>
-        <ul>
-          <li><a href="../demo/enter-name">User doesn't know NHS number</a></li>
-        </ul>
         <p>Errors</p>
         <ul>
-          <li><a href="../errors/error-radio-no-input">Field validation</a></li>
-          <li><a href="../errors/error-nhs-number-digits-exceeded">>10 digits entered</a></li>
-          <li><a href="../errors/error-nhs-number-field-validation">No NHS number on record</a></li>
-          <li><a href="../errors/error-nhs-number-no-input">No user input</a></li>
-          <li><a href="../errors/error-nhs-number-national-insurance">National insurance number input</a></li>
-          <li><a href="../errors/error-nhs-number-numbers-and-letters">More or less than 10 numbers and includes letters</a></li>
-        </ul>
+          <li><a href="/p5/check-details-flow/errors/error-p5-no-match-nhs-number">We cannot find a match</a></li>
+          </ul>
       </div>
     </details>
     {% endif %}
