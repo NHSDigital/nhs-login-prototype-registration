@@ -24,7 +24,8 @@ Error: Enter your mobile number
       </div>
 
       <h1 class="nhsuk-fieldset__legend--l">Enter your mobile number</h1>
-      <p class="nhsuk-body">We will send you a 6 digit security code.</p>
+      <p class="nhsuk-body">We will send you another 6 digit security code, this time to your phone, to confirm your mobile number.</p>
+      <p>It will be quicker to set up your NHS login if the mobile number you enter is the number your GP surgery has for you.</p>
 
       <form method="post" action="register-enter-OTP">
         <div class="nhsuk-form-group">
@@ -39,10 +40,10 @@ Error: Enter your mobile number
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
               <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional conditional-reveal--border-colour">
                 <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-checkbox" aria-expanded="false">
+                  <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-checkbox" aria-expanded="true" checked>
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
                 </div>
-                <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-checkbox">
+                <div class="nhsuk-checkboxes__conditional" id="conditional-int-checkbox">
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="mobile">International mobile number</label>
                     <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
