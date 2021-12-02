@@ -46,14 +46,14 @@ Do you know your NHS number
             <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
               <div class="nhsuk-radios nhsuk-radios--conditional">
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="know-nhs-number" name="know-nhs-number" type="radio" value="yes" aria-controls="conditional-contact-1" aria-expanded="false">
+                  <input class="nhsuk-radios__input" id="know-nhs-number" name="know-nhs-number" type="radio" value="yes" aria-controls="conditional-nhs-number-1" aria-expanded="false">
                   <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number">
                     Yes, I know my NHS number
                   </label>
                 </div>
-                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-nhs-number-1">
                   <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="nhs-number">
+                    <label class="nhsuk-label" for="know-nhs-number">
                       NHS number
                     </label>
                     <span class="nhsuk-hint" id="nhs-number-hint">
@@ -62,10 +62,9 @@ Do you know your NHS number
                     <input class="nhsuk-input nhsuk-u-width-two-thirds" id="know-nhs-number" name="nhsNumber" value="{{ checked("nhsNumber", "yes") }}" value="{{ data['nhsNumber'] }}" type="number">
                   </div>
                 </div>
-              </div>
-              <div class="nhsuk-radios">
+              
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="no-nhs-number" name="know-nhs-number" type="radio" value="no">
+                  <input class="nhsuk-radios__input" id="no-nhs-number" name="know-nhs-number" type="radio" value="no" aria-controls="conditional-nhs-number-2">
                   <label class="nhsuk-label nhsuk-radios__label" for="no-nhs-number">
                     No, continue with my full name
                   </label>
