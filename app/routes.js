@@ -590,6 +590,11 @@ router.get('/help/prototypes', function (req, res) {
   });
 })
 
+//account recovery - change phone email otp
+router.post('acc-recovery-change-mobile-otp'), function (req, res) {
+  res.redirect('/v-9/acc-recovery-route-enter-nhs-number')
+}
+
 //Email confirmation - email sent
 
 //Notify initial email

@@ -5,32 +5,31 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your mobile number
+Enter your new mobile phone number
 {% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
         <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="login-enter-OTP-recovery">
+            <a class="nhsuk-back-link__link" href="/set-up/v-9/acc-recovery-change-mobile-email-p0">
                 <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
                 </svg>
-                Back to: Check your mobile
+                Back to: Check your email
             </a>
         </div>
 
-        <form action="../v-9/acc-recovery-route-enter-nhs-number" method="POST" role="form">
+        <form action="../v-9/acc-recovery-check-your-phone-p0" method="POST" role="form">
 
-            <h1 class="nhsuk-heading-l">Enter your old mobile number</h1>
-            <p class="nhsuk-body">We need you to confirm the mobile number currently linked to your NHS login.</p>
-            <p class="nhsuk-body">We will not text a security code to this number.</p>
-
+            <h1 class="nhsuk-heading-l">Enter your new mobile phone number</h1>
+            <p class="nhsuk-body">We will send a 6 digit security code to your new phone number.</p>
             <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile-number">Mobile number</label>
-                <span class="nhsuk-hint">Enter your old mobile number below.</span>
-                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile-number" name="mobile-number" type="number">
-            </div> <!-- end nhsuk-form-group -->
+                <label class="nhsuk-label" for="mobile-number">New number</label>
+                <span class="nhsuk-hint">You must enter a UK mobile phone number so we can send you a 6 digit security code.</span>
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="new-number" type="number" value="{{ data['new-number'] }}">
+            </div>
 
             <!-- Conditional reveal checkbox -->
 
@@ -39,7 +38,7 @@ Enter your mobile number
                 <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
                     <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-num-checkbox" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I used an international mobile number</label>
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
                     </div>
                     <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-num-checkbox">
                     <div class="nhsuk-form-group">
@@ -54,36 +53,21 @@ Enter your mobile number
                 </fieldset> <!-- nhsuk-fieldset -->
             </div> <!-- end nhsuk-form-group -->
 
-            <button class="nhsuk-button full-width" type="submit">
-                Continue
-            </button>
+            <button class="nhsuk-button full-width" type="submit">Continue</button>
 
-        </form> <!-- end form -->
-
-        <p>
-            If you do not remember the mobile number you registered with we can <a href="/set-up/v-9/acc-recovery-change-mobile-email">email you a security code to verify your account</a>.
-        </p>
+        </form>
 
         {% if data['devMode'] %}
+
         <details class="nhsuk-details dev-mode" role="group">
-            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
-                aria-expanded="true">
-                <span class="nhsuk-details__summary-text">
-                    Continue with testing scenario
-                </span>
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+                <span class="nhsuk-details__summary-text">Continue with testing scenario</span>
             </summary>
             <div class="nhsuk-details__text">
                 <p>Errors</p>
                 <ul>
-                    <li><a href="../errors/error-acc-recovery-mobile-no-input">No user input</a></li>
-                    <li><a href="../errors/error-acc-recovery-international-number-invalid">Invalid international number format</a></li>
-                </ul>
-            </div>
-            <div class="nhsuk-details__text">
-                <p>Routes</p>
-                <ul>
-                    <li><a href="acc-recovery-route-no-recovery-email">User is P > 0</a></li>
-                    <li><a href="acc-recovery-user-p0">User is P0</a></li>
+                    <li><a href="../errors/error-acc-recovery-new-mobile-no-input">No user input</a></li>
+                    <li><a href="../errors/error-acc-recovery-new-mobile-international-number-invalid-format">International number invalid format</a></li>
                 </ul>
             </div>
         </details>
@@ -106,6 +90,6 @@ Enter your mobile number
         document.getElementById('mobile-number').disabled = this.checked;
     };
 
-  </script>
+</script>
 
 {% endblock %}

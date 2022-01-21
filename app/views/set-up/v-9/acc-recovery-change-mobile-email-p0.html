@@ -5,7 +5,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your mobile number
+Check your email
 {% endblock %}
 
 {% block content %}
@@ -16,43 +16,22 @@ Enter your mobile number
                 <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
                 </svg>
-                Back to: Check your mobile
+                Back to: Enter your old mobile number
             </a>
         </div>
 
-        <form action="../v-9/acc-recovery-route-enter-nhs-number" method="POST" role="form">
+        <form action="/set-up/v-9/acc-recovery-enter-new-mobile-number-p0-via-email" method="POST" role="form">
 
-            <h1 class="nhsuk-heading-l">Enter your old mobile number</h1>
-            <p class="nhsuk-body">We need you to confirm the mobile number currently linked to your NHS login.</p>
-            <p class="nhsuk-body">We will not text a security code to this number.</p>
+            <h1 class="nhsuk-heading-l">Check your email</h1>
+            <p class="nhsuk-body">Enter the 6 digit security code we have sent to <strong>ws••••••@gmail.com</strong> to confirm your email address.</p>
+            <p class="nhsuk-body">You need to use this code within <strong>1 hour</strong> or it will expire.</p>
 
             <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile-number">Mobile number</label>
-                <span class="nhsuk-hint">Enter your old mobile number below.</span>
+                <label class="nhsuk-label" for="mobile-number">Security code</label>
+                <span class="nhsuk-hint">The code is 6 numbers</span>
                 <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile-number" name="mobile-number" type="number">
             </div> <!-- end nhsuk-form-group -->
 
-            <!-- Conditional reveal checkbox -->
-
-            <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-                <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-                    <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-num-checkbox" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I used an international mobile number</label>
-                    </div>
-                    <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-num-checkbox">
-                    <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="mobile">International mobile number</label>
-                        <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
-                        Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
-                        </span>
-                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
-                    </div> <!-- end nhsuk-form-group --> 
-                    </div> <!-- end nhsuk-checkboxes__conditional -->
-                </div> <!-- end nhsuk-checkboxes -->
-                </fieldset> <!-- nhsuk-fieldset -->
-            </div> <!-- end nhsuk-form-group -->
 
             <button class="nhsuk-button full-width" type="submit">
                 Continue
@@ -61,7 +40,7 @@ Enter your mobile number
         </form> <!-- end form -->
 
         <p>
-            If you do not remember the mobile number you registered with we can <a href="/set-up/v-9/acc-recovery-change-mobile-email">email you a security code to verify your account</a>.
+            If you did not get a security code, check your spam folder or <a href= "#">request a new security code</a>.
         </p>
 
         {% if data['devMode'] %}
