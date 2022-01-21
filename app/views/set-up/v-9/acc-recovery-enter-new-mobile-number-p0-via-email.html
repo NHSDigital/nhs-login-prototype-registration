@@ -5,7 +5,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Enter your new mobile phone number
+Change your mobile phone number
 {% endblock %}
 
 {% block content %}
@@ -24,10 +24,10 @@ Enter your new mobile phone number
         <form action="../v-9/acc-recovery-check-your-phone-p0" method="POST" role="form">
 
             <h1 class="nhsuk-heading-l">Enter your new mobile phone number</h1>
-            <p class="nhsuk-body">We will send a 6 digit security code to your new phone number.</p>
+            <p class="nhsuk-body">We will send a 6 digit security code to your new mobile phone number.</p>
             <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="mobile-number">New number</label>
-                <span class="nhsuk-hint">You must enter a UK mobile phone number so we can send you a 6 digit security code.</span>
+                <span class="nhsuk-hint">UK mobile phone number.</span>
                 <input class="nhsuk-input nhsuk-u-width-one-third" id="mobile-number" name="new-number" type="number" value="{{ data['new-number'] }}">
             </div>
 
@@ -38,11 +38,11 @@ Enter your new mobile phone number
                 <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
                     <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="int-checkbox" name="contact" type="checkbox" value="text" aria-controls="conditional-int-num-checkbox" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile number</label>
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="int-checkbox">I have an international mobile phone number</label>
                     </div>
                     <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-int-num-checkbox">
                     <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="mobile">International mobile number</label>
+                        <label class="nhsuk-label" for="mobile">International mobile phone number</label>
                         <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
                         Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
                         </span>
