@@ -13,7 +13,7 @@ Check your mobile phone
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
         <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="../v-9/acc-recovery-enter-new-mobile-number">
+            <a class="nhsuk-back-link__link" href="../v-9/acc-recovery-route-enter-new-number">
                 <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                     aria-hidden="true">
                     <path
@@ -29,7 +29,23 @@ Check your mobile phone
                 Check your mobile phone
             </h1>
 
-            <p class="nhsuk-body">Enter the security code we've sent to {{ data['new-number'] }}</p>
+            <p class="nhsuk-body">Enter the 6 digit security code we have sent to <b>07123456789</b> to confirm this is your new mobile phone number.</p>
+            <p class="nhsuk-body">You need to use this code within <strong>5 minutes</strong> or it will expire.</p>
+
+            <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Not received your security code?
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p>When we are really busy, it may take a bit longer for your code to arrive.</p>
+                  <p class="govuk-body">
+                    <a href="#">Send the security code again</a> or <a href="/set-up/v-9/acc-recovery-route-enter-new-number">enter your mobile number to try again</a>.
+                  </p>
+              
+                </div>
+              </details>
 
             <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="otp-number">
@@ -48,8 +64,7 @@ Check your mobile phone
 
         </form>
 
-        <p>If you do not get a code, <a href="acc-recovery-enter-new-mobile-number">enter your number to try again</a>
-        </p>
+     
 
         {% if data['devMode'] %}
         <details class="nhsuk-details dev-mode" role="group">
