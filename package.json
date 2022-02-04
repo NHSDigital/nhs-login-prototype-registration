@@ -3,6 +3,9 @@
   "version": "4.4.1",
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "gulp build",
     "postinstall": "npm run build",
