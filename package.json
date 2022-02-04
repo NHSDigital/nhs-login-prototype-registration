@@ -4,7 +4,8 @@
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "build": "gulp build",
@@ -32,12 +33,14 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-nodemon": "^2.5.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.1.0",
     "keypather": "^3.0.0",
     "nhsuk-frontend": "^5.1.0",
     "nunjucks": "^3.2.3",
     "path": "^0.12.7",
     "sass": "^1.34.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
+  }
 }
