@@ -1,0 +1,44 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+Your security code for NHS login
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h1 class="nhsuk-fieldset__legend--l">
+            Your security code
+        </h1>
+
+        <p>Use this security code to confirm your email address.</p>
+        <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p>793356</p>
+          </div>
+
+        <p class="nhsuk-body">You need to use this security code within <b>5 minutes</b> to continue setting up your NHS login.</p>
+
+        {% if data['devMode'] %}
+        <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0"
+                aria-expanded="true">
+                <span class="nhsuk-details__summary-text">
+                    Continue with testing scenario
+                </span>
+            </summary>
+            <div class="nhsuk-details__text">
+                <p>Errors</p>
+                <ul>
+                    <li><a href="../errors/error-acc-recovery-email-generic-error">Generic back-end error</a></li>
+                    <li><a href="../errors/error-acc-recovery-email-link-expired">Link expired</a></li>
+                </ul>
+            </div>
+        </details>
+
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
