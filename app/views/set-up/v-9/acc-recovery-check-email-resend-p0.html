@@ -1,0 +1,54 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    {{ backLink({
+      "href": "acc-recovery-user-p0",
+      "text": "Back to: Enter your old mobile phone number"
+    }) }}
+
+
+    <h1 class="nhsuk-heading-l">
+      Check your email
+    </h1>
+
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You have been sent a new security code.</p>
+      </div>
+
+      <p class="nhsuk-body">Enter the 6 digit security code we have sent to <strong>ws••••••@gmail.com</strong> to confirm your email address.</p>
+      <p class="nhsuk-body">You need to use this code within <strong>1 hour</strong> or it will expire.</p>
+
+      <form action="acc-recovery-enter-new-mobile-number-p0-via-email" method="POST" role="form">
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="security-code">Security code</label>
+            <span class="nhsuk-hint">The code is 6 numbers</span>
+            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="security-code" name="security-code" type="number">
+        </div> <!-- end nhsuk-form-group -->
+
+
+        <button class="nhsuk-button full-width" type="submit">
+            Continue
+        </button>
+
+    </form> <!-- end form -->
+
+    <p>
+        If you did not get a security code, check your spam folder or <a href= "acc-recovery-check-email-resend-p0">request a new security code</a>.
+    </p>
+    
+
+
+
+  </div>
+</div>
+
+{% endblock %}

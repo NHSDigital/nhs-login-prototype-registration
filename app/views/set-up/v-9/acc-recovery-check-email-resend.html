@@ -1,0 +1,58 @@
+{% extends 'layouts/layout-cookie-banner.html' %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    {{ backLink({
+      "href": "acc-recovery-enter-mobile-number",
+      "text": "Back to: Enter your old mobile phone number"
+    }) }}
+
+
+    <h1 class="nhsuk-heading-l">
+      Check your email
+    </h1>
+
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You have been sent a new security code.</p>
+      </div>
+
+      <p class="nhsuk-body">Enter the 6 digit security code we have sent to <strong>ws••••••@gmail.com</strong> to confirm your email address.</p>
+      <p class="nhsuk-body">You need to use this code within <strong>1 hour</strong> or it will expire.</p>
+
+    <form action="acc-recovery-route-enter-nhs-number-via-email" method="post">
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-with-hint-text">
+          Security code
+        </label>
+        <span class="nhsuk-hint" id="otp-hint-text">
+          The code is 6 numbers
+        </span>
+        <input
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+          type="number" aria-describedby="security-code-input">
+      </div>
+
+
+      <button data-redirect="register-enter-phone" class="nhsuk-button full-width"
+        id="button--save">Continue</button>
+
+    </form>
+    <p>
+      If you did not get a security code, check your spam folder or <a href= "/set-up/v-9/acc-recovery-check-email-resend">request a new security code</a>.
+  </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

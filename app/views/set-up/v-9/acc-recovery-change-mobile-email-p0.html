@@ -12,7 +12,7 @@ Check your email
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
         <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="login-enter-OTP-recovery">
+            <a class="nhsuk-back-link__link" href="acc-recovery-user-p0">
                 <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
                 </svg>
@@ -20,16 +20,16 @@ Check your email
             </a>
         </div>
 
-        <form action="/set-up/v-9/acc-recovery-enter-new-mobile-number-p0-via-email" method="POST" role="form">
+        <form action="acc-recovery-enter-new-mobile-number-p0-via-email" method="POST" role="form">
 
             <h1 class="nhsuk-heading-l">Check your email</h1>
             <p class="nhsuk-body">Enter the 6 digit security code we have sent to <strong>ws••••••@gmail.com</strong> to confirm your email address.</p>
             <p class="nhsuk-body">You need to use this code within <strong>1 hour</strong> or it will expire.</p>
 
             <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="mobile-number">Security code</label>
+                <label class="nhsuk-label" for="security-code">Security code</label>
                 <span class="nhsuk-hint">The code is 6 numbers</span>
-                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile-number" name="mobile-number" type="number">
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="security-code" name="security-code" type="number">
             </div> <!-- end nhsuk-form-group -->
 
 
@@ -40,7 +40,7 @@ Check your email
         </form> <!-- end form -->
 
         <p>
-            If you did not get a security code, check your spam folder or <a href= "#">request a new security code</a>.
+            If you did not get a security code, check your spam folder or <a href= "acc-recovery-check-email-resend-p0">request a new security code</a>.
         </p>
 
         {% if data['devMode'] %}
