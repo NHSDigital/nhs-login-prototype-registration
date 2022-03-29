@@ -4,7 +4,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-What is your postcode?
+Enter your postcode
 {% endblock %}
 
 {% block content %}
@@ -22,12 +22,12 @@ What is your postcode?
         Back to: Enter your date of birth</a>
     </div>
 
-    <form method="get" action="check-your-details">
+    <form method="submit" action="auth">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
           <legend class="nhsuk-fieldset__legend nhsuk-label--l">
             <h1 class="nhsuk-fieldset__heading">
-              What is your postcode?
+              Enter your postcode
             </h1>
           </legend>
 
@@ -39,17 +39,15 @@ What is your postcode?
               <li>the one your GP has on record for you</li>
             </ul>
             </span>
-            <input class="nhsuk-input nhsuk-input--width-10" id="postcode" name="postcode" type="text" value="{{ data['postcode'] }}">
+            <input class="nhsuk-input nhsuk-input--width-10" id="postcode" name="postcode" type="text">
           </div>
 
         </fieldset>
       </div>
-
-        <button class="nhsuk-button full-width" type="submit">
-          Continue
-        </button>
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
     </form>
-
     {% if data['devMode'] %}
     <details class="nhsuk-details dev-mode" role="group">
       <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
@@ -60,8 +58,8 @@ What is your postcode?
       <div class="nhsuk-details__text">
         <p>Errors</p>
         <ul>
-          <li><a href="../errors/error-postcode-no-input">Field validation - No user input</a></li>
-          <li><a href="../errors/error-postcode-field-validation">Field validation - Invalid postcode</a></li>
+          <li><a href="../p5/errors/error-postcode-no-input">Field validation - No user input</a></li>
+          <li><a href="../p5/errors/error-postcode-field-validation">Field validation - Invalid postcode</a></li>
         </ul>
       </div>
     </details>
