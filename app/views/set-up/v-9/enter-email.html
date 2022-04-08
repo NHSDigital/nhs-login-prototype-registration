@@ -13,12 +13,11 @@ Enter your email address
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-  {% if data['existing'] %}
-  <form action="login-existing-account-alert" autocomplete="on">
+  {% if data.existing === 'true' %}
+  <form action="login-existing-account-alert" autocomplete="on" method="post">
   {% else %}
-  <script>
-  <form action="register-account-creation-alert" autocomplete="on">
-  </script>
+  
+  <form action="register-account-creation-alert" autocomplete="on" method="post">
   {% endif %}
 
     
@@ -39,11 +38,15 @@ Enter your email address
           <input class="nhsuk-input nhsuk-input--width-20" id="emailAddress" name="emailAddress"
             value="{{ data['emailAddress'] }}" type="email">
         </div>
-        <a>
-          <button data-redirect="register-account-creation-alert" class="nhsuk-button full-width"
-            id="button--save">Continue</button>
-        </a>
-
+        {% if data.existing === 'true' %}
+          <button data-redirect="login-existing-account-alert" class="nhsuk-button full-width" id="button--save">
+            Continue
+          </button>
+        {% else %}
+          <button data-redirect="register-account-creation-alert" class="nhsuk-button full-width" id="button--save">
+            Continue
+          </button>
+        {% endif %}
         <div class="nhsuk-inset-text nhsuk-u-margin-top-1 nhsuk-u-margin-bottom-5">
           <span class="nhsuk-u-visually-hidden">Information: </span>
           <h2>What is NHS login?</h2>
