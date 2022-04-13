@@ -1,7 +1,8 @@
 {% extends 'layouts/layout.html' %}
+{% from 'card/macro.njk' import card %}
 
 {% block pageTitle %}
-There is a problem
+Your NHS login has been disabled
 {% endblock %}
 
 {% block content %}
@@ -9,16 +10,17 @@ There is a problem
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
 
         <h1 class="nhsuk-heading-l">
-            We cannot log you in
+            Your NHS login has been disabled
         </h1>
 
-        <p>This NHS login has been disabled.</p>
-        <p>Email our support team to find out why.</p>
+        <p>This may be because your information has errors or it is being used by someone else.</p>
+        
 
-        <p>Email: 
-            <a href="mailto:help.nhslogin@nhs.net@nhs.net?subject=NHS%20login%20-%20CID2011">ssd.nationalservicedesk@nhs.net</a>
-        </p>
-        <p>Include this code in your email: <b>CID2012</b></p>
+        {{ card({
+          "heading": "Get help",
+          "headingLevel": "3",
+          "descriptionHtml": "<p class=\"nhsuk-card__description\"><a href=\"#\">Contact us</a> so we can try to fix the problem.</p>"
+        }) }} 
 
     </div>
 </div>
